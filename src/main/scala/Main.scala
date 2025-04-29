@@ -12,9 +12,15 @@ object Main extends App {
   var inQuizMode: Boolean = false
   var currentQuestionIndex: Int = 0
   
+  // Flags to track which preferences have been explicitly set
+  var motherLanguageExplicitlySet: Boolean = false
+  var targetLanguageExplicitlySet: Boolean = false
+  var difficultyExplicitlySet: Boolean = false
+  
   // Display welcome message
-  println(ChatbotCore.greetUser(userPreferences))
-  println("Type 'help' for available commands.")
+  val welcomeMessage = ChatbotCore.greetUser(userPreferences)
+  println(formatDualLanguageResponse(welcomeMessage))
+  println(formatDualLanguageResponse("Type 'help' for available commands."))
   
   // Main interaction loop
   var running = true
@@ -67,7 +73,8 @@ object Main extends App {
       case _ =>
         // Process general input
         val response = ChatbotCore.handleUserInput(input, userPreferences)
-        println(s"\nBot: $response")
+        val formattedResponse = formatDualLanguageResponse(response)
+        println(s"\nBot: $formattedResponse")
         AnalyticsDashboard.logInteraction(input, response)
     }
   }
@@ -78,8 +85,8 @@ object Main extends App {
   def startQuiz(): Unit = {
     userPreferences match {
       case Some(prefs) =>
-        println("\nBot: What type of quiz would you like to take?")
-        println("Available quiz types: vocabulary, grammar, translation, mcq, correction")
+        println(s"\nBot: ${formatDualLanguageResponse("What type of quiz would you like to take?")}")
+        println(formatDualLanguageResponse("Available quiz types: vocabulary, grammar, translation, mcq, correction"))
         print("\nYou: ")
         val quizTypeInput = readLine().trim.toLowerCase
         
@@ -111,11 +118,11 @@ object Main extends App {
             displayCurrentQuestion()
             
           case None =>
-            println("\nBot: Sorry, I don't recognize that quiz type. Please try again.")
+            println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that quiz type. Please try again.")}")
         }
         
       case None =>
-        println("\nBot: Please set your language preferences before starting a quiz.")
+        println(s"\nBot: ${formatDualLanguageResponse("Please set your language preferences before starting a quiz.")}")
         showSettings()
     }
   }
@@ -126,7 +133,7 @@ object Main extends App {
   def handleQuizMode(input: String): Unit = {
     input.toLowerCase match {
       case "exit quiz" | "quit quiz" =>
-        println("\nBot: Exiting quiz mode.")
+        println(s"\nBot: ${formatDualLanguageResponse("Exiting quiz mode.")}")
         inQuizMode = false
         
       case _ =>
@@ -138,7 +145,7 @@ object Main extends App {
             
             // Evaluate the answer
             val (isCorrect, feedback) = QuizGenerator.evaluateQuizAnswer(input, currentQuestion.correctAnswer)
-            println(s"\nBot: $feedback")
+            println(s"\nBot: ${formatDualLanguageResponse(feedback)}")
             
             // Update the quiz session immutably
             currentQuizSession = Some(QuizSession(
@@ -154,7 +161,8 @@ object Main extends App {
             } else {
               // Quiz completed
               val completedSession = currentQuizSession.get
-              println(s"\nBot: ${QuizGenerator.summarizeQuizResults(completedSession)}")
+              val summary = QuizGenerator.summarizeQuizResults(completedSession)
+              println(s"\nBot: ${formatDualLanguageResponse(summary)}")
               
               // Log the completed quiz
               AnalyticsDashboard.logQuizInteraction(completedSession)
@@ -166,7 +174,7 @@ object Main extends App {
             }
             
           case None =>
-            println("\nBot: There was an error with the quiz. Exiting quiz mode.")
+            println(s"\nBot: ${formatDualLanguageResponse("There was an error with the quiz. Exiting quiz mode.")}")
             inQuizMode = false
         }
     }
@@ -180,10 +188,10 @@ object Main extends App {
       case Some(session) if currentQuestionIndex < session.questions.length =>
         val question = session.questions(currentQuestionIndex)
         val questionText = QuizGenerator.presentQuizQuestion(question, currentQuestionIndex + 1)
-        println(s"\nBot: $questionText")
+        println(s"\nBot: ${formatDualLanguageResponse(questionText)}")
         
       case _ =>
-        println("\nBot: No questions available.")
+        println(s"\nBot: ${formatDualLanguageResponse("No questions available.")}")
     }
   }
   
@@ -191,24 +199,40 @@ object Main extends App {
    * Show and modify user settings
    */
   def showSettings(): Unit = {
-    println("\nBot: ===== User Settings =====")
-    println("Available languages: English, Spanish, French, German, Arabic")
-    println("Available difficulty levels: Easy, Medium, Hard, Impossible")
+    println(s"\nBot: ${formatDualLanguageResponse("===== User Settings =====")}")
+    println(formatDualLanguageResponse("Available languages: English, Spanish, French, German, Arabic"))
+    println(formatDualLanguageResponse("Available difficulty levels: Easy, Medium, Hard, Impossible"))
     
     val currentSettings = userPreferences match {
       case Some(prefs) =>
-        s"Mother Language: ${prefs.motherLanguage}\n" +
-        s"Target Language: ${prefs.targetLanguage}\n" +
-        s"Difficulty: ${prefs.difficulty}"
+        val motherLangString = if (prefs.motherLanguage == English && !motherLanguageExplicitlySet) {
+          formatDualLanguageResponse("Mother Language: Not set yet\n")
+        } else {
+          formatDualLanguageResponse(s"Mother Language: ${languageToString(prefs.motherLanguage)}\n")
+        }
+        
+        val targetLangString = if (prefs.targetLanguage == English && !targetLanguageExplicitlySet) {
+          formatDualLanguageResponse("Target Language: Not set yet\n")
+        } else {
+          formatDualLanguageResponse(s"Target Language: ${languageToString(prefs.targetLanguage)}\n")
+        }
+        
+        val difficultyString = if (prefs.difficulty == Easy && !difficultyExplicitlySet) {
+          formatDualLanguageResponse("Difficulty: Not set yet")
+        } else {
+          formatDualLanguageResponse(s"Difficulty: ${difficultyToString(prefs.difficulty)}")
+        }
+        
+        motherLangString + targetLangString + difficultyString
       case None =>
-        "No preferences set yet."
+        formatDualLanguageResponse("No preferences set yet.")
     }
     
-    println(s"\nCurrent settings:\n$currentSettings")
-    println("\nTo update settings, use commands like:")
-    println("- set mother language English")
-    println("- set target language Spanish")
-    println("- set difficulty Medium")
+    println(s"\n${formatDualLanguageResponse("Current settings:")}\n$currentSettings")
+    println(formatDualLanguageResponse("\nTo update settings, use commands like:"))
+    println(formatDualLanguageResponse("- set mother language English"))
+    println(formatDualLanguageResponse("- set target language Spanish"))
+    println(formatDualLanguageResponse("- set difficulty Medium"))
   }
   
   /**
@@ -220,14 +244,17 @@ object Main extends App {
       case Some(lang) =>
         userPreferences = ChatbotCore.storeUserPreferences(
           motherLanguage = Some(lang),
-          targetLanguage = userPreferences.map(_.targetLanguage),
-          difficulty = userPreferences.map(_.difficulty),
+          targetLanguage = if (userPreferences.isDefined) Some(userPreferences.get.targetLanguage) else None,
+          difficulty = if (userPreferences.isDefined) Some(userPreferences.get.difficulty) else None,
           currentPreferences = userPreferences
         )
-        println(s"\nBot: Mother language set to $lang")
+        // Mark mother language as explicitly set
+        motherLanguageExplicitlySet = true
+        val response = s"Mother language set to ${languageToString(lang)}"
+        println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
       case None =>
-        println("\nBot: Sorry, I don't recognize that language. Available options: English, Spanish, French, German, Arabic")
+        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German, Arabic")}")
     }
   }
   
@@ -239,15 +266,18 @@ object Main extends App {
     language match {
       case Some(lang) =>
         userPreferences = ChatbotCore.storeUserPreferences(
-          motherLanguage = userPreferences.map(_.motherLanguage),
+          motherLanguage = if (userPreferences.isDefined) Some(userPreferences.get.motherLanguage) else None,
           targetLanguage = Some(lang),
-          difficulty = userPreferences.map(_.difficulty),
+          difficulty = if (userPreferences.isDefined) Some(userPreferences.get.difficulty) else None,
           currentPreferences = userPreferences
         )
-        println(s"\nBot: Target language set to $lang")
+        // Mark target language as explicitly set
+        targetLanguageExplicitlySet = true
+        val response = s"Target language set to ${languageToString(lang)}"
+        println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
       case None =>
-        println("\nBot: Sorry, I don't recognize that language. Available options: English, Spanish, French, German, Arabic")
+        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German, Arabic")}")
     }
   }
   
@@ -259,15 +289,18 @@ object Main extends App {
     difficulty match {
       case Some(diff) =>
         userPreferences = ChatbotCore.storeUserPreferences(
-          motherLanguage = userPreferences.map(_.motherLanguage),
-          targetLanguage = userPreferences.map(_.targetLanguage),
+          motherLanguage = if (userPreferences.isDefined) Some(userPreferences.get.motherLanguage) else None,
+          targetLanguage = if (userPreferences.isDefined) Some(userPreferences.get.targetLanguage) else None,
           difficulty = Some(diff),
           currentPreferences = userPreferences
         )
-        println(s"\nBot: Difficulty set to $diff")
+        // Mark difficulty as explicitly set
+        difficultyExplicitlySet = true
+        val response = s"Difficulty set to ${difficultyToString(diff)}"
+        println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
       case None =>
-        println("\nBot: Sorry, I don't recognize that difficulty level. Available options: Easy, Medium, Hard, Impossible")
+        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that difficulty level. Available options: Easy, Medium, Hard, Impossible")}")
     }
   }
   
@@ -275,7 +308,7 @@ object Main extends App {
    * Show analytics dashboard
    */
   def showAnalytics(): Unit = {
-    println("\nBot: ===== Analytics Dashboard =====")
+    println(s"\nBot: ${formatDualLanguageResponse("===== Analytics Dashboard =====")}")
     
     // Get interaction analytics
     val interactionLog = AnalyticsDashboard.getInteractionLog()
@@ -285,12 +318,12 @@ object Main extends App {
       }
     )
     
-    println("\n== Interaction Statistics ==")
-    println(s"Total Interactions: ${interactionStats("total_interactions")}")
+    println(formatDualLanguageResponse("\n== Interaction Statistics =="))
+    println(formatDualLanguageResponse(s"Total Interactions: ${interactionStats("total_interactions")}"))
     
     // Display language proficiency report if preferences are set
     userPreferences.foreach { prefs =>
-      println(s"\n== Language Proficiency Report for ${prefs.targetLanguage} ==")
+      println(formatDualLanguageResponse(s"\n== Language Proficiency Report for ${languageToString(prefs.targetLanguage)} =="))
       
       val quizLogs = currentQuizSession.toList.map { session =>
         QuizLog(
@@ -308,19 +341,19 @@ object Main extends App {
         prefs.targetLanguage
       )
       
-      println(s"Proficiency Level: ${proficiencyReport("proficiency_level")}")
-      println(s"Overall Success Rate: ${proficiencyReport("overall_success_rate")}")
+      println(formatDualLanguageResponse(s"Proficiency Level: ${proficiencyReport("proficiency_level")}"))
+      println(formatDualLanguageResponse(s"Overall Success Rate: ${proficiencyReport("overall_success_rate")}"))
       
       if (proficiencyReport.contains("strengths")) {
-        println(s"Strengths: ${proficiencyReport("strengths").asInstanceOf[List[String]].mkString(", ")}")
+        println(formatDualLanguageResponse(s"Strengths: ${proficiencyReport("strengths").asInstanceOf[List[String]].mkString(", ")}"))
       }
       
       if (proficiencyReport.contains("areas_for_improvement")) {
-        println(s"Areas for Improvement: ${proficiencyReport("areas_for_improvement").asInstanceOf[List[String]].mkString(", ")}")
+        println(formatDualLanguageResponse(s"Areas for Improvement: ${proficiencyReport("areas_for_improvement").asInstanceOf[List[String]].mkString(", ")}"))
       }
       
-      println(s"Learning Trend: ${proficiencyReport("learning_trend")}")
-      println(s"Total Quizzes Taken: ${proficiencyReport("total_quizzes_taken")}")
+      println(formatDualLanguageResponse(s"Learning Trend: ${proficiencyReport("learning_trend")}"))
+      println(formatDualLanguageResponse(s"Total Quizzes Taken: ${proficiencyReport("total_quizzes_taken")}"))
     }
   }
   
@@ -328,19 +361,19 @@ object Main extends App {
    * Show help information
    */
   def showHelp(): Unit = {
-    println("\nBot: ===== Language Learning Bot Help =====")
-    println("Available commands:")
-    println("- quiz: Start a new quiz session")
-    println("- settings: View and change your language preferences")
-    println("- set mother language [language]: Set your native language")
-    println("- set target language [language]: Set the language you want to learn")
-    println("- set difficulty [level]: Set the difficulty level")
-    println("- analytics: View your learning progress and statistics")
-    println("- help: Show this help message")
-    println("- exit: Close the application")
-    println("\nDuring a quiz:")
-    println("- Type your answer to respond to questions")
-    println("- exit quiz: End the current quiz session")
+    println(s"\nBot: ${formatDualLanguageResponse("===== Language Learning Bot Help =====")}")
+    println(formatDualLanguageResponse("Available commands:"))
+    println(formatDualLanguageResponse("- quiz: Start a new quiz session"))
+    println(formatDualLanguageResponse("- settings: View and change your language preferences"))
+    println(formatDualLanguageResponse("- set mother language [language]: Set your native language"))
+    println(formatDualLanguageResponse("- set target language [language]: Set the language you want to learn"))
+    println(formatDualLanguageResponse("- set difficulty [level]: Set the difficulty level"))
+    println(formatDualLanguageResponse("- analytics: View your learning progress and statistics"))
+    println(formatDualLanguageResponse("- help: Show this help message"))
+    println(formatDualLanguageResponse("- exit: Close the application"))
+    println("\n" + formatDualLanguageResponse("During a quiz:"))
+    println(formatDualLanguageResponse("- Type your answer to respond to questions"))
+    println(formatDualLanguageResponse("- exit quiz: End the current quiz session"))
   }
   
   /**
@@ -367,6 +400,64 @@ object Main extends App {
       case "hard" => Some(Hard)
       case "impossible" => Some(Impossible)
       case _ => None
+    }
+  }
+  
+  /**
+   * Helper method to convert Language to a string representation
+   */
+  def languageToString(language: Language): String = {
+    language match {
+      case English => "English"
+      case Spanish => "Spanish"
+      case French => "French"
+      case German => "German"
+      case Arabic => "Arabic"
+      case _ => "Unknown"
+    }
+  }
+  
+  /**
+   * Helper method to convert Difficulty to a string representation
+   */
+  def difficultyToString(difficulty: Difficulty): String = {
+    difficulty match {
+      case Easy => "Easy"
+      case Medium => "Medium"
+      case Hard => "Hard"
+      case Impossible => "Impossible"
+      case _ => "Unknown"
+    }
+  }
+  
+  /**
+   * Format a response in both target and mother languages
+   */
+  def formatDualLanguageResponse(response: String): String = {
+    userPreferences match {
+      case Some(prefs) if motherLanguageExplicitlySet && targetLanguageExplicitlySet => 
+        // If both languages are set, translate to both
+        val targetLangResponse = ChatbotCore.translateText(response, prefs.targetLanguage)
+        val motherLangResponse = ChatbotCore.translateText(response, prefs.motherLanguage)
+        
+        // If the languages are the same, don't duplicate
+        if (prefs.targetLanguage == prefs.motherLanguage) {
+          targetLangResponse
+        } else {
+          s"$targetLangResponse\n(${languageToString(prefs.motherLanguage)}): $motherLangResponse"
+        }
+      
+      case Some(prefs) if targetLanguageExplicitlySet => 
+        // If only target language is set
+        ChatbotCore.translateText(response, prefs.targetLanguage)
+        
+      case Some(prefs) if motherLanguageExplicitlySet => 
+        // If only mother language is set
+        ChatbotCore.translateText(response, prefs.motherLanguage)
+        
+      case _ => 
+        // If no languages are set, default to English
+        response
     }
   }
 }

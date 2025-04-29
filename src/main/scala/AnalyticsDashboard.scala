@@ -108,18 +108,19 @@ object AnalyticsDashboard {
       val successRateByType = quizzesByType.map { 
         case (quizType, quizzes) =>
           val typeTotal = quizzes.size
-          val correctAnswers = quizzes.flatMap { quiz =>
-            // For each quiz, count correct answers
-            quiz.questions.zip(quiz.userAnswers).count {
-              case (question, answer) => 
-                question.correctAnswer.toLowerCase == answer.toLowerCase
+          // Calculate correct answers for each quiz and sum them
+          val correctAnswers = quizzes.foldLeft(0) { (total, quiz) =>
+            // For each quiz, count correct answers and add to running total
+            total + quiz.questions.zip(quiz.userAnswers).count { case (question, answer) => 
+              question.correctAnswer.toLowerCase == answer.toLowerCase
             }
-          }.sum
+          }
           val totalQuestions = quizzes.flatMap(_.questions).size
-          val successRate = if (totalQuestions > 0) 
-                              correctAnswers.toDouble / totalQuestions * 100 
-                            else 0.0
-                            
+          val successRate = if (totalQuestions > 0) {
+            correctAnswers.toDouble / totalQuestions * 100
+          } else {
+            0.0
+          }
           (quizType.toString, Map(
             "count" -> typeTotal,
             "success_rate" -> f"$successRate%.1f%%"
