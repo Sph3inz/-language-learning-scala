@@ -248,6 +248,84 @@ object ChatbotCore {
           "Sie können Ihre Einstellungen ändern für:\n- Muttersprache\n- Zielsprache\n- Schwierigkeitsgrad\nWas möchten Sie aktualisieren?",
         ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "Arabic") -> 
           "يمكنك تغيير إعداداتك لـ:\n- اللغة الأم\n- اللغة الهدف\n- مستوى الصعوبة\nماذا تريد أن تحدث؟",
+
+        // Quiz-related translations
+        ("What type of quiz would you like to take?", "English") -> 
+          "What type of quiz would you like to take?",
+        ("What type of quiz would you like to take?", "Spanish") -> 
+          "¿Qué tipo de cuestionario te gustaría realizar?",
+        ("What type of quiz would you like to take?", "French") -> 
+          "Quel type de quiz aimeriez-vous passer?",
+        ("What type of quiz would you like to take?", "German") -> 
+          "Welche Art von Quiz möchten Sie machen?",
+        ("What type of quiz would you like to take?", "Arabic") -> 
+          "ما نوع الاختبار الذي ترغب في إجرائه؟",
+          
+        ("Available quiz types: vocabulary, grammar, translation, mcq", "English") -> 
+          "Available quiz types: vocabulary, grammar, translation, mcq",
+        ("Available quiz types: vocabulary, grammar, translation, mcq", "Spanish") -> 
+          "Tipos de cuestionarios disponibles: vocabulario, gramática, traducción, opción múltiple",
+        ("Available quiz types: vocabulary, grammar, translation, mcq", "French") -> 
+          "Types de quiz disponibles: vocabulaire, grammaire, traduction, choix multiple",
+        ("Available quiz types: vocabulary, grammar, translation, mcq", "German") -> 
+          "Verfügbare Quiz-Typen: Vokabeln, Grammatik, Übersetzung, Multiple-Choice",
+        ("Available quiz types: vocabulary, grammar, translation, mcq", "Arabic") -> 
+          "أنواع الاختبارات المتاحة: مفردات، قواعد، ترجمة، اختيار من متعدد، تصحيح",
+
+        ("Exiting quiz mode.", "English") -> 
+          "Exiting quiz mode.",
+        ("Exiting quiz mode.", "Spanish") -> 
+          "Saliendo del modo cuestionario.",
+        ("Exiting quiz mode.", "French") -> 
+          "Sortie du mode quiz.",
+        ("Exiting quiz mode.", "German") -> 
+          "Quiz-Modus wird beendet.",
+        ("Exiting quiz mode.", "Arabic") -> 
+          "الخروج من وضع الاختبار.",
+
+        ("There was an error with the quiz. Exiting quiz mode.", "English") -> 
+          "There was an error with the quiz. Exiting quiz mode.",
+        ("There was an error with the quiz. Exiting quiz mode.", "Spanish") -> 
+          "Hubo un error con el cuestionario. Saliendo del modo cuestionario.",
+        ("There was an error with the quiz. Exiting quiz mode.", "French") -> 
+          "Une erreur s'est produite avec le quiz. Sortie du mode quiz.",
+        ("There was an error with the quiz. Exiting quiz mode.", "German") -> 
+          "Es gab einen Fehler beim Quiz. Quiz-Modus wird beendet.",
+        ("There was an error with the quiz. Exiting quiz mode.", "Arabic") -> 
+          "حدث خطأ في الاختبار. الخروج من وضع الاختبار.",
+
+        ("No questions available.", "English") -> 
+          "No questions available.",
+        ("No questions available.", "Spanish") -> 
+          "No hay preguntas disponibles.",
+        ("No questions available.", "French") -> 
+          "Aucune question disponible.",
+        ("No questions available.", "German") -> 
+          "Keine Fragen verfügbar.",
+        ("No questions available.", "Arabic") -> 
+          "لا توجد أسئلة متاحة.",
+
+        ("Sorry, I don't recognize that quiz type. Please try again.", "English") -> 
+          "Sorry, I don't recognize that quiz type. Please try again.",
+        ("Sorry, I don't recognize that quiz type. Please try again.", "Spanish") -> 
+          "Lo siento, no reconozco ese tipo de cuestionario. Por favor, inténtalo de nuevo.",
+        ("Sorry, I don't recognize that quiz type. Please try again.", "French") -> 
+          "Désolé, je ne reconnais pas ce type de quiz. Veuillez réessayer.",
+        ("Sorry, I don't recognize that quiz type. Please try again.", "German") -> 
+          "Entschuldigung, ich erkenne diesen Quiz-Typ nicht. Bitte versuchen Sie es erneut.",
+        ("Sorry, I don't recognize that quiz type. Please try again.", "Arabic") -> 
+          "عذراً، لا أتعرف على نوع الاختبار هذا. يرجى المحاولة مرة أخرى.",
+
+        ("Please set your language preferences before starting a quiz.", "English") -> 
+          "Please set your language preferences before starting a quiz.",
+        ("Please set your language preferences before starting a quiz.", "Spanish") -> 
+          "Por favor, configura tus preferencias de idioma antes de comenzar un cuestionario.",
+        ("Please set your language preferences before starting a quiz.", "French") -> 
+          "Veuillez définir vos préférences linguistiques avant de commencer un quiz.",
+        ("Please set your language preferences before starting a quiz.", "German") -> 
+          "Bitte legen Sie Ihre Spracheinstellungen fest, bevor Sie ein Quiz starten.",
+        ("Please set your language preferences before starting a quiz.", "Arabic") -> 
+          "يرجى تحديد تفضيلات اللغة قبل بدء الاختبار.",
         
         ("I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.", "English") -> 
           "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
