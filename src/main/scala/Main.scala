@@ -5,15 +5,24 @@ import scala.util.{Try, Success, Failure}
 import java.io.{File, PrintWriter, FileWriter, BufferedWriter}
 import java.nio.file.{Files, Paths}
 import scala.io.Source
+import services.AuthService
+import models.{SignUpRequest, UserCredentials, GuestUserRequest}
+import services.UserHistoryService
+import models.QuizQuestion
 
 object Main extends App {
   println("Starting Language Learning Bot...")
+  
+  // Initialize AuthService
+  val authService = new AuthService()
+  val userHistoryService = new UserHistoryService()
   
   // State variables (kept immutable by always reassigning)
   var userPreferences: Option[UserPreferences] = None
   var currentQuizSession: Option[QuizSession] = None
   var inQuizMode: Boolean = false
   var currentQuestionIndex: Int = 0
+  var currentUser: Option[models.User] = None
   
   // Flags to track which preferences have been explicitly set
   var motherLanguageExplicitlySet: Boolean = false
@@ -23,27 +32,109 @@ object Main extends App {
   // Settings file constants
   val SETTINGS_FILE = "user_preferences.txt"
   
-  // Try to load saved settings at startup
-  try {
-    loadPreferences() match {
-      case Success(Some(loadedPrefs)) => 
-        userPreferences = Some(loadedPrefs)
-        // Set all flags to true since these were explicitly saved
-        motherLanguageExplicitlySet = true
-        targetLanguageExplicitlySet = true
-        difficultyExplicitlySet = true
-        println("Found saved settings. Loaded your previously saved preferences.")
+  // Authentication menu
+  def showAuthMenu(): Unit = {
+    println("\n=== Authentication Menu ===")
+    println("1. Sign Up")
+    println("2. Login")
+    println("3. Exit")
+    print("\nChoose an option: ")
+    
+    val input = readLine().trim.toLowerCase
+    
+    input match {
+      // Number choices
+      case "1" => handleSignUp()
+      case "2" => handleLogin()
+      case "3" => System.exit(0)
+      
+      // Text commands
+      case "signup" | "sign up" | "register" | "registration" => handleSignUp()
+      case "login" | "signin" | "sign in" => handleLogin()
+      case "exit" | "quit" | "close" => System.exit(0)
+      
       case _ => 
-        // No saved settings or error loading - start fresh
+        println("Invalid option. Please try again.")
+        println("You can use numbers (1-3) or type commands like 'signup', 'login', or 'exit'")
+        showAuthMenu()
     }
-  } catch {
-    case _: Throwable => 
-      // Handle any errors gracefully
-      println("Could not load settings. Starting with default configuration.")
   }
   
+  def handleSignUp(): Unit = {
+    println("\n=== Sign Up ===")
+    print("Username: ")
+    val username = readLine().trim
+    print("Email: ")
+    val email = readLine().trim
+    print("Password: ")
+    val password = readLine().trim
+    
+    val signUpRequest = SignUpRequest(username, email, password)
+    authService.signUp(signUpRequest) match {
+      case Success(user) =>
+        currentUser = Some(user)
+        println(s"Welcome, ${user.username}!")
+        loadUserPreferences()
+      case Failure(ex) =>
+        println(s"Sign up failed: ${ex.getMessage}")
+        println("Would you like to try again? (yes/no)")
+        readLine().trim.toLowerCase match {
+          case "yes" | "y" => handleSignUp()
+          case _ => showAuthMenu()
+        }
+    }
+  }
+  
+  def handleLogin(): Unit = {
+    println("\n=== Login ===")
+    print("Email: ")
+    val email = readLine().trim
+    print("Password: ")
+    val password = readLine().trim
+    
+    val credentials = UserCredentials(email, password)
+    authService.login(credentials) match {
+      case Success(user) =>
+        // Store the user with their original ID
+        currentUser = Some(user)
+        println(s"Welcome back, ${user.username}!")
+        loadUserPreferences()
+      case Failure(ex) =>
+        println(s"Login failed: ${ex.getMessage}")
+        println("Would you like to try again? (yes/no)")
+        readLine().trim.toLowerCase match {
+          case "yes" | "y" => handleLogin()
+          case _ => showAuthMenu()
+        }
+    }
+  }
+  
+  def loadUserPreferences(): Unit = {
+    currentUser match {
+      case Some(user) =>
+        // Try to load saved settings for registered users
+        loadPreferences() match {
+          case Success(Some(loadedPrefs)) => 
+            userPreferences = Some(loadedPrefs)
+            motherLanguageExplicitlySet = true
+            targetLanguageExplicitlySet = true
+            difficultyExplicitlySet = true
+            println("Loaded your previously saved preferences.")
+          case _ => 
+            println("No saved preferences found. Let's set up your preferences.")
+            showSettings()
+        }
+      case None =>
+        println("Please sign in.")
+        showAuthMenu()
+    }
+  }
+  
+  // Start with authentication
+  showAuthMenu()
+  
   // Display welcome message
-  val welcomeMessage = ChatbotCore.greetUser(userPreferences)
+  val welcomeMessage = ChatbotCore.greetUser(userPreferences, currentUser)
   println(formatDualLanguageResponse(welcomeMessage))
   println(formatDualLanguageResponse("Type 'help' for available commands."))
   
@@ -57,6 +148,10 @@ object Main extends App {
     if (userInput.toLowerCase == "exit") {
       println("\nBot: Thank you for using the Language Learning Bot. Goodbye!")
       running = false
+    } else if (userInput.toLowerCase == "logout") {
+      currentUser = None
+      println("\nBot: You have been logged out.")
+      showAuthMenu()
     } else if (inQuizMode) {
       // Handle quiz mode interaction
       handleQuizMode(userInput)
@@ -73,15 +168,59 @@ object Main extends App {
     input.toLowerCase match {
       case "quiz" | "start quiz" =>
         startQuiz()
+        // Save quiz start interaction
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "quiz",
+            response = "Started a new quiz session",
+            category = "quiz"
+          )
+        }
         
       case "settings" | "preferences" =>
         showSettings()
+        // Save settings interaction to history
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "settings",
+            response = "Displayed user settings",
+            category = "system"
+          )
+        }
         
       case "save settings" | "save preferences" =>
         saveSettings()
+        // Save save settings interaction to history
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "save settings",
+            response = "Attempted to save user settings",
+            category = "system"
+          )
+        }
         
       case "load settings" | "load preferences" =>
         loadSettings()
+        // Save load settings interaction to history
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "load settings",
+            response = "Attempted to load user settings",
+            category = "system"
+          )
+        }
         
       case s if s.startsWith("set mother language ") =>
         val lang = s.substring("set mother language ".length).trim
@@ -97,16 +236,66 @@ object Main extends App {
         
       case "analytics" | "stats" | "progress" =>
         showAnalytics()
+        // Save analytics interaction to history
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "analytics",
+            response = "Displayed user analytics",
+            category = "system"
+          )
+        }
+        
+      case "history" | "my history" =>
+        currentUser match {
+          case Some(user) =>
+            val history = userHistoryService.displayUserHistory(user.id)
+            println(s"\nBot: ${formatDualLanguageResponse(history)}")
+          case None =>
+            println(s"\nBot: ${formatDualLanguageResponse("Please sign in to view your history.")}")
+        }
         
       case "help" =>
-        showHelp()
+        val helpMessage = """
+          |Available commands:
+          |1. chat - Start a conversation
+          |2. quiz - Take a quiz
+          |3. history - View your learning history
+          |4. preferences - Set your language preferences
+          |5. help - Show this help message
+          |6. logout - Log out
+          |7. exit - Exit the application
+          |""".stripMargin
+        println(helpMessage)
+        // Save help interaction to history
+        userHistoryService.addInteraction(
+          userId = currentUser.get.id,
+          username = currentUser.get.username,
+          email = currentUser.get.email,
+          question = "help",
+          response = helpMessage,
+          category = "system"
+        )
         
       case _ =>
         // Process general input
-        val response = ChatbotCore.handleUserInput(input, userPreferences)
+        val response = ChatbotCore.handleUserInput(input, userPreferences, currentUser)
         val formattedResponse = formatDualLanguageResponse(response)
         println(s"\nBot: $formattedResponse")
-        AnalyticsDashboard.logInteraction(input, response)
+        
+        // Log the interaction if user is logged in
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = input,
+            response = response,
+            category = ChatbotCore.categorizeInput(input)
+          )
+        }
     }
   }
   
@@ -120,6 +309,18 @@ object Main extends App {
         println(formatDualLanguageResponse("Available quiz types: vocabulary, grammar, translation, mcq"))
         print("\nYou: ")
         val quizTypeInput = readLine().trim.toLowerCase
+        
+        // Save the quiz type response
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "What type of quiz would you like to take?",
+            response = quizTypeInput,
+            category = "quiz"
+          )
+        }
         
         // Parse quiz type using pattern matching
         val quizType = quizTypeInput match {
@@ -163,37 +364,61 @@ object Main extends App {
    */
   def handleQuizMode(input: String): Unit = {
     input.toLowerCase match {
-      case "exit quiz" | "quit quiz" =>
+      case "exit quiz" | "quit quiz" | "end quiz" | "stop quiz" =>
         println(s"\nBot: ${formatDualLanguageResponse("Exiting quiz mode.")}")
         inQuizMode = false
+        currentQuizSession = None
+        currentQuestionIndex = 0
+        // Save quiz exit interaction
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "exit quiz",
+            response = "Exited quiz mode",
+            category = "quiz"
+          )
+        }
+        
+      case "exit" | "quit" =>
+        println(s"\nBot: ${formatDualLanguageResponse("To exit the quiz, please type 'exit quiz' or 'quit quiz'.")}")
         
       case _ =>
         currentQuizSession match {
           case Some(session) =>
             val currentQuestion = session.questions(currentQuestionIndex)
             
-            // Evaluate the answer - now supporting both the answer text and letter choices
-            // This returns (isCorrect, feedback, processedAnswer)
+            // Evaluate the answer
             val (isCorrect, feedback, processedAnswer) = QuizGenerator.evaluateQuizAnswer(input, currentQuestion.correctAnswer, Some(currentQuestion))
             
-            // Record the processed answer instead of the raw input
-            // This ensures letter answers (a,b,c,d) are converted to the actual option text
-            val updatedAnswers = session.userAnswers :+ processedAnswer
+            // Save the quiz answer interaction
+            currentUser.foreach { user =>
+              userHistoryService.addInteraction(
+                userId = user.id,
+                username = user.username,
+                email = user.email,
+                question = s"Quiz Question ${currentQuestionIndex + 1}: ${currentQuestion.prompt}",
+                response = s"Answer: $input, Feedback: $feedback",
+                category = "quiz"
+              )
+            }
+            
+            // Record the processed answer and whether it was correct
+            val updatedAnswers = session.userAnswers :+ (if (isCorrect) currentQuestion.correctAnswer else processedAnswer)
             
             // For quiz feedback, use only the target language if set
             val translatedFeedback = userPreferences match {
               case Some(prefs) if targetLanguageExplicitlySet =>
-                // Quiz feedback is only shown in target language
                 ChatbotCore.translateText(feedback, prefs.targetLanguage)
               case Some(prefs) if motherLanguageExplicitlySet =>
-                // If only mother language is set, use that
                 ChatbotCore.translateText(feedback, prefs.motherLanguage)
               case _ => feedback
             }
             
             println(s"\nBot: $translatedFeedback")
             
-            // Update the quiz session immutably with the processed answers
+            // Update the quiz session
             currentQuizSession = Some(QuizSession(
               session.questions,
               updatedAnswers,
@@ -209,21 +434,52 @@ object Main extends App {
               val completedSession = currentQuizSession.get
               val summary = QuizGenerator.summarizeQuizResults(completedSession)
               
-              // For quiz summary, use only the target language if set
-              val translatedSummary = userPreferences match {
-                case Some(prefs) if targetLanguageExplicitlySet =>
-                  // Quiz summary is only shown in target language
-                  ChatbotCore.translateText(summary, prefs.targetLanguage)
-                case Some(prefs) if motherLanguageExplicitlySet =>
-                  // If only mother language is set, use that
-                  ChatbotCore.translateText(summary, prefs.motherLanguage)
-                case _ => summary
+              // Save quiz results if user is logged in
+              currentUser.foreach { user =>
+                val quizQuestions = completedSession.questions.zip(completedSession.userAnswers).map {
+                  case (question, answer) =>
+                    QuizQuestion(
+                      question = question.prompt,
+                      correctAnswer = question.correctAnswer,
+                      userAnswer = answer,
+                      isCorrect = answer == question.correctAnswer
+                    )
+                }
+                
+                // Calculate correct answers for this quiz
+                val correctAnswers = quizQuestions.count(_.isCorrect)
+                
+                // Get total correct answers across all quizzes
+                val totalCorrectAnswers = userHistoryService.getTotalCorrectAnswers(user.id)
+                val totalQuestions = userHistoryService.getTotalQuestions(user.id)
+                
+                userHistoryService.addQuizResult(
+                  userId = user.id,
+                  username = user.username,
+                  email = user.email,
+                  quizType = completedSession.quizType.toString,
+                  score = completedSession.calculateScore,
+                  totalQuestions = completedSession.questions.length,
+                  correctAnswers = correctAnswers,  // Use the actual count of correct answers
+                  questions = quizQuestions,
+                  userAnswers = completedSession.userAnswers
+                )
+                
+                // Add total stats to summary
+                val totalStats = s"\nTotal Questions Answered: $totalQuestions\nTotal Correct Answers: $totalCorrectAnswers"
+                val finalSummary = summary + totalStats
+                
+                // For quiz summary, use only the target language if set
+                val translatedSummary = userPreferences match {
+                  case Some(prefs) if targetLanguageExplicitlySet =>
+                    ChatbotCore.translateText(finalSummary, prefs.targetLanguage)
+                  case Some(prefs) if motherLanguageExplicitlySet =>
+                    ChatbotCore.translateText(finalSummary, prefs.motherLanguage)
+                  case _ => finalSummary
+                }
+                
+                println(s"\nBot: $translatedSummary")
               }
-              
-              println(s"\nBot: $translatedSummary")
-              
-              // Log the completed quiz
-              AnalyticsDashboard.logQuizInteraction(completedSession)
               
               // Reset quiz mode
               inQuizMode = false
@@ -468,6 +724,7 @@ object Main extends App {
     println(s"- ${translateToMotherLang("set target language")} [${translateToMotherLang("language")}]: ${translateToMotherLang("Set the language you want to learn")}")
     println(s"- ${translateToMotherLang("set difficulty")} [${translateToMotherLang("level")}]: ${translateToMotherLang("Set the difficulty level")}")
     println(s"- ${translateToMotherLang("analytics")}: ${translateToMotherLang("View your learning progress and statistics")}")
+    println(s"- ${translateToMotherLang("history")}: ${translateToMotherLang("View your interaction history")}")
     println(s"- ${translateToMotherLang("help")}: ${translateToMotherLang("Show this help message")}")
     println(s"- ${translateToMotherLang("exit")}: ${translateToMotherLang("Close the application")}")
     
@@ -700,7 +957,7 @@ object Main extends App {
           if (prefs.targetLanguage == prefs.motherLanguage) {
             targetLangResponse
           } else {
-            s"$targetLangResponse\n(${languageToString(prefs.motherLanguage)}): $motherLangResponse"
+            s"(${languageToString(prefs.motherLanguage)}): $motherLangResponse\n$targetLangResponse"
           }
         }
       

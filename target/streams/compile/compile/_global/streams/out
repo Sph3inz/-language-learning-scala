@@ -1,0 +1,5 @@
+[0m[[0m[33mwarn[0m] [0m[0mD:\chatbot\-language-learning-scala\src\main\scala\Main.scala:136:5: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Some(_)[0m
+[0m[[0m[33mwarn[0m] [0m[0m    currentUser match {[0m
+[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

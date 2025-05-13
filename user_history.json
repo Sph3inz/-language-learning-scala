@@ -1,0 +1,1266 @@
+[{
+  "email": "mazen",
+  "interactions": [{
+    "category": "quiz",
+    "id": "d3db69bb-61d5-4239-beb4-3c9041bef028",
+    "question": "Quiz Question 1: Which famous museum is located in Paris?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747158304748,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "698cd64c-1e44-4057-b198-2e84e2eb2432",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747158303648,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e53cbdbf-d926-41db-9f4a-3f3ca370f961",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1747158303585,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "90dfe180-e9f5-4356-b8f1-60205e22c56e",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747158263496,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "efd270dd-8989-440f-9185-a6610f561cc1",
+    "question": "hlep",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747158259503,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "9c858718-b31d-4b4e-8001-060d2c19ec3b",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747158252215,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "a0a3b13e-034e-4a07-9942-a9384764df40",
+    "question": "What type of quiz would you like to take?",
+    "response": "help",
+    "timestamp": 1747158252201,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "51daea19-6c82-4d1c-bf91-7c4156bf667b",
+    "question": "set target langauge german",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747158065620,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "6c4a5829-9244-4e26-b88d-dac1eabc4dee",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747157855356,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "265af891-6b7d-4835-a68c-f282a6b7577a",
+    "question": "What type of quiz would you like to take?",
+    "response": "grammar",
+    "timestamp": 1747157855301,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "451e14cc-00c9-4752-b670-c3eb7dbc8695",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747157841160,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "def83745-8789-487d-95c9-adb2196f009b",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747157817362,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "6e38e74b-2f3e-42da-8881-40486bc81eb0",
+    "question": "exix",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747157355280,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c1fc948d-60a6-4f21-97f2-ed8d32ba6f31",
+    "question": "Quiz Question 1: What color is the Spanish flag?",
+    "response": "Answer: quit, Feedback: That's not correct. The correct answer is: Red and yellow",
+    "timestamp": 1747040601007,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b881b927-5bc9-45c2-805b-997a8eeeaf6b",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747040592933,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "2abebef8-c1a5-47ed-9dad-6eca97f08820",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1747040592929,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "5e77e259-b6fe-4f21-ae59-4ea731f5b1ab",
+    "question": "mcq",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747040586224,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "c2e014c5-357d-40ea-94d5-fba7055a6b76",
+    "question": "vocabulary",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747040582711,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "a3edf6f3-cff7-4959-9f20-78b937f3381f",
+    "question": "grammar",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747040568165,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "90bbc2d7-70c7-4fbb-ad0c-a907b69c7ab5",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747040561402,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "1113475f-2213-4c9e-8f2a-ec9ae41831df",
+    "question": "What type of quiz would you like to take?",
+    "response": "grammer",
+    "timestamp": 1747040561398,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "b522a541-12ef-4b91-b7d3-35cea5d9f276",
+    "question": "1",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747040551316,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz_request",
+    "id": "f46461a7-f154-468d-86dd-e32fc3133796",
+    "question": "can you giveanother quiz",
+    "response": "I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction",
+    "timestamp": 1747040546237,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8097b059-b7f0-4a57-8200-465a9af79350",
+    "question": "Quiz Question 5: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747040535819,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "bd07dedf-9b3f-4d08-ba55-60990c9a9e57",
+    "question": "Quiz Question 4: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: Joan Mr, Feedback: That's not correct. The correct answer is: Pablo Picasso",
+    "timestamp": 1747040509425,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "cfd58a63-2d83-4984-882f-62847db463d2",
+    "question": "Quiz Question 3: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747040501061,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c78984ff-eed8-4595-80c1-e00d69b65c61",
+    "question": "Quiz Question 2: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747040497849,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c45bb191-ccd5-4ad4-a141-55f26c5c96f4",
+    "question": "Quiz Question 1: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: easter, Feedback: That's not correct. The correct answer is: New Year's Eve",
+    "timestamp": 1747040495611,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "fec997ef-a4ac-4122-8316-01b42576c315",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747040379181,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "846ef032-e19d-4d6d-84c5-94e228557d1b",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1747040379126,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz_request",
+    "id": "d7d40cd4-8718-4ab0-a6fe-1d0c93a3caa7",
+    "question": "i want to take correction quiz",
+    "response": "I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction",
+    "timestamp": 1747040352388,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz_request",
+    "id": "22aa73a4-4e48-41ed-8d06-464d7f4616df",
+    "question": "i want to take a quiz",
+    "response": "I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction",
+    "timestamp": 1747040288177,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "5abc3c57-a06b-4644-b034-e163eb493818",
+    "question": "i want to learn",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1747040261407,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "304217e7-c9d0-4e42-9a07-7eb4ff4c53ac",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747040248735,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "ce08d467-54f5-474f-a0ba-5b4a58b1c633",
+    "question": "set target langauge drench",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747039250363,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "363a3666-e108-439a-8404-e47a9f0f04b7",
+    "question": "set mother langauge french",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747039165394,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c89ef31f-e331-4113-b455-189229fbf4e7",
+    "question": "Quiz Question 5: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900285124,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "4fc751a3-2790-4618-a83f-ddb3d73b4e66",
+    "question": "Quiz Question 4: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900284717,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "6ace25c5-5ff1-47f1-bda0-7b85434822f6",
+    "question": "Quiz Question 3: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900284157,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "3f345c81-0001-4f91-8a73-71178749dcad",
+    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900283889,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e8aa0247-a666-49f1-ac95-90058a69857c",
+    "question": "Quiz Question 1: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900283547,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "58eb860c-861a-453b-af96-75ba09249e27",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900281242,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e20707fe-18d9-40a0-986a-376048a44863",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900281237,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "ddfd1e32-d85c-4821-bca4-3669de43a505",
+    "question": "Quiz Question 5: What color is the Spanish flag?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900269541,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "ff1df452-86e5-4655-9305-69dfe2477fdf",
+    "question": "Quiz Question 4: Which of these is a traditional Spanish dance?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900269117,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7000aa3a-c623-4ddf-87ec-59414b38d038",
+    "question": "Quiz Question 3: What is the traditional Spanish midday rest called?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900268611,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "84f3132d-15c4-4fec-9ad4-f18e6a4c0722",
+    "question": "Quiz Question 2: What is the currency used in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900268163,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "30d971cd-074b-47d4-b5ac-983d12487815",
+    "question": "Quiz Question 1: What time do Spaniards typically eat dinner?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900267613,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "848f891e-e641-4972-b18d-ea5e84ea5124",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900266117,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "0cdec352-9037-4639-a877-6d6f94044f99",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900266055,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "a0aab5dd-cbc6-4af0-8134-960c7b28d421",
+    "question": "Quiz Question 5: Which preposition completes: 'Hablo ___ mi amigo'?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: con",
+    "timestamp": 1746900033943,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7e5eb89e-9250-4a03-a993-066a7dc2b682",
+    "question": "Quiz Question 4: Which preposition completes: 'Vivo ___ España'?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: en",
+    "timestamp": 1746900033545,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "9346939e-64b8-4ec1-8d7b-f07d8a0a3643",
+    "question": "Quiz Question 3: Which preposition completes: 'Voy ___ Madrid'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900032480,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "336448d2-bfa2-483d-be1c-eb84bacbae73",
+    "question": "Quiz Question 2: Which preposition completes: 'Viajo ___ tren'?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: en",
+    "timestamp": 1746900030999,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "be9ac6e0-0af5-40ca-9e6f-610f06a4afe0",
+    "question": "Quiz Question 1: Which preposition completes: 'El libro es ___ Juan'?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: de",
+    "timestamp": 1746900030652,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f77ca6b5-2428-44cb-ae32-4a177ea3f862",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900029916,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "057e0502-1f5d-467f-a153-2b8cf18e9269",
+    "question": "What type of quiz would you like to take?",
+    "response": "grammar",
+    "timestamp": 1746900029908,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c13fe6f4-69f0-44bb-86ad-6f3e027f07d1",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900007591,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "3eaa03e7-245b-437e-bdf7-9b3ef99e42f2",
+    "question": "Quiz Question 4: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900005154,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "55e27a5c-10cb-452b-96dd-bc967fd745eb",
+    "question": "Quiz Question 3: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900004580,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5f39327c-8ba0-4fe8-99f4-27d2f5bb529f",
+    "question": "Quiz Question 2: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900003974,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7419a1db-cf1b-4387-909e-06ac6ce9b0b4",
+    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900002487,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "10edc48a-a467-4f2c-ac49-5e9ef437d623",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746899998185,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b49e54b2-67e4-411f-b7a4-2a00fd6a608b",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746899998104,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "aa261d82-471d-405e-a578-4f4c0d2487cd",
+    "question": "a",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746898565349,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "0da9a899-8a4f-4057-bf14-c1aab96d2d92",
+    "question": "Quiz Question 5: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898564624,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "bc03c8a0-4a21-45b4-b7b6-a2427a100f04",
+    "question": "Quiz Question 4: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898563887,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "ec9ac5ef-b49a-42f2-9be1-21f675340c76",
+    "question": "Quiz Question 3: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898563490,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "9450d6cf-9ea7-4a65-b974-0c425600f6ad",
+    "question": "Quiz Question 2: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898563189,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "37758ed9-7cfd-4488-adae-f619176a1583",
+    "question": "Quiz Question 1: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898562384,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "95247731-d95b-4195-8b0c-ff914e0ef9a2",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746898540091,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "6b55f358-b059-4f60-a00c-1c09b5f7696f",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746898540086,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "387ee90b-550e-4abd-98ce-90d1b23df112",
+    "question": "a",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746898368511,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5195ed7e-f88a-467e-bc4a-e5a03f1b2c6e",
+    "question": "Quiz Question 5: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898368317,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "cf56cf2b-3473-4232-9740-659fca5dd0c6",
+    "question": "Quiz Question 4: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898368109,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f2208693-4f00-47c1-a34b-36998a248eb2",
+    "question": "Quiz Question 3: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898367898,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f29bbe32-da9d-4a9a-939a-309b59cd070b",
+    "question": "Quiz Question 2: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898367669,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "dd4b0614-51e2-4214-b3e0-d6f47fca14d0",
+    "question": "Quiz Question 1: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746898366482,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5420f234-f7ab-4b51-b98c-cfb2d80c0106",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746898364679,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7cecd8fe-b4f0-4709-a02d-1a0cd3663ace",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746898364636,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "80fd81b7-889a-4f67-a8fd-589894f909dc",
+    "question": "set target english",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1746898360555,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "6e99fe3f-85f7-4906-a3c9-8eaf44dfa2f9",
+    "question": "",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746898294030,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "75e5c4ec-fb4b-4949-8925-e2882cc49976",
+    "question": "set mother laungauge english",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1746898283635,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "98bc2f2f-c71c-40dc-a8ff-2836dd5dd4e3",
+    "question": "elp",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746898259769,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "2c24aad7-2990-42c9-a43e-18606cb7562c",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746898029531,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "e2431fb1-3785-4b49-a297-450aef588cc4",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746898020611,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "647d75c9-e720-4ad2-8d46-3d7d9c2008b1",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746889205089,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "34e85455-0d45-4134-8d6a-692d01457c41",
+    "question": "mcq",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746889199054,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "647a7c28-6c5a-421c-981e-5138c2f003c7",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746889066770,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "c15349d3-fde4-4db6-a956-f77dac2f8198",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1746889053385,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "db661e33-928a-47de-9f34-621665f7da31",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746889046283,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "462cd87d-e081-46a5-aefa-3c56468e2a51",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1746889036482,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "2066589d-aac8-49c6-b7cd-af1c0be15468",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1746889034010,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "24a53b5f-da3e-49c4-ae5b-369d3219876d",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746889027486,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }],
+  "quizResults": [{
+    "correctAnswers": 3,
+    "id": "581c3b4e-defe-4106-b012-0a362dc014f5",
+    "questions": [{
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": false,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "easter"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": false,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Joan Mr"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }],
+    "quizType": "MCQ",
+    "score": 3.0,
+    "timestamp": 1747040535827,
+    "totalQuestions": 5,
+    "userAnswers": ["easter", "Real Madrid", "Paella", "Joan Mr", "Madrid"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
+    "id": "8d7fbb46-30d3-4eb7-8653-e60089aa9856",
+    "questions": [{
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900285128,
+    "totalQuestions": 5,
+    "userAnswers": ["Eagle", "Mallorca", "Ebro", "Pamplona", "Pyrenees"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
+    "id": "9288feeb-b3a7-4be9-ae95-a5e800fa83ed",
+    "questions": [{
+      "correctAnswer": "9-10 PM",
+      "isCorrect": true,
+      "question": "What time do Spaniards typically eat dinner?",
+      "userAnswer": "9-10 PM"
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in Spain?",
+      "userAnswer": "Euro"
+    }, {
+      "correctAnswer": "Siesta",
+      "isCorrect": true,
+      "question": "What is the traditional Spanish midday rest called?",
+      "userAnswer": "Siesta"
+    }, {
+      "correctAnswer": "Flamenco",
+      "isCorrect": true,
+      "question": "Which of these is a traditional Spanish dance?",
+      "userAnswer": "Flamenco"
+    }, {
+      "correctAnswer": "Red and yellow",
+      "isCorrect": true,
+      "question": "What color is the Spanish flag?",
+      "userAnswer": "Red and yellow"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900269548,
+    "totalQuestions": 5,
+    "userAnswers": ["9-10 PM", "Euro", "Siesta", "Flamenco", "Red and yellow"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 1,
+    "id": "bb5ea3a4-8476-479d-b79a-3c9c1e7285a5",
+    "questions": [{
+      "correctAnswer": "de",
+      "isCorrect": false,
+      "question": "Which preposition completes: 'El libro es ___ Juan'?",
+      "userAnswer": "a"
+    }, {
+      "correctAnswer": "en",
+      "isCorrect": false,
+      "question": "Which preposition completes: 'Viajo ___ tren'?",
+      "userAnswer": "a"
+    }, {
+      "correctAnswer": "a",
+      "isCorrect": true,
+      "question": "Which preposition completes: 'Voy ___ Madrid'?",
+      "userAnswer": "a"
+    }, {
+      "correctAnswer": "en",
+      "isCorrect": false,
+      "question": "Which preposition completes: 'Vivo ___ España'?",
+      "userAnswer": "a"
+    }, {
+      "correctAnswer": "con",
+      "isCorrect": false,
+      "question": "Which preposition completes: 'Hablo ___ mi amigo'?",
+      "userAnswer": "a"
+    }],
+    "quizType": "Grammar",
+    "score": 1.0,
+    "timestamp": 1746900033948,
+    "totalQuestions": 5,
+    "userAnswers": ["a", "a", "a", "a", "a"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
+    "id": "764b9f8e-d1ee-4304-a3cb-1620aa5d091a",
+    "questions": [{
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900007598,
+    "totalQuestions": 5,
+    "userAnswers": ["Pablo Picasso", "Madrid", "Paella", "New Year's Eve", "Real Madrid"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 1,
+    "id": "900e8e40-7435-4e12-a59b-ecbe758490c9",
+    "questions": [{
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }, {
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746898564628,
+    "totalQuestions": 5,
+    "userAnswers": ["Pamplona", "Pyrenees", "Ebro", "Mallorca", "Eagle"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 1,
+    "id": "4b32b14b-a143-4ed4-a07b-5a87767648b0",
+    "questions": [{
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746898368325,
+    "totalQuestions": 5,
+    "userAnswers": ["Mallorca", "Pyrenees", "Pamplona", "Eagle", "Ebro"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }],
+  "userId": "fb3f2991-2a99-4217-838a-71013cf35465",
+  "username": "mazen"
+}, {
+  "email": "ramez",
+  "interactions": [{
+    "category": "quiz",
+    "id": "2d41dcee-31b9-49ef-afc8-c801bc2e4760",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: Real Madrid",
+    "timestamp": 1746900489362,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ccd9b9c7-326b-4606-8115-6e1f896d6c89",
+    "question": "Quiz Question 4: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488990,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "52e3dd65-af09-46d6-b6e8-9faa1a37f890",
+    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488402,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "fe6ee49b-4f80-400f-a34f-04f5c2c7aaa4",
+    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488002,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "3b1720bf-34ab-4945-8158-ca48a8fc0eed",
+    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900487630,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "8a101fa8-1ca7-41b8-a973-df3de656ec84",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900486242,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ff986b31-7931-49d0-bec3-34314fa1440c",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900486237,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "unknown",
+    "id": "b7c64f3a-f82d-4632-acfb-d2d2cfa22075",
+    "question": "mcq",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746900482800,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "1db68540-be8e-4fb3-87a9-166e59b094da",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900478407,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "310ca165-c4fe-4b2c-bf05-e71237618c5a",
+    "question": "Quiz Question 4: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900477841,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "bf60af64-5b53-48d7-913e-cc8cf11514a9",
+    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900477395,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "c21fde75-c3e4-4a0b-ae99-75bacd5236b7",
+    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900476972,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "aecb3d0d-7028-4391-9db5-b59fec6b9b92",
+    "question": "Quiz Question 1: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900476651,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "2aac629f-d088-4e83-ab26-adbecf1dc1ae",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900476052,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "7175abf7-6707-4ff8-89be-00647eef2a56",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900476047,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "cab45f5e-8c50-4f59-ac9e-f316bda7cde2",
+    "question": "Quiz Question 5: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900466011,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ff4aa1f3-9afb-4c15-a0ef-5359d6f4fc3c",
+    "question": "Quiz Question 4: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900465547,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "7449964f-1c80-44d9-b723-630f447d6a71",
+    "question": "Quiz Question 3: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900465162,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "586d9634-2890-438e-b7ca-e77eed2073bb",
+    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900464829,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "fb03cad2-f130-4e13-a394-4284ca4ebff0",
+    "question": "Quiz Question 1: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900464499,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "4241cfab-4c42-4b3a-b091-8e9d293ba3cc",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900463283,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "60c4cf00-7615-4a94-b973-443659059972",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900463219,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "unknown",
+    "id": "93694544-7ccf-4c0d-b9dc-caa4a757bfe1",
+    "question": "sss",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746888774448,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "system",
+    "id": "83444530-eecc-4427-9c6b-0ab7e5ca1021",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746888772357,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "system",
+    "id": "29662a70-a516-481c-aeb1-930ef7b06bc6",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746888638046,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }],
+  "quizResults": [{
+    "correctAnswers": 4,
+    "id": "0d373864-df04-4280-8e3b-ff97e4f7b735",
+    "questions": [{
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": false,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": ""
+    }],
+    "quizType": "MCQ",
+    "score": 4.0,
+    "timestamp": 1746900489366,
+    "totalQuestions": 5,
+    "userAnswers": ["Pablo Picasso", "Paella", "Madrid", "New Year's Eve", ""],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 5,
+    "id": "fafe6a1c-f530-4f95-9e6e-b21df7e336ba",
+    "questions": [{
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900478411,
+    "totalQuestions": 5,
+    "userAnswers": ["New Year's Eve", "Paella", "Madrid", "Pablo Picasso", "Real Madrid"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 5,
+    "id": "65f7eb6e-84e7-411d-9ce5-2acda698279b",
+    "questions": [{
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900466019,
+    "totalQuestions": 5,
+    "userAnswers": ["Pyrenees", "Mallorca", "Eagle", "Ebro", "Pamplona"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 1,
+    "id": "9685ae91-fd6c-4f38-81e4-e1c18d977847",
+    "questions": [{
+      "correctAnswer": "hablo",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'hablar' (yo)?",
+      "userAnswer": "hablo"
+    }, {
+      "correctAnswer": "comes",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'comer' (tú)?",
+      "userAnswer": "comes"
+    }, {
+      "correctAnswer": "van",
+      "isCorrect": true,
+      "question": "What is the correct present tense for 'ir' (ellos)?",
+      "userAnswer": "van"
+    }, {
+      "correctAnswer": "somos",
+      "isCorrect": true,
+      "question": "What is the correct present tense for 'ser' (nosotros)?",
+      "userAnswer": "somos"
+    }, {
+      "correctAnswer": "vive",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'vivir' (él)?",
+      "userAnswer": "vive"
+    }],
+    "quizType": "Grammar",
+    "score": 5.0,
+    "timestamp": 1746888856146,
+    "totalQuestions": 5,
+    "userAnswers": ["hablo", "comes", "van", "somos", "vive"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 1,
+    "id": "655f14b0-bc73-47fe-bd51-a797dd5d5cd7",
+    "questions": [{
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746888827725,
+    "totalQuestions": 5,
+    "userAnswers": ["Mallorca", "Pyrenees", "Eagle", "Pamplona", "Ebro"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }],
+  "userId": "083fa50b-dc29-4076-bc73-53b325339d62",
+  "username": "mazen"
+}]

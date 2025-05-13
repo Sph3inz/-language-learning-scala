@@ -1,6 +1,7 @@
 package languagelearningbot
 
 import scala.util.matching.Regex
+import models.User
 
 object ChatbotCore {
   // Required core chatbot functions as specified in the requirements
@@ -8,16 +9,17 @@ object ChatbotCore {
   /**
    * Returns an initial greeting based on user preferences if any
    */
-  def greetUser(preferences: Option[UserPreferences] = None): String = {
+  def greetUser(preferences: Option[UserPreferences] = None, currentUser: Option[User] = None): String = {
+    val userGreeting = currentUser match {
+      case Some(user) => s"Hello, ${user.username}!"
+      case None => "Hello!"
+    }
+    
     preferences match {
-      case Some(prefs) => prefs.targetLanguage match {
-        case English => "Hello! Welcome to the Language Learning Bot. How can I help you today?"
-        case Spanish => "¡Hola! Bienvenido al Bot de Aprendizaje de Idiomas. ¿Cómo puedo ayudarte hoy?"
-        case French => "Bonjour! Bienvenue sur le Bot d'Apprentissage des Langues. Comment puis-je vous aider aujourd'hui?"
-        case German => "Hallo! Willkommen beim Sprachlern-Bot. Wie kann ich Ihnen heute helfen?"
-        case Arabic => "مرحبًا! مرحبًا بك في روبوت تعلم اللغة. كيف يمكنني مساعدتك اليوم؟"
-      }
-      case None => "Welcome to the Language Learning Bot! Please set your preferred language to get started."
+      case Some(prefs) => 
+        val welcomeMessage = "Welcome to the Language Learning Bot. How can I help you today?"
+        s"$userGreeting ${translateText(welcomeMessage, prefs.targetLanguage)}"
+      case None => s"$userGreeting Welcome to the Language Learning Bot! Please set your preferred language to get started."
     }
   }
   
@@ -31,61 +33,92 @@ object ChatbotCore {
   /**
    * Categorizes and processes the user query via pattern matching
    */
-  def handleUserInput(input: String, preferences: Option[UserPreferences] = None): String = {
+  def handleUserInput(input: String, preferences: Option[UserPreferences] = None, currentUser: Option[User] = None): String = {
     val tokens = parseInput(input)
     
     // Pattern matching on input tokens to determine intent
     tokens match {
       case x if isGreeting(x) => 
-        generateResponse("greeting", preferences)
+        generateResponse("greeting", preferences, currentUser)
       
       case x if isQuizRequest(x) =>
-        generateResponse("quiz_request", preferences)
+        generateResponse("quiz_request", preferences, currentUser)
       
       case x if isSettingsChange(x) =>
-        generateResponse("settings", preferences)
+        generateResponse("settings", preferences, currentUser)
       
       case x if isHelp(x) =>
-        generateResponse("help", preferences)
+        generateResponse("help", preferences, currentUser)
         
       case x if isLanguageQuestion(x) =>
-        generateResponse("language_question", preferences)
+        generateResponse("language_question", preferences, currentUser)
         
       case _ => 
-        generateResponse("unknown", preferences)
+        generateResponse("unknown", preferences, currentUser)
     }
   }
   
   /**
    * Crafts a well-structured response based on the query category
    */
-  def generateResponse(category: String, preferences: Option[UserPreferences] = None): String = {
+  def generateResponse(category: String, preferences: Option[UserPreferences] = None, currentUser: Option[User] = None): String = {
     // Get base response in English
     val baseResponse = category match {
       case "greeting" => 
-        "Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?"
+        currentUser match {
+          case Some(user) =>
+            s"Hello, ${user.username}! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?"
+          case None =>
+            "Hello! I'm your Language Learning Bot. Please sign in or continue as guest to get started."
+        }
       
       case "quiz_request" => 
-        "I'd be happy to start a quiz! What type would you prefer? We offer:\n" +
-        "1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction"
+        currentUser match {
+          case Some(_) =>
+            "I'd be happy to start a quiz! What type would you prefer? We offer:\n" +
+            "1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction"
+          case None =>
+            "Please sign in or continue as guest to start a quiz."
+        }
       
       case "settings" => 
-        "You can change your settings for:\n" +
-        "- Mother language\n- Target language\n- Difficulty level\n" +
-        "What would you like to update?"
+        currentUser match {
+          case Some(user) =>
+            "You can change your settings for:\n" +
+            "- Mother language\n- Target language\n- Difficulty level\n" +
+            "What would you like to update?"
+          case None =>
+            "Please sign in or continue as guest to access settings."
+        }
       
       case "help" => 
-        "I'm here to help you learn languages! You can:\n" +
-        "- Start a quiz by typing 'quiz'\n" +
-        "- Change settings with 'settings'\n" +
-        "- View your progress with 'analytics'\n" +
-        "- Ask language questions directly"
+        currentUser match {
+          case Some(_) =>
+            "I'm here to help you learn languages! You can:\n" +
+            "- Start a quiz by typing 'quiz'\n" +
+            "- Change settings with 'settings'\n" +
+            "- View your progress with 'analytics'\n" +
+            "- Ask language questions directly\n" +
+            "- Type 'logout' to sign out"
+          case None =>
+            "Please sign in or continue as guest to access the language learning features."
+        }
         
       case "language_question" =>
-        "I'd be happy to help with your language question. Could you be more specific?"
+        currentUser match {
+          case Some(_) =>
+            "I'd be happy to help with your language question. Could you be more specific?"
+          case None =>
+            "Please sign in or continue as guest to ask language questions."
+        }
       
       case "unknown" => 
-        "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question."
+        currentUser match {
+          case Some(_) =>
+            "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question."
+          case None =>
+            "Please sign in or continue as guest to use the language learning features."
+        }
     }
     
     // Return the base response (will be translated later in formatDualLanguageResponse)
@@ -186,11 +219,17 @@ object ChatbotCore {
         // Greetings
         ("Hello", "English") -> "Hello",
         ("Hello", "Spanish") -> "¡Hola!",
-        ("Hello", "French") -> "Bonjour!",
+        ("Hello", "French") -> "Bonjour !",
         ("Hello", "German") -> "Hallo!",
-        ("Hello", "Arabic") -> "مرحبا!",
+        ("Hello", "Arabic") -> "مرحباً!",
         
         // Common phrases
+        ("Type 'help' for available commands.", "English") -> "Type 'help' for available commands.",
+        ("Type 'help' for available commands.", "Spanish") -> "Escribe 'help' para ver los comandos disponibles.",
+        ("Type 'help' for available commands.", "French") -> "Tapez 'help' pour voir les commandes disponibles.",
+        ("Type 'help' for available commands.", "German") -> "Geben Sie 'help' ein, um verfügbare Befehle zu sehen.",
+        ("Type 'help' for available commands.", "Arabic") -> "اكتب 'help' لرؤية الأوامر المتاحة.",
+        
         ("I'm here to help you learn languages", "English") -> "I'm here to help you learn languages",
         ("I'm here to help you learn languages", "Spanish") -> "Estoy aquí para ayudarte a aprender idiomas",
         ("I'm here to help you learn languages", "French") -> "Je suis là pour vous aider à apprendre des langues",
@@ -199,8 +238,8 @@ object ChatbotCore {
         
         ("What would you like to do today?", "English") -> "What would you like to do today?",
         ("What would you like to do today?", "Spanish") -> "¿Qué te gustaría hacer hoy?",
-        ("What would you like to do today?", "French") -> "Que voulez-vous faire aujourd'hui?",
-        ("What would you like to do today?", "German") -> "Was möchten Sie heute tun?",
+        ("What would you like to do today?", "French") -> "Que souhaitez-vous faire aujourd'hui ?",
+        ("What would you like to do today?", "German") -> "Was möchten Sie heute machen?",
         ("What would you like to do today?", "Arabic") -> "ماذا تريد أن تفعل اليوم؟",
         
         // Greeting responses
@@ -209,45 +248,45 @@ object ChatbotCore {
         ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "Spanish") -> 
           "¡Hola! Soy tu Bot de Aprendizaje de Idiomas. ¿Te gustaría practicar vocabulario, gramática o comenzar un cuestionario?",
         ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "French") -> 
-          "Bonjour! Je suis votre Bot d'Apprentissage des Langues. Voulez-vous pratiquer le vocabulaire, la grammaire ou commencer un quiz?",
+          "Bonjour ! Je suis votre Bot d'Apprentissage des Langues. Souhaitez-vous pratiquer le vocabulaire, la grammaire ou commencer un quiz ?",
         ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "German") -> 
           "Hallo! Ich bin Ihr Sprachlern-Bot. Möchten Sie Vokabeln üben, Grammatik lernen oder ein Quiz starten?",
         ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "Arabic") -> 
-          "مرحبًا! أنا روبوت تعلم اللغة الخاص بك. هل ترغب في ممارسة المفردات أو القواعد أو بدء اختبار؟",
+          "مرحباً! أنا روبوت تعلم اللغات الخاص بك. هل ترغب في ممارسة المفردات أو القواعد أو بدء اختبار؟",
         
         // Other common responses
         ("I'd be happy to help with your language question. Could you be more specific?", "English") -> 
           "I'd be happy to help with your language question. Could you be more specific?",
         ("I'd be happy to help with your language question. Could you be more specific?", "Spanish") -> 
-          "Estaría encantado de ayudarte con tu pregunta sobre idiomas. ¿Podrías ser más específico?",
+          "Con gusto te ayudo con tu pregunta sobre idiomas. ¿Podrías ser más específico?",
         ("I'd be happy to help with your language question. Could you be more specific?", "French") -> 
-          "Je serais ravi de vous aider avec votre question linguistique. Pourriez-vous être plus précis?",
+          "Je serais ravi de vous aider avec votre question linguistique. Pourriez-vous être plus précis ?",
         ("I'd be happy to help with your language question. Could you be more specific?", "German") -> 
-          "Ich helfe Ihnen gerne bei Ihrer Sprachfrage. Könnten Sie etwas genauer sein?",
+          "Ich helfe Ihnen gerne bei Ihrer Sprachfrage. Könnten Sie das genauer erläutern?",
         ("I'd be happy to help with your language question. Could you be more specific?", "Arabic") -> 
-          "سأكون سعيدًا بمساعدتك في سؤالك عن اللغة. هل يمكن أن تكون أكثر تحديدًا؟",
+          "سأكون سعيداً بمساعدتك في سؤالك اللغوي. هل يمكنك أن تكون أكثر تحديداً؟",
         
         ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction", "English") -> 
           "I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction",
         ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction", "Spanish") -> 
-          "¡Me encantaría comenzar un cuestionario! ¿Qué tipo prefieres? Ofrecemos:\n1. Vocabulario\n2. Gramática\n3. Traducción\n4. Selección Múltiple\n5. Corrección",
+          "¡Con gusto comenzamos un cuestionario! ¿Qué tipo prefieres? Ofrecemos:\n1. Vocabulario\n2. Gramática\n3. Traducción\n4. Opción Múltiple\n5. Corrección",
         ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction", "French") -> 
-          "Je serais ravi de commencer un quiz! Quel type préférez-vous? Nous proposons:\n1. Vocabulaire\n2. Grammaire\n3. Traduction\n4. Choix Multiple\n5. Correction",
+          "Je serais ravi de commencer un quiz ! Quel type préférez-vous ? Nous proposons :\n1. Vocabulaire\n2. Grammaire\n3. Traduction\n4. Choix Multiple\n5. Correction",
         ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction", "German") -> 
-          "Ich würde gerne ein Quiz starten! Welchen Typ bevorzugen Sie? Wir bieten:\n1. Vokabeln\n2. Grammatik\n3. Übersetzung\n4. Multiple-Choice\n5. Korrektur",
+          "Ich starte gerne ein Quiz! Welchen Typ bevorzugen Sie? Wir bieten:\n1. Vokabeln\n2. Grammatik\n3. Übersetzung\n4. Multiple-Choice\n5. Korrektur",
         ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice\n5. Correction", "Arabic") -> 
-          "سأكون سعيدًا ببدء اختبار! ما هو النوع الذي تفضله؟ نحن نقدم:\n1. المفردات\n2. القواعد\n3. الترجمة\n4. الاختيار من متعدد\n5. التصحيح",
+          "سأكون سعيداً ببدء اختبار! ما هو النوع الذي تفضله؟ نقدم:\n1. المفردات\n2. القواعد\n3. الترجمة\n4. اختيار من متعدد\n5. التصحيح",
         
         ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "English") -> 
           "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
         ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "Spanish") -> 
-          "Puedes cambiar tu configuración para:\n- Idioma materno\n- Idioma objetivo\n- Nivel de dificultad\n¿Qué te gustaría actualizar?",
+          "Puedes modificar tu configuración para:\n- Idioma materno\n- Idioma objetivo\n- Nivel de dificultad\n¿Qué te gustaría actualizar?",
         ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "French") -> 
-          "Vous pouvez modifier vos paramètres pour:\n- Langue maternelle\n- Langue cible\n- Niveau de difficulté\nQue souhaitez-vous mettre à jour?",
+          "Vous pouvez modifier vos paramètres pour :\n- Langue maternelle\n- Langue cible\n- Niveau de difficulté\nQue souhaitez-vous mettre à jour ?",
         ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "German") -> 
           "Sie können Ihre Einstellungen ändern für:\n- Muttersprache\n- Zielsprache\n- Schwierigkeitsgrad\nWas möchten Sie aktualisieren?",
         ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "Arabic") -> 
-          "يمكنك تغيير إعداداتك لـ:\n- اللغة الأم\n- اللغة الهدف\n- مستوى الصعوبة\nماذا تريد أن تحدث؟",
+          "يمكنك تغيير إعداداتك لـ:\n- اللغة الأم\n- اللغة الهدف\n- مستوى الصعوبة\nماذا تريد تحديثه؟",
 
         // Quiz-related translations
         ("What type of quiz would you like to take?", "English") -> 
@@ -255,7 +294,7 @@ object ChatbotCore {
         ("What type of quiz would you like to take?", "Spanish") -> 
           "¿Qué tipo de cuestionario te gustaría realizar?",
         ("What type of quiz would you like to take?", "French") -> 
-          "Quel type de quiz aimeriez-vous passer?",
+          "Quel type de quiz souhaitez-vous passer ?",
         ("What type of quiz would you like to take?", "German") -> 
           "Welche Art von Quiz möchten Sie machen?",
         ("What type of quiz would you like to take?", "Arabic") -> 
@@ -266,11 +305,11 @@ object ChatbotCore {
         ("Available quiz types: vocabulary, grammar, translation, mcq", "Spanish") -> 
           "Tipos de cuestionarios disponibles: vocabulario, gramática, traducción, opción múltiple",
         ("Available quiz types: vocabulary, grammar, translation, mcq", "French") -> 
-          "Types de quiz disponibles: vocabulaire, grammaire, traduction, choix multiple",
+          "Types de quiz disponibles : vocabulaire, grammaire, traduction, choix multiple",
         ("Available quiz types: vocabulary, grammar, translation, mcq", "German") -> 
           "Verfügbare Quiz-Typen: Vokabeln, Grammatik, Übersetzung, Multiple-Choice",
         ("Available quiz types: vocabulary, grammar, translation, mcq", "Arabic") -> 
-          "أنواع الاختبارات المتاحة: مفردات، قواعد، ترجمة، اختيار من متعدد، تصحيح",
+          "أنواع الاختبارات المتاحة: المفردات، القواعد، الترجمة، الاختيار من متعدد",
 
         ("Exiting quiz mode.", "English") -> 
           "Exiting quiz mode.",
@@ -336,26 +375,31 @@ object ChatbotCore {
         ("I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.", "German") -> 
           "Ich bin mir nicht sicher, ob ich verstehe. Versuchen Sie, nach Quiz zu fragen, Einstellungen zu ändern oder eine bestimmte Sprachfrage zu stellen.",
         ("I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.", "Arabic") -> 
-          "لست متأكدًا من فهمي. حاول السؤال عن الاختبارات أو تغيير الإعدادات أو طرح سؤال محدد حول اللغة.",
+          "لست متأكداً من فهمي. حاول السؤال عن الاختبارات أو تغيير الإعدادات أو طرح سؤال محدد حول اللغة.",
         
         // Settings messages
         ("Mother language set to", "English") -> "Mother language set to",
-        ("Mother language set to", "Spanish") -> "Idioma materno establecido a",
+        ("Mother language set to", "Spanish") -> "Idioma materno establecido en",
         ("Mother language set to", "French") -> "Langue maternelle définie sur",
         ("Mother language set to", "German") -> "Muttersprache festgelegt auf",
         ("Mother language set to", "Arabic") -> "تم تعيين اللغة الأم إلى",
         
         ("Target language set to", "English") -> "Target language set to",
-        ("Target language set to", "Spanish") -> "Idioma objetivo establecido a",
+        ("Target language set to", "Spanish") -> "Idioma objetivo establecido en",
         ("Target language set to", "French") -> "Langue cible définie sur",
         ("Target language set to", "German") -> "Zielsprache festgelegt auf",
         ("Target language set to", "Arabic") -> "تم تعيين اللغة الهدف إلى",
         
         ("Difficulty set to", "English") -> "Difficulty set to",
-        ("Difficulty set to", "Spanish") -> "Dificultad establecida en",
-        ("Difficulty set to", "French") -> "Difficulté définie sur",
+        ("Difficulty set to", "Spanish") -> "Nivel de dificultad establecido en",
+        ("Difficulty set to", "French") -> "Niveau de difficulté défini sur",
         ("Difficulty set to", "German") -> "Schwierigkeitsgrad festgelegt auf",
-        ("Difficulty set to", "Arabic") -> "تم تعيين مستوى الصعوبة إلى"
+        ("Difficulty set to", "Arabic") -> "تم تعيين مستوى الصعوبة إلى",
+
+        ("Welcome to the Language Learning Bot. How can I help you today?", "Spanish") -> "¡Bienvenido al Bot de Aprendizaje de Idiomas. ¿Cómo puedo ayudarte hoy?",
+        ("Welcome to the Language Learning Bot. How can I help you today?", "French") -> "Bienvenue sur le Bot d'Apprentissage des Langues. Comment puis-je vous aider aujourd'hui ?",
+        ("Welcome to the Language Learning Bot. How can I help you today?", "German") -> "Willkommen beim Sprachlern-Bot. Wie kann ich Ihnen heute helfen?",
+        ("Welcome to the Language Learning Bot. How can I help you today?", "Arabic") -> "مرحباً بك في روبوت تعلم اللغات. كيف يمكنني مساعدتك اليوم؟"
       )
       
       // Convert language to string for lookup
@@ -405,5 +449,19 @@ object ChatbotCore {
     
     // Get translation using the helper function
     getTranslation(text, targetLanguage)
+  }
+
+  /**
+   * Categorizes user input into a specific category
+   */
+  def categorizeInput(input: String): String = {
+    val tokens = parseInput(input)
+    
+    if (isGreeting(tokens)) "greeting"
+    else if (isQuizRequest(tokens)) "quiz_request"
+    else if (isSettingsChange(tokens)) "settings"
+    else if (isHelp(tokens)) "help"
+    else if (isLanguageQuestion(tokens)) "language_question"
+    else "unknown"
   }
 }
