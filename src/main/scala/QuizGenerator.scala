@@ -147,7 +147,7 @@ object QuizGenerator {
           Question("What is 'house' in Spanish?", List("casa", "apartamento", "edificio", "oficina"), "casa", Vocabulary),
           Question("What is 'table' in Spanish?", List("mesa", "silla", "cama", "sofá"), "mesa", Vocabulary),
           Question("What is 'door' in Spanish?", List("puerta", "ventana", "pared", "techo"), "puerta", Vocabulary),
-          Question("What is 'chair' in Spanish?", List("silla", "mesa", "sofá", "cama"), "silla", Vocabulary),
+          Question("What is 'cshair' in Spanish?", List("silla", "mesa", "sofá", "cama"), "silla", Vocabulary),
           Question("What is 'bed' in Spanish?", List("cama", "silla", "mesa", "sofá"), "cama", Vocabulary)
         ),
 
@@ -221,35 +221,7 @@ object QuizGenerator {
         )
       )
 
-      // Spanish vocabulary quizzes - Impossible difficulty (3 versions)
-      case (Spanish, Impossible, Vocabulary) => List(
-        // Version 1 - Philosophical terms
-        List(
-          Question("What is 'epistemology' in Spanish?", List("epistemología", "ontología", "metafísica", "lógica"), "epistemología", Vocabulary),
-          Question("What is 'existentialism' in Spanish?", List("existencialismo", "nihilismo", "empirismo", "racionalismo"), "existencialismo", Vocabulary),
-          Question("What is 'dialectic' in Spanish?", List("dialéctica", "metafísica", "lógica", "retórica"), "dialéctica", Vocabulary),
-          Question("What is 'hermeneutics' in Spanish?", List("hermenéutica", "semiótica", "fenomenología", "ontología"), "hermenéutica", Vocabulary),
-          Question("What is 'phenomenology' in Spanish?", List("fenomenología", "epistemología", "ontología", "existencialismo"), "fenomenología", Vocabulary)
-        ),
-
-        // Version 2 - Rare scientific terms
-        List(
-          Question("What is 'bioluminescence' in Spanish?", List("bioluminiscencia", "fotosíntesis", "quimioluminiscencia", "biofísica"), "bioluminiscencia", Vocabulary),
-          Question("What is 'quantum entanglement' in Spanish?", List("entrelazamiento cuántico", "dualidad onda-partícula", "superposición cuántica", "decoherencia cuántica"), "entrelazamiento cuántico", Vocabulary),
-          Question("What is 'neurotransmitter' in Spanish?", List("neurotransmisor", "neuroreceptor", "sinapsis", "axón"), "neurotransmisor", Vocabulary),
-          Question("What is 'nanotechnology' in Spanish?", List("nanotecnología", "biotecnología", "microtecnología", "femtotecnología"), "nanotecnología", Vocabulary),
-          Question("What is 'thermodynamics' in Spanish?", List("termodinámica", "física cuántica", "mecánica de fluidos", "física nuclear"), "termodinámica", Vocabulary)
-        ),
-
-        // Version 3 - Obscure linguistic terms
-        List(
-          Question("What is 'subjunctive mood' in Spanish?", List("modo subjuntivo", "modo indicativo", "modo imperativo", "modo condicional"), "modo subjuntivo", Vocabulary),
-          Question("What is 'lexicography' in Spanish?", List("lexicografía", "lexicología", "semántica", "etimología"), "lexicografía", Vocabulary),
-          Question("What is 'morphology' in Spanish?", List("morfología", "fonología", "sintaxis", "pragmática"), "morfología", Vocabulary),
-          Question("What is 'phonetics' in Spanish?", List("fonética", "fonología", "lingüística", "gramática"), "fonética", Vocabulary),
-          Question("What is 'syntax' in Spanish?", List("sintaxis", "semántica", "morfología", "fonología"), "sintaxis", Vocabulary)
-        )
-      )
+      // Spanish vocabulary quizzes - Impossible difficulty cases removed
 
       // French vocabulary quizzes - For each difficulty level (only one version for each as example)
       case (French, Easy, Vocabulary) => List(
@@ -353,34 +325,7 @@ object QuizGenerator {
       )
 
       // Spanish grammar quizzes - Impossible difficulty (3 versions)
-      case (Spanish, Impossible, Grammar) => List(
-        // Version 1 - Exceptional cases and irregularities
-        List(
-          Question("Identify the correct statement about 'se' in Spanish.", List("Can be reflexive, reciprocal, impersonal, or passive marker", "Only used as a direct object pronoun", "Only used with reflexive verbs", "Only used in formal contexts"), "Can be reflexive, reciprocal, impersonal, or passive marker", Grammar),
-          Question("Which is the correct archaic form of the second person plural imperative?", List("cantad", "cantáis", "cantéis", "cantarais"), "cantad", Grammar),
-          Question("What is the correct usage of leísmo?", List("Using 'le' instead of 'lo' for male direct objects", "Using 'lo' instead of 'le' for indirect objects", "Using 'les' instead of 'los' for plural objects", "Using 'le' for formal situations"), "Using 'le' instead of 'lo' for male direct objects", Grammar),
-          Question("What dialect feature is characterized by 'voseo'?", List("Using 'vos' instead of 'tú'", "Using 'ustedes' instead of 'vosotros'", "Using 'usted' instead of 'tú'", "Using 'vosotros' instead of 'ustedes'"), "Using 'vos' instead of 'tú'", Grammar),
-          Question("In which case would 'sino' be used instead of 'pero'?", List("When contradicting a negative statement", "When introducing an exception", "When providing an alternative", "When comparing two things"), "When contradicting a negative statement", Grammar)
-        ),
-        
-        // Version 2 - Literary and formal structures
-        List(
-          Question("What is the 'futuro de subjuntivo' used for in modern Spanish?", List("Legal or literary texts", "Everyday conversation", "Technical instructions", "Weather forecasts"), "Legal or literary texts", Grammar),
-          Question("Complete this literary phrase: 'Aquellos que ___ (oír) oigan'", List("tengan oídos", "tienen oídos", "tendrán oídos", "tuvieran oídos"), "tengan oídos", Grammar),
-          Question("Which literary tense is used in 'Cantara él con más ánimo'?", List("Imperfect subjunctive as a substitute for conditional", "Present subjunctive", "Future subjunctive", "Imperative"), "Imperfect subjunctive as a substitute for conditional", Grammar),
-          Question("What is the correct form for 'deber' indicating probability in the past?", List("debió de + infinitive", "debió + infinitive", "debía de + infinitive", "debiera + infinitive"), "debió de + infinitive", Grammar),
-          Question("Complete the academic phrase: 'Conforme a lo ___ (exponer) anteriormente'", List("expuesto", "exponido", "exponiendo", "exponido"), "expuesto", Grammar)
-        ),
-        
-        // Version 3 - Dialectal variations
-        List(
-          Question("Which form of 'you' plural is used in most of Latin America?", List("ustedes", "vosotros", "vos", "tú"), "ustedes", Grammar),
-          Question("How would 'tú tienes' be expressed using voseo?", List("vos tenés", "vos tienes", "tú tenés", "vos tenís"), "vos tenés", Grammar),
-          Question("Which Spanish dialect uses 'ustedes' with third-person plural forms?", List("All Latin American dialects", "Only Peninsular Spanish", "Only Caribbean Spanish", "Only Andean Spanish"), "All Latin American dialects", Grammar),
-          Question("In Rioplatense Spanish (Argentina), how would you say 'be quiet'?", List("callate", "cállate", "os calláis", "se calla"), "callate", Grammar),
-          Question("Which dialectal feature is common in Andalusian Spanish?", List("Dropping final 's' sounds", "Adding extra 's' sounds", "Using 'vos' instead of 'tú'", "Using 'vosotros' instead of 'ustedes'"), "Dropping final 's' sounds", Grammar)
-        )
-      )
+      
 
       // French grammar quizzes - Easy difficulty (3 versions)
       case (French, Easy, Grammar) => List(
@@ -471,6 +416,8 @@ object QuizGenerator {
           Question("Which is NOT a correct transformation in reported speech?", List("'Je' → 'tu' (always)", "'Maintenant' → 'alors'", "'Ici' → 'là'", "'Ce matin' → 'ce matin-là'"), "'Je' → 'tu' (always)", Grammar)
         )
       )
+
+      // French grammar quizzes - Impossible difficulty cases removed
 
       // French grammar quizzes - Impossible difficulty (3 versions)
       case (French, Impossible, Grammar) => List(
@@ -1316,35 +1263,35 @@ object QuizGenerator {
       
       // English MCQ quizzes - Hard difficulty (3 versions)
       case (English, Hard, MCQ) => List(
-        // Version 1 - Politics and government
+        // Version 1 - Perfect and progressive tenses
         List(
-          Question("How many chambers does the UK Parliament have?", List("Two", "One", "Three", "Four"), "Two", MCQ),
-          Question("What is the official title of the UK's Prime Minister?", List("First Lord of the Treasury", "Chief Executive Officer", "Head of State", "President of Parliament"), "First Lord of the Treasury", MCQ),
-          Question("How many constituencies are there in the UK (as of 2023)?", List("650", "500", "725", "850"), "650", MCQ),
-          Question("Which of these is NOT a major political party in the UK?", List("Progressive Party", "Conservative Party", "Labour Party", "Liberal Democrats"), "Progressive Party", MCQ),
-          Question("What is the Queen's (or King's) Speech?", List("The outline of the government's proposed policies", "The monarch's Christmas address", "The coronation oath", "The monarch's birthday celebration"), "The outline of the government's proposed policies", MCQ)
+          Question("Which sentence correctly uses the past perfect?", List("I had finished my homework before she called", "I have finished my homework before she called", "I finished my homework before she had called", "I was finishing my homework before she called"), "I had finished my homework before she called", Grammar),
+          Question("Identify the correct future perfect progressive form:", List("By next year, I will have been studying English for 10 years", "By next year, I will be studying English for 10 years", "By next year, I have been studying English for 10 years", "By next year, I will have studied English for 10 years"), "By next year, I will have been studying English for 10 years", Grammar),
+          Question("Which sentence correctly uses the present perfect progressive?", List("She has been living in Paris for three years", "She is living in Paris for three years", "She lives in Paris for three years", "She had been living in Paris for three years"), "She has been living in Paris for three years", Grammar),
+          Question("Choose the sentence with the correct past perfect progressive:", List("I had been waiting for an hour when she finally arrived", "I have been waiting for an hour when she finally arrived", "I was waiting for an hour when she finally arrived", "I would have been waiting for an hour when she finally arrived"), "I had been waiting for an hour when she finally arrived", Grammar),
+          Question("Which sentence correctly uses the future perfect tense?", List("By the time we arrive, the movie will have started", "By the time we arrive, the movie will start", "By the time we arrive, the movie has started", "By the time we arrive, the movie starts"), "By the time we arrive, the movie will have started", Grammar)
         ),
         
-        // Version 2 - Education and culture
+        // Version 2 - Advanced conditionals and subjunctive
         List(
-          Question("What are the divisions of the academic year called at Oxford and Cambridge?", List("Terms", "Semesters", "Quarters", "Sessions"), "Terms", MCQ),
-          Question("What is a 'Blue' at Oxford and Cambridge universities?", List("A sports award", "An academic gown", "A final exam", "A student accommodation"), "A sports award", MCQ),
-          Question("Which institution awards the Turner Prize?", List("Tate Gallery", "The British Museum", "The National Gallery", "The Royal Academy"), "Tate Gallery", MCQ),
-          Question("What percentage of British people speak a second language fluently?", List("About 38%", "About 65%", "About 80%", "About 20%"), "About 38%", MCQ),
-          Question("What is a 'listed building' in the UK?", List("A building of special architectural or historical interest", "A building for sale on the property market", "A government-owned building", "A building with UNESCO status"), "A building of special architectural or historical interest", MCQ)
+          Question("Which is a correct third conditional sentence?", List("If I had studied harder, I would have passed the exam", "If I studied harder, I would have passed the exam", "If I had studied harder, I would pass the exam", "If I study harder, I would have passed the exam"), "If I had studied harder, I would have passed the exam", Grammar),
+          Question("Identify the correct use of the subjunctive mood:", List("I suggest that he be more careful", "I suggest that he is more careful", "I suggest that he was more careful", "I suggest that he being more careful"), "I suggest that he be more careful", Grammar),
+          Question("Which is a correct mixed conditional?", List("If I had taken the job, I would be rich now", "If I took the job, I would be rich now", "If I had taken the job, I would have been rich now", "If I would take the job, I would be rich now"), "If I had taken the job, I would be rich now", Grammar),
+          Question("Choose the correct subjunctive in this formal expression:", List("Be that as it may, we must continue", "Is that as it may, we must continue", "Being that as it may, we must continue", "Been that as it may, we must continue"), "Be that as it may, we must continue", Grammar),
+          Question("Which is a correct inverted conditional form?", List("Had I known earlier, I would have told you", "If I had known earlier, I had told you", "Would I have known earlier, I would have told you", "Have I known earlier, I would have told you"), "Had I known earlier, I would have told you", Grammar)
         ),
         
-        // Version 3 - Geography and science
+        // Version 3 - Complex sentence structures and clauses
         List(
-          Question("Which English city has the highest population outside London?", List("Birmingham", "Manchester", "Liverpool", "Leeds"), "Birmingham", MCQ),
-          Question("What percentage of the UK land area does England occupy?", List("About 53%", "About 65%", "About 40%", "About 75%"), "About 53%", MCQ),
-          Question("Which English scientist discovered penicillin?", List("Alexander Fleming", "Isaac Newton", "Charles Darwin", "Stephen Hawking"), "Alexander Fleming", MCQ),
-          Question("Which national park is the largest in England?", List("Lake District", "Peak District", "Dartmoor", "New Forest"), "Lake District", MCQ),
-          Question("Which English city was the first industrialized city in the world?", List("Manchester", "Birmingham", "Liverpool", "Leeds"), "Manchester", MCQ)
+          Question("Identify the sentence with a correct relative clause:", List("The woman whose car was stolen called the police", "The woman which car was stolen called the police", "The woman who car was stolen called the police", "The woman whom car was stolen called the police"), "The woman whose car was stolen called the police", Grammar),
+          Question("Which sentence correctly uses a participle phrase?", List("Walking to the store, he met his friend", "He met his friend, walked to the store", "While walk to the store, he met his friend", "To walking to the store, he met his friend"), "Walking to the store, he met his friend", Grammar),
+          Question("Identify the correct use of a noun clause:", List("What she said surprised everyone", "That she said surprised everyone", "Which she said surprised everyone", "When she said surprised everyone"), "What she said surprised everyone", Grammar),
+          Question("Choose the sentence with correct parallel structure:", List("She enjoys swimming, hiking, and to ride bikes", "She enjoys swimming, hiking, and riding bikes", "She enjoys to swim, to hike, and to ride bikes", "She enjoys swim, hike, and ride bikes"), "She enjoys swimming, hiking, and riding bikes", Grammar),
+          Question("Which sentence contains a correct adverbial clause?", List("When it rains, the plants grow faster", "When it rains the plants growing faster", "When raining, the plants grow faster", "When it is rain, the plants grow faster"), "When it rains, the plants grow faster", Grammar)
         )
       )
       
-      // English MCQ quizzes - Impossible difficulty (3 versions)
+      // English grammar quizzes - Impossible difficulty (3 versions)
       case (English, Impossible, MCQ) => List(
         // Version 1 - Obscure history and traditions
         List(
@@ -1583,37 +1530,8 @@ object QuizGenerator {
           Question("What does 'jihad' primarily mean in Islamic theology?", List("Spiritual struggle", "Holy war", "Pilgrimage", "Charitable giving"), "Spiritual struggle", MCQ)
         )
       )
-      
-      // Arabic MCQ quizzes - Impossible difficulty (3 versions)
-      case (Arabic, Impossible, MCQ) => List(
-        // Version 1 - Obscure historical knowledge
-        List(
-          Question("Which pre-Islamic Arab queen ruled Palmyra and challenged Rome?", List("Zenobia", "Cleopatra", "Bilqis", "Kahina"), "Zenobia", MCQ),
-          Question("Which Arab mathematician first used the term 'algebra'?", List("Al-Khwarizmi", "Ibn al-Haytham", "Al-Kindi", "Omar Khayyam"), "Al-Khwarizmi", MCQ),
-          Question("What was the 'mihna' in Abbasid history?", List("An inquisition about religious doctrine", "A literary competition", "A tax system", "A military campaign"), "An inquisition about religious doctrine", MCQ),
-          Question("Who wrote 'Kalila wa-Dimna', the Arabic adaptation of animal fables?", List("Ibn al-Muqaffa", "Al-Jahiz", "Ibn Tufail", "Al-Hariri"), "Ibn al-Muqaffa", MCQ),
-          Question("Which medieval Arab scientist corrected Ptolemy's model of planetary motion?", List("Ibn al-Shatir", "Al-Battani", "Ibn Yunus", "Al-Zarqali"), "Ibn al-Shatir", MCQ)
-        ),
-        
-        // Version 2 - Specialized linguistic knowledge
-        List(
-          Question("What is 'sarf' in Arabic linguistics?", List("Morphology", "Syntax", "Phonology", "Semantics"), "Morphology", MCQ),
-          Question("Which Arabic dialect features the sound shift of 'q' to 'g'?", List("Egyptian", "Lebanese", "Moroccan", "Iraqi"), "Egyptian", MCQ),
-          Question("What is 'sukun' in Arabic writing?", List("A mark indicating absence of a vowel", "A letter connector", "A long vowel marker", "A punctuation mark"), "A mark indicating absence of a vowel", MCQ),
-          Question("What is the Arabic linguistics term for derivational morphology?", List("Ishtiqaq", "Tasrif", "Nahw", "Balaghah"), "Ishtiqaq", MCQ),
-          Question("Which of these is NOT one of the six canonical hadith collections?", List("Sahih Al-Tabari", "Sahih Al-Bukhari", "Sunan Abu Dawood", "Sahih Muslim"), "Sahih Al-Tabari", MCQ)
-        ),
-        
-        // Version 3 - Extremely specific cultural and historical knowledge
-        List(
-          Question("What was 'al-Andalus'?", List("Muslim-ruled Iberian Peninsula", "A type of Arabic calligraphy", "An ancient Arabic calendar", "The Arabic name for Constantinople"), "Muslim-ruled Iberian Peninsula", MCQ),
-          Question("Which philosophical concept did Al-Farabi develop in Islamic philosophy?", List("The Virtuous City", "The Categorical Imperative", "The Great Chain of Being", "The Tabula Rasa"), "The Virtuous City", MCQ),
-          Question("What is 'tafsir'?", List("Quranic exegesis", "Islamic law", "Spiritual purification", "Pilgrimage ritual"), "Quranic exegesis", MCQ),
-          Question("What does 'jihad' primarily mean in Islamic theology?", List("Spiritual struggle", "Holy war", "Pilgrimage", "Charitable giving"), "Spiritual struggle", MCQ)
-        )
-      )
-      
 
+      // Arabic MCQ quizzes - Impossible difficulty cases removed
       
       // For other quiz types and language combinations, return an empty list
       case _ => List()

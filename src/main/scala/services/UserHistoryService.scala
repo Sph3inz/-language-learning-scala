@@ -206,4 +206,28 @@ class UserHistoryService {
       case None => 0
     }
   }
+
+  // Returns a list of (username, interactionCount) for the top n users
+  def getTopUsers(n: Int): List[(String, Int)] = {
+    userHistories.values
+      .map(h => (h.username, h.interactions.length))
+      .toList
+      .sortBy(-_._2)
+      .take(n)
+  }
+
+  // Returns the total number of interactions across all users
+  def getTotalInteractions: Int = {
+    userHistories.values.map(_.interactions.length).sum
+  }
+
+  // Returns the total number of quizzes for a user or all users
+  def getTotalQuizzes(userId: Option[String]): Int = {
+    userId match {
+      case Some(id) => userHistories.get(id).map(_.quizResults.length).getOrElse(0)
+      case None => userHistories.values.map(_.quizResults.length).sum
+    }
+  }
+
+  def getAllUserHistories: List[UserHistory] = userHistories.values.toList
 } 

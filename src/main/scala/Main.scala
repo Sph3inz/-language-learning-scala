@@ -23,6 +23,7 @@ object Main extends App {
   var inQuizMode: Boolean = false
   var currentQuestionIndex: Int = 0
   var currentUser: Option[models.User] = None
+  var pendingQuizType: Option[QuizType] = None  // New variable to store pending quiz type
   
   // Flags to track which preferences have been explicitly set
   var motherLanguageExplicitlySet: Boolean = false
@@ -145,7 +146,12 @@ object Main extends App {
     val userInput = readLine().trim
     
     // Check for exit command
-    if (userInput.toLowerCase == "exit") {
+    if (userInput.toLowerCase match {
+      case "exit" | "eit" | "exif" | "exi" | "exitt" | "exxit" | "exiit" |
+           "quit" | "qit" | "quitt" | "qutt" |
+           "end" | "stp" | "stopp" | "stop" => true
+      case _ => false
+    }) {
       println("\nBot: Thank you for using the Language Learning Bot. Goodbye!")
       running = false
     } else if (userInput.toLowerCase == "logout") {
@@ -165,9 +171,280 @@ object Main extends App {
    * Handles user input in regular chatbot mode
    */
   def handleRegularMode(input: String): Unit = {
+    // First, check if the input is a thank you message
+    val thanksWords = Set("thanks", "thank", "thx", "ty", "thankyou", "thank you", "gracias", "merci", "danke")
+    if (thanksWords.exists(word => input.toLowerCase.contains(word))) {
+      // For thank you messages, just respond with a simple acknowledgment and don't start a new quiz
+      val response = ChatbotCore.handleUserInput(input, userPreferences, currentUser)
+      val formattedResponse = formatDualLanguageResponse(response)
+      println(s"\nBot: $formattedResponse")
+      
+      // Log the interaction if user is logged in
+      currentUser.foreach { user =>
+        userHistoryService.addInteraction(
+          userId = user.id,
+          username = user.username,
+          email = user.email,
+          question = input,
+          response = response,
+          category = "thanks"
+        )
+      }
+      return
+    }
+    
+    // First, check for direct quiz type requests using ChatbotCore's detectQuizType
+    val tokens = ChatbotCore.parseInput(input)
+    
+    // Special case for generic quiz requests without a specific quiz type
+    if (input.trim.toLowerCase == "quiz" || 
+        input.trim.toLowerCase == "give me quiz" || 
+        input.trim.toLowerCase == "start quiz" || 
+        input.trim.toLowerCase == "take quiz") {
+      // Ask what type of quiz they want
+      startQuiz()
+      return
+    }
+    
+    val detectedQuizType = ChatbotCore.detectQuizType(tokens)
+    
+    if (detectedQuizType.isDefined) {
+      val quizTypeValue = detectedQuizType.get match {
+        case "vocabulary" => Vocabulary
+        case "grammar" => Grammar
+        case "translation" => Translation
+        case "mcq" => MCQ
+        case _ => Vocabulary // fallback to vocabulary
+      }
+      
+      userPreferences match {
+        case Some(prefs) =>
+          // Start quiz with the specified type
+          val questions = QuizGenerator.selectQuizQuestions(
+            prefs.targetLanguage,
+            prefs.difficulty,
+            quizTypeValue,
+            5
+          )
+          currentQuizSession = Some(QuizSession(questions, List.empty, quizTypeValue))
+          inQuizMode = true
+          currentQuestionIndex = 0
+          displayCurrentQuestion()
+          
+          // Save quiz start interaction
+          currentUser.foreach { user =>
+            userHistoryService.addInteraction(
+              userId = user.id,
+              username = user.username,
+              email = user.email,
+              question = input,
+              response = s"Started a ${quizTypeValue} quiz",
+              category = "quiz"
+            )
+          }
+          return
+        case None =>
+          println(s"\nBot: ${formatDualLanguageResponse("Please set your language preferences before starting a quiz.")}")
+          showSettings()
+          return
+      }
+    }
+    
+    // Check language learning intent patterns
+    val learnWords = Set("learn", "study", "practice", "master", "speak", "teach", "understand", "know", "use")
+    val languageWords = Set("english", "spanish", "french", "german")
+    
+    // Check if input contains both a learning verb and a language name anywhere
+    val containsLearnVerb = learnWords.exists(word => input.toLowerCase.contains(word))
+    val containedLanguages = languageWords.filter(lang => input.toLowerCase.contains(lang))
+    
+    if (containsLearnVerb && containedLanguages.nonEmpty) {
+      // If multiple languages are mentioned, try to determine the most likely target language
+      // Default to the first one if we can't tell
+      val language = if (containedLanguages.size > 1) {
+        // Look for explicit indicators like "to" or "in" followed by a language
+        val toPattern = containedLanguages.find(lang => 
+          input.toLowerCase.contains(s"to $lang") || 
+          input.toLowerCase.contains(s"in $lang") ||
+          input.toLowerCase.contains(s"target $lang"))
+        
+        toPattern.getOrElse(containedLanguages.head)
+      } else {
+        containedLanguages.head
+      }
+      
+      // Set it as target language
+      setTargetLanguage(language)
+      // Prompt for quiz - using two separate translations for better localization
+      val part1 = ChatbotCore.translateText("Great! I'll help you learn ", userPreferences.map(_.motherLanguage).getOrElse(English))
+      val part2 = ChatbotCore.translateText(". Would you like to take a quiz to practice?", userPreferences.map(_.motherLanguage).getOrElse(English))
+      println(s"\nBot: $part1$language$part2")
+      println(formatDualLanguageResponse("Available quiz types: vocabulary, grammar, translation, mcq"))
+      // Save interaction
+      currentUser.foreach { user =>
+        userHistoryService.addInteraction(
+          userId = user.id,
+          username = user.username,
+          email = user.email,
+          question = input,
+          response = s"Great! I'll help you learn $language. Would you like to take a quiz to practice?",
+          category = "language_selection"
+        )
+      }
+      return
+    } else if (containsLearnVerb && containedLanguages.isEmpty) {
+      // If user mentions learning but no specific language
+      val msg = ChatbotCore.translateText("Great news! Which language would you like to study?", userPreferences.map(_.motherLanguage).getOrElse(English))
+      println(s"\nBot: $msg")
+      // Wait for the next input and handle language selection
+      print("\nYou: ")
+      val nextInput = readLine().trim.toLowerCase
+      
+      // See if the input contains any language name
+      val detectedLanguage = languageWords.find(lang => nextInput.contains(lang))
+      
+      // Try to parse language directly if it's just a language name
+      val parsedLang = parseLanguage(nextInput)
+      
+      if (parsedLang.isDefined) {
+        // If it's a direct language name like "French"
+        setTargetLanguage(languageToString(parsedLang.get).toLowerCase)
+        startQuiz()
+        return
+      } else if (detectedLanguage.isDefined) {
+        // If a language is mentioned as part of a sentence
+        setTargetLanguage(detectedLanguage.get)
+        startQuiz()
+        return
+      } else {
+        // Try one more method - check for partial matches
+        val partialMatches = languageWords.filter(lang => 
+          lang.startsWith(nextInput) || nextInput.startsWith(lang.substring(0, 3)))
+          
+        if (partialMatches.nonEmpty) {
+          setTargetLanguage(partialMatches.head)
+          startQuiz()
+          return
+        } else {
+          // If not a valid language, fallback to normal handling
+          println(s"\nBot: ${formatDualLanguageResponse("I didn't recognize that language. Please specify one of: English, Spanish, French, or German.")}")
+          handleRegularMode(nextInput)
+          return
+        }
+      }
+    }
+    
+    // Check if input is a direct quiz type request
+    val directQuizType = input.trim.toLowerCase match {
+      case "vocabulary" | "vocab" | "vocabulario" | "vocabulaire" | "vokabular" | "المفردات" | "1" => Some(Vocabulary)
+      case "grammar" | "gramática" | "grammaire" | "grammatik" | "القواعد" | "2" => Some(Grammar)
+      case "translation" | "translate" | "traducción" | "traduction" | "übersetzung" | "الترجمة" | "3" => Some(Translation)
+      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" | "4" => Some(MCQ)
+      case _ => None
+    }
+    
+    if (directQuizType.isDefined) {
+      userPreferences match {
+        case Some(prefs) =>
+          // Start quiz with the specified type
+          val questions = QuizGenerator.selectQuizQuestions(
+            prefs.targetLanguage,
+            prefs.difficulty,
+            directQuizType.get,
+            5
+          )
+          currentQuizSession = Some(QuizSession(questions, List.empty, directQuizType.get))
+          inQuizMode = true
+          currentQuestionIndex = 0
+          displayCurrentQuestion()
+          
+          // Save quiz start interaction
+          currentUser.foreach { user =>
+            userHistoryService.addInteraction(
+              userId = user.id,
+              username = user.username,
+              email = user.email,
+              question = input,
+              response = s"Started a ${directQuizType.get} quiz",
+              category = "quiz"
+            )
+          }
+          return
+        case None =>
+          println(s"\nBot: ${formatDualLanguageResponse("Please set your language preferences before starting a quiz.")}")
+          showSettings()
+          return
+      }
+    }
+    
+    // Allow starting a quiz directly by typing the quiz type
+    val quizTypeMap = Map(
+      "vocabulary" -> Vocabulary,
+      "vocab" -> Vocabulary,
+      "grammar" -> Grammar,
+      "translation" -> Translation,
+      "translate" -> Translation,
+      "mcq" -> MCQ,
+      "mcq quiz" -> MCQ,
+      "multiple choice quiz" -> MCQ,
+      "mcw" -> MCQ,
+      "mcc" -> MCQ,
+      "multiple choice" -> MCQ,
+      "multichoice" -> MCQ,
+      "multi-choice" -> MCQ,
+      "multi choice" -> MCQ,
+      "multiplechoice" -> MCQ,
+      "multiple-choice" -> MCQ
+    )
+    if (quizTypeMap.contains(input.trim.toLowerCase)) {
+      // Store the quiz type and ask for confirmation
+      pendingQuizType = Some(quizTypeMap(input.trim.toLowerCase))
+      println(s"\nBot: ${formatDualLanguageResponse("Would you like to start a quiz? If yes, please type 'start quiz' to begin.")}")
+      return
+    }
+    
+    // If the input contains 'quiz' or 'quizzes', start the quiz process
+    if (input.toLowerCase.contains("quizzes")) {
+      startQuiz()
+      return
+    }
+    
+    // Proceed with regular command matching
+    // Check first for exit quiz commands
+    val exitPhrases = Set("exit quiz", "quit quiz", "end quiz", "stop quiz", "cancel quiz")
+    val containsExitPhrase = exitPhrases.exists(phrase => input.toLowerCase.contains(phrase))
+    
+    if (containsExitPhrase) {
+      // Handle users trying to exit quiz when not in quiz mode
+      println(s"\nBot: ${formatDualLanguageResponse("You're not currently in a quiz.")}")
+      return
+    }
+    
     input.toLowerCase match {
       case "quiz" | "start quiz" =>
-        startQuiz()
+        pendingQuizType match {
+          case Some(qt) =>
+            // Start quiz with the pending type
+            userPreferences match {
+              case Some(prefs) =>
+                val questions = QuizGenerator.selectQuizQuestions(
+                  prefs.targetLanguage,
+                  prefs.difficulty,
+                  qt,
+                  5
+                )
+                currentQuizSession = Some(QuizSession(questions, List.empty, qt))
+                inQuizMode = true
+                currentQuestionIndex = 0
+                pendingQuizType = None  // Clear the pending type
+                displayCurrentQuestion()
+              case None =>
+                println(s"\nBot: ${formatDualLanguageResponse("Please set your language preferences before starting a quiz.")}")
+                showSettings()
+            }
+          case None =>
+            startQuiz()  // If no pending type, show quiz type selection
+        }
         // Save quiz start interaction
         currentUser.foreach { user =>
           userHistoryService.addInteraction(
@@ -222,11 +499,11 @@ object Main extends App {
           )
         }
         
-      case s if s.startsWith("set mother language ") =>
+      case s if s.startsWith("set mother language ") || s.startsWith("set mother langauge ") =>
         val lang = s.substring("set mother language ".length).trim
         setMotherLanguage(lang)
         
-      case s if s.startsWith("set target language ") =>
+      case s if s.startsWith("set target language ") || s.startsWith("set target langauge ") =>
         val lang = s.substring("set target language ".length).trim
         setTargetLanguage(lang)
         
@@ -280,7 +557,7 @@ object Main extends App {
         )
         
       case _ =>
-        // Process general input
+        // Process general input using ChatbotCore which will return the "unknown" response for unrecognized input
         val response = ChatbotCore.handleUserInput(input, userPreferences, currentUser)
         val formattedResponse = formatDualLanguageResponse(response)
         println(s"\nBot: $formattedResponse")
@@ -305,53 +582,79 @@ object Main extends App {
   def startQuiz(): Unit = {
     userPreferences match {
       case Some(prefs) =>
-        println(s"\nBot: ${formatDualLanguageResponse("What type of quiz would you like to take?")}")
-        println(formatDualLanguageResponse("Available quiz types: vocabulary, grammar, translation, mcq"))
-        print("\nYou: ")
-        val quizTypeInput = readLine().trim.toLowerCase
-        
-        // Save the quiz type response
-        currentUser.foreach { user =>
-          userHistoryService.addInteraction(
-            userId = user.id,
-            username = user.username,
-            email = user.email,
-            question = "What type of quiz would you like to take?",
-            response = quizTypeInput,
-            category = "quiz"
-          )
-        }
-        
-        // Parse quiz type using pattern matching
-        val quizType = quizTypeInput match {
-          case "vocabulary" | "vocab" => Some(Vocabulary)
-          case "grammar" => Some(Grammar)
-          case "translation" | "translate" => Some(Translation)
-          case "mcq" | "multiple choice" => Some(MCQ)
-          case "correction" | "correct" => Some(Correction)
-          case _ => None
-        }
-        
-        quizType match {
-          case Some(qt) =>
-            // Generate quiz questions
-            val questions = QuizGenerator.selectQuizQuestions(
-              prefs.targetLanguage, 
-              prefs.difficulty, 
-              qt, 
-              5 // 5 questions per quiz
+        // Create a recursive function to keep asking for quiz type until valid
+        def askForQuizType(): Unit = {
+          // Get quiz selection message from ChatbotCore in the appropriate language
+          val quizSelectionMessage = ChatbotCore.getQuizSelectionMessage(prefs.motherLanguage)
+          
+          println(s"\nBot: ${formatDualLanguageResponse(quizSelectionMessage)}")
+          print("\nYou: ")
+          val quizTypeInput = readLine().trim.toLowerCase
+          
+          // Save the quiz type response
+          currentUser.foreach { user =>
+            userHistoryService.addInteraction(
+              userId = user.id,
+              username = user.username,
+              email = user.email,
+              question = "What type of quiz would you like to take?",
+              response = quizTypeInput,
+              category = "quiz"
             )
-            
-            currentQuizSession = Some(QuizSession(questions, List.empty, qt))
-            inQuizMode = true
-            currentQuestionIndex = 0
-            
-            // Display first question
-            displayCurrentQuestion()
-            
-          case None =>
-            println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that quiz type. Please try again.")}")
+          }
+          
+          // Parse quiz type using pattern matching
+          val quizType = quizTypeInput match {
+            case "exit quiz" | "quit quiz" | "end quiz" | "stop quiz" | "cancel" | "back" =>
+              println(s"\nBot: ${formatDualLanguageResponse("Cancelling quiz setup.")}")
+              
+              // Save quiz exit interaction
+              currentUser.foreach { user =>
+                userHistoryService.addInteraction(
+                  userId = user.id,
+                  username = user.username,
+                  email = user.email,
+                  question = quizTypeInput,
+                  response = "Cancelled quiz setup",
+                  category = "quiz"
+                )
+              }
+              
+              return // Exit the askForQuizType function early
+              
+            case "vocabulary" | "vocab" | "1" | "vocabulario" | "vocabulaire" | "vokabular" | "المفردات" => Some(Vocabulary)
+            case "grammar" | "2" | "gramática" | "grammaire" | "grammatik" | "القواعد" => Some(Grammar)
+            case "translation" | "translate" | "3" | "traducción" | "traduction" | "übersetzung" | "الترجمة" => Some(Translation)
+            case "mcq" | "multiple choice" | "4" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" => Some(MCQ)
+            case _ => None
+          }
+          
+          quizType match {
+            case Some(qt) =>
+              // Generate quiz questions
+              val questions = QuizGenerator.selectQuizQuestions(
+                prefs.targetLanguage, 
+                prefs.difficulty, 
+                qt, 
+                5 // 5 questions per quiz
+              )
+              
+              currentQuizSession = Some(QuizSession(questions, List.empty, qt))
+              inQuizMode = true
+              currentQuestionIndex = 0
+              
+              // Display first question
+              displayCurrentQuestion()
+              
+            case None =>
+              // Instead of returning to regular mode, inform the user and ask again
+              println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that quiz type. Please try again.")}")
+              askForQuizType() // Recursively ask again
+          }
         }
+        
+        // Start the recursive function
+        askForQuizType()
         
       case None =>
         println(s"\nBot: ${formatDualLanguageResponse("Please set your language preferences before starting a quiz.")}")
@@ -363,134 +666,135 @@ object Main extends App {
    * Handles user input during quiz mode
    */
   def handleQuizMode(input: String): Unit = {
-    input.toLowerCase match {
-      case "exit quiz" | "quit quiz" | "end quiz" | "stop quiz" =>
-        println(s"\nBot: ${formatDualLanguageResponse("Exiting quiz mode.")}")
-        inQuizMode = false
-        currentQuizSession = None
-        currentQuestionIndex = 0
-        // Save quiz exit interaction
-        currentUser.foreach { user =>
-          userHistoryService.addInteraction(
-            userId = user.id,
-            username = user.username,
-            email = user.email,
-            question = "exit quiz",
-            response = "Exited quiz mode",
-            category = "quiz"
-          )
-        }
-        
-      case "exit" | "quit" =>
-        println(s"\nBot: ${formatDualLanguageResponse("To exit the quiz, please type 'exit quiz' or 'quit quiz'.")}")
-        
-      case _ =>
-        currentQuizSession match {
-          case Some(session) =>
-            val currentQuestion = session.questions(currentQuestionIndex)
+    // Check if the input contains any exit phrases regardless of position
+    val exitPhrases = Set("exit quiz", "quit quiz", "end quiz", "stop quiz", "cancel quiz")
+    val containsExitPhrase = exitPhrases.exists(phrase => input.toLowerCase.contains(phrase))
+    
+    if (containsExitPhrase) {
+      println(s"\nBot: ${formatDualLanguageResponse("Exiting quiz mode.")}")
+      inQuizMode = false
+      currentQuizSession = None
+      currentQuestionIndex = 0
+      // Save quiz exit interaction
+      currentUser.foreach { user =>
+        userHistoryService.addInteraction(
+          userId = user.id,
+          username = user.username,
+          email = user.email,
+          question = "exit quiz",
+          response = "Exited quiz mode",
+          category = "quiz"
+        )
+      }
+    } else if (input.toLowerCase == "exit" || input.toLowerCase == "quit") {
+      println(s"\nBot: ${formatDualLanguageResponse("To exit the quiz, please type 'exit quiz' or 'quit quiz'.")}")
+    } else {
+      currentQuizSession match {
+        case Some(session) =>
+          val currentQuestion = session.questions(currentQuestionIndex)
+          
+          // Evaluate the answer
+          val (isCorrect, feedback, processedAnswer) = QuizGenerator.evaluateQuizAnswer(input, currentQuestion.correctAnswer, Some(currentQuestion))
+          
+          // Save the quiz answer interaction
+          currentUser.foreach { user =>
+            userHistoryService.addInteraction(
+              userId = user.id,
+              username = user.username,
+              email = user.email,
+              question = s"Quiz Question ${currentQuestionIndex + 1}: ${currentQuestion.prompt}",
+              response = s"Answer: $input, Feedback: $feedback",
+              category = "quiz"
+            )
+          }
+          
+          // Record the processed answer and whether it was correct
+          val updatedAnswers = session.userAnswers :+ (if (isCorrect) currentQuestion.correctAnswer else processedAnswer)
+          
+          // For quiz feedback, use only the target language if set
+          val translatedFeedback = userPreferences match {
+            case Some(prefs) if targetLanguageExplicitlySet =>
+              ChatbotCore.translateText(feedback, prefs.targetLanguage)
+            case Some(prefs) if motherLanguageExplicitlySet =>
+              ChatbotCore.translateText(feedback, prefs.motherLanguage)
+            case _ => feedback
+          }
+          
+          println(s"\nBot: $translatedFeedback")
+          
+          // Update the quiz session
+          currentQuizSession = Some(QuizSession(
+            session.questions,
+            updatedAnswers,
+            session.quizType
+          ))
+          
+          // Move to next question or end quiz
+          currentQuestionIndex += 1
+          if (currentQuestionIndex < session.questions.length) {
+            displayCurrentQuestion()
+          } else {
+            // Quiz completed
+            val completedSession = currentQuizSession.get
+            val summary = QuizGenerator.summarizeQuizResults(completedSession)
             
-            // Evaluate the answer
-            val (isCorrect, feedback, processedAnswer) = QuizGenerator.evaluateQuizAnswer(input, currentQuestion.correctAnswer, Some(currentQuestion))
-            
-            // Save the quiz answer interaction
+            // Save quiz results if user is logged in
             currentUser.foreach { user =>
-              userHistoryService.addInteraction(
+              val quizQuestions = completedSession.questions.zip(completedSession.userAnswers).map {
+                case (question, answer) =>
+                  QuizQuestion(
+                    question = question.prompt,
+                    correctAnswer = question.correctAnswer,
+                    userAnswer = answer,
+                    isCorrect = answer == question.correctAnswer
+                  )
+              }
+              
+              // Calculate correct answers for this quiz
+              val correctAnswers = quizQuestions.count(_.isCorrect)
+              
+              // Get total correct answers across all quizzes
+              val totalCorrectAnswers = userHistoryService.getTotalCorrectAnswers(user.id)
+              val totalQuestions = userHistoryService.getTotalQuestions(user.id)
+              
+              userHistoryService.addQuizResult(
                 userId = user.id,
                 username = user.username,
                 email = user.email,
-                question = s"Quiz Question ${currentQuestionIndex + 1}: ${currentQuestion.prompt}",
-                response = s"Answer: $input, Feedback: $feedback",
-                category = "quiz"
+                quizType = completedSession.quizType.toString,
+                score = completedSession.calculateScore,
+                totalQuestions = completedSession.questions.length,
+                correctAnswers = correctAnswers,  // Use the actual count of correct answers
+                questions = quizQuestions,
+                userAnswers = completedSession.userAnswers
               )
-            }
-            
-            // Record the processed answer and whether it was correct
-            val updatedAnswers = session.userAnswers :+ (if (isCorrect) currentQuestion.correctAnswer else processedAnswer)
-            
-            // For quiz feedback, use only the target language if set
-            val translatedFeedback = userPreferences match {
-              case Some(prefs) if targetLanguageExplicitlySet =>
-                ChatbotCore.translateText(feedback, prefs.targetLanguage)
-              case Some(prefs) if motherLanguageExplicitlySet =>
-                ChatbotCore.translateText(feedback, prefs.motherLanguage)
-              case _ => feedback
-            }
-            
-            println(s"\nBot: $translatedFeedback")
-            
-            // Update the quiz session
-            currentQuizSession = Some(QuizSession(
-              session.questions,
-              updatedAnswers,
-              session.quizType
-            ))
-            
-            // Move to next question or end quiz
-            currentQuestionIndex += 1
-            if (currentQuestionIndex < session.questions.length) {
-              displayCurrentQuestion()
-            } else {
-              // Quiz completed
-              val completedSession = currentQuizSession.get
-              val summary = QuizGenerator.summarizeQuizResults(completedSession)
               
-              // Save quiz results if user is logged in
-              currentUser.foreach { user =>
-                val quizQuestions = completedSession.questions.zip(completedSession.userAnswers).map {
-                  case (question, answer) =>
-                    QuizQuestion(
-                      question = question.prompt,
-                      correctAnswer = question.correctAnswer,
-                      userAnswer = answer,
-                      isCorrect = answer == question.correctAnswer
-                    )
-                }
-                
-                // Calculate correct answers for this quiz
-                val correctAnswers = quizQuestions.count(_.isCorrect)
-                
-                // Get total correct answers across all quizzes
-                val totalCorrectAnswers = userHistoryService.getTotalCorrectAnswers(user.id)
-                val totalQuestions = userHistoryService.getTotalQuestions(user.id)
-                
-                userHistoryService.addQuizResult(
-                  userId = user.id,
-                  username = user.username,
-                  email = user.email,
-                  quizType = completedSession.quizType.toString,
-                  score = completedSession.calculateScore,
-                  totalQuestions = completedSession.questions.length,
-                  correctAnswers = correctAnswers,  // Use the actual count of correct answers
-                  questions = quizQuestions,
-                  userAnswers = completedSession.userAnswers
-                )
-                
-                // Add total stats to summary
-                val totalStats = s"\nTotal Questions Answered: $totalQuestions\nTotal Correct Answers: $totalCorrectAnswers"
-                val finalSummary = summary + totalStats
-                
-                // For quiz summary, use only the target language if set
-                val translatedSummary = userPreferences match {
-                  case Some(prefs) if targetLanguageExplicitlySet =>
-                    ChatbotCore.translateText(finalSummary, prefs.targetLanguage)
-                  case Some(prefs) if motherLanguageExplicitlySet =>
-                    ChatbotCore.translateText(finalSummary, prefs.motherLanguage)
-                  case _ => finalSummary
-                }
-                
-                println(s"\nBot: $translatedSummary")
+              // Add total stats to summary
+              val totalStats = s"\nTotal Questions Answered: $totalQuestions\nTotal Correct Answers: $totalCorrectAnswers"
+              val finalSummary = summary + totalStats
+              
+              // For quiz summary, use only the target language if set
+              val translatedSummary = userPreferences match {
+                case Some(prefs) if targetLanguageExplicitlySet =>
+                  ChatbotCore.translateText(finalSummary, prefs.targetLanguage)
+                case Some(prefs) if motherLanguageExplicitlySet =>
+                  ChatbotCore.translateText(finalSummary, prefs.motherLanguage)
+                case _ => finalSummary
               }
               
-              // Reset quiz mode
-              inQuizMode = false
-              currentQuizSession = None
-              currentQuestionIndex = 0
+              println(s"\nBot: $translatedSummary")
             }
             
-          case None =>
-            println(s"\nBot: ${formatDualLanguageResponse("There was an error with the quiz. Exiting quiz mode.")}")
+            // Reset quiz mode
             inQuizMode = false
-        }
+            currentQuizSession = None
+            currentQuestionIndex = 0
+          }
+          
+        case None =>
+          println(s"\nBot: ${formatDualLanguageResponse("There was an error with the quiz. Exiting quiz mode.")}")
+          inQuizMode = false
+      }
     }
   }
   
@@ -534,7 +838,7 @@ object Main extends App {
     }
     
     println(s"\nBot: ===== ${translateToMotherLang("User Settings")} =====")
-    println(s"${translateToMotherLang("Available languages")}: English, Spanish, French, German, Arabic")
+    println(s"${translateToMotherLang("Available languages")}: English, Spanish, French, German")
     println(s"${translateToMotherLang("Available difficulty levels")}: Easy, Medium, Hard, Impossible")
     
     println(s"\n${translateToMotherLang("Current settings")}:")
@@ -591,7 +895,7 @@ object Main extends App {
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
       case None =>
-        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German, Arabic")}")
+        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German")}")
     }
   }
   
@@ -614,7 +918,7 @@ object Main extends App {
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
       case None =>
-        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German, Arabic")}")
+        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German")}")
     }
   }
   
@@ -655,21 +959,45 @@ object Main extends App {
     
     println(s"\nBot: ===== ${translateToMotherLang("Analytics Dashboard")} =====")
     
-    // Get interaction analytics
-    val interactionLog = AnalyticsDashboard.getInteractionLog()
-    val interactionStats = AnalyticsDashboard.analyzeInteractions(
-      interactionLog.map { case (id, input, response) => 
-        InteractionLog(id, input, response, System.currentTimeMillis()) 
+    // === Top Users ===
+    println(s"\n== ${translateToMotherLang("Top Users")}")
+    val topUsers = userHistoryService.getTopUsers(5) // Assume returns List[(String, Int)] (username, interactionCount)
+    topUsers.foreach { case (username, count) =>
+      println(s"- $username: $count ${translateToMotherLang("interactions")}")
+    }
+    
+    // === Number of Interactions ===
+    println(s"\n== ${translateToMotherLang("Number of Interactions")}")
+    val totalInteractions = userHistoryService.getTotalInteractions
+    println(s"${translateToMotherLang("Total interactions")}: $totalInteractions")
+    
+    // === Performance Summaries ===
+    println(s"\n== ${translateToMotherLang("Performance Summaries")}")
+    val avgScore = userHistoryService.getAverageQuizScore(currentUser.map(_.id).getOrElse(""))
+    val totalQuizzes = userHistoryService.getTotalQuizzes(Some(currentUser.map(_.id).getOrElse("")))
+    println(s"${translateToMotherLang("Average quiz score")}: $avgScore")
+    println(s"${translateToMotherLang("Total quizzes taken")}: $totalQuizzes")
+    
+    // === User Breakdown ===
+    println(s"\n== ${translateToMotherLang("User Breakdown")}")
+    val allUsers = userHistoryService.getAllUserHistories
+    if (allUsers.isEmpty) {
+      println(translateToMotherLang("No users found."))
+    } else {
+      allUsers.foreach { user =>
+        val quizzes = user.quizResults.length
+        val correct = user.quizResults.map(_.correctAnswers).sum
+        println(s"${translateToMotherLang("Username")}: ${user.username}")
+        println(s"${translateToMotherLang("Interactions")}: ${user.interactions.length}")
+        println(s"${translateToMotherLang("Quizzes Taken")}: $quizzes")
+        println(s"${translateToMotherLang("Correct Answers")}: $correct")
+        println("------------------------------")
       }
-    )
+    }
     
-    println(s"\n== ${translateToMotherLang("Interaction Statistics")} ==")
-    println(s"${translateToMotherLang("Total Interactions")}: ${interactionStats("total_interactions")}")
-    
-    // Display language proficiency report if preferences are set
+    // Existing proficiency report, if any
     userPreferences.foreach { prefs =>
       println(s"\n== ${translateToMotherLang("Language Proficiency Report for")} ${languageToString(prefs.targetLanguage)} ==")
-      
       val quizLogs = currentQuizSession.toList.map { session =>
         QuizLog(
           1, 
@@ -680,25 +1008,6 @@ object Main extends App {
           System.currentTimeMillis()
         )
       }
-      
-      val proficiencyReport = AnalyticsDashboard.generateLanguageProficiencyReport(
-        quizLogs, 
-        prefs.targetLanguage
-      )
-      
-      println(s"${translateToMotherLang("Proficiency Level")}: ${proficiencyReport("proficiency_level")}")
-      println(s"${translateToMotherLang("Overall Success Rate")}: ${proficiencyReport("overall_success_rate")}")
-      
-      if (proficiencyReport.contains("strengths")) {
-        println(s"${translateToMotherLang("Strengths")}: ${proficiencyReport("strengths").asInstanceOf[List[String]].mkString(", ")}")
-      }
-      
-      if (proficiencyReport.contains("areas_for_improvement")) {
-        println(s"${translateToMotherLang("Areas for Improvement")}: ${proficiencyReport("areas_for_improvement").asInstanceOf[List[String]].mkString(", ")}")
-      }
-      
-      println(s"${translateToMotherLang("Learning Trend")}: ${proficiencyReport("learning_trend")}")
-      println(s"${translateToMotherLang("Total Quizzes Taken")}: ${proficiencyReport("total_quizzes_taken")}")
     }
   }
   
@@ -877,7 +1186,6 @@ object Main extends App {
       case "spanish" => Some(Spanish)
       case "french" => Some(French)
       case "german" => Some(German)
-      case "arabic" => Some(Arabic)
       case _ => None
     }
   }
@@ -904,7 +1212,6 @@ object Main extends App {
       case Spanish => "Spanish"
       case French => "French"
       case German => "German"
-      case Arabic => "Arabic"
       case _ => "Unknown"
     }
   }
@@ -933,12 +1240,16 @@ object Main extends App {
                           response.contains("Exiting quiz mode") ||
                           response.contains("error with the quiz")
     
-    // Check if this is quiz content (choices, corrections, etc.)
+    // Check if this is quiz content (choices, , etc.)
     val isQuizContent = response.contains("vocabulary") ||
                        response.contains("grammar") ||
                        response.contains("translation") ||
-                       response.contains("mcq") ||
-                       response.contains("correction")
+                       response.contains("mcq")
+    
+    // Check if this is a greeting response
+    val isGreeting = response.startsWith("Hello") || 
+                    response.contains("Language Learning Bot") ||
+                    response.contains("I'm your Language Learning Bot")
     
     userPreferences match {
       case Some(prefs) if motherLanguageExplicitlySet && targetLanguageExplicitlySet => 
@@ -948,17 +1259,12 @@ object Main extends App {
         } else if (isQuizContent) {
           // For quiz content, show only in target language
           ChatbotCore.translateText(response, prefs.targetLanguage)
+        } else if (isGreeting) {
+          // For greetings, show only in mother language
+          ChatbotCore.translateText(response, prefs.motherLanguage)
         } else {
-          // For regular content, show in both languages
-          val targetLangResponse = ChatbotCore.translateText(response, prefs.targetLanguage)
-          val motherLangResponse = ChatbotCore.translateText(response, prefs.motherLanguage)
-          
-          // If the languages are the same, don't duplicate
-          if (prefs.targetLanguage == prefs.motherLanguage) {
-            targetLangResponse
-          } else {
-            s"(${languageToString(prefs.motherLanguage)}): $motherLangResponse\n$targetLangResponse"
-          }
+          // Only show English translation as requested
+          ChatbotCore.translateText(response, English)
         }
       
       case Some(prefs) if targetLanguageExplicitlySet => 
@@ -970,7 +1276,7 @@ object Main extends App {
         ChatbotCore.translateText(response, prefs.motherLanguage)
         
       case _ => 
-        // If no languages are set, default to English
+        // If no languages are set, return original response
         response
     }
   }
