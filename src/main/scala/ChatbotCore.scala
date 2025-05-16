@@ -2,6 +2,7 @@ package languagelearningbot
 
 import scala.util.matching.Regex
 import models.User
+import scala.util.Random
 
 object ChatbotCore {
   // Required core chatbot functions as specified in the requirements
@@ -78,6 +79,13 @@ object ChatbotCore {
       .replaceAll("[^a-zA-Z0-9áéíóúüñçßÄÖÜäöü\\s]", "")
       .split("\\s+")
       .toList
+      .filter(_.nonEmpty)  // Remove empty tokens
+    
+    // If it's a simple greeting, return it as is
+    if (rawTokens.length == 1 && Set("hi", "hello", "hey").contains(rawTokens.head)) {
+      return rawTokens
+    }
+    
     val keywords = Set(
       // Command related
       "set", "sets", "setting", "settings", "change", "changes", "changed", "changing",
@@ -171,10 +179,7 @@ object ChatbotCore {
   def handleUserInput(input: String, preferences: Option[UserPreferences] = None, currentUser: Option[User] = None): String = {
     val tokens = parseInput(input)
     
-    // Special case for basic greetings
-    if (input.trim.toLowerCase == "hi" || input.trim.toLowerCase == "hello" || input.trim.toLowerCase == "hey") {
-      return generateResponse("greeting", preferences, currentUser)
-    }
+    
     
     // First, check for specific intents that should be prioritized
     if (isGreeting(tokens)) {
@@ -208,9 +213,7 @@ object ChatbotCore {
       return generateResponse("help", preferences, currentUser)
     }
     
-    if (isLanguageQuestion(tokens)) {
-      return generateResponse("language_question", preferences, currentUser)
-    }
+    
     
     // Default case - if none of the specific patterns matched, return "unknown" response
     generateResponse("unknown", preferences, currentUser)
@@ -273,7 +276,7 @@ object ChatbotCore {
           case Some(_) =>
             "What would you like to know about language learning? I can help with vocabulary, grammar, and more."
           case None =>
-            "Please sign in or continue as guest to ask language questions."
+            "Please sign in to ask language questions."
         }
       
       case "unknown" => 
@@ -291,11 +294,17 @@ object ChatbotCore {
   
   // Helper functions for intent detection using pattern matching
   private def isGreeting(tokens: List[String]): Boolean = {
-    val greetings = Set("hello", "hi", "hey", "hola", "bonjour", "hallo", "ciao", "howdy", "greetings", 
-                       "morning", "afternoon", "evening", "night", "yo", "sup", "salut", "ola", "gday", "heya")
+    val greetings = Set(
+      // Basic English greetings
+      "hi", "hello", "hey", "greetings", "howdy", "yo", "sup", "heya",
+      // Time-based greetings
+      "good morning", "good afternoon", "good evening", "good night",
+      "morning", "afternoon", "evening", "night"
+    )
     
-    // Check if any token is a greeting (not the whole input)
-    tokens.exists(token => greetings.contains(token.toLowerCase))
+    // Check if the input is a simple greeting
+    val input = tokens.mkString(" ").toLowerCase.trim
+    greetings.contains(input) || greetings.exists(greeting => input.contains(greeting))
   }
   
   private def isThanks(tokens: List[String]): Boolean = {
@@ -345,9 +354,9 @@ object ChatbotCore {
     // Map of quiz type variations to standardized types, including multilingual options
     val quizTypeMap = Map(
       Set("vocabulary", "vocab", "words", "word", "terms", "vocabulario", "vocabulaire", "vokabular", "المفردات", "1", "vocabulary quiz", "vocab quiz") -> "vocabulary",
-      Set("grammar", "grammatical", "syntax", "gramática", "grammaire", "grammatik", "القواعد", "2", "grammar quiz") -> "grammar",
-      Set("translation", "translate", "translating", "traducción", "traduction", "übersetzung", "الترجمة", "3", "translation quiz", "translate quiz") -> "translation",
-      Set("mcq", "multiple choice", "multiplechoice", "multiple-choice", "choice", "opción múltiple", "choix multiple", "الاختيار من متعدد", "4", "mcq quiz", "multiple choice quiz", "mcw", "mcc") -> "mcq"
+      Set("grammar", "grammatical", "syntax", "gramática", "grammaire", "grammatik", "2", "grammar quiz") -> "grammar",
+      Set("translation", "translate", "translating", "traducción", "traduction", "übersetzung", "3", "translation quiz", "translate quiz") -> "translation",
+      Set("mcq", "multiple choice", "multiplechoice", "multiple-choice", "choice", "opción múltiple", "choix multiple",  "4", "mcq quiz", "multiple choice quiz", "mcw", "mcc") -> "mcq"
     )
     
     // Check for patterns like "give me grammar quiz"
@@ -400,12 +409,6 @@ object ChatbotCore {
     tokens.exists(helpWords.contains)
   }
   
-  private def isLanguageQuestion(tokens: List[String]): Boolean = {
-    val questionIndicators = Set("why", "when", "translate", "mean", "say", "spell", "pronounce")
-    // Add more specific language learning words that won't be confused with greeting inquiries
-    val languageSpecificWords = Set("verb", "noun", "adjective", "grammar", "vocabulary", "phrase", "idiom", "word", "sentence")
-    tokens.exists(questionIndicators.contains) || tokens.exists(languageSpecificWords.contains)
-  }
   
   /**
    * Store user preferences immutably
@@ -535,10 +538,7 @@ object ChatbotCore {
         ("I'm here to help you learn languages", "German") -> "Ich bin hier, um Ihnen beim Sprachenlernen zu helfen",
         
         
-        ("What would you like to do today?", "English") -> "What would you like to do today?",
-        ("What would you like to do today?", "Spanish") -> "¿Qué te gustaría hacer hoy?",
-        ("What would you like to do today?", "French") -> "Que souhaitez-vous faire aujourd'hui ?",
-        ("What would you like to do today?", "German") -> "Was möchten Sie heute machen?",
+       
         
         
         // Greeting responses
@@ -757,7 +757,6 @@ object ChatbotCore {
     else if (isQuizRequest(tokens)) "quiz_request"
     else if (isSettingsChange(tokens)) "settings"
     else if (isHelp(tokens)) "help"
-    else if (isLanguageQuestion(tokens)) "language_question"
     else "unknown"
   }
 

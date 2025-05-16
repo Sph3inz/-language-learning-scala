@@ -1,7 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0mD:\chatbot\-language-learning-scala\src\main\scala\Main.scala:342:12: Pattern contains duplicate alternatives: "multiple choice"[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" | "4" => Some(MCQ)[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\chatbot\-language-learning-scala\src\main\scala\Main.scala:327:12: Pattern contains duplicate alternatives: "multiple choice"[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "4" => Some(MCQ)[0m
 [0m[[0m[33mwarn[0m] [0m[0m           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mD:\chatbot\-language-learning-scala\src\main\scala\Main.scala:628:18: Pattern contains duplicate alternatives: "multiple choice"[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\chatbot\-language-learning-scala\src\main\scala\Main.scala:686:18: Pattern contains duplicate alternatives: "multiple choice"[0m
 [0m[[0m[33mwarn[0m] [0m[0m            case "mcq" | "multiple choice" | "4" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" => Some(MCQ)[0m
 [0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

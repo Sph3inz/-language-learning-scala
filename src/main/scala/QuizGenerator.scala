@@ -17,8 +17,8 @@ object QuizGenerator {
       // Pick a random version from the available banks
       questionBanks(Random.nextInt(questionBanks.length))
     } else {
-      // Fallback to default questions if no specific banks exist for this combination
-      getDefaultQuestionBank(language, quizType)
+      // Default to an empty list if no banks are available
+      List()
     }
 
     // Randomly select questions from the chosen bank
@@ -417,37 +417,9 @@ object QuizGenerator {
         )
       )
 
-      // French grammar quizzes - Impossible difficulty cases removed
+      
 
-      // French grammar quizzes - Impossible difficulty (3 versions)
-      case (French, Impossible, Grammar) => List(
-        // Version 1 - Literary and formal French
-        List(
-          Question("What is the passé simple of 'prendre' for 'ils'?", List("ils prirent", "ils ont pris", "ils prenaient", "ils prendront"), "ils prirent", Grammar),
-          Question("What is the correct usage of the 'ne explétif'?", List("After verbs of fear: 'Je crains qu'il ne soit trop tard'", "For negation: 'Je ne veux pas'", "For emphasis: 'N'est-ce pas vrai?'", "For formal commands: 'Ne venez pas'"), "After verbs of fear: 'Je crains qu'il ne soit trop tard'", Grammar),
-          Question("Which is a correct example of the 'subjonctif imparfait'?", List("qu'il vînt", "qu'il vienne", "qu'il viendrait", "qu'il venait"), "qu'il vînt", Grammar),
-          Question("What is the correct translation of the literary tense in: 'Eussé-je su la vérité'?", List("Had I known the truth", "I know the truth", "If I knew the truth", "I would know the truth"), "Had I known the truth", Grammar),
-          Question("In literary French, what does 'que' replace in the inverted conditional?", List("'si' in a condition: 'Eût-il parlé' = 'S'il avait parlé'", "'quand' in time expressions", "'qui' in relative clauses", "'où' in place expressions"), "'si' in a condition: 'Eût-il parlé' = 'S'il avait parlé'", Grammar)
-        ),
-        
-        // Version 2 - Archaic and exceptional forms
-        List(
-          Question("What is the correct archaic second person singular form of the imperative of 'avoir'?", List("aie", "as", "ai", "ais"), "aie", Grammar),
-          Question("What is the 'subjonctif plus-que-parfait' of 'pouvoir' with 'vous'?", List("que vous eussiez pu", "que vous puissiez", "que vous avez pu", "que vous pouvez"), "que vous eussiez pu", Grammar),
-          Question("Which is an example of a 'conditionnel surcomposé'?", List("il aurait eu terminé", "il aurait terminé", "il aura terminé", "il eût terminé"), "il aurait eu terminé", Grammar),
-          Question("What is the archaic inversion form of 'Que Dieu vous protège'?", List("Que Dieu vous protège-t-il", "Dieu vous protège-t-il", "Vous protège Dieu", "Vous Dieu protège"), "Que Dieu vous protège-t-il", Grammar),
-          Question("Which construction is an example of a 'proposition infinitive'?", List("Je les entends chanter", "Je veux chanter", "Je suis en train de chanter", "Je sais qu'ils chantent"), "Je les entends chanter", Grammar)
-        ),
-        
-        // Version 3 - Dialectal and register variations
-        List(
-          Question("Which expression is typical of Quebec French?", List("C'est plate (It's boring)", "C'est génial", "C'est chouette", "C'est nul"), "C'est plate (It's boring)", Grammar),
-          Question("Which negation structure is typical of informal spoken French?", List("'Je sais pas' (omitting 'ne')", "'Je ne sais pas'", "'Je ne sais point'", "'Je sais jamais'"), "'Je sais pas' (omitting 'ne')", Grammar),
-          Question("In African French, what does 'Il a chicotté l'enfant' mean?", List("He whipped/beat the child", "He scolded the child", "He educated the child", "He punished the child"), "He whipped/beat the child", Grammar),
-          Question("What is the meaning of the Belgian French term 'drache'?", List("Heavy rain", "Strong wind", "Snow", "Fog"), "Heavy rain", Grammar),
-          Question("Which structure is common in Swiss French?", List("'Ça joue?' (Is it okay?)", "'Ça marche?'", "'Ça va?'", "'Ça roule?'"), "'Ça joue?' (Is it okay?)", Grammar)
-        )
-      )
+      
       
       // English grammar quizzes - Easy difficulty (3 versions)
       case (English, Easy, Grammar) => List(
@@ -539,35 +511,8 @@ object QuizGenerator {
         )
       )
       
-      // English grammar quizzes - Impossible difficulty (3 versions)
-      case (English, Impossible, Grammar) => List(
-        // Version 1 - Complex grammatical structures and nuances
-        List(
-          Question("Identify the correct usage of the subjunctive in a contrary-to-fact statement:", List("If I were you, I would reconsider that decision", "If I was you, I would reconsider that decision", "If I am you, I would reconsider that decision", "If I be you, I would reconsider that decision"), "If I were you, I would reconsider that decision", Grammar),
-          Question("Which sentence demonstrates correct subject-verb inversion for emphasis?", List("Never have I seen such beauty", "Never I have seen such beauty", "I have never seen such beauty", "I never have seen such beauty"), "Never have I seen such beauty", Grammar),
-          Question("Identify the sentence with the correct use of a cleft structure:", List("It was in Paris that I met her for the first time", "In Paris is where I met her for the first time", "It is in Paris where I met her for the first time", "In Paris it was that I met her for the first time"), "It was in Paris that I met her for the first time", Grammar),
-          Question("Which sentence correctly uses a double negative for rhetorical effect?", List("It is not uncommon to make such mistakes", "It is not unobvious to make such mistakes", "It is not unillegal to make such mistakes", "It is not uninformal to make such mistakes"), "It is not uncommon to make such mistakes", Grammar),
-          Question("Choose the sentence with correct inversion in a hypothetical subjunctive construction:", List("Were she to arrive early, we would start the meeting", "Was she to arrive early, we would start the meeting", "Should she arrives early, we would start the meeting", "Would she arrive early, we would start the meeting"), "Were she to arrive early, we would start the meeting", Grammar)
-        ),
-        
-        // Version 2 - Archaic and literary forms
-        List(
-          Question("Identify the archaic second-person singular verb form:", List("thou dost", "thou do", "thou does", "thou doing"), "thou dost", Grammar),
-          Question("Which is the correct Shakespearean form of the negative imperative?", List("Fear not the challenge", "Do not fear the challenge", "Not fear the challenge", "Non-fear the challenge"), "Fear not the challenge", Grammar),
-          Question("Identify the correct use of the historic present tense in narrative:", List("Caesar crosses the Rubicon and changes history forever", "Caesar crossing the Rubicon and changing history forever", "Caesar crossed the Rubicon and changed history forever", "Caesar had crossed the Rubicon and had changed history forever"), "Caesar crosses the Rubicon and changes history forever", Grammar),
-          Question("Choose the correct archaic possessive form:", List("mine own house", "my own house", "the own house of mine", "the mine own house"), "mine own house", Grammar),
-          Question("Identify the correct use of 'would' to express a habitual past action:", List("When I was a child, I would visit my grandmother every Sunday", "When I was a child, I had visited my grandmother every Sunday", "When I was a child, I will visit my grandmother every Sunday", "When I was a child, I visited my grandmother every Sunday"), "When I was a child, I would visit my grandmother every Sunday", Grammar)
-        ),
-        
-        // Version 3 - Dialectal variations and register
-        List(
-          Question("Which sentence correctly uses the subjunctive in American English?", List("The committee recommends that he submit his report", "The committee recommends that he submits his report", "The committee recommends that he submitted his report", "The committee recommends that he would submit his report"), "The committee recommends that he submit his report", Grammar),
-          Question("Identify the correct use of 'shall' in British formal English:", List("We shall require payment within 30 days", "We will require payment within 30 days", "We should require payment within 30 days", "We ought to require payment within 30 days"), "We shall require payment within 30 days", Grammar),
-          Question("Which is an example of a correct complex preposition in formal writing?", List("The decision was made in accordance with the regulations", "The decision was made according with the regulations", "The decision was made accordant to the regulations", "The decision was made in according to the regulations"), "The decision was made in accordance with the regulations", Grammar),
-          Question("Identify the sentence that correctly uses British English spelling and grammar:", List("The organisation specialises in analysing behavioural patterns", "The organization specializes in analyzing behavioral patterns", "The organisation specializes in analysing behavioural patterns", "The organization specialises in analyzing behavioral patterns"), "The organisation specialises in analysing behavioural patterns", Grammar),
-          Question("Which sentence demonstrates correct use of the definite article in idiomatic English?", List("She plays the piano beautifully", "She plays piano beautifully", "She plays a piano beautifully", "She plays beautifully the piano"), "She plays the piano beautifully", Grammar)
-        )
-      )
+     
+      
       
       // German grammar quizzes - Easy difficulty (3 versions)
       case (German, Easy, Grammar) => List(
@@ -660,154 +605,12 @@ object QuizGenerator {
       )
       
       // German grammar quizzes - Impossible difficulty (3 versions)
-      case (German, Impossible, Grammar) => List(
-        // Version 1 - Advanced subjunctive and conditional forms
-        List(
-          Question("Which is the double infinitive construction: 'Er ___ besser machen können'", List("hätte", "würde", "hat", "wäre"), "hätte", Grammar),
-          Question("Complete: 'Er tat so, als ___ er nichts gehört' (He acted as if he had heard nothing)", List("hätte", "habe", "würde haben", "hatte"), "hätte", Grammar),
-          Question("Identify the correct subjunctive form in indirect speech: 'Sie sagte, sie ___ müde'", List("sei", "wäre", "ist", "würde sein"), "sei", Grammar),
-          Question("What is the correct Konjunktiv II alternative form for 'käme'?", List("würde kommen", "komme", "kämen", "kommte"), "würde kommen", Grammar),
-          Question("Which form is used for unreal past conditions in German?", List("Plusquamperfekt Konjunktiv", "Präteritum Konjunktiv", "Futur Konjunktiv", "Präsens Konjunktiv"), "Plusquamperfekt Konjunktiv", Grammar)
-        ),
-        
-        // Version 2 - Advanced verbal structures
-        List(
-          Question("Which is the correct position for multiple verbal elements: 'Er ___ das Buch ___ ___'", List("hat lesen wollen", "hat wollen lesen", "wollen hat lesen", "lesen hat wollen"), "hat lesen wollen", Grammar),
-          Question("Identify the correct extended infinitive structure: 'Sie geht in den Park, ___'", List("um zu spielen", "zu spielen", "für zu spielen", "damit zu spielen"), "um zu spielen", Grammar),
-          Question("Which sentence correctly uses a modal particle?", List("Das ist ja interessant!", "Das ja ist interessant!", "Das ist interessant ja!", "Ja das ist interessant!"), "Das ist ja interessant!", Grammar),
-          Question("Identify the correct use of a separable verb in the perfect tense:", List("Er hat den Vorschlag angenommen", "Er angenommen hat den Vorschlag", "Er hat angenommen den Vorschlag", "Er hat den Vorschlag genomannen"), "Er hat den Vorschlag angenommen", Grammar),
-          Question("Which is the correct structure with two-way prepositions defining motion?", List("Ich gehe in die Schule", "Ich gehe in der Schule", "Ich gehe zu die Schule", "Ich gehe nach die Schule"), "Ich gehe in die Schule", Grammar)
-        ),
-        
-        // Version 3 - Participles and advanced structures
-        List(
-          Question("Which is the correct present participle used as an adjective?", List("die lachenden Kinder", "die gelachten Kinder", "die lachten Kinder", "die zu lachenden Kinder"), "die lachenden Kinder", Grammar),
-          Question("Identify the correct expanded participial construction:", List("In Berlin angekommen, ging er sofort zum Hotel", "Angekommen in Berlin, ging er sofort zum Hotel", "Er angekommen in Berlin, ging sofort zum Hotel", "Er ging sofort zum Hotel, in Berlin angekommen"), "In Berlin angekommen, ging er sofort zum Hotel", Grammar),
-          Question("Which is the correct form of 'zu' with separable verbs?", List("anzufangen", "zu anfangen", "aufzuangen", "zu fangen an"), "anzufangen", Grammar),
-          Question("Complete with the correct functional verb construction: 'Die Arbeit ___ zum Abschluss'", List("kommt", "macht", "gibt", "stellt"), "kommt", Grammar),
-          Question("Identify the grammatically correct complex adjectival phrase:", List("der seit drei Jahren in Berlin lebende Mann", "der in Berlin seit drei Jahren lebend Mann", "der Mann seit drei Jahren in Berlin lebend", "der lebende Mann seit drei Jahren in Berlin"), "der seit drei Jahren in Berlin lebende Mann", Grammar)
-        )
-      )
       
-      // Arabic grammar quizzes - Easy difficulty (3 versions)
-      case (Arabic, Easy, Grammar) => List(
-        // Version 1 - Basic sentence structure
-        List(
-          Question("What is the correct word order in Arabic sentences?", List("Verb-Subject-Object (VSO)", "Subject-Verb-Object (SVO)", "Object-Verb-Subject (OVS)", "Subject-Object-Verb (SOV)"), "Verb-Subject-Object (VSO)", Grammar),
-          Question("Which is the correct definite article in Arabic?", List("ال (al)", "في (fi)", "من (min)", "على (ala)"), "ال (al)", Grammar),
-          Question("How are adjectives positioned relative to nouns in Arabic?", List("After the noun", "Before the noun", "Either before or after", "No specific order"), "After the noun", Grammar),
-          Question("What is the correct way to say 'a book' in Arabic (indefinite)?", List("كتاب (kitab)", "الكتاب (al-kitab)", "كتابٌ (kitabun)", "كتابي (kitabi)"), "كتابٌ (kitabun)", Grammar),
-          Question("Which sentence has the correct word order in Arabic?", List("يأكل الولد التفاحة (The boy eats the apple)", "الولد يأكل التفاحة", "التفاحة الولد يأكل", "الولد التفاحة يأكل"), "يأكل الولد التفاحة (The boy eats the apple)", Grammar)
-        ),
-        
-        // Version 2 - Gender and number agreement
-        List(
-          Question("How many grammatical genders are in Arabic?", List("Two (masculine and feminine)", "Three (masculine, feminine, and neuter)", "Four (masculine, feminine, neuter, and common)", "One (no gender)"), "Two (masculine and feminine)", Grammar),
-          Question("Which is the correct feminine form of المعلم (the male teacher)?", List("المعلمة", "المعلمات", "المعلمتان", "المعلمون"), "المعلمة", Grammar),
-          Question("How many number forms does Arabic have?", List("Three (singular, dual, and plural)", "Two (singular and plural)", "Four (singular, dual, plural, and collective)", "One (no number distinction)"), "Three (singular, dual, and plural)", Grammar),
-          Question("Which is the correct dual form of كتاب (book)?", List("كتابان", "كتابين", "كتابات", "كتب"), "كتابان", Grammar),
-          Question("What is the correct feminine plural form of طالب (male student)?", List("طالبات", "طالبان", "طالبين", "طلاب"), "طالبات", Grammar)
-        ),
-        
-        // Version 3 - Basic verb conjugation
-        List(
-          Question("In Arabic, what is the base form of verbs called?", List("المصدر (masdar)", "الفعل (fi'l)", "الاسم (ism)", "الصفة (sifa)"), "المصدر (masdar)", Grammar),
-          Question("What is the past tense form of 'to write' for 'he' in Arabic?", List("كتب (kataba)", "يكتب (yaktubu)", "اكتب (uktub)", "كاتب (katib)"), "كتب (kataba)", Grammar),
-          Question("What is the present tense form of 'to read' for 'I' in Arabic?", List("أقرأ (aqra'u)", "قرأت (qara'tu)", "تقرأ (taqra'u)", "يقرأ (yaqra'u)"), "أقرأ (aqra'u)", Grammar),
-          Question("Which sentence correctly uses the present tense in Arabic?", List("أنا أكتب رسالة (I write a letter)", "أنا كتبت رسالة", "أنا سوف أكتب رسالة", "أنا كاتب رسالة"), "أنا أكتب رسالة (I write a letter)", Grammar),
-          Question("What is the imperative form of 'to open' for 'you' (masculine) in Arabic?", List("افتح (iftah)", "يفتح (yaftahu)", "فتح (fataha)", "مفتوح (maftooh)"), "افتح (iftah)", Grammar)
-        )
-      )
       
-      // Arabic grammar quizzes - Medium difficulty (3 versions)
-      case (Arabic, Medium, Grammar) => List(
-        // Version 1 - Case endings
-        List(
-          Question("What are the three grammatical cases in Arabic?", List("Nominative, accusative, and genitive", "Subject, object, and possessive", "Agent, patient, and instrument", "Active, passive, and reflexive"), "Nominative, accusative, and genitive", Grammar),
-          Question("What is the nominative case marker in Arabic?", List("الضمة (damma - ُ)", "الفتحة (fatha - َ)", "الكسرة (kasra - ِ)", "السكون (sukoon - ْ)"), "الضمة (damma - ُ)", Grammar),
-          Question("Which case is used for the subject of a verbal sentence in Arabic?", List("Nominative", "Accusative", "Genitive", "Vocative"), "Nominative", Grammar),
-          Question("Which case is used after most prepositions in Arabic?", List("Genitive", "Accusative", "Nominative", "Dative"), "Genitive", Grammar),
-          Question("In the phrase 'كتاب الطالب' (the student's book), what case is 'الطالب' in?", List("Genitive", "Nominative", "Accusative", "Dative"), "Genitive", Grammar)
-        ),
-        
-        // Version 2 - Verb forms
-        List(
-          Question("How many derived verb forms are there in Classical Arabic?", List("Ten", "Five", "Seven", "Three"), "Ten", Grammar),
-          Question("Which form of the verb typically indicates reciprocal action?", List("Form VI (تفاعل)", "Form II (فعّل)", "Form IV (أفعل)", "Form VIII (افتعل)"), "Form VI (تفاعل)", Grammar),
-          Question("What is the typical meaning added by Form II (فعّل) of Arabic verbs?", List("Causative or intensive", "Reciprocal", "Reflexive", "Passive"), "Causative or intensive", Grammar),
-          Question("Which verb form is derived from كتب (to write) that means 'to correspond with each other'?", List("تكاتب (Form VI)", "كتّب (Form II)", "اكتتب (Form VIII)", "استكتب (Form X)"), "تكاتب (Form VI)", Grammar),
-          Question("Which form is used for the verb عَلِمَ (to know) to make it mean 'to teach'?", List("Form II: عَلَّمَ", "Form IV: أَعْلَمَ", "Form III: عَالَمَ", "Form X: اِسْتَعْلَمَ"), "Form II: عَلَّمَ", Grammar)
-        ),
-        
-        // Version 3 - Complex sentences
-        List(
-          Question("Which Arabic word is used to mean 'that' in a nominal sentence?", List("أنّ (anna)", "أن (an)", "لأن (li-anna)", "إذا (idha)"), "أنّ (anna)", Grammar),
-          Question("Which particle is used to negate past tense verbs in Arabic?", List("لم (lam)", "لا (la)", "ما (ma)", "ليس (laysa)"), "لم (lam)", Grammar),
-          Question("Which conditional particle means 'if' for possible conditions in Arabic?", List("إذا (idha)", "لو (law)", "إن (in)", "لولا (lawla)"), "إذا (idha)", Grammar),
-          Question("What is the correct Arabic term for a verbal sentence?", List("جملة فعلية (jumla fi'liyya)", "جملة اسمية (jumla ismiyya)", "جملة ظرفية (jumla dharfiyya)", "جملة شرطية (jumla shartiyya)"), "جملة فعلية (jumla fi'liyya)", Grammar),
-          Question("How do you say 'I want to go' in Arabic using the subjunctive?", List("أريد أن أذهب", "أريد أذهب", "أريد لأذهب", "أريد سوف أذهب"), "أريد أن أذهب", Grammar)
-        )
-      )
+     
       
-      // Arabic grammar quizzes - Hard difficulty (3 versions)
-      case (Arabic, Hard, Grammar) => List(
-        // Version 1 - Broken plurals
-        List(
-          Question("What is the term for irregular plurals in Arabic?", List("جمع التكسير (jam' at-taksir)", "جمع المؤنث السالم (jam' al-mu'annath as-salim)", "جمع المذكر السالم (jam' al-mudhakkar as-salim)", "المثنى (al-muthanna)"), "جمع التكسير (jam' at-taksir)", Grammar),
-          Question("What is the plural form of كتاب (book)?", List("كتب (kutub)", "كتابون (kitaboon)", "كتابات (kitabat)", "أكتبة (aktiba)"), "كتب (kutub)", Grammar),
-          Question("What is the plural form of قلب (heart)?", List("قلوب (quloob)", "قلبان (qalban)", "قلوبات (quloobat)", "أقلاب (aqlab)"), "قلوب (quloob)", Grammar),
-          Question("What is the plural pattern used for مسجد (mosque)?", List("مساجد (masajid)", "مسجدون (masjidoon)", "مساجيد (masajeed)", "أمسجدة (amsjida)"), "مساجد (masajid)", Grammar),
-          Question("Which word has a sound masculine plural?", List("مدرس (teacher) → مدرسون", "كتاب (book) → كتب", "بيت (house) → بيوت", "قلم (pen) → أقلام"), "مدرس (teacher) → مدرسون", Grammar)
-        ),
-        
-        // Version 2 - Complex verb tenses
-        List(
-          Question("Which construction is used for the future perfect in Arabic?", List("سيكون قد + past verb", "سوف + present verb", "كان قد + past verb", "قد + present verb"), "سيكون قد + past verb", Grammar),
-          Question("What is the correct way to express 'had been doing' in Arabic?", List("كان قد + past verb", "كان + present verb", "قد + past verb", "سيكون + past verb"), "كان قد + past verb", Grammar),
-          Question("How do you express 'must have done' in Arabic?", List("لا بد أنه قد + past verb", "يجب أن + present verb", "من الضروري + present verb", "كان من المفروض أن + present verb"), "لا بد أنه قد + past verb", Grammar),
-          Question("Which particle is used with the jussive mood to express prohibition?", List("لا (la) + jussive", "لن (lan) + subjunctive", "لم (lam) + jussive", "ما (ma) + perfect"), "لا (la) + jussive", Grammar),
-          Question("How would you translate 'He has been writing' into Arabic?", List("كان يكتب", "قد كتب", "ما زال يكتب", "سوف يكتب"), "ما زال يكتب", Grammar)
-        ),
-        
-        // Version 3 - Grammatical exceptions
-        List(
-          Question("Which of these nouns is diptote (doesn't take tanween)?", List("أحمد (Ahmad)", "كتاب (book)", "قلم (pen)", "رجل (man)"), "أحمد (Ahmad)", Grammar),
-          Question("Which of these is a 'sister of كان' (kana)?", List("أصبح (asbaha - to become)", "قال (qala - to say)", "فتح (fataha - to open)", "ذهب (dhahaba - to go)"), "أصبح (asbaha - to become)", Grammar),
-          Question("What is special about the 'Five Nouns' in Arabic grammar?", List("They have special case endings with و، ا، ي", "They only have singular forms", "They are always indefinite", "They never take the definite article"), "They have special case endings with و، ا، ي", Grammar),
-          Question("Which of these is one of the 'Five Nouns'?", List("أب (father)", "كتاب (book)", "بيت (house)", "شجرة (tree)"), "أب (father)", Grammar),
-          Question("Which type of noun doesn't accept nunation (tanween)?", List("Proper nouns", "Common nouns", "Abstract nouns", "Collective nouns"), "Proper nouns", Grammar)
-        )
-      )
       
-      // Arabic grammar quizzes - Impossible difficulty (3 versions)
-      case (Arabic, Impossible, Grammar) => List(
-        // Version 1 - Classical Arabic poetry and rhetoric
-        List(
-          Question("What is the term for Arabic rhetoric?", List("البلاغة (al-balagha)", "النحو (an-nahw)", "الصرف (as-sarf)", "العروض (al-'arud)"), "البلاغة (al-balagha)", Grammar),
-          Question("What is the branch of Arabic rhetoric that deals with syntax for effective expression?", List("علم المعاني (ilm al-ma'ani)", "علم البيان (ilm al-bayan)", "علم البديع (ilm al-badi')", "علم العروض (ilm al-'arud)"), "علم المعاني (ilm al-ma'ani)", Grammar),
-          Question("What is the rhetoric term for personification in Arabic?", List("التشخيص (at-tashkhis)", "الاستعارة (al-isti'ara)", "التشبيه (at-tashbih)", "الكناية (al-kinaya)"), "التشخيص (at-tashkhis)", Grammar),
-          Question("Which grammatical case is used for the circumstantial adverb (الحال) in Arabic?", List("النصب (accusative)", "الرفع (nominative)", "الجر (genitive)", "الجزم (jussive)"), "النصب (accusative)", Grammar),
-          Question("In Arabic poetry meter, what is the smallest unit called?", List("السبب (as-sabab)", "البيت (al-bayt)", "البحر (al-bahr)", "القافية (al-qafiya)"), "السبب (as-sabab)", Grammar)
-        ),
-        
-        // Version 2 - Dialectical variations
-        List(
-          Question("Which dialectical feature distinguishes Egyptian Arabic from Modern Standard Arabic?", List("Replacing ث with س or ت", "Dropping case endings", "Adding the prefix 'ب' to present tense verbs", "All of these"), "All of these", Grammar),
-          Question("How does Levantine Arabic form the future tense, unlike MSA?", List("Using رح or ح before the verb", "Using سوف before the verb", "Using the prefix س", "Using the particle قد"), "Using رح or ح before the verb", Grammar),
-          Question("In Moroccan Arabic (Darija), what often happens to short vowels?", List("They are frequently dropped", "They are lengthened", "They are replaced with dipthongs", "They are nasalized"), "They are frequently dropped", Grammar),
-          Question("Which is a feature of Gulf Arabic not found in MSA?", List("The use of چ (ch) sound", "Lack of dual forms", "No gender distinction", "No definite article"), "The use of چ (ch) sound", Grammar),
-          Question("What grammatical feature is preserved in some Yemeni dialects but lost in many other dialects?", List("Case endings", "Dual verbs", "The letter ث", "Passive voice"), "Case endings", Grammar)
-        ),
-        
-        // Version 3 - Linguistic analysis
-        List(
-          Question("What is i'rab in Arabic grammar?", List("The system of case endings", "The plural formation", "The verbal paradigm", "The writing system"), "The system of case endings", Grammar),
-          Question("What is the grammatical term for a verbal noun in Arabic?", List("مصدر (masdar)", "اسم فاعل (ism fa'il)", "اسم مفعول (ism maf'ul)", "اسم آلة (ism ala)"), "مصدر (masdar)", Grammar),
-          Question("What is the linguistic term for the consonantal root system in Arabic?", List("الجذر (al-jidhr)", "الميزان الصرفي (al-mizan as-sarfi)", "الوزن (al-wazn)", "الصيغة (as-sigha)"), "الجذر (al-jidhr)", Grammar),
-          Question("In Arabic linguistic theory, what does إعلال (i'lal) refer to?", List("Changes in weak letters in a word", "Addition of extra letters", "Shortening of vowels", "Dropping of case endings"), "Changes in weak letters in a word", Grammar),
-          Question("What is the term for the phonological process where ت (ta) assimilates with certain consonants?", List("الإدغام (al-idgham)", "الإبدال (al-ibdal)", "الإعلال (al-i'lal)", "الإظهار (al-idhar)"), "الإدغام (al-idgham)", Grammar)
-        )
-      )
+   
 
       // For other quiz types and language combinations, return an empty list
       // This will make the system fall back to the default question bank
@@ -932,34 +735,7 @@ object QuizGenerator {
       )
       
       // Arabic translation quizzes - Easy difficulty (3 versions)
-      case (Arabic, Easy, Translation) => List(
-        // Version 1 - Basic greetings and phrases
-        List(
-          Question("How do you say 'Hello, how are you?' in Arabic?", List("مرحباً، كيف حالك؟", "السلام عليكم، كيف حالك؟", "أهلاً، كيف الحال؟", "All of these are correct"), "مرحباً، كيف حالك؟", Translation),
-          Question("Translate 'My name is John' to Arabic", List("اسمي جون", "أنا جون", "يُدعى جون", "All of these are acceptable"), "اسمي جون", Translation),
-          Question("Translate 'I would like a coffee, please' to Arabic", List("أريد قهوة من فضلك", "أود قهوة لو سمحت", "هل يمكنني الحصول على قهوة من فضلك", "All of these are correct"), "أريد قهوة من فضلك", Translation),
-          Question("How do you say 'Where is the bathroom?' in Arabic?", List("أين الحمام؟", "أين المرحاض؟", "أين دورة المياه؟", "All of these are acceptable"), "أين الحمام؟", Translation),
-          Question("Translate 'Thank you very much' to Arabic", List("شكراً جزيلاً", "شكراً كثيراً", "أشكرك بشدة", "All of these are correct"), "شكراً جزيلاً", Translation)
-        ),
-        
-        // Version 2 - Food and restaurants
-        List(
-          Question("Translate 'I would like to order' to Arabic", List("أريد أن أطلب", "أود أن أطلب", "أرغب في الطلب", "All of these are correct"), "أريد أن أطلب", Translation),
-          Question("How do you say 'The bill, please' in Arabic?", List("الحساب من فضلك", "الفاتورة لو سمحت", "أريد أن أدفع", "All of these are acceptable"), "الحساب من فضلك", Translation),
-          Question("Translate 'Is there a vegetarian option?' to Arabic", List("هل هناك خيار نباتي؟", "هل توجد أطباق نباتية؟", "هل لديكم طعام للنباتيين؟", "All of these are correct"), "هل هناك خيار نباتي؟", Translation),
-          Question("How do you say 'This food is delicious' in Arabic?", List("هذا الطعام لذيذ", "الطعام شهي", "وجبة لذيذة", "All of these convey the same meaning"), "هذا الطعام لذيذ", Translation),
-          Question("Translate 'I am allergic to nuts' to Arabic", List("أنا أعاني من حساسية من المكسرات", "لدي حساسية من المكسرات", "أنا حساس للمكسرات", "All of these convey the meaning"), "لدي حساسية من المكسرات", Translation)
-        ),
-        
-        // Version 3 - Travel and directions
-        List(
-          Question("How do you say 'How much does this cost?' in Arabic?", List("كم يكلف هذا؟", "كم سعر هذا؟", "بكم هذا؟", "All of these are correct"), "كم يكلف هذا؟", Translation),
-          Question("Translate 'I need a hotel' to Arabic", List("أحتاج إلى فندق", "أريد فندقاً", "أبحث عن فندق", "All of these are correct"), "أحتاج إلى فندق", Translation),
-          Question("How do you say 'Turn right at the corner' in Arabic?", List("انعطف يميناً عند الزاوية", "اتجه يميناً عند المنعطف", "خذ اليمين عند الزاوية", "All of these convey the direction"), "انعطف يميناً عند الزاوية", Translation),
-          Question("Translate 'Is it far from here?' to Arabic", List("هل هو بعيد من هنا؟", "هل هذا بعيد؟", "هل المسافة طويلة من هنا؟", "All of these are correct"), "هل هو بعيد من هنا؟", Translation),
-          Question("How do you say 'I am lost' in Arabic?", List("أنا تائه", "لقد ضللت الطريق", "أنا ضائع", "All of these convey being lost"), "أنا تائه", Translation)
-        )
-      )
+      
       
       // French MCQ quizzes - Easy difficulty (3 versions)
       case (French, Easy, MCQ) => List(
@@ -1051,35 +827,8 @@ object QuizGenerator {
         )
       )
       
-      // French MCQ quizzes - Impossible difficulty (3 versions)
-      case (French, Impossible, MCQ) => List(
-        // Version 1 - Obscure history and politics
-        List(
-          Question("Who was the last king of France before the 1848 Revolution?", List("Louis-Philippe I", "Charles X", "Louis XVIII", "Napoleon III"), "Louis-Philippe I", MCQ),
-          Question("Which French prime minister served the longest consecutive term?", List("François Fillon", "Georges Pompidou", "Pierre Mauroy", "Michel Rocard"), "François Fillon", MCQ),
-          Question("Which constitutional article allows the French president to take emergency powers?", List("Article 16", "Article 49", "Article 89", "Article 35"), "Article 16", MCQ),
-          Question("Which French overseas territory held an independence referendum in 2018?", List("New Caledonia", "French Guiana", "Réunion", "Mayotte"), "New Caledonia", MCQ),
-          Question("What was the name of the French colonial policy of cultural assimilation?", List("Mission civilisatrice", "Pax Gallica", "Ancien Régime colonial", "Politique indigène"), "Mission civilisatrice", MCQ)
-        ),
-        
-        // Version 2 - Specialized knowledge
-        List(
-          Question("What is the average annual wine production in France (in billions of liters)?", List("4.2", "2.8", "7.5", "10.1"), "4.2", MCQ),
-          Question("Which French mathematician invented analytical geometry?", List("René Descartes", "Blaise Pascal", "Pierre de Fermat", "Joseph Fourier"), "René Descartes", MCQ),
-          Question("What is 'Loi Toubon'?", List("Law protecting the French language", "Anti-terrorism legislation", "Agricultural subsidy regulation", "Environmental protection act"), "Law protecting the French language", MCQ),
-          Question("What French term describes the specific local growing conditions for wine?", List("Terroir", "Vendange", "Millésime", "Cépage"), "Terroir", MCQ),
-          Question("What is the French 'Grandes Écoles' system?", List("Elite higher education institutions", "Primary school curriculum", "Art education framework", "Military academies"), "Elite higher education institutions", MCQ)
-        ),
-        
-        // Version 3 - Extremely specific cultural knowledge
-        List(
-          Question("Which French scientist won the Nobel Prize for discovering radioactivity?", List("Henri Becquerel", "Marie Curie", "Louis Pasteur", "Pierre Curie"), "Henri Becquerel", MCQ),
-          Question("What is 'Alexandrin' in French poetry?", List("A twelve-syllable line", "A specific rhyme scheme", "A type of sonnet", "A structural device"), "A twelve-syllable line", MCQ),
-          Question("What is the traditional 'Pot-au-Feu'?", List("A beef stew", "A ceramic cooking pot", "A fireplace design", "A holiday tradition"), "A beef stew", MCQ),
-          Question("Which French philosopher coined the phrase 'I think, therefore I am'?", List("René Descartes", "Jean-Paul Sartre", "Albert Camus", "Voltaire"), "René Descartes", MCQ),
-          Question("What is the oldest still-operating French perfume house?", List("Houbigant", "Guerlain", "Chanel", "Dior"), "Houbigant", MCQ)
-        )
-      )
+      
+      
       
       // Spanish MCQ quizzes - Easy difficulty (3 versions)
       case (Spanish, Easy, MCQ) => List(
@@ -1171,35 +920,7 @@ object QuizGenerator {
         )
       )
       
-      // Spanish MCQ quizzes - Impossible difficulty (3 versions)
-      case (Spanish, Impossible, MCQ) => List(
-        // Version 1 - Obscure history and politics
-        List(
-          Question("Which Spanish king abdicated in 2014?", List("Juan Carlos I", "Felipe VI", "Alfonso XIII", "Carlos IV"), "Juan Carlos I", MCQ),
-          Question("In which year was the First Spanish Republic proclaimed?", List("1873", "1898", "1931", "1812"), "1873", MCQ),
-          Question("Which Spanish politician negotiated the 'Pactos de la Moncloa'?", List("Adolfo Suárez", "Felipe González", "Santiago Carrillo", "Manuel Fraga"), "Adolfo Suárez", MCQ),
-          Question("What was the name of the secret police during Franco's regime?", List("Brigada Político-Social", "Guardia Civil", "Policía Nacional", "Brigada Militar"), "Brigada Político-Social", MCQ),
-          Question("Which Spanish region had its autonomous status temporarily suspended in 2017?", List("Catalonia", "Basque Country", "Galicia", "Andalusia"), "Catalonia", MCQ)
-        ),
-        
-        // Version 2 - Specialized knowledge
-        List(
-          Question("What is the Spanish legal system based on?", List("Civil law", "Common law", "Religious law", "Customary law"), "Civil law", MCQ),
-          Question("What percentage of Spain's land is used for agriculture?", List("Around 55%", "Around 25%", "Around 75%", "Around 35%"), "Around 55%", MCQ),
-          Question("Which Spanish university is the oldest in operation?", List("University of Salamanca", "Complutense University of Madrid", "University of Barcelona", "University of Seville"), "University of Salamanca", MCQ),
-          Question("What is Spain's national tree?", List("Holm oak", "Pine", "Olive", "Eucalyptus"), "Holm oak", MCQ),
-          Question("Which traditional Spanish herding dog has distinctive two-colored eyes?", List("Catalonian Sheepdog", "Spanish Mastiff", "Ibizan Hound", "Andalusian Hound"), "Catalonian Sheepdog", MCQ)
-        ),
-        
-        // Version 3 - Extremely specific cultural knowledge
-        List(
-          Question("Which Spanish chemist won the Nobel Prize in 1906?", List("Santiago Ramón y Cajal", "Severo Ochoa", "Antoni Gaudí", "Miguel Servet"), "Santiago Ramón y Cajal", MCQ),
-          Question("What type of instrument is a 'gaita'?", List("Bagpipe", "Guitar", "Flute", "Drum"), "Bagpipe", MCQ),
-          Question("In Spanish cuisine, what is 'socarrat'?", List("The crispy rice at the bottom of the paella pan", "A type of fish sauce", "Caramelized onions", "Smoked paprika"), "The crispy rice at the bottom of the paella pan", MCQ),
-          Question("Which Spanish film won the Academy Award for Best Foreign Language Film in 2004?", List("The Sea Inside", "All About My Mother", "Talk to Her", "Volver"), "The Sea Inside", MCQ),
-          Question("What is the meaning of the Spanish literary term 'esperpento'?", List("A grotesque distortion of reality", "A traditional form of Spanish poetry", "A type of theater performance", "A narrative technique with multiple viewpoints"), "A grotesque distortion of reality", MCQ)
-        )
-      )
+     
       
       // English MCQ quizzes - Easy difficulty (3 versions)
       case (English, Easy, MCQ) => List(
@@ -1292,34 +1013,7 @@ object QuizGenerator {
       )
       
       // English grammar quizzes - Impossible difficulty (3 versions)
-      case (English, Impossible, MCQ) => List(
-        // Version 1 - Obscure history and traditions
-        List(
-          Question("What is the 'Cinque Ports' in English history?", List("A confederation of coastal towns", "A series of naval battles", "A type of fishing vessel", "A trade agreement with France"), "A confederation of coastal towns", MCQ),
-          Question("What is 'Swan Upping'?", List("An annual census of swans on the River Thames", "A traditional rowing competition", "A festival celebrating spring", "A hunt for wild swans"), "An annual census of swans on the River Thames", MCQ),
-          Question("Who was the last English monarch to lead troops in battle?", List("George II", "Victoria", "Henry VIII", "Elizabeth I"), "George II", MCQ),
-          Question("What is a 'Yeoman Warder'?", List("A ceremonial guardian at the Tower of London", "A royal gardener", "A member of Parliament", "A town crier"), "A ceremonial guardian at the Tower of London", MCQ),
-          Question("What was the 'Window Tax' in English history?", List("A property tax based on the number of windows", "A tax on glass manufacturing", "A tax on imported French windows", "A tax on housing with sea views"), "A property tax based on the number of windows", MCQ)
-        ),
-        
-        // Version 2 - Specialized knowledge
-        List(
-          Question("What is the national plant of England?", List("Tudor rose", "Daffodil", "Thistle", "Shamrock"), "Tudor rose", MCQ),
-          Question("What is the traditional English folk dance with bells and sticks?", List("Morris dancing", "Maypole dancing", "Square dancing", "Ballroom dancing"), "Morris dancing", MCQ),
-          Question("What percentage of England's land is designated as 'Green Belt'?", List("About 13%", "About 5%", "About 25%", "About 30%"), "About 13%", MCQ),
-          Question("Which English scientist discovered the law of universal gravitation?", List("Isaac Newton", "Michael Faraday", "Robert Hooke", "James Clerk Maxwell"), "Isaac Newton", MCQ),
-          Question("What is 'Received Pronunciation' in English linguistics?", List("The standard accent associated with educated speakers", "The pronunciation used in TV news", "Regional dialect patterns", "The Queen's English dialect"), "The standard accent associated with educated speakers", MCQ)
-        ),
-        
-        // Version 3 - Extremely specific cultural knowledge
-        List(
-          Question("What is a 'Mummers Play' in English folklore?", List("A folk play with masked characters", "A puppet show", "A children's fairy tale", "A type of musical performance"), "A folk play with masked characters", MCQ),
-          Question("What ceremony takes place at the Tower of London each night?", List("The Ceremony of the Keys", "The Changing of the Guard", "The Ravens' Roll Call", "The Yeoman's Watch"), "The Ceremony of the Keys", MCQ),
-          Question("Which English king introduced the Assize of Arms in 1181?", List("Henry II", "Richard I", "King John", "William I"), "Henry II", MCQ),
-          Question("What is 'Plough Monday' in English traditions?", List("The first Monday after Epiphany", "The first day of spring planting", "The harvest festival", "The first Monday of the lunar year"), "The first Monday after Epiphany", MCQ),
-          Question("What is the English legal concept of 'primogeniture'?", List("The right of the firstborn to inherit", "The right to a fair trial", "The monarch's divine right to rule", "The concept of innocent until proven guilty"), "The right of the firstborn to inherit", MCQ)
-        )
-      )
+      
 
       // German MCQ quizzes - Easy difficulty (3 versions)
       case (German, Easy, MCQ) => List(
@@ -1380,6 +1074,97 @@ object QuizGenerator {
           Question("What is 'Mittelstand' in Germany?", List("Small and medium-sized enterprises", "Middle class", "Central government", "Middle management"), "Small and medium-sized enterprises", MCQ)
         )
       )
+
+      case (German, Easy, Vocabulary) => List(
+        // Version 1 - Basic nouns
+        List(
+          Question("Was ist 'apple' auf Deutsch?", List("Apfel", "Banane", "Orange", "Traube"), "Apfel", Vocabulary),
+          Question("Was ist 'book' auf Deutsch?", List("Buch", "Heft", "Bleistift", "Kugelschreiber"), "Buch", Vocabulary),
+          Question("Was ist 'dog' auf Deutsch?", List("Hund", "Katze", "Vogel", "Fisch"), "Hund", Vocabulary),
+          Question("Was ist 'house' auf Deutsch?", List("Haus", "Wohnung", "Gebäude", "Hotel"), "Haus", Vocabulary),
+          Question("Was ist 'car' auf Deutsch?", List("Auto", "Fahrrad", "Zug", "Flugzeug"), "Auto", Vocabulary)
+        ),
+        
+        // Version 2 - Common verbs
+        List(
+          Question("Was ist 'to eat' auf Deutsch?", List("essen", "trinken", "schlafen", "laufen"), "essen", Vocabulary),
+          Question("Was ist 'to drink' auf Deutsch?", List("trinken", "essen", "schlafen", "laufen"), "trinken", Vocabulary),
+          Question("Was ist 'to sleep' auf Deutsch?", List("schlafen", "essen", "trinken", "laufen"), "schlafen", Vocabulary),
+          Question("Was ist 'to walk' auf Deutsch?", List("laufen", "essen", "trinken", "schlafen"), "laufen", Vocabulary),
+          Question("Was ist 'to write' auf Deutsch?", List("schreiben", "lesen", "sprechen", "hören"), "schreiben", Vocabulary)
+        ),
+        
+        // Version 3 - Adjectives
+        List(
+          Question("Was ist 'big' auf Deutsch?", List("groß", "klein", "alt", "jung"), "groß", Vocabulary),
+          Question("Was ist 'small' auf Deutsch?", List("klein", "groß", "alt", "jung"), "klein", Vocabulary),
+          Question("Was ist 'old' auf Deutsch?", List("alt", "jung", "groß", "klein"), "alt", Vocabulary),
+          Question("Was ist 'young' auf Deutsch?", List("jung", "alt", "groß", "klein"), "jung", Vocabulary),
+          Question("Was ist 'beautiful' auf Deutsch?", List("schön", "hässlich", "gut", "schlecht"), "schön", Vocabulary)
+        )
+      )
+
+      // German vocabulary quizzes - Medium difficulty (3 versions)
+      case (German, Medium, Vocabulary) => List(
+        // Version 1 - Professions
+        List(
+          Question("Was ist 'doctor' auf Deutsch?", List("Arzt", "Lehrer", "Ingenieur", "Anwalt"), "Arzt", Vocabulary),
+          Question("Was ist 'teacher' auf Deutsch?", List("Lehrer", "Student", "Arzt", "Anwalt"), "Lehrer", Vocabulary),
+          Question("Was ist 'engineer' auf Deutsch?", List("Ingenieur", "Arzt", "Lehrer", "Krankenschwester"), "Ingenieur", Vocabulary),
+          Question("Was ist 'lawyer' auf Deutsch?", List("Anwalt", "Richter", "Polizist", "Feuerwehrmann"), "Anwalt", Vocabulary),
+          Question("Was ist 'nurse' auf Deutsch?", List("Krankenschwester", "Arzt", "Apotheker", "Zahnarzt"), "Krankenschwester", Vocabulary)
+        ),
+        
+        // Version 2 - Travel
+        List(
+          Question("Was ist 'passport' auf Deutsch?", List("Reisepass", "Ticket", "Koffer", "Hotel"), "Reisepass", Vocabulary),
+          Question("Was ist 'airport' auf Deutsch?", List("Flughafen", "Bahnhof", "Hafen", "Terminal"), "Flughafen", Vocabulary),
+          Question("Was ist 'hotel' auf Deutsch?", List("Hotel", "Pension", "Wohnung", "Haus"), "Hotel", Vocabulary),
+          Question("Was ist 'ticket' auf Deutsch?", List("Fahrkarte", "Reisepass", "Gepäck", "Reservierung"), "Fahrkarte", Vocabulary),
+          Question("Was ist 'suitcase' auf Deutsch?", List("Koffer", "Rucksack", "Tasche", "Gepäck"), "Koffer", Vocabulary)
+        ),
+        
+        // Version 3 - Technology
+        List(
+          Question("Was ist 'computer' auf Deutsch?", List("Computer", "Telefon", "Tablet", "Fernseher"), "Computer", Vocabulary),
+          Question("Was ist 'cell phone' auf Deutsch?", List("Handy", "Computer", "Tablet", "Fernseher"), "Handy", Vocabulary),
+          Question("Was ist 'internet' auf Deutsch?", List("Internet", "Web", "Netz", "WLAN"), "Internet", Vocabulary),
+          Question("Was ist 'printer' auf Deutsch?", List("Drucker", "Scanner", "Computer", "Monitor"), "Drucker", Vocabulary),
+          Question("Was ist 'keyboard' auf Deutsch?", List("Tastatur", "Maus", "Bildschirm", "Drucker"), "Tastatur", Vocabulary)
+        )
+      )
+
+      // German vocabulary quizzes - Hard difficulty (3 versions)
+      case (German, Hard, Vocabulary) => List(
+        // Version 1 - Business terminology
+        List(
+          Question("Was ist 'meeting' auf Deutsch?", List("Besprechung", "Präsentation", "Geschäft", "Konferenz"), "Besprechung", Vocabulary),
+          Question("Was ist 'contract' auf Deutsch?", List("Vertrag", "Vereinbarung", "Dokument", "Projekt"), "Vertrag", Vocabulary),
+          Question("Was ist 'investment' auf Deutsch?", List("Investition", "Gewinn", "Finanzen", "Budget"), "Investition", Vocabulary),
+          Question("Was ist 'profit' auf Deutsch?", List("Gewinn", "Einnahme", "Einkommen", "Gehalt"), "Gewinn", Vocabulary),
+          Question("Was ist 'management' auf Deutsch?", List("Management", "Verwaltung", "Leitung", "Koordination"), "Management", Vocabulary)
+        ),
+        
+        // Version 2 - Medical terminology
+        List(
+          Question("Was ist 'diagnosis' auf Deutsch?", List("Diagnose", "Behandlung", "Symptom", "Krankheit"), "Diagnose", Vocabulary),
+          Question("Was ist 'prescription' auf Deutsch?", List("Rezept", "Medikament", "Behandlung", "Apotheke"), "Rezept", Vocabulary),
+          Question("Was ist 'examination' auf Deutsch?", List("Untersuchung", "Beratung", "Überprüfung", "Diagnose"), "Untersuchung", Vocabulary),
+          Question("Was ist 'symptom' auf Deutsch?", List("Symptom", "Krankheit", "Schmerz", "Diagnose"), "Symptom", Vocabulary),
+          Question("Was ist 'treatment' auf Deutsch?", List("Behandlung", "Medikament", "Therapie", "Pflege"), "Behandlung", Vocabulary)
+        ),
+        
+        // Version 3 - Legal terminology
+        List(
+          Question("Was ist 'law' auf Deutsch?", List("Gesetz", "Recht", "Gerechtigkeit", "Kodex"), "Gesetz", Vocabulary),
+          Question("Was ist 'justice' auf Deutsch?", List("Gerechtigkeit", "Gesetz", "Gericht", "Richter"), "Gerechtigkeit", Vocabulary),
+          Question("Was ist 'lawsuit' auf Deutsch?", List("Klage", "Prozess", "Streit", "Rechtsstreit"), "Klage", Vocabulary),
+          Question("Was ist 'evidence' auf Deutsch?", List("Beweis", "Zeugnis", "Aussage", "Erklärung"), "Beweis", Vocabulary),
+          Question("Was ist 'verdict' auf Deutsch?", List("Urteil", "Entscheidung", "Beschluss", "Prozess"), "Urteil", Vocabulary)
+        )
+      )
+
+      
       
       // German MCQ quizzes - Hard difficulty (3 versions)
       case (German, Hard, MCQ) => List(
@@ -1410,192 +1195,12 @@ object QuizGenerator {
           Question("What is a 'Lehnwort' in German linguistics?", List("A loanword", "A neologism", "A compound word", "A pronoun"), "A loanword", MCQ)
         )
       )
-      
-      // German MCQ quizzes - Impossible difficulty (3 versions)
-      case (German, Impossible, MCQ) => List(
-        // Version 1 - Obscure history and politics
-        List(
-          Question("Which German state was the last to join the North German Confederation?", List("Hesse-Darmstadt", "Bavaria", "Württemberg", "Baden"), "Hesse-Darmstadt", MCQ),
-          Question("What was the 'Weimar Triangle'?", List("A political cooperation between Germany, France, and Poland", "A mathematical concept", "An architectural design", "A military alliance"), "A political cooperation between Germany, France, and Poland", MCQ),
-          Question("Who was the first female minister in German history?", List("Elisabeth Schwarzhaupt", "Angela Merkel", "Ursula von der Leyen", "Hildegard Hamm-Brücher"), "Elisabeth Schwarzhaupt", MCQ),
-          Question("Which German philosopher wrote 'Critique of Pure Reason'?", List("Immanuel Kant", "Friedrich Nietzsche", "Georg Hegel", "Karl Marx"), "Immanuel Kant", MCQ),
-          Question("What was the 'Kulturnation' concept in German history?", List("Cultural unity despite political fragmentation", "State-sponsored cultural programs", "International cultural exchange", "Academic excellence initiative"), "Cultural unity despite political fragmentation", MCQ)
-        ),
-        
-        // Version 2 - Specialized knowledge
-        List(
-          Question("What is 'Knappschaft' in German social history?", List("A miners' guild and insurance system", "A medieval craft guild", "A religious brotherhood", "A student association"), "A miners' guild and insurance system", MCQ),
-          Question("What does the architectural term 'Plattenbau' refer to?", List("Prefabricated concrete buildings", "Medieval half-timbered houses", "Bauhaus design", "Castle architecture"), "Prefabricated concrete buildings", MCQ),
-          Question("Which German physicist formulated the uncertainty principle?", List("Werner Heisenberg", "Max Planck", "Albert Einstein", "Wilhelm Röntgen"), "Werner Heisenberg", MCQ),
-          Question("What percentage of German forests are mixed forests?", List("About 40%", "About 20%", "About 60%", "About 10%"), "About 40%", MCQ),
-          Question("What is 'Klientelpolitik' in German political science?", List("Politics catering to specific interest groups", "Foreign policy doctrine", "Electoral system", "Political party structure"), "Politics catering to specific interest groups", MCQ)
-        ),
-        
-        // Version 3 - Extremely specific cultural knowledge
-        List(
-          Question("What is 'Sehnsucht' in German philosophical and cultural context?", List("A deep yearning or longing", "A form of existential dread", "A mathematical theorem", "An architectural style"), "A deep yearning or longing", MCQ),
-          Question("Which ancient Germanic tribe did NOT participate in the Germanic migrations?", List("Cimbri", "Goths", "Vandals", "Franks"), "Cimbri", MCQ),
-          Question("What is 'Feierabend' in German culture?", List("Free time after work", "A type of celebration", "Weekend holiday", "Religious ceremony"), "Free time after work", MCQ),
-          Question("What does the German legal term 'Drittwirkung' refer to?", List("The effect of constitutional rights on private relationships", "Triple damages in civil lawsuits", "Third-party liability", "Legal precedent system"), "The effect of constitutional rights on private relationships", MCQ),
-          Question("What is the 'Nibelungentreue' concept in German cultural history?", List("Absolute loyalty even to certain doom", "A medieval inheritance system", "A musical composition technique", "A diplomatic alliance structure"), "Absolute loyalty even to certain doom", MCQ)
-        )
-      )
-      
-      // Arabic MCQ quizzes - Easy difficulty (3 versions)
-      case (Arabic, Easy, MCQ) => List(
-        // Version 1 - Cultural knowledge
-        List(
-          Question("Which city is the capital of Saudi Arabia?", List("Riyadh", "Cairo", "Dubai", "Doha"), "Riyadh", MCQ),
-          Question("Which is the holiest city in Islam?", List("Mecca", "Medina", "Jerusalem", "Damascus"), "Mecca", MCQ),
-          Question("Which Arab country has the largest population?", List("Egypt", "Saudi Arabia", "Morocco", "Iraq"), "Egypt", MCQ),
-          Question("What is the most widely spoken dialect of Arabic?", List("Egyptian Arabic", "Levantine Arabic", "Gulf Arabic", "Maghrebi Arabic"), "Egyptian Arabic", MCQ),
-          Question("Which of these is a traditional Arabic instrument?", List("Oud", "Sitar", "Violin", "Piano"), "Oud", MCQ)
-        ),
-        
-        // Version 2 - Geography and history
-        List(
-          Question("Which desert covers much of the Arabian Peninsula?", List("Arabian Desert", "Sahara Desert", "Gobi Desert", "Kalahari Desert"), "Arabian Desert", MCQ),
-          Question("Which Arab city is known as 'the Pearl of the Mediterranean'?", List("Alexandria", "Beirut", "Tunis", "Tripoli"), "Alexandria", MCQ),
-          Question("Which body of water separates the Arabian Peninsula from Africa?", List("Red Sea", "Persian Gulf", "Mediterranean Sea", "Arabian Sea"), "Red Sea", MCQ),
-          Question("Which Arab country was known as Mesopotamia in ancient times?", List("Iraq", "Syria", "Lebanon", "Jordan"), "Iraq", MCQ),
-          Question("Which landmark is located in Giza, Egypt?", List("The Great Pyramids", "Petra", "Burj Khalifa", "Hagia Sophia"), "The Great Pyramids", MCQ)
-        ),
-        
-        // Version 3 - Everyday knowledge
-        List(
-          Question("What is the traditional Arabic coffee called?", List("Qahwa", "Espresso", "Latte", "Mocha"), "Qahwa", MCQ),
-          Question("What is the traditional greeting in Arabic?", List("As-salamu alaykum", "Marhaba", "Ahlan", "All of these are used"), "As-salamu alaykum", MCQ),
-          Question("What type of bread is commonly eaten throughout the Arab world?", List("Khubz (pita)", "Baguette", "Naan", "Focaccia"), "Khubz (pita)", MCQ),
-          Question("What is a 'souk'?", List("A traditional market", "A type of food", "A religious ceremony", "A musical instrument"), "A traditional market", MCQ),
-          Question("What is the Arabic word for 'peace'?", List("Salam", "Harb", "Hob", "Nur"), "Salam", MCQ)
-        )
-      )
-      
-      // Arabic MCQ quizzes - Medium difficulty (3 versions)
-      case (Arabic, Medium, MCQ) => List(
-        // Version 1 - History and culture
-        List(
-          Question("During which century did Islam first emerge?", List("7th century CE", "5th century CE", "10th century CE", "3rd century CE"), "7th century CE", MCQ),
-          Question("Which dynasty ruled the largest Arab empire in history?", List("Umayyad", "Abbasid", "Fatimid", "Ottoman"), "Umayyad", MCQ),
-          Question("What was the 'House of Wisdom' in Baghdad?", List("A major intellectual center for science and literature", "A royal palace", "A religious school", "A government building"), "A major intellectual center for science and literature", MCQ),
-          Question("Which Arab polymath is known as the 'father of modern medicine'?", List("Ibn Sina (Avicenna)", "Al-Kindi", "Ibn Rushd (Averroes)", "Al-Razi"), "Ibn Sina (Avicenna)", MCQ),
-          Question("What is 'Al-Andalus'?", List("Islamic Spain", "Ancient Egypt", "Mesopotamia", "The Levant"), "Islamic Spain", MCQ)
-        ),
-        
-        // Version 2 - Arts and literature
-        List(
-          Question("What are the 'Mu'allaqat' in Arabic literature?", List("Pre-Islamic suspended poems", "Religious texts", "Epic tales", "Love letters"), "Pre-Islamic suspended poems", MCQ),
-          Question("Who wrote 'One Thousand and One Nights'?", List("Multiple anonymous authors", "Ibn Khaldun", "Al-Mutanabbi", "Naguib Mahfouz"), "Multiple anonymous authors", MCQ),
-          Question("What is 'maqam' in Arabic music?", List("A system of melodic modes", "A type of drum", "A singing style", "A dance form"), "A system of melodic modes", MCQ),
-          Question("Which art form is characterized by geometric patterns and calligraphy?", List("Islamic art", "Expressionism", "Surrealism", "Classicism"), "Islamic art", MCQ),
-          Question("What is 'dabke'?", List("A traditional folk dance", "A style of poetry", "A type of food", "A religious ceremony"), "A traditional folk dance", MCQ)
-        ),
-        
-        // Version 3 - Society and religion
-        List(
-          Question("What are the Five Pillars of Islam?", List("Shahada, Salat, Zakat, Sawm, Hajj", "Prayer, Fasting, Charity", "Faith, Hope, Charity", "Honesty, Piety, Charity, Faith, Prayer"), "Shahada, Salat, Zakat, Sawm, Hajj", MCQ),
-          Question("What is 'wasta' in Arab society?", List("Using connections or influence", "A religious ceremony", "A traditional meal", "A marriage custom"), "Using connections or influence", MCQ),
-          Question("What is 'hijab'?", List("A head covering worn by some Muslim women", "A religious holiday", "A type of prayer", "A religious text"), "A head covering worn by some Muslim women", MCQ),
-          Question("What is the 'Arab League'?", List("A regional organization of Arab states", "A literary association", "A sports federation", "A trade agreement"), "A regional organization of Arab states", MCQ),
-          Question("What is 'majlis' in Arab culture?", List("A gathering or council meeting", "A religious ceremony", "A type of dance", "A legal document"), "A gathering or council meeting", MCQ)
-        )
-      )
-      
-      // Arabic MCQ quizzes - Hard difficulty (3 versions)
-      case (Arabic, Hard, MCQ) => List(
-        // Version 1 - Language and literature
-        List(
-          Question("What is 'i'rab' in Arabic grammar?", List("Case endings", "Verb conjugation", "Plural formation", "Pronoun use"), "Case endings", MCQ),
-          Question("Which book is considered the first Arabic dictionary?", List("Kitab al-'Ayn", "Lisan al-Arab", "Al-Qamus al-Muhit", "Al-Sihah"), "Kitab al-'Ayn", MCQ),
-          Question("What is the 'hamza' in Arabic?", List("A glottal stop consonant", "A long vowel", "A diacritical mark for emphasis", "A type of rhyme"), "A glottal stop consonant", MCQ),
-          Question("Who wrote 'Muqaddimah', considered one of the earliest works on social sciences?", List("Ibn Khaldun", "Al-Jahiz", "Al-Mutanabbi", "Ibn Rushd"), "Ibn Khaldun", MCQ),
-          Question("What is the standard form of literary Arabic called?", List("Modern Standard Arabic (Fusha)", "Ammiyya", "Darija", "Khaliji"), "Modern Standard Arabic (Fusha)", MCQ)
-        ),
-        
-        // Version 2 - History and politics
-        List(
-          Question("When did the Arab Spring begin?", List("2010", "2008", "2012", "2015"), "2010", MCQ),
-          Question("Which agreement first divided the Middle East into French and British spheres of influence?", List("Sykes-Picot Agreement", "Camp David Accords", "Oslo Accords", "Treaty of Sèvres"), "Sykes-Picot Agreement", MCQ),
-          Question("Which Arab country was the first to sign a peace treaty with Israel?", List("Egypt", "Jordan", "Lebanon", "UAE"), "Egypt", MCQ),
-          Question("What was the Baath Party's core ideology?", List("Pan-Arab socialism", "Islamic fundamentalism", "Democratic liberalism", "Monarchism"), "Pan-Arab socialism", MCQ),
-          Question("Which 20th-century Arab leader promoted the idea of Pan-Arabism?", List("Gamal Abdel Nasser", "King Faisal", "Saddam Hussein", "Yasser Arafat"), "Gamal Abdel Nasser", MCQ)
-        ),
-        
-        // Version 3 - Religion and philosophy
-        List(
-          Question("What is 'ijtihad' in Islamic jurisprudence?", List("Independent reasoning", "Consensus of scholars", "Analogical deduction", "Literal interpretation"), "Independent reasoning", MCQ),
-          Question("What are the main branches of Islam?", List("Sunni and Shia", "Sufi and Salafi", "Hanafi and Maliki", "Wahhabi and Alawi"), "Sunni and Shia", MCQ),
-          Question("Which philosophical concept did Al-Farabi develop in Islamic philosophy?", List("The Virtuous City", "The Categorical Imperative", "The Great Chain of Being", "The Tabula Rasa"), "The Virtuous City", MCQ),
-          Question("What is 'tafsir'?", List("Quranic exegesis", "Islamic law", "Spiritual purification", "Pilgrimage ritual"), "Quranic exegesis", MCQ),
-          Question("What does 'jihad' primarily mean in Islamic theology?", List("Spiritual struggle", "Holy war", "Pilgrimage", "Charitable giving"), "Spiritual struggle", MCQ)
-        )
-      )
-
-      // Arabic MCQ quizzes - Impossible difficulty cases removed
-      
-      // For other quiz types and language combinations, return an empty list
       case _ => List()
     }
   }
   
 
   
-  private def getDefaultQuestionBank(language: Language, quizType: QuizType): List[Question] = {
-    (language, quizType) match {
-      case (Spanish, Vocabulary) =>
-        List(
-          Question("What is 'apple' in Spanish?", List("manzana", "plátano", "naranja", "uva"), "manzana", Vocabulary),
-          Question("What is 'book' in Spanish?", List("libro", "cuaderno", "lápiz", "bolígrafo"), "libro", Vocabulary),
-          Question("What is 'dog' in Spanish?", List("perro", "gato", "pájaro", "pez"), "perro", Vocabulary),
-          Question("What is 'house' in Spanish?", List("casa", "apartamento", "edificio", "hotel"), "casa", Vocabulary),
-          Question("What is 'car' in Spanish?", List("coche", "bicicleta", "tren", "avión"), "coche", Vocabulary)
-        )
-
-      case (French, Grammar) =>
-        List(
-          Question("What is the correct article to use with 'maison'?", List("le", "la", "les", "l'"), "la", Grammar),
-          Question("Which is the correct form: 'Je ___ français'", List("suis", "es", "est", "sommes"), "suis", Grammar),
-          Question("What is the plural of 'cheval'?", List("chevals", "chevaus", "chevaux", "chevauxs"), "chevaux", Grammar),
-          Question("Which preposition follows 'aller': 'Je vais ___ Paris'", List("à", "en", "dans", "sur"), "à", Grammar),
-          Question("What is the past participle of 'faire'?", List("fait", "faite", "faisant", "faire"), "fait", Grammar)
-        )
-
-      case (German, Translation) =>
-        List(
-          Question("Translate: 'Good morning'", List("Guten Morgen", "Guten Tag", "Guten Abend", "Gute Nacht"), "Guten Morgen", Translation),
-          Question("Translate: 'How are you?'", List("Wie geht es dir?", "Wie heißt du?", "Woher kommst du?", "Was machst du?"), "Wie geht es dir?", Translation),
-          Question("Translate: 'My name is...'", List("Ich heiße...", "Mein Name ist...", "Ich bin...", "A and B are correct"), "A and B are correct", Translation),
-          Question("Translate: 'I don't understand'", List("Ich verstehe nicht", "Ich weiß nicht", "Ich spreche nicht", "Ich kenne nicht"), "Ich verstehe nicht", Translation),
-          Question("Translate: 'Thank you very much'", List("Danke schön", "Vielen Dank", "Bitte schön", "Entschuldigung"), "Vielen Dank", Translation)
-        )
-
-      case (Arabic, MCQ) =>
-        List(
-          Question("Which means 'hello' in Arabic?", List("مرحبا", "شكرا", "وداعا", "نعم"), "مرحبا", MCQ),
-          Question("Which word means 'yes' in Arabic?", List("نعم", "لا", "ربما", "جيد"), "نعم", MCQ),
-          Question("Which phrase means 'How are you?' in Arabic?", List("كيف حالك؟", "ما اسمك؟", "من أين أنت؟", "كم عمرك؟"), "كيف حالك؟", MCQ),
-          Question("Which is the correct Arabic word for 'water'?", List("ماء", "خبز", "حليب", "قهوة"), "ماء", MCQ),
-          Question("What does 'شكرا' mean in English?", List("Thank you", "Please", "Excuse me", "Sorry"), "Thank you", MCQ)
-        )
-
-      case (English, Correction) =>
-        List(
-          Question("Correct this sentence: 'She don't like coffee.'", List("She doesn't like coffee.", "She don't likes coffee.", "She not like coffee.", "She isn't like coffee."), "She doesn't like coffee.", Correction),
-          Question("Correct this sentence: 'I gone to the store yesterday.'", List("I went to the store yesterday.", "I have gone to the store yesterday.", "I was going to the store yesterday.", "I had gone to the store yesterday."), "I went to the store yesterday.", Correction),
-          Question("Correct this sentence: 'He have three cars.'", List("He has three cars.", "He haves three cars.", "He having three cars.", "He had three cars."), "He has three cars.", Correction),
-          Question("Correct this sentence: 'We was at the party.'", List("We were at the party.", "We are at the party.", "We is at the party.", "We be at the party."), "We were at the party.", Correction),
-          Question("Correct this sentence: 'She more tall than her sister.'", List("She is taller than her sister.", "She taller than her sister.", "She is more tall than her sister.", "She is tallest than her sister."), "She is taller than her sister.", Correction)
-        )
-
-      // Default case - provide generic English questions
-      case _ =>
-        List(
-          Question("Example question 1?", List("Option A", "Option B", "Option C", "Option D"), "Option A", quizType),
-          Question("Example question 2?", List("Option A", "Option B", "Option C", "Option D"), "Option B", quizType),
-          Question("Example question 3?", List("Option A", "Option B", "Option C", "Option D"), "Option C", quizType),
-          Question("Example question 4?", List("Option A", "Option B", "Option C", "Option D"), "Option D", quizType),
-          Question("Example question 5?", List("Option A", "Option B", "Option C", "Option D"), "Option A", quizType)
-        )
-    }
+  
   }
-}
+

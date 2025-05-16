@@ -87,7 +87,7 @@ object FileUtils {
       case Spanish => "Spanish"
       case French => "French"
       case German => "German"
-      case Arabic => "Arabic"
+      
       case _ => "Unknown"
     }
   }
@@ -98,7 +98,6 @@ object FileUtils {
       case "spanish" => Some(Spanish)
       case "french" => Some(French)
       case "german" => Some(German)
-      case "arabic" => Some(Arabic)
       case _ => None
     }
   }

@@ -146,15 +146,7 @@ object Main extends App {
     val userInput = readLine().trim
     
     // Check for exit command
-    if (userInput.toLowerCase match {
-      case "exit" | "eit" | "exif" | "exi" | "exitt" | "exxit" | "exiit" |
-           "quit" | "qit" | "quitt" | "qutt" |
-           "end" | "stp" | "stopp" | "stop" => true
-      case _ => false
-    }) {
-      println("\nBot: Thank you for using the Language Learning Bot. Goodbye!")
-      running = false
-    } else if (userInput.toLowerCase == "logout") {
+    if (userInput.toLowerCase == "logout") {
       currentUser = None
       println("\nBot: You have been logged out.")
       showAuthMenu()
@@ -197,14 +189,7 @@ object Main extends App {
     val tokens = ChatbotCore.parseInput(input)
     
     // Special case for generic quiz requests without a specific quiz type
-    if (input.trim.toLowerCase == "quiz" || 
-        input.trim.toLowerCase == "give me quiz" || 
-        input.trim.toLowerCase == "start quiz" || 
-        input.trim.toLowerCase == "take quiz") {
-      // Ask what type of quiz they want
-      startQuiz()
-      return
-    }
+   
     
     val detectedQuizType = ChatbotCore.detectQuizType(tokens)
     
@@ -336,10 +321,10 @@ object Main extends App {
     
     // Check if input is a direct quiz type request
     val directQuizType = input.trim.toLowerCase match {
-      case "vocabulary" | "vocab" | "vocabulario" | "vocabulaire" | "vokabular" | "المفردات" | "1" => Some(Vocabulary)
-      case "grammar" | "gramática" | "grammaire" | "grammatik" | "القواعد" | "2" => Some(Grammar)
-      case "translation" | "translate" | "traducción" | "traduction" | "übersetzung" | "الترجمة" | "3" => Some(Translation)
-      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" | "4" => Some(MCQ)
+      case "vocabulary" | "vocab" | "vocabulario" | "vocabulaire" | "vokabular" | "1" => Some(Vocabulary)
+      case "grammar" | "gramática" | "grammaire" | "grammatik" | "2" => Some(Grammar)
+      case "translation" | "translate" | "traducción" | "traduction" | "übersetzung" | "3" => Some(Translation)
+      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "4" => Some(MCQ)
       case _ => None
     }
     
@@ -457,7 +442,7 @@ object Main extends App {
           )
         }
         
-      case "settings" | "preferences" =>
+      case s if s.toLowerCase == "settings" || s.toLowerCase == "preferences" || s.toLowerCase.contains("show settings") || s.toLowerCase.contains("display settings") =>
         showSettings()
         // Save settings interaction to history
         currentUser.foreach { user =>
@@ -471,7 +456,9 @@ object Main extends App {
           )
         }
         
-      case "save settings" | "save preferences" =>
+      case s if s.toLowerCase == "save settings" || s.toLowerCase == "save preferences" || 
+               s.toLowerCase.contains("save settings") || s.toLowerCase.contains("save preferences") || 
+               s.toLowerCase.contains("store settings") || s.toLowerCase.contains("store preferences") =>
         saveSettings()
         // Save save settings interaction to history
         currentUser.foreach { user =>
@@ -485,7 +472,7 @@ object Main extends App {
           )
         }
         
-      case "load settings" | "load preferences" =>
+      case s if s.toLowerCase.contains("load") && (s.toLowerCase.contains("settings") || s.toLowerCase.contains("preferences")) =>
         loadSettings()
         // Save load settings interaction to history
         currentUser.foreach { user =>
@@ -499,19 +486,70 @@ object Main extends App {
           )
         }
         
-      case s if s.startsWith("set mother language ") || s.startsWith("set mother langauge ") =>
-        val lang = s.substring("set mother language ".length).trim
-        setMotherLanguage(lang)
+      case s if s.toLowerCase.contains("set mother language") || s.toLowerCase.contains("set mother langauge") =>
+        // Extract the language after "mother language" or "mother langauge"
+        if (s.toLowerCase.contains("mother language")) {
+          val parts = s.toLowerCase.split("mother language")
+          if (parts.length > 1) {
+            val lang = parts(1).trim.replaceAll("^(to|as)\\s+", "").trim
+            setMotherLanguage(lang)
+          }
+        } else {
+          val parts = s.toLowerCase.split("mother langauge")
+          if (parts.length > 1) {
+            val lang = parts(1).trim.replaceAll("^(to|as)\\s+", "").trim
+            setMotherLanguage(lang)
+          }
+        }
         
-      case s if s.startsWith("set target language ") || s.startsWith("set target langauge ") =>
-        val lang = s.substring("set target language ".length).trim
-        setTargetLanguage(lang)
+      case s if s.toLowerCase.contains("set target language") || s.toLowerCase.contains("set target langauge") =>
+        // Extract the language after "target language" or "target langauge"
+        if (s.toLowerCase.contains("target language")) {
+          val parts = s.toLowerCase.split("target language")
+          if (parts.length > 1) {
+            val lang = parts(1).trim.replaceAll("^(to|as)\\s+", "").trim
+            setTargetLanguage(lang)
+          }
+        } else {
+          val parts = s.toLowerCase.split("target langauge")
+          if (parts.length > 1) {
+            val lang = parts(1).trim.replaceAll("^(to|as)\\s+", "").trim
+            setTargetLanguage(lang)
+          }
+        }
         
-      case s if s.startsWith("set difficulty ") =>
-        val diff = s.substring("set difficulty ".length).trim
-        setDifficulty(diff)
+      case s if s.toLowerCase.contains("difficulty") =>
+        val parts = s.toLowerCase.split("difficulty")
+        if (parts.length > 1) {
+          val diff = parts(1).trim.replaceAll("^(to|as|level|to level|as level)\\s+", "").trim
+          setDifficulty(diff)
+        } else {
+          println(s"\nBot: ${formatDualLanguageResponse("Please specify a difficulty level (Easy, Medium, Hard, or Impossible)")}")
+        }
+
+      case s if s.toLowerCase.contains("set difficulty") || s.toLowerCase.contains("set dificulty") =>
+        // Extract the difficulty after "set difficulty" or "set dificulty"
+        if (s.toLowerCase.contains("set difficulty")) {
+          val parts = s.toLowerCase.split("set difficulty")
+          if (parts.length > 1) {
+            val diff = parts(1).trim.replaceAll("^(to|as|level|to level|as level)\\s+", "").trim
+            setDifficulty(diff)
+          }
+        } else {
+          val parts = s.toLowerCase.split("set dificulty")
+          if (parts.length > 1) {
+            val diff = parts(1).trim.replaceAll("^(to|as|level|to level|as level)\\s+", "").trim
+            setDifficulty(diff)
+          }
+        }
         
-      case "analytics" | "stats" | "progress" =>
+      case s if s.toLowerCase.contains("analytics") || 
+                s.toLowerCase.contains("stats") || 
+                s.toLowerCase.contains("statistics") || 
+                s.toLowerCase.contains("progress") || 
+                s.toLowerCase.contains("performance") || 
+                s.toLowerCase.contains("report") || 
+                s.toLowerCase.contains("dashboard") =>
         showAnalytics()
         // Save analytics interaction to history
         currentUser.foreach { user =>
@@ -525,7 +563,11 @@ object Main extends App {
           )
         }
         
-      case "history" | "my history" =>
+      case s if s.toLowerCase.contains("history") || 
+                s.toLowerCase.contains("past") || 
+                s.toLowerCase.contains("previous") || 
+                s.toLowerCase.contains("record") || 
+                s.toLowerCase.contains("log") =>
         currentUser match {
           case Some(user) =>
             val history = userHistoryService.displayUserHistory(user.id)
@@ -534,7 +576,13 @@ object Main extends App {
             println(s"\nBot: ${formatDualLanguageResponse("Please sign in to view your history.")}")
         }
         
-      case "help" =>
+      case s if s.toLowerCase.contains("help") || 
+                s.toLowerCase.contains("commands") || 
+                s.toLowerCase.contains("guide") || 
+                s.toLowerCase.contains("instructions") || 
+                s.toLowerCase.contains("manual") || 
+                s.toLowerCase.contains("how to") || 
+                s.toLowerCase.contains("what can") =>
         val helpMessage = """
           |Available commands:
           |1. chat - Start a conversation
@@ -547,14 +595,24 @@ object Main extends App {
           |""".stripMargin
         println(helpMessage)
         // Save help interaction to history
-        userHistoryService.addInteraction(
-          userId = currentUser.get.id,
-          username = currentUser.get.username,
-          email = currentUser.get.email,
-          question = "help",
-          response = helpMessage,
-          category = "system"
-        )
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = "help",
+            response = helpMessage,
+            category = "system"
+          )
+        }
+        
+      case s if s.toLowerCase.contains("exit") || 
+                s.toLowerCase.contains("quit") || 
+                s.toLowerCase.contains("close") || 
+                s.toLowerCase.contains("bye") || 
+                s.toLowerCase.contains("goodbye") =>
+        println(s"\nBot: ${formatDualLanguageResponse("Goodbye! Thank you for using the Language Learning Bot.")}")
+        System.exit(0)
         
       case _ =>
         // Process general input using ChatbotCore which will return the "unknown" response for unrecognized input
@@ -753,10 +811,7 @@ object Main extends App {
               // Calculate correct answers for this quiz
               val correctAnswers = quizQuestions.count(_.isCorrect)
               
-              // Get total correct answers across all quizzes
-              val totalCorrectAnswers = userHistoryService.getTotalCorrectAnswers(user.id)
-              val totalQuestions = userHistoryService.getTotalQuestions(user.id)
-              
+              // First add the current quiz result
               userHistoryService.addQuizResult(
                 userId = user.id,
                 username = user.username,
@@ -768,6 +823,10 @@ object Main extends App {
                 questions = quizQuestions,
                 userAnswers = completedSession.userAnswers
               )
+              
+              // Now get the updated total correct answers across all quizzes
+              val totalCorrectAnswers = userHistoryService.getTotalCorrectAnswers(user.id)
+              val totalQuestions = userHistoryService.getTotalQuestions(user.id)
               
               // Add total stats to summary
               val totalStats = s"\nTotal Questions Answered: $totalQuestions\nTotal Correct Answers: $totalCorrectAnswers"
@@ -939,6 +998,21 @@ object Main extends App {
         difficultyExplicitlySet = true
         val response = s"Difficulty set to ${difficultyToString(diff)}"
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
+        
+        // Add automatic saving of preferences after setting difficulty
+        try {
+          userPreferences.foreach { prefs =>
+            savePreferences(prefs) match {
+              case Success(_) => 
+                println(s"\nBot: ${formatDualLanguageResponse("Settings saved automatically!")}")
+              case Failure(error) => 
+                println(s"\nBot: ${formatDualLanguageResponse(s"Failed to auto-save settings: ${error.getMessage}")}")
+            }
+          }
+        } catch {
+          case ex: Throwable =>
+            println(s"\nBot: ${formatDualLanguageResponse(s"Error auto-saving settings: ${ex.getMessage}")}")
+        }
         
       case None =>
         println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that difficulty level. Available options: Easy, Medium, Hard, Impossible")}")
@@ -1167,11 +1241,12 @@ object Main extends App {
       
       val name = if (parts.length > 3 && parts(3).nonEmpty) Some(parts(3)) else None
       
-      for {
-        ml <- motherLang
-        tl <- targetLang
-        d <- difficulty
-      } yield UserPreferences(ml, tl, d, name)
+      // Create preferences using existing values for any that aren't specified
+      val ml = motherLang.getOrElse(userPreferences.map(_.motherLanguage).getOrElse(English))
+      val tl = targetLang.getOrElse(userPreferences.map(_.targetLanguage).getOrElse(English))
+      val d = difficulty.getOrElse(userPreferences.map(_.difficulty).getOrElse(Easy))
+      
+      Some(UserPreferences(ml, tl, d, name))
     } else {
       None
     }
@@ -1195,10 +1270,10 @@ object Main extends App {
    */
   def parseDifficulty(diff: String): Option[Difficulty] = {
     diff.toLowerCase match {
-      case "easy" => Some(Easy)
-      case "medium" => Some(Medium)
-      case "hard" => Some(Hard)
-      case "impossible" => Some(Impossible)
+      case "easy" | "Easy" => Some(Easy)
+      case "medium" | "Medium" => Some(Medium)
+      case "hard" | "Hard" => Some(Hard)
+      case "impossible" | "Impossible" => Some(Impossible)
       case _ => None
     }
   }

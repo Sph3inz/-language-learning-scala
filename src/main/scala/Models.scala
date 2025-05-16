@@ -5,7 +5,7 @@ package languagelearningbot
 
 // Language enumeration
 sealed trait Language
-case object Arabic extends Language
+
 case object German extends Language
 case object English extends Language
 case object French extends Language 
@@ -17,14 +17,12 @@ case object Easy extends Difficulty
 case object Medium extends Difficulty
 case object Hard extends Difficulty
 case object Impossible extends Difficulty
-
 // Quiz Type enumeration
 sealed trait QuizType
 case object Complete extends QuizType
 case object Grammar extends QuizType
 case object Vocabulary extends QuizType 
 case object MCQ extends QuizType
-case object Correction extends QuizType
 case object ScenarioBased extends QuizType
 case object Translation extends QuizType
 

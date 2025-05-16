@@ -1,3 +1,35 @@
-[debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/D:/chatbot/-language-learning-scala/project/"), "root--language-learning-scala-build")...
-[debug] Done updating ProjectRef(uri("file:/D:/chatbot/-language-learning-scala/project/"), "root--language-learning-scala-build")
+[0m[[0m[31merror[0m] [0m[0mjava.io.FileNotFoundException: D:\chatbot\-language-learning-scala\project\target\scala-2.12\sbt-1.0\update\update_cache_2.12\output (The requested operation cannot be performed on a file with a user-mapped section open)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileOutputStream.open0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.Using$.$anonfun$fileOutputStream$1(Using.scala:110)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.Using$$anon$3.openImpl(Using.scala:100)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.OpenFile.open(Using.scala:67)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.OpenFile.open$(Using.scala:61)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.Using$$anon$3.open(Using.scala:99)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.Using$$anon$3.open(Using.scala:99)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.io.Using.apply(Using.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.FileOutput.write(Output.scala:40)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.FileBasedStore.write(CacheStore.scala:90)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:75)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:144)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:131)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:169)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3941)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:69)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:292)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:1583)[0m
+[0m[[0m[31merror[0m] [0m[0m([31mupdate[0m) java.io.FileNotFoundException: D:\chatbot\-language-learning-scala\project\target\scala-2.12\sbt-1.0\update\update_cache_2.12\output (The requested operation cannot be performed on a file with a user-mapped section open)[0m

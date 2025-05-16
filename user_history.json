@@ -1,6 +1,3159 @@
 [{
+  "email": "123",
+  "interactions": [{
+    "category": "quiz",
+    "id": "d7e48922-c108-47ee-a66f-1c54b340f50f",
+    "question": "Quiz Question 5: What is 'hello' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420499665,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "577b5091-1758-4db7-8dfa-96c349ab86d6",
+    "question": "Quiz Question 4: What is 'yes' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420499211,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "201471f7-d443-4497-96af-0b22d8a46724",
+    "question": "Quiz Question 3: What is 'please' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420498855,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "864d9cbe-e4a3-4326-8fda-18420659726b",
+    "question": "Quiz Question 2: What is 'thank you' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420498554,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "95a1af13-55be-40a7-963c-5d50919a020b",
+    "question": "Quiz Question 1: What is 'no' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420498242,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "80a114ff-7ffd-4727-b822-3288d94d31b0",
+    "question": "vocb quiz",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747420497170,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "eec41f36-10f3-4a4e-a687-222e2cf0f5fa",
+    "question": "Quiz Question 5: Which mountain range is found in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420491855,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "065ef66a-2c6c-4c9f-a95b-cbf79ba3cd7c",
+    "question": "Quiz Question 4: Which is the longest river in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420491108,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "57dfc485-5814-47a1-82ee-574c92951410",
+    "question": "Quiz Question 3: Which sea borders the south of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420490702,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "aae96004-aa4c-4397-839d-c07b095c5b36",
+    "question": "Quiz Question 2: Which is NOT a neighboring country of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420490361,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "e2056c94-f74e-40ac-8bf0-e88aa2877a42",
+    "question": "Quiz Question 1: Which French region is known for its wine production?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420490052,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "category": "quiz",
+    "id": "e49609b0-56c0-4261-a37a-755c34cdf887",
+    "question": "mcq quiz",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747420489201,
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "391765d7-f2a2-4e99-b65b-a5bd26036d4b",
+    "questions": [{
+      "correctAnswer": "non",
+      "isCorrect": true,
+      "question": "What is 'no' in French?",
+      "userAnswer": "non"
+    }, {
+      "correctAnswer": "merci",
+      "isCorrect": true,
+      "question": "What is 'thank you' in French?",
+      "userAnswer": "merci"
+    }, {
+      "correctAnswer": "s'il vous plaît",
+      "isCorrect": true,
+      "question": "What is 'please' in French?",
+      "userAnswer": "s'il vous plaît"
+    }, {
+      "correctAnswer": "oui",
+      "isCorrect": true,
+      "question": "What is 'yes' in French?",
+      "userAnswer": "oui"
+    }, {
+      "correctAnswer": "bonjour",
+      "isCorrect": true,
+      "question": "What is 'hello' in French?",
+      "userAnswer": "bonjour"
+    }],
+    "quizType": "Vocabulary",
+    "score": 5.0,
+    "timestamp": 1747420499674,
+    "totalQuestions": 5,
+    "userAnswers": ["non", "merci", "s'il vous plaît", "oui", "bonjour"],
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }, {
+    "correctAnswers": 5,
+    "id": "d57c331c-95d4-4ef7-977d-a86e40a2b7f1",
+    "questions": [{
+      "correctAnswer": "Bordeaux",
+      "isCorrect": true,
+      "question": "Which French region is known for its wine production?",
+      "userAnswer": "Bordeaux"
+    }, {
+      "correctAnswer": "Portugal",
+      "isCorrect": true,
+      "question": "Which is NOT a neighboring country of France?",
+      "userAnswer": "Portugal"
+    }, {
+      "correctAnswer": "Mediterranean Sea",
+      "isCorrect": true,
+      "question": "Which sea borders the south of France?",
+      "userAnswer": "Mediterranean Sea"
+    }, {
+      "correctAnswer": "Loire",
+      "isCorrect": true,
+      "question": "Which is the longest river in France?",
+      "userAnswer": "Loire"
+    }, {
+      "correctAnswer": "The Alps",
+      "isCorrect": true,
+      "question": "Which mountain range is found in France?",
+      "userAnswer": "The Alps"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747420491913,
+    "totalQuestions": 5,
+    "userAnswers": ["Bordeaux", "Portugal", "Mediterranean Sea", "Loire", "The Alps"],
+    "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e"
+  }],
+  "userId": "071a74fe-6a5e-437d-9ebd-9ee78645100e",
+  "username": "yasiin"
+}, {
+  "email": "mm",
+  "interactions": [{
+    "category": "quiz",
+    "id": "a436f826-882f-4906-b167-e5d376b034bc",
+    "question": "Quiz Question 5: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420855963,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "5dbfe5e3-20dc-4ca9-899d-8ff4b8ddefb6",
+    "question": "Quiz Question 4: What is a 'baguette'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420855459,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "26adb75f-53dd-426b-a6d3-f336032cb130",
+    "question": "Quiz Question 3: Which of these is a famous French fashion brand?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420855023,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "1112306c-9e77-4343-8411-993669545b8f",
+    "question": "Quiz Question 2: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420854571,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "904936c2-cae6-49dc-8995-ff886986378e",
+    "question": "Quiz Question 1: What is the most widely spoken language in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420854187,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "c751c568-9f51-40b2-93d6-84849cbf77fc",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747420853713,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "8f8568fa-b1cd-4b6c-b929-f6f853d230c2",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747420853702,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "702e5935-08ca-496a-9323-02f972ddc699",
+    "question": "Quiz Question 5: Which is NOT a neighboring country of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420834736,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "b4fda254-463b-4ec6-ac87-5e6a920b875a",
+    "question": "Quiz Question 4: Which sea borders the south of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420832832,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "8e76cde5-0a11-4dca-aea0-fc736c0d62b7",
+    "question": "Quiz Question 3: Which mountain range is found in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420831236,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "e6a7a00f-61b3-40b2-8582-284317cbbb84",
+    "question": "Quiz Question 2: Which is the longest river in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420830085,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "bd7947c1-b8f6-469b-90d8-ad851c0e4635",
+    "question": "Quiz Question 1: Which French region is known for its wine production?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747420828855,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "e5aab923-ad9a-4998-8d21-86fada7f1ad8",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747420827098,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "category": "quiz",
+    "id": "a478d15d-6cac-413b-b276-9325ddcee96c",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747420826986,
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }],
+  "quizResults": [{
+    "correctAnswers": 1,
+    "id": "a292f528-62b1-4740-89d2-7768b9357e0a",
+    "questions": [{
+      "correctAnswer": "French",
+      "isCorrect": false,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Bonjour",
+      "isCorrect": false,
+      "question": "What is the typical French greeting?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": false,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "A type of bread",
+      "isCorrect": false,
+      "question": "What is a 'baguette'?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": false,
+      "question": "What is the currency used in France?",
+      "userAnswer": ""
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747420855972,
+    "totalQuestions": 5,
+    "userAnswers": ["French", "Bonjour", "Chanel", "A type of bread", "Euro"],
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }, {
+    "correctAnswers": 1,
+    "id": "1b6d5999-2fb1-438d-8b6e-53e748827d90",
+    "questions": [{
+      "correctAnswer": "Bordeaux",
+      "isCorrect": false,
+      "question": "Which French region is known for its wine production?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Loire",
+      "isCorrect": false,
+      "question": "Which is the longest river in France?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "The Alps",
+      "isCorrect": false,
+      "question": "Which mountain range is found in France?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Mediterranean Sea",
+      "isCorrect": false,
+      "question": "Which sea borders the south of France?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Portugal",
+      "isCorrect": false,
+      "question": "Which is NOT a neighboring country of France?",
+      "userAnswer": ""
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747420834751,
+    "totalQuestions": 5,
+    "userAnswers": ["Bordeaux", "Loire", "The Alps", "Mediterranean Sea", "Portugal"],
+    "userId": "7019e699-24c9-4193-be06-bf3e57b24484"
+  }],
+  "userId": "7019e699-24c9-4193-be06-bf3e57b24484",
+  "username": "mm"
+}, {
+  "email": "mazin kareem",
+  "interactions": [{
+    "category": "quiz_request",
+    "id": "25350b06-1dde-4cc5-afe0-7fe4d4188f16",
+    "question": "i want a quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\n1. Vocabulaire - Testez votre connaissance des mots\n2. Grammaire - Pratiquez les règles de langue\n3. Traduction - Traduisez entre les langues\n4. Choix multiple (MCQ) - Questions générales sur la langue\n\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747423314992,
+    "userId": "a08ebd0c-daba-4269-92bf-a25ffaa4fd4c"
+  }, {
+    "category": "system",
+    "id": "680ac3a6-f6b7-4140-aa40-7451bc30a791",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423307996,
+    "userId": "a08ebd0c-daba-4269-92bf-a25ffaa4fd4c"
+  }, {
+    "category": "thanks",
+    "id": "b44f6a1e-a03e-49f7-8c1d-e45fa64da070",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747423303937,
+    "userId": "a08ebd0c-daba-4269-92bf-a25ffaa4fd4c"
+  }, {
+    "category": "system",
+    "id": "c0c040bb-62a8-4277-8015-2e0cde17cfa8",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423278473,
+    "userId": "a08ebd0c-daba-4269-92bf-a25ffaa4fd4c"
+  }, {
+    "category": "system",
+    "id": "587c3813-4bbb-4488-b7c9-3119bb6d0946",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747423275154,
+    "userId": "a08ebd0c-daba-4269-92bf-a25ffaa4fd4c"
+  }],
+  "quizResults": [],
+  "userId": "a08ebd0c-daba-4269-92bf-a25ffaa4fd4c",
+  "username": "mazen"
+}, {
+  "email": "ramez",
+  "interactions": [{
+    "category": "quiz",
+    "id": "2d41dcee-31b9-49ef-afc8-c801bc2e4760",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: Real Madrid",
+    "timestamp": 1746900489362,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ccd9b9c7-326b-4606-8115-6e1f896d6c89",
+    "question": "Quiz Question 4: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488990,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "52e3dd65-af09-46d6-b6e8-9faa1a37f890",
+    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488402,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "fe6ee49b-4f80-400f-a34f-04f5c2c7aaa4",
+    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488002,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "3b1720bf-34ab-4945-8158-ca48a8fc0eed",
+    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900487630,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "8a101fa8-1ca7-41b8-a973-df3de656ec84",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900486242,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ff986b31-7931-49d0-bec3-34314fa1440c",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900486237,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "unknown",
+    "id": "b7c64f3a-f82d-4632-acfb-d2d2cfa22075",
+    "question": "mcq",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746900482800,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "1db68540-be8e-4fb3-87a9-166e59b094da",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900478407,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "310ca165-c4fe-4b2c-bf05-e71237618c5a",
+    "question": "Quiz Question 4: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900477841,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "bf60af64-5b53-48d7-913e-cc8cf11514a9",
+    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900477395,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "c21fde75-c3e4-4a0b-ae99-75bacd5236b7",
+    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900476972,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "aecb3d0d-7028-4391-9db5-b59fec6b9b92",
+    "question": "Quiz Question 1: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900476651,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "2aac629f-d088-4e83-ab26-adbecf1dc1ae",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900476052,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "7175abf7-6707-4ff8-89be-00647eef2a56",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900476047,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "cab45f5e-8c50-4f59-ac9e-f316bda7cde2",
+    "question": "Quiz Question 5: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900466011,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ff4aa1f3-9afb-4c15-a0ef-5359d6f4fc3c",
+    "question": "Quiz Question 4: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900465547,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "7449964f-1c80-44d9-b723-630f447d6a71",
+    "question": "Quiz Question 3: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900465162,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "586d9634-2890-438e-b7ca-e77eed2073bb",
+    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900464829,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "fb03cad2-f130-4e13-a394-4284ca4ebff0",
+    "question": "Quiz Question 1: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900464499,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "4241cfab-4c42-4b3a-b091-8e9d293ba3cc",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900463283,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "60c4cf00-7615-4a94-b973-443659059972",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900463219,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "unknown",
+    "id": "93694544-7ccf-4c0d-b9dc-caa4a757bfe1",
+    "question": "sss",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746888774448,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "system",
+    "id": "83444530-eecc-4427-9c6b-0ab7e5ca1021",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746888772357,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "system",
+    "id": "29662a70-a516-481c-aeb1-930ef7b06bc6",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746888638046,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }],
+  "quizResults": [{
+    "correctAnswers": 4,
+    "id": "0d373864-df04-4280-8e3b-ff97e4f7b735",
+    "questions": [{
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": false,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": ""
+    }],
+    "quizType": "MCQ",
+    "score": 4.0,
+    "timestamp": 1746900489366,
+    "totalQuestions": 5,
+    "userAnswers": ["Pablo Picasso", "Paella", "Madrid", "New Year's Eve", ""],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 5,
+    "id": "fafe6a1c-f530-4f95-9e6e-b21df7e336ba",
+    "questions": [{
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900478411,
+    "totalQuestions": 5,
+    "userAnswers": ["New Year's Eve", "Paella", "Madrid", "Pablo Picasso", "Real Madrid"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 5,
+    "id": "65f7eb6e-84e7-411d-9ce5-2acda698279b",
+    "questions": [{
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900466019,
+    "totalQuestions": 5,
+    "userAnswers": ["Pyrenees", "Mallorca", "Eagle", "Ebro", "Pamplona"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 1,
+    "id": "9685ae91-fd6c-4f38-81e4-e1c18d977847",
+    "questions": [{
+      "correctAnswer": "hablo",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'hablar' (yo)?",
+      "userAnswer": "hablo"
+    }, {
+      "correctAnswer": "comes",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'comer' (tú)?",
+      "userAnswer": "comes"
+    }, {
+      "correctAnswer": "van",
+      "isCorrect": true,
+      "question": "What is the correct present tense for 'ir' (ellos)?",
+      "userAnswer": "van"
+    }, {
+      "correctAnswer": "somos",
+      "isCorrect": true,
+      "question": "What is the correct present tense for 'ser' (nosotros)?",
+      "userAnswer": "somos"
+    }, {
+      "correctAnswer": "vive",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'vivir' (él)?",
+      "userAnswer": "vive"
+    }],
+    "quizType": "Grammar",
+    "score": 5.0,
+    "timestamp": 1746888856146,
+    "totalQuestions": 5,
+    "userAnswers": ["hablo", "comes", "van", "somos", "vive"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 1,
+    "id": "655f14b0-bc73-47fe-bd51-a797dd5d5cd7",
+    "questions": [{
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746888827725,
+    "totalQuestions": 5,
+    "userAnswers": ["Mallorca", "Pyrenees", "Eagle", "Pamplona", "Ebro"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }],
+  "userId": "083fa50b-dc29-4076-bc73-53b325339d62",
+  "username": "mazen"
+}, {
+  "email": "karim",
+  "interactions": [{
+    "category": "quiz",
+    "id": "f400ad96-d3e0-4067-a504-95c38814c5b0",
+    "question": "Quiz Question 5: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421022812,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "270720d3-c9fe-4da4-bfe6-95c6468d39f9",
+    "question": "Quiz Question 4: Which of these is a famous French fashion brand?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421022466,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "1d1330f3-53ca-405e-a210-e01c2662f7c2",
+    "question": "Quiz Question 3: What is the most widely spoken language in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421022163,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "26e0e77a-bd84-4929-bde5-c0a631423de4",
+    "question": "Quiz Question 2: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421021822,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "98a51173-56c4-44cf-9a1d-9043a1d80f7b",
+    "question": "Quiz Question 1: What is a 'baguette'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421021498,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "1ba7a1a7-4e34-4545-a3ba-f63f06860893",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747421021147,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "8847c8c3-974a-431a-a18e-2939d482450c",
+    "question": "Quiz Question 5: Which French region is known for its wine production?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421013502,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "2c9541be-6c00-4f4e-a2f9-02fa9457bd76",
+    "question": "Quiz Question 4: Which is the longest river in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421011554,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "f2888182-71ac-48e8-906b-3cd4e44c8286",
+    "question": "Quiz Question 3: Which sea borders the south of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421010825,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "b4090b47-f7fa-4dcf-b179-17aebf225a81",
+    "question": "Quiz Question 2: Which is NOT a neighboring country of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421010261,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "d9e0dbea-f765-437c-8b60-10e06d78a9db",
+    "question": "Quiz Question 1: Which mountain range is found in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421009310,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "category": "quiz",
+    "id": "e3db63bf-ebad-433e-abcf-1177393f1fcc",
+    "question": "mcq quiz",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747421008346,
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "741fc1db-f5ab-4dde-8af0-e7a5666ccc07",
+    "questions": [{
+      "correctAnswer": "A type of bread",
+      "isCorrect": true,
+      "question": "What is a 'baguette'?",
+      "userAnswer": "A type of bread"
+    }, {
+      "correctAnswer": "Bonjour",
+      "isCorrect": true,
+      "question": "What is the typical French greeting?",
+      "userAnswer": "Bonjour"
+    }, {
+      "correctAnswer": "French",
+      "isCorrect": true,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": "French"
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": true,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": "Chanel"
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in France?",
+      "userAnswer": "Euro"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747421022823,
+    "totalQuestions": 5,
+    "userAnswers": ["A type of bread", "Bonjour", "French", "Chanel", "Euro"],
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }, {
+    "correctAnswers": 5,
+    "id": "4a788774-3ca0-4f07-a795-51c95482c0b9",
+    "questions": [{
+      "correctAnswer": "The Alps",
+      "isCorrect": true,
+      "question": "Which mountain range is found in France?",
+      "userAnswer": "The Alps"
+    }, {
+      "correctAnswer": "Portugal",
+      "isCorrect": true,
+      "question": "Which is NOT a neighboring country of France?",
+      "userAnswer": "Portugal"
+    }, {
+      "correctAnswer": "Mediterranean Sea",
+      "isCorrect": true,
+      "question": "Which sea borders the south of France?",
+      "userAnswer": "Mediterranean Sea"
+    }, {
+      "correctAnswer": "Loire",
+      "isCorrect": true,
+      "question": "Which is the longest river in France?",
+      "userAnswer": "Loire"
+    }, {
+      "correctAnswer": "Bordeaux",
+      "isCorrect": true,
+      "question": "Which French region is known for its wine production?",
+      "userAnswer": "Bordeaux"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747421013519,
+    "totalQuestions": 5,
+    "userAnswers": ["The Alps", "Portugal", "Mediterranean Sea", "Loire", "Bordeaux"],
+    "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8"
+  }],
+  "userId": "a6d3dc3b-e2f4-4f5a-ba7c-4b92153de1b8",
+  "username": "karim"
+}, {
+  "email": "mmam",
+  "interactions": [{
+    "category": "quiz",
+    "id": "6f051c83-1d05-478b-8b3e-dd642a2d90f7",
+    "question": "Quiz Question 5: What colors are on the French flag?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Blue, white, and red",
+    "timestamp": 1747422667306,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }, {
+    "category": "quiz",
+    "id": "d1c4a4c6-c919-4da9-bb71-20f3ca384fc6",
+    "question": "Quiz Question 4: Which famous museum is located in Paris?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: The Louvre",
+    "timestamp": 1747422666781,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }, {
+    "category": "quiz",
+    "id": "cd37d41d-6db2-44f7-a1a5-b8f3f8d321fa",
+    "question": "Quiz Question 3: Which city is the capital of France?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Paris",
+    "timestamp": 1747422666500,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }, {
+    "category": "quiz",
+    "id": "4460f4b5-b684-4ae0-967b-a6534356cf0e",
+    "question": "Quiz Question 2: Which of these is a traditional French cheese?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Camembert",
+    "timestamp": 1747422665881,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }, {
+    "category": "quiz",
+    "id": "cb76f15d-1537-4731-9a1b-a4365e90669c",
+    "question": "Quiz Question 1: Which French dish consists of snails cooked with garlic and butter?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Escargots",
+    "timestamp": 1747422665634,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }, {
+    "category": "quiz",
+    "id": "280ac433-4064-4999-b84a-d0a70e77841c",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747422664184,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }, {
+    "category": "quiz",
+    "id": "ed94a16f-b37d-4d43-96ce-3c0f2dbdcf78",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747422664072,
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }],
+  "quizResults": [{
+    "correctAnswers": 0,
+    "id": "bde0b58c-d796-4465-871f-16cf1300c00f",
+    "questions": [{
+      "correctAnswer": "Escargots",
+      "isCorrect": false,
+      "question": "Which French dish consists of snails cooked with garlic and butter?",
+      "userAnswer": "Quiche"
+    }, {
+      "correctAnswer": "Camembert",
+      "isCorrect": false,
+      "question": "Which of these is a traditional French cheese?",
+      "userAnswer": "Feta"
+    }, {
+      "correctAnswer": "Paris",
+      "isCorrect": false,
+      "question": "Which city is the capital of France?",
+      "userAnswer": "Nice"
+    }, {
+      "correctAnswer": "The Louvre",
+      "isCorrect": false,
+      "question": "Which famous museum is located in Paris?",
+      "userAnswer": "The Metropolitan"
+    }, {
+      "correctAnswer": "Blue, white, and red",
+      "isCorrect": false,
+      "question": "What colors are on the French flag?",
+      "userAnswer": "Red, blue, and green"
+    }],
+    "quizType": "MCQ",
+    "score": 0.0,
+    "timestamp": 1747422667324,
+    "totalQuestions": 5,
+    "userAnswers": ["Quiche", "Feta", "Nice", "The Metropolitan", "Red, blue, and green"],
+    "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1"
+  }],
+  "userId": "117edf15-7c85-4d1c-a5ba-f3c66a9ddde1",
+  "username": "lautaro"
+}, {
+  "email": "yassen.hani@eui",
+  "interactions": [{
+    "category": "settings",
+    "id": "58d3962d-9547-43a0-88cc-4c20536189c7",
+    "question": "set mother lanuage english",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747423165665,
+    "userId": "a0e523c4-5ca3-4862-ade0-6e24d566c6af"
+  }, {
+    "category": "system",
+    "id": "dc38d0b4-17ce-47d0-bafb-7ce929694c8b",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423158911,
+    "userId": "a0e523c4-5ca3-4862-ade0-6e24d566c6af"
+  }, {
+    "category": "system",
+    "id": "daf404f1-6531-4d77-bf6b-aedfb36b6052",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747423155142,
+    "userId": "a0e523c4-5ca3-4862-ade0-6e24d566c6af"
+  }],
+  "quizResults": [],
+  "userId": "a0e523c4-5ca3-4862-ade0-6e24d566c6af",
+  "username": "yassen hany"
+}, {
+  "email": "yassen.hani4000",
+  "interactions": [{
+    "category": "settings",
+    "id": "d9ca9cd7-2635-4f94-968f-686fa5757513",
+    "question": "set target langauage spanish",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747423574498,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "e7f93a8d-98de-4e42-82f5-6d8ca228d1aa",
+    "question": "Quiz Question 5: Which of these is a famous French fashion brand?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Chanel",
+    "timestamp": 1747423558382,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "be0f6a97-218d-46b7-8df0-cf7a815dde32",
+    "question": "Quiz Question 4: What is a 'baguette'?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: A type of bread",
+    "timestamp": 1747423556113,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "4dd62c71-763b-48b8-a551-6daeef5a3d5d",
+    "question": "Quiz Question 3: What is the most widely spoken language in France?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: French",
+    "timestamp": 1747423554666,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "16de147f-ad4e-42c3-86b4-f48f633bd6ba",
+    "question": "Quiz Question 2: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747423552807,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "43dc3c63-a259-4e4d-afaf-7fcfe9d7d720",
+    "question": "Quiz Question 1: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747423551637,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "783bb5c3-22f5-4de3-bfb0-fa3ffbd399d5",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747423550723,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "quiz",
+    "id": "920ff2b3-1093-4d88-b996-5bbede853ffe",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1747423550585,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "system",
+    "id": "a26bf9e8-a5b1-47fe-aaf0-e8dbf91f41b0",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423541959,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "thanks",
+    "id": "5b768d63-203e-4c7a-ac38-5876415d478b",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747423535628,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "system",
+    "id": "686ba809-28dd-442c-8c49-ec882b12728d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423498897,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }, {
+    "category": "system",
+    "id": "a6e5240d-c34c-425c-91a3-97284144f80b",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747423495573,
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }],
+  "quizResults": [{
+    "correctAnswers": 2,
+    "id": "912693ce-c946-496d-b2bd-191a988e9208",
+    "questions": [{
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in France?",
+      "userAnswer": "Euro"
+    }, {
+      "correctAnswer": "Bonjour",
+      "isCorrect": true,
+      "question": "What is the typical French greeting?",
+      "userAnswer": "Bonjour"
+    }, {
+      "correctAnswer": "French",
+      "isCorrect": false,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": "Spanish"
+    }, {
+      "correctAnswer": "A type of bread",
+      "isCorrect": false,
+      "question": "What is a 'baguette'?",
+      "userAnswer": "A musical instrument"
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": false,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": "Zara"
+    }],
+    "quizType": "MCQ",
+    "score": 2.0,
+    "timestamp": 1747423558421,
+    "totalQuestions": 5,
+    "userAnswers": ["Euro", "Bonjour", "Spanish", "A musical instrument", "Zara"],
+    "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4"
+  }],
+  "userId": "7f4ce926-6892-4e41-8066-09e46dee1dc4",
+  "username": "Yassen hani"
+}, {
+  "email": "yassin",
+  "interactions": [{
+    "category": "quiz",
+    "id": "06fd182a-d3df-42cc-a516-b4539b604c2c",
+    "question": "Quiz Question 5: Which sea borders the south of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411508345,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "8ab25373-33ea-46ce-a0f8-373914f69227",
+    "question": "Quiz Question 4: Which mountain range is found in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411507936,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "538ef0bb-d414-48dd-b7f6-a68c9b76a077",
+    "question": "Quiz Question 3: Which French region is known for its wine production?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411507537,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "28243d89-4437-4689-9e5f-3dd47fcf17d0",
+    "question": "Quiz Question 2: Which is the longest river in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411507116,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "c5dc04ab-03a7-44dc-a0bb-3449cd90976e",
+    "question": "Quiz Question 1: Which is NOT a neighboring country of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411506759,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "7a5849ec-e338-4218-aa6f-0a9d27be1a8b",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747411506260,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "ae6cccae-2029-46fa-afd3-40a99a8c678e",
+    "question": "Quiz Question 5: Which article is correct: ___ livre",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411502153,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "40b003e0-91b7-481d-bda3-bd99dc9d52d5",
+    "question": "Quiz Question 4: Which article is correct: ___ ami",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411501633,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "d3624e01-0cba-42b1-bb0e-285a1c8ae317",
+    "question": "Quiz Question 3: Which is the correct feminine form of 'un ami'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411501233,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "6bbf1e5f-cc1e-4976-ad1e-cb20341d8edb",
+    "question": "Quiz Question 2: Which article is correct: ___ voiture",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411500827,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "8f3034a8-5771-49a2-9b9c-af577c50c4cc",
+    "question": "Quiz Question 1: Which is the correct plural form of 'un animal'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411500480,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "7aae1d85-67a2-422f-b12c-670858c45338",
+    "question": "grammar",
+    "response": "Started a Grammar quiz",
+    "timestamp": 1747411499781,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "58db2b96-6d2b-4ecf-a0b1-95025de26497",
+    "question": "Quiz Question 5: Which French region is known for its wine production?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411494000,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "b106d734-da4e-4ad5-8faa-ec89bb627eea",
+    "question": "Quiz Question 4: Which is NOT a neighboring country of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411493555,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "9d2f936e-e42c-46ab-a10b-1edb8f619166",
+    "question": "Quiz Question 3: Which mountain range is found in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411493201,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "4ee0a00a-d9b3-4d49-9f0f-8f7172fc2a11",
+    "question": "Quiz Question 2: Which sea borders the south of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411492826,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "4795cdef-c8f5-426a-9458-71a95940ac55",
+    "question": "Quiz Question 1: Which is the longest river in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411492480,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "quiz",
+    "id": "05585ff9-4358-4787-8d2a-1138e32faa69",
+    "question": "mc1",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747411492023,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "category": "language_selection",
+    "id": "c8c307a8-1305-44cb-a5ee-7d4c03b5e9b4",
+    "question": "i want to study french\\",
+    "response": "Great! I'll help you learn french. Would you like to take a quiz to practice?",
+    "timestamp": 1747411490430,
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "30a29ff6-968c-4376-ab30-8d53cf09c15b",
+    "questions": [{
+      "correctAnswer": "Portugal",
+      "isCorrect": true,
+      "question": "Which is NOT a neighboring country of France?",
+      "userAnswer": "Portugal"
+    }, {
+      "correctAnswer": "Loire",
+      "isCorrect": true,
+      "question": "Which is the longest river in France?",
+      "userAnswer": "Loire"
+    }, {
+      "correctAnswer": "Bordeaux",
+      "isCorrect": true,
+      "question": "Which French region is known for its wine production?",
+      "userAnswer": "Bordeaux"
+    }, {
+      "correctAnswer": "The Alps",
+      "isCorrect": true,
+      "question": "Which mountain range is found in France?",
+      "userAnswer": "The Alps"
+    }, {
+      "correctAnswer": "Mediterranean Sea",
+      "isCorrect": true,
+      "question": "Which sea borders the south of France?",
+      "userAnswer": "Mediterranean Sea"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747411508355,
+    "totalQuestions": 5,
+    "userAnswers": ["Portugal", "Loire", "Bordeaux", "The Alps", "Mediterranean Sea"],
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "correctAnswers": 5,
+    "id": "bde229d6-cb4c-47bd-8c36-133bd213b48f",
+    "questions": [{
+      "correctAnswer": "des animaux",
+      "isCorrect": true,
+      "question": "Which is the correct plural form of 'un animal'?",
+      "userAnswer": "des animaux"
+    }, {
+      "correctAnswer": "la",
+      "isCorrect": true,
+      "question": "Which article is correct: ___ voiture",
+      "userAnswer": "la"
+    }, {
+      "correctAnswer": "une amie",
+      "isCorrect": true,
+      "question": "Which is the correct feminine form of 'un ami'?",
+      "userAnswer": "une amie"
+    }, {
+      "correctAnswer": "l'",
+      "isCorrect": true,
+      "question": "Which article is correct: ___ ami",
+      "userAnswer": "l'"
+    }, {
+      "correctAnswer": "le",
+      "isCorrect": true,
+      "question": "Which article is correct: ___ livre",
+      "userAnswer": "le"
+    }],
+    "quizType": "Grammar",
+    "score": 5.0,
+    "timestamp": 1747411502162,
+    "totalQuestions": 5,
+    "userAnswers": ["des animaux", "la", "une amie", "l'", "le"],
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }, {
+    "correctAnswers": 5,
+    "id": "66cca1fb-9c77-415d-9c94-79d35d44d2df",
+    "questions": [{
+      "correctAnswer": "Loire",
+      "isCorrect": true,
+      "question": "Which is the longest river in France?",
+      "userAnswer": "Loire"
+    }, {
+      "correctAnswer": "Mediterranean Sea",
+      "isCorrect": true,
+      "question": "Which sea borders the south of France?",
+      "userAnswer": "Mediterranean Sea"
+    }, {
+      "correctAnswer": "The Alps",
+      "isCorrect": true,
+      "question": "Which mountain range is found in France?",
+      "userAnswer": "The Alps"
+    }, {
+      "correctAnswer": "Portugal",
+      "isCorrect": true,
+      "question": "Which is NOT a neighboring country of France?",
+      "userAnswer": "Portugal"
+    }, {
+      "correctAnswer": "Bordeaux",
+      "isCorrect": true,
+      "question": "Which French region is known for its wine production?",
+      "userAnswer": "Bordeaux"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747411494009,
+    "totalQuestions": 5,
+    "userAnswers": ["Loire", "Mediterranean Sea", "The Alps", "Portugal", "Bordeaux"],
+    "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd"
+  }],
+  "userId": "3dcbb643-7057-4027-aae0-1a5678eac3fd",
+  "username": "yassin"
+}, {
+  "email": "eyad",
+  "interactions": [{
+    "category": "quiz",
+    "id": "874d64eb-16b9-4b72-a52c-2fb12c7bfcce",
+    "question": "Quiz Question 5: What is the most widely spoken language in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422061115,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "a25f5578-67a8-4c4e-9e50-442a1ddab0ce",
+    "question": "Quiz Question 4: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422060499,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "79525dd4-87bb-4d00-81b8-3084d0a12a37",
+    "question": "Quiz Question 3: Which of these is a famous French fashion brand?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422060094,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "631d3516-9909-47be-bd8e-107995af2392",
+    "question": "Quiz Question 2: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422059761,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "09407e7c-5aab-49e2-b599-b91b9588a387",
+    "question": "Quiz Question 1: What is a 'baguette'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422059435,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "a31d55b2-c0b8-4bd6-8e81-5a58642a95be",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747422058402,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "9fbceca0-2730-4ba0-8b9d-44f31e5be23a",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747422058391,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "unknown",
+    "id": "0663fb47-383a-4065-b592-4b90cc69d3c7",
+    "question": "cancel",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747422049143,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz_request",
+    "id": "7c2643c5-a9b6-42b1-bc37-0035785cf40f",
+    "question": "i want to start quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\n1. Vocabulaire - Testez votre connaissance des mots\n2. Grammaire - Pratiquez les règles de langue\n3. Traduction - Traduisez entre les langues\n4. Choix multiple (MCQ) - Questions générales sur la langue\n\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747422042450,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "ad0f1481-1acf-4b97-a3cb-1fb4965bcf84",
+    "question": "Quiz Question 5: What colors are on the French flag?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422034505,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "0f049bf0-4401-4fcf-bd0b-dfc3d358247f",
+    "question": "Quiz Question 4: Which famous museum is located in Paris?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422033733,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "fd51c94d-e6d5-495e-bcd0-4cc7c2d44c6a",
+    "question": "Quiz Question 3: Which city is the capital of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422033359,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "cbc8a86e-40ae-45c7-8607-a1ce28bc5bda",
+    "question": "Quiz Question 2: Which French dish consists of snails cooked with garlic and butter?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422033019,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "649d5d04-99fb-47c6-b136-45ebf17c3695",
+    "question": "Quiz Question 1: Which of these is a traditional French cheese?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422032623,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "79378240-8e0b-48ce-b50b-460484394d62",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747422030942,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "quiz",
+    "id": "69cad8ec-f960-4059-9f8a-a56a9cabdd7c",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747422030855,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "category": "greeting",
+    "id": "1441cc5d-af14-4583-bd48-7a0108c23390",
+    "question": "hi",
+    "response": "Hello, eyad! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747422013134,
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "ad8fa989-657e-4d23-b659-2480f107a477",
+    "questions": [{
+      "correctAnswer": "A type of bread",
+      "isCorrect": true,
+      "question": "What is a 'baguette'?",
+      "userAnswer": "A type of bread"
+    }, {
+      "correctAnswer": "Bonjour",
+      "isCorrect": true,
+      "question": "What is the typical French greeting?",
+      "userAnswer": "Bonjour"
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": true,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": "Chanel"
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in France?",
+      "userAnswer": "Euro"
+    }, {
+      "correctAnswer": "French",
+      "isCorrect": true,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": "French"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747422061125,
+    "totalQuestions": 5,
+    "userAnswers": ["A type of bread", "Bonjour", "Chanel", "Euro", "French"],
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }, {
+    "correctAnswers": 5,
+    "id": "2ec7beb9-3596-4fd9-b39f-3ecb2a676d66",
+    "questions": [{
+      "correctAnswer": "Camembert",
+      "isCorrect": true,
+      "question": "Which of these is a traditional French cheese?",
+      "userAnswer": "Camembert"
+    }, {
+      "correctAnswer": "Escargots",
+      "isCorrect": true,
+      "question": "Which French dish consists of snails cooked with garlic and butter?",
+      "userAnswer": "Escargots"
+    }, {
+      "correctAnswer": "Paris",
+      "isCorrect": true,
+      "question": "Which city is the capital of France?",
+      "userAnswer": "Paris"
+    }, {
+      "correctAnswer": "The Louvre",
+      "isCorrect": true,
+      "question": "Which famous museum is located in Paris?",
+      "userAnswer": "The Louvre"
+    }, {
+      "correctAnswer": "Blue, white, and red",
+      "isCorrect": true,
+      "question": "What colors are on the French flag?",
+      "userAnswer": "Blue, white, and red"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747422034521,
+    "totalQuestions": 5,
+    "userAnswers": ["Camembert", "Escargots", "Paris", "The Louvre", "Blue, white, and red"],
+    "userId": "45c68e09-08f5-4764-ae56-d954601728e2"
+  }],
+  "userId": "45c68e09-08f5-4764-ae56-d954601728e2",
+  "username": "eyad"
+}, {
+  "email": "eyad ihab",
+  "interactions": [{
+    "category": "quiz",
+    "id": "50d1506d-5743-4cda-89e4-aa54ddd3fe8e",
+    "question": "Quiz Question 5: Which of these is a traditional French cheese?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747423000407,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "bebef7db-05df-41f5-8ec6-e8ef233d9326",
+    "question": "Quiz Question 4: Which famous museum is located in Paris?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422998825,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "05a21a80-ae54-4db2-90d6-73ea00f228f8",
+    "question": "Quiz Question 3: Which French dish consists of snails cooked with garlic and butter?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422998567,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "cf0bad74-1804-4438-809c-fd9d8297531a",
+    "question": "Quiz Question 2: Which city is the capital of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422998297,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "8ba0d78b-ce8d-485f-ba4a-83682480e740",
+    "question": "Quiz Question 1: What colors are on the French flag?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422998054,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "b7fe69b3-5073-4bdf-b319-d8232bc7dc1e",
+    "question": "mcq quiz",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747422997253,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "system",
+    "id": "6cd37b0c-e4b9-4449-a009-312e3b50481c",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747422983513,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "thanks",
+    "id": "798cdd98-9424-42e5-9ef0-edcbd63c86d5",
+    "question": "set difficulty easty",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747422981432,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "unknown",
+    "id": "e2635b19-f80d-4608-a862-17eeb4ed7ecc",
+    "question": "a",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747422944513,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "e0b10870-4709-431a-9141-001b5419d92e",
+    "question": "Quiz Question 5: What colors are on the French flag?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422943963,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "d2269cc6-5dc2-42e1-8776-799c05218cd7",
+    "question": "Quiz Question 4: Which French dish consists of snails cooked with garlic and butter?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422943535,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "8a2cff18-9265-4ba4-b4b7-090ee13163ec",
+    "question": "Quiz Question 3: Which of these is a traditional French cheese?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422942960,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "f59dd15b-7752-4155-9b22-3eed1899aebf",
+    "question": "Quiz Question 2: Which famous museum is located in Paris?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422942638,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "6667cf86-2d45-4350-b2e2-d80394208359",
+    "question": "Quiz Question 1: Which city is the capital of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422942152,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "2cb816e0-587f-4ab2-9766-f9d74982d7eb",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747422941287,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "category": "quiz",
+    "id": "282c053c-3696-47e1-9412-1471330636f0",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747422941168,
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "b6d7336e-96cd-46b9-a515-9254481b70e2",
+    "questions": [{
+      "correctAnswer": "Blue, white, and red",
+      "isCorrect": true,
+      "question": "What colors are on the French flag?",
+      "userAnswer": "Blue, white, and red"
+    }, {
+      "correctAnswer": "Paris",
+      "isCorrect": true,
+      "question": "Which city is the capital of France?",
+      "userAnswer": "Paris"
+    }, {
+      "correctAnswer": "Escargots",
+      "isCorrect": true,
+      "question": "Which French dish consists of snails cooked with garlic and butter?",
+      "userAnswer": "Escargots"
+    }, {
+      "correctAnswer": "The Louvre",
+      "isCorrect": true,
+      "question": "Which famous museum is located in Paris?",
+      "userAnswer": "The Louvre"
+    }, {
+      "correctAnswer": "Camembert",
+      "isCorrect": true,
+      "question": "Which of these is a traditional French cheese?",
+      "userAnswer": "Camembert"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747423000419,
+    "totalQuestions": 5,
+    "userAnswers": ["Blue, white, and red", "Paris", "Escargots", "The Louvre", "Camembert"],
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }, {
+    "correctAnswers": 5,
+    "id": "7e98d3f8-e352-4c7c-8603-3cac1776aade",
+    "questions": [{
+      "correctAnswer": "Paris",
+      "isCorrect": true,
+      "question": "Which city is the capital of France?",
+      "userAnswer": "Paris"
+    }, {
+      "correctAnswer": "The Louvre",
+      "isCorrect": true,
+      "question": "Which famous museum is located in Paris?",
+      "userAnswer": "The Louvre"
+    }, {
+      "correctAnswer": "Camembert",
+      "isCorrect": true,
+      "question": "Which of these is a traditional French cheese?",
+      "userAnswer": "Camembert"
+    }, {
+      "correctAnswer": "Escargots",
+      "isCorrect": true,
+      "question": "Which French dish consists of snails cooked with garlic and butter?",
+      "userAnswer": "Escargots"
+    }, {
+      "correctAnswer": "Blue, white, and red",
+      "isCorrect": true,
+      "question": "What colors are on the French flag?",
+      "userAnswer": "Blue, white, and red"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747422943982,
+    "totalQuestions": 5,
+    "userAnswers": ["Paris", "The Louvre", "Camembert", "Escargots", "Blue, white, and red"],
+    "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790"
+  }],
+  "userId": "b74ebf2d-0afa-4a05-9f35-4a35f956a790",
+  "username": "eyad ihab"
+}, {
   "email": "mazen",
   "interactions": [{
+    "category": "quiz",
+    "id": "5173be42-ccdd-40ba-89cd-8b16cd40d522",
+    "question": "Quiz Question 5: Which French dish consists of snails cooked with garlic and butter?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421718628,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "a39dd373-5b0a-45a3-a62f-2c1ee69846d3",
+    "question": "Quiz Question 4: Which of these is a traditional French cheese?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421718023,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b1a8da56-383a-4027-9ec0-45bc391a554c",
+    "question": "Quiz Question 3: Which city is the capital of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421717608,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "25629cf2-181f-44cb-881d-f71d2e1cfb0d",
+    "question": "Quiz Question 2: What colors are on the French flag?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421717088,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "203f4a05-4971-4471-a789-f4bb226f66fe",
+    "question": "Quiz Question 1: Which famous museum is located in Paris?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421716665,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "38335ff1-74c4-402c-90eb-1cf291621344",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747421716284,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "cd5f9549-76a0-4a93-b1e9-f961cfc80326",
+    "question": "Quiz Question 5: Which of these is a famous French fashion brand?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421712399,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "02320539-d1fd-43fd-8188-7bd2bb5d675b",
+    "question": "Quiz Question 4: What is the most widely spoken language in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421711876,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f2a49801-95e2-41ef-8a4e-12b148a4d365",
+    "question": "Quiz Question 3: What is a 'baguette'?",
+    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: A type of bread",
+    "timestamp": 1747421711051,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "733c4e90-a496-4bf5-8393-d622b8a74489",
+    "question": "Quiz Question 2: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421710647,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "87e9600d-d7ac-4619-85e3-d01a78b1dfed",
+    "question": "Quiz Question 1: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421710327,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "6ac4aaca-291a-48e6-8f80-c543218720aa",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747421709026,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz_request",
+    "id": "392632ec-f782-4ae0-a5f0-77621301eca2",
+    "question": "i want to start quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\n1. Vocabulaire - Testez votre connaissance des mots\n2. Grammaire - Pratiquez les règles de langue\n3. Traduction - Traduisez entre les langues\n4. Choix multiple (MCQ) - Questions générales sur la langue\n\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747421704836,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz_request",
+    "id": "336af8f9-74f0-4ffa-b800-6913279130da",
+    "question": "i want to start a quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\n1. Vocabulaire - Testez votre connaissance des mots\n2. Grammaire - Pratiquez les règles de langue\n3. Traduction - Traduisez entre les langues\n4. Choix multiple (MCQ) - Questions générales sur la langue\n\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747421586330,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "18b217f6-36f3-459c-8cac-9a1b8da019ea",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419560142,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "6a4e9c70-cadf-4f1c-9bf8-739e9058dd99",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747419552677,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "41f9bdfd-a4f3-4a2c-a756-b8af65f7e8df",
+    "question": "save settings",
+    "response": "Attempted to save user settings",
+    "timestamp": 1747419522410,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "e3331782-5f7e-48ea-a301-d69c9322a5c3",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419323581,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "d8cdbd1a-188d-4c94-9e66-258f2fc1ff86",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419254207,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "4eaf046b-8f44-4033-b39f-82d7610c7487",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747419249231,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "35dd89f1-362a-4a82-920c-868d7c905684",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418992492,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "b0454abe-d431-4a79-9b77-91515073c981",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418986601,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "bb06b164-0b0a-4903-972c-cbb405450716",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418876511,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "b285edc2-b258-4648-be76-df0004caf493",
+    "question": "g",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747418874093,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "31fcfd9d-6cff-46a9-b064-579fc33b801c",
+    "question": "setiings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418867660,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "3fd82fac-c649-4987-9e66-9da8046942e8",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418863678,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "8d2e4a12-41f6-4df5-8a2b-d37b8bd3098e",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418743776,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "778c9696-d8f8-4845-95c4-98a5c07c5670",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418740876,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "c997a523-99a8-40e7-b4c7-feabbb6ac511",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418557234,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "a3a55fac-bc73-4683-88d1-838e02e9833b",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418537310,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "01d94d1c-c654-4705-b4ab-6df13225eacb",
+    "question": "set difficulty as hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418531997,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "b0cecea8-de1d-42e7-b324-c51ed528a439",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418484776,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "20c773ef-3433-4d06-9235-1a543b6b4869",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418481484,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "8b9e8faa-080d-4273-a1f1-92b1720a5200",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418065356,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "0f5970eb-5631-4861-8a7b-7a28d0733308",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418062450,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "ba67f9a8-c733-47a2-81d8-8bbd370d65ea",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747418041140,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "ff7b3438-cd74-419a-a175-2d05658583f0",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747418039358,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "4c6498fb-9b30-4cbe-85e8-d60a5f03007f",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417623057,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "82132f7f-6797-41af-9fb3-cce98a5d2531",
+    "question": "set difficulty as  hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417614282,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "8dd0cbac-b2ed-421f-8bb7-e6e0ca0bf36d",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747417583494,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b051d621-803e-4268-bc88-66c925fc7be2",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747417581873,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "347ae13c-a7b8-4c2b-81cd-40146298fd1f",
+    "question": "h3llo",
+    "response": "Started a Translation quiz",
+    "timestamp": 1747417576501,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "fbd917ca-8f50-46ab-9ce3-863c6918dcbc",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747417574649,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "1b24321b-25b2-4f64-8bcc-4663cb77d70d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417432608,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "8206b929-6e49-4cdf-bee6-3d76e1899fda",
+    "question": "set difficulty as hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417430056,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "ab021e92-d386-4a54-9f9c-71c5a3961d99",
+    "question": "",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747417420108,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "d39f0787-6784-4bfa-8ece-622775a59dde",
+    "question": "set difficulty as hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417420064,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "22f6e230-0d75-4ce7-9db9-2f40163c84e3",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417372582,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "fc25be71-9a0f-4cad-8486-968bbde4ce29",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417368204,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "ece5b532-7af8-43d6-bf6f-fd9cd4b45c76",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417275523,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "455ecf45-049f-4443-a17a-3d06ca07d41b",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417273015,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "a38bfe6b-7beb-4a78-9730-39e228242e0c",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417263404,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "426624d4-f393-40c3-977d-2e8f0eef09bc",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417261093,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "d814e4ca-a618-4bdf-8e90-182ab7005ab9",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747417023510,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "456c27b9-5138-4228-9dbf-1d4bcc06707b",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747417022009,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "643943ff-367a-4b23-ada1-0b30884bcc87",
+    "question": "set difficulty as hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417015982,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "6eba9656-2bd3-4947-b6f9-a79318fa4c6d",
+    "question": "ext",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747416939718,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "f32380a4-db06-4dd9-8a5f-07ea9edb998a",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416898500,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "97a297f4-47e8-4dad-8afa-921ce8f5e7fd",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747416892524,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "9353da3e-b84f-4d84-8ebb-3eec091f353e",
+    "question": "difficulty",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747416889286,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "b983db96-54fa-4b4e-9559-496bbe591eec",
+    "question": "set difficulty as hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416867569,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "a69ff93f-b6f2-4412-831f-6fbdeb54b073",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416829511,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "ca86c82a-9189-4cdd-8212-d31fbb835868",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747416817402,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "5e1d4c7f-a6c4-431d-a44b-3dc7ed08a36c",
+    "question": "hihih",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747416730912,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "8b018706-3361-414e-b0b6-3cfc025409eb",
+    "question": "xit",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747416725515,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "50d81ffd-29ad-4cd5-a5b4-0d7cbe114013",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416290899,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "3c32e1e3-1686-4dc4-ae95-a4893af81cef",
+    "question": "set eay",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416015097,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "cfe69609-9774-4871-8ba5-76552cd01f7a",
+    "question": "easy",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747416009995,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "2b4a54cf-3a2f-48b6-9004-40d74d456285",
+    "question": "set easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416006755,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "9e49c8f8-6630-4e62-9f52-4690853b82bf",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415998300,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "a2bac643-2020-4211-8338-071416b24317",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747415987381,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "greeting",
+    "id": "dbc5abfb-e93a-4b51-9b83-3672d33fbfda",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747415982976,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "b16a6f4b-9600-4bd7-bd0a-6738df504311",
+    "question": "hey",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415811943,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "37e8afeb-139d-4835-8f79-bc420e1c0b4b",
+    "question": "hi",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415806326,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "64840fa6-b651-40a9-8de4-bad2917c1e12",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747415728489,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "cea110a4-9464-4fe2-b654-b6cf9076d2bc",
+    "question": "hey",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415656059,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "f0039c2a-d0d6-4986-8b68-4accb07a2991",
+    "question": "hello",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415654698,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "db75760d-4abb-43ce-b0ab-9e6c56d997f1",
+    "question": "hi",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415652142,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "670cbfdc-fe52-4197-b06c-f7fcfdaf00dc",
+    "question": "i want to learn spanish",
+    "response": "Great! I'll help you learn spanish. Would you like to take a quiz to practice?",
+    "timestamp": 1747415645639,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8fe08e4c-1d59-43e0-ae9e-4a3c78a48a31",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747415629397,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c213fe7b-aeee-4c7b-b7fc-6c23ba5df2f7",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747415626443,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "c361f658-2608-4fab-ade5-76bf9933b050",
+    "question": "hello",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415611511,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "8d82b2a8-2a60-4aeb-a63e-7b98c711c05a",
+    "question": "hi",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415609579,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "085a730b-0959-4023-b584-8956b3cad903",
+    "question": "hi",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415607804,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "c17786b5-182d-4b56-9f6e-f7ff382668e1",
+    "question": "hello",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415424312,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "4cf6418e-80e4-4527-a83f-38fa863ee7c4",
+    "question": "hello",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415421150,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "help",
+    "id": "6321e99a-64c2-45a8-aa17-56e722821339",
+    "question": "hellp",
+    "response": "I'm here to help you learn languages! You can:\n- Start a quiz by typing 'quiz'\n- Change settings with 'settings'\n- View your progress with 'analytics'\n- Ask language questions directly\n- Type 'logout' to sign out",
+    "timestamp": 1747415417946,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "c5c144a2-31af-4da6-9ee7-f8361a04f0dc",
+    "question": "hi",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747415413824,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "08affec6-5844-4fc9-96aa-b9bed9ff66e0",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415274915,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "af5b2e8e-b2ae-4d99-a2cc-4b0b624b41e8",
+    "question": "set diffculty as hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415180454,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "bb5cbb8e-e734-4ee7-b8a0-51ce386b9478",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415165413,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f3c1c880-9738-4241-a391-f8c2f5c2c1e0",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747415153261,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "9ec7045e-f901-4735-b8df-8dfba4173a42",
+    "question": "mcw",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747415149793,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "df9f3655-556f-44f2-9c88-f928ff3e7e7d",
+    "question": "set target langage french",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414971375,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "3b7f7ce1-c168-4938-9cb1-f07e29cec29c",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414959224,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "122a3c60-0ccb-4cd7-a169-11773384d958",
+    "question": "set Difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414940158,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "7edc4fc8-f4dd-48d0-af09-f069ad3c2d48",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414921733,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "a384ef28-47f7-48e7-bf18-4c0c4a99435b",
+    "question": "set diffculty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414783924,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "6759db8a-2380-4bf7-949f-cdfa40f8df89",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747414763488,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "6ad98a23-7f6d-48ab-948f-19e552e6daf4",
+    "question": "difficulty",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747414752399,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "920eb32b-1aa4-4946-9690-90e5c9f2118a",
+    "question": "set easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414746888,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "b66cc552-a97e-435b-af08-6590bfa1b3fb",
+    "question": "set difficulty to hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414740354,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "b6762df4-b929-451f-9a0b-d6daea56d5f5",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414717320,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "faa29332-3d7c-4fe7-9f9d-92c44179c95e",
+    "question": "set dificutly hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747414443303,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "40b2d9cf-1050-49a1-9bd4-74b082e2e031",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747414434076,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "4bc0251b-aa51-4518-bcea-2d81a0352568",
+    "question": "thanks",
+    "response": "You're welcome! Would you like to try a quiz or Changing Settings?",
+    "timestamp": 1747414380228,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "041f40c3-f665-410c-99cc-a94c99ac2e24",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747414312503,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5a5cfd6d-cc6e-4649-adf3-94552a25b0c0",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747414307754,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "0a5c48b9-f223-425c-aa37-3e93d8bd14d7",
+    "question": "Quiz Question 5: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747414303812,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "6e140e00-36b8-479e-a667-76cff27ef102",
+    "question": "Quiz Question 4: What is a 'baguette'?",
+    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: A type of bread",
+    "timestamp": 1747414302418,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "51c6535b-0f06-4be4-aa41-bc25e94dc071",
+    "question": "Quiz Question 3: Which of these is a famous French fashion brand?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747414302131,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "96911f18-a790-48df-97fa-c7615c1c5fa8",
+    "question": "Quiz Question 2: What is the most widely spoken language in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747414301766,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "15f97818-d113-47e0-8f5c-5a5ec2d80b0f",
+    "question": "Quiz Question 1: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747414301367,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d9ae343b-160b-4b2a-a1f2-f7b98f584d68",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747414299806,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "ed3f7432-5cd8-4b45-a441-5e448e1b8b94",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747414040617,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_question",
+    "id": "1334bd5d-64c0-48aa-9171-535878cfd8c0",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747414038523,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "e02dfaa7-e66d-4601-a2f7-1858f5699b24",
+    "question": "exit",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747414034069,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "eeda7f1e-7735-4e57-a726-b2570c23af79",
+    "question": "exit",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747413980562,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "5391ad65-e4ca-4a08-9cdb-3bff09abb783",
+    "question": "exif",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747413918009,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "8ad50e51-83dc-43f1-8a98-72eedf167d7f",
+    "question": "exit",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747413915967,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "841f0543-ffa2-45ce-9bf6-e2e64be158ce",
+    "question": "exit",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747413912648,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "1a7791ba-cf7f-4340-8e2e-579b9ff0c67f",
+    "question": "exit",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747413907689,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "0d37f0f3-aba6-4ecf-a5e1-562ba0792f66",
+    "question": "set difficulty medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747413822335,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d261cc6d-550a-4c1b-ac20-5e14179d6fba",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747413796125,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "3734aac3-174d-44de-bf1c-aca499471b47",
+    "question": "give me help",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747413791527,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "366a2fa2-1811-4a18-88be-883855ccf2e9",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747413776106,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d26c1e10-7c92-4987-b7eb-84dc35015e59",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747413746765,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "fc78e592-858a-4d9f-9756-5d3b024bc940",
+    "question": "123",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747413706546,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "aaa1fbea-f9fe-4a06-8fff-311e991cd65b",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747413705877,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "b61fac37-0d48-4a4d-8399-d6c8c62fc927",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747413590278,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "4bf35430-12c8-420d-9d71-7c969c18cd66",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747413585094,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7d11e985-f2de-4c81-a7da-74fc2f1ce83a",
+    "question": "give me help",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747413505844,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "6025699f-94bc-4da1-b2d8-7c6571143853",
+    "question": "please set target langauge german",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412405871,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "24718e5c-f99f-47bc-bd9e-f0d9dde479ce",
+    "question": "please set target langauge to french",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412390828,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "a909c1b3-6c08-4a96-8993-18d3bc67d9c2",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747412039718,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7b008d23-50d5-4442-a456-793cfc382f56",
+    "question": "i want you to give me quiz",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747412035846,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "bff6ffd1-db01-4b68-906f-9ba523dbbffc",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747412028898,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c0b8cbe6-1743-444a-9f01-83f5402b3d2d",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747412028886,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "1d351ef9-6c1b-414c-ad72-64b4702bfb66",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747412015256,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "71052f78-0046-4ec1-b383-0587bbb6281c",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747412015229,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "3b3e3ca3-163a-4c2d-91a9-a25215b8bc4a",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz please",
+    "timestamp": 1747412010711,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8ad9d1d9-adb4-41b7-a881-e328a64bba41",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747411446307,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "995fe124-b900-4601-ab03-df791eeee243",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747411446299,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "3cabefa5-5f2f-4051-8022-8a6723d852f7",
+    "question": "yes",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747411288655,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_question",
+    "id": "c192bc6b-44e0-4f09-994a-b6c64b2c47dd",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747411279449,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "be1c443c-e6e8-4352-a001-1e3a181f14e7",
+    "question": "Quiz Question 5: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410897821,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b5d7270c-7549-4e81-a8eb-1698e836d7db",
+    "question": "Quiz Question 4: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410896405,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f10892fe-bf2b-4c16-a5b9-f2d3a7b15f03",
+    "question": "Quiz Question 3: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410896234,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e942b0bc-a07f-4c66-9045-91d1ec1ae906",
+    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410896048,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "46300eb9-dbf4-40ec-8526-2046794afda1",
+    "question": "Quiz Question 1: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410895820,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "64ec4ba2-1076-4613-995e-c60bc9823212",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747410894783,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "2265eff1-bb05-4fab-aa41-64bde44d982c",
+    "question": "i want to learn spanish",
+    "response": "Great! I'll help you learn spanish. Would you like to take a quiz to practice?",
+    "timestamp": 1747410893026,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "284374dd-f3ba-4b4b-a260-5199ad7610f3",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747410401377,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "9078f16f-9692-405d-bc2e-49d36500000b",
+    "question": "grammar",
+    "response": "Started a Grammar quiz",
+    "timestamp": 1747410387940,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_question",
+    "id": "2e904652-a960-413c-834d-35f1fb753124",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747410381063,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c2e2bd44-7617-492d-bae3-269520bde720",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409880750,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "ded5fd48-4613-4cb2-a4bf-faab87f2f3a4",
+    "question": "grammar",
+    "response": "Started a Grammar quiz",
+    "timestamp": 1747409877919,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "43568c2c-6f4f-4e61-9349-895e99ea5b88",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409872739,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "cbb0f47e-7c80-4749-809a-a2fac2d389c2",
+    "question": "vocab",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747409869796,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e36932df-bc10-44a4-b2e8-d2e5708803c7",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409867442,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "fa317101-167a-41c7-b24e-da2eeded0174",
+    "question": "translation",
+    "response": "Started a Translation quiz",
+    "timestamp": 1747409864464,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "becb3116-e6ae-4690-8ba2-ed43d5c3791c",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409860641,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "da567eb1-528e-4fc2-8fc8-f102218e90c5",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747409857310,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "695b10cd-ecb5-4342-a7a6-86b1018bb38d",
+    "question": "i want to learn spanish",
+    "response": "Great! I'll help you learn spanish. Would you like to take a quiz to practice?",
+    "timestamp": 1747409849036,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7a1f10de-06f6-4ade-83ee-f1eeeb12dac3",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409812514,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "61639248-69ec-41bb-87f2-3833750ed3c3",
+    "question": "vocab",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747409809700,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "738eb663-4fcf-4429-91ee-17e724472b21",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409805104,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "552d8142-336b-48e4-839e-878b2a651b02",
+    "question": "translation",
+    "response": "Started a Translation quiz",
+    "timestamp": 1747409802921,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "fa704d14-ea03-4d81-b19c-7a2f45d40d56",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409798693,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5a983ba6-ec71-4d0e-a5a9-ccea06abcca0",
+    "question": "grammar",
+    "response": "Started a Grammar quiz",
+    "timestamp": 1747409796079,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "06200942-029d-4c6e-980f-82eb031eaa47",
+    "question": "",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747409793961,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "ac05397e-6852-431e-81e8-fedaaab83f72",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409793940,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "3358b958-185c-4914-8b60-207d1227417f",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747409789289,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "5667412c-f37b-4e1c-a347-47c73fcf28c8",
+    "question": "i want to learn french",
+    "response": "Great! I'll help you learn french. Would you like to take a quiz to practice?",
+    "timestamp": 1747409787194,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "704762a4-d43d-4055-9a89-997768e38ea1",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409780867,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d3f29aff-a74a-4713-96df-f5564076a212",
+    "question": "translation",
+    "response": "Started a Translation quiz",
+    "timestamp": 1747409777072,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8b40ff6e-dc37-49dc-80e2-eecb5d7ca8af",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409774409,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8565aa31-37d2-4927-a4a9-46008a84c914",
+    "question": "grammar",
+    "response": "Started a Grammar quiz",
+    "timestamp": 1747409771720,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "9bfc9ff4-2f28-441d-8f93-019aecee8efb",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409768900,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d9a65075-ee62-4eab-b328-59f789ed4935",
+    "question": "vocab",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747409762913,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b31070c8-689a-4af4-82b8-77aa5efb9316",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409760346,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "573f4569-a250-40fa-ba4f-0a5c4372a8b6",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747409756569,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "d0a25ab8-26c4-475d-a868-aee59092551b",
+    "question": "i want to learn german",
+    "response": "Great! I'll help you learn german. Would you like to take a quiz to practice?",
+    "timestamp": 1747409754630,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e098ce0d-8676-42bc-bd1c-9962a7d1736b",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409744361,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "384119c2-ac36-40cc-b21f-478f33f55502",
+    "question": "translation",
+    "response": "Started a Translation quiz",
+    "timestamp": 1747409712064,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "5e53be5f-381a-455c-a3c4-f285f70bf2e7",
+    "question": "trans",
+    "response": "You're welcome! Would you like to try a quiz or Changing Settings?",
+    "timestamp": 1747409707222,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "cfab68e4-91b7-4635-8fd7-fb9b9a3c4258",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409702866,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "184be746-c0be-4d40-b469-73a8a8536ddf",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747409700310,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8dbd1f9e-8778-4b7e-8d46-b078eade93c8",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409696494,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e2bd8097-31db-43c1-bda9-2f08087c5681",
+    "question": "grammar",
+    "response": "Started a Grammar quiz",
+    "timestamp": 1747409692640,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "a52a8be0-9457-4175-a1d0-0d464073616d",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409688525,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "483d15fc-5beb-43b4-8b13-c56a3a9c6bb6",
+    "question": "vocab",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747409684503,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "91b69aa7-5d98-41d8-ada2-b99bacb51901",
+    "question": "l want to learn english",
+    "response": "Great! I'll help you learn english. Would you like to take a quiz to practice?",
+    "timestamp": 1747409681035,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e6dc2dd7-4434-43be-885f-ba868cac3aad",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747409612087,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "777f1aa1-a3db-41b1-8b61-70c0351ce7a7",
+    "question": "set diffculty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747409490148,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "b5135021-e511-4fdf-9903-a61e07a9f7ff",
+    "question": "set diffculty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747409457690,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "5cb4c415-2357-4ef8-b243-5168d6cffb47",
+    "question": "set target languege to german",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747409432348,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "cc416946-1307-48d4-aefb-ba05a9bbea9e",
+    "question": "set diffculty to hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747409399926,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_question",
+    "id": "28b8fe80-199f-4e9c-8164-78d54905fada",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747409389402,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
     "category": "system",
     "id": "0f6e5dc8-0910-4ae7-8789-4ea09c344e2d",
     "question": "analytics",
@@ -4945,6 +8098,146 @@
   }],
   "quizResults": [{
     "correctAnswers": 5,
+    "id": "a1d19cf3-2a2b-4408-a8cf-16ad15477320",
+    "questions": [{
+      "correctAnswer": "The Louvre",
+      "isCorrect": true,
+      "question": "Which famous museum is located in Paris?",
+      "userAnswer": "The Louvre"
+    }, {
+      "correctAnswer": "Blue, white, and red",
+      "isCorrect": true,
+      "question": "What colors are on the French flag?",
+      "userAnswer": "Blue, white, and red"
+    }, {
+      "correctAnswer": "Paris",
+      "isCorrect": true,
+      "question": "Which city is the capital of France?",
+      "userAnswer": "Paris"
+    }, {
+      "correctAnswer": "Camembert",
+      "isCorrect": true,
+      "question": "Which of these is a traditional French cheese?",
+      "userAnswer": "Camembert"
+    }, {
+      "correctAnswer": "Escargots",
+      "isCorrect": true,
+      "question": "Which French dish consists of snails cooked with garlic and butter?",
+      "userAnswer": "Escargots"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747421718638,
+    "totalQuestions": 5,
+    "userAnswers": ["The Louvre", "Blue, white, and red", "Paris", "Camembert", "Escargots"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 4,
+    "id": "ea25b4fe-35eb-4863-a299-d01dc29b334d",
+    "questions": [{
+      "correctAnswer": "Bonjour",
+      "isCorrect": true,
+      "question": "What is the typical French greeting?",
+      "userAnswer": "Bonjour"
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in France?",
+      "userAnswer": "Euro"
+    }, {
+      "correctAnswer": "A type of bread",
+      "isCorrect": false,
+      "question": "What is a 'baguette'?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "French",
+      "isCorrect": true,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": "French"
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": true,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": "Chanel"
+    }],
+    "quizType": "MCQ",
+    "score": 4.0,
+    "timestamp": 1747421712415,
+    "totalQuestions": 5,
+    "userAnswers": ["Bonjour", "Euro", "", "French", "Chanel"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 4,
+    "id": "2f3d70de-c459-45d9-b4af-9c888f8e9e01",
+    "questions": [{
+      "correctAnswer": "Bonjour",
+      "isCorrect": true,
+      "question": "What is the typical French greeting?",
+      "userAnswer": "Bonjour"
+    }, {
+      "correctAnswer": "French",
+      "isCorrect": true,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": "French"
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": true,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": "Chanel"
+    }, {
+      "correctAnswer": "A type of bread",
+      "isCorrect": false,
+      "question": "What is a 'baguette'?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in France?",
+      "userAnswer": "Euro"
+    }],
+    "quizType": "MCQ",
+    "score": 4.0,
+    "timestamp": 1747414303829,
+    "totalQuestions": 5,
+    "userAnswers": ["Bonjour", "French", "Chanel", "", "Euro"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
+    "id": "186700ec-d482-4692-8baa-3f5cc5eb0ccf",
+    "questions": [{
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }, {
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747410897837,
+    "totalQuestions": 5,
+    "userAnswers": ["Ebro", "Mallorca", "Eagle", "Pamplona", "Pyrenees"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
     "id": "bac07fb9-7b57-42d6-9748-66e7bfb5df3d",
     "questions": [{
       "correctAnswer": "Die Rechnung, bitte",
@@ -6242,359 +9535,370 @@
   "userId": "fb3f2991-2a99-4217-838a-71013cf35465",
   "username": "mazen"
 }, {
-  "email": "ramez",
+  "email": "karam",
   "interactions": [{
-    "category": "quiz",
-    "id": "2d41dcee-31b9-49ef-afc8-c801bc2e4760",
-    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
-    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: Real Madrid",
-    "timestamp": 1746900489362,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "category": "system",
+    "id": "4232a2bb-4f44-40b0-a833-1b898dd9b26e",
+    "question": "save settings",
+    "response": "Attempted to save user settings",
+    "timestamp": 1747421898860,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "ccd9b9c7-326b-4606-8115-6e1f896d6c89",
-    "question": "Quiz Question 4: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "id": "e6f19112-4cbb-47c0-ab32-35d13ce642b1",
+    "question": "Quiz Question 5: What colors are on the French flag?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900488990,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421811039,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "52e3dd65-af09-46d6-b6e8-9faa1a37f890",
-    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "id": "7b20b140-3fe0-46e0-aedc-48ad3fa65501",
+    "question": "Quiz Question 4: Which French dish consists of snails cooked with garlic and butter?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900488402,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421810647,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "fe6ee49b-4f80-400f-a34f-04f5c2c7aaa4",
-    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "id": "66c69158-a080-4e6c-ac4a-689540a8d047",
+    "question": "Quiz Question 3: Which of these is a traditional French cheese?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900488002,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421810250,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "3b1720bf-34ab-4945-8158-ca48a8fc0eed",
-    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "id": "6e5df643-a854-4087-b159-19ec1937ee2a",
+    "question": "Quiz Question 2: Which famous museum is located in Paris?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900487630,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421809845,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "8a101fa8-1ca7-41b8-a973-df3de656ec84",
-    "question": "quiz",
-    "response": "Started a new quiz session",
-    "timestamp": 1746900486242,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "id": "2c9f779b-2814-45cc-9125-164316a89cd8",
+    "question": "Quiz Question 1: Which city is the capital of France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747421809157,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "ff986b31-7931-49d0-bec3-34314fa1440c",
-    "question": "What type of quiz would you like to take?",
-    "response": "mcq",
-    "timestamp": 1746900486237,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "unknown",
-    "id": "b7c64f3a-f82d-4632-acfb-d2d2cfa22075",
+    "id": "301d81fc-b705-4da8-be8f-15b1e738d293",
     "question": "mcq",
-    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
-    "timestamp": 1746900482800,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747421808332,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "1db68540-be8e-4fb3-87a9-166e59b094da",
-    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "id": "1957170d-30b8-451e-a68a-cbff79bb9ab0",
+    "question": "Quiz Question 5: Which is NOT a neighboring country of France?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900478407,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421783450,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "310ca165-c4fe-4b2c-bf05-e71237618c5a",
-    "question": "Quiz Question 4: Which Spanish artist painted 'Guernica'?",
+    "id": "7737fd2d-27b2-40d0-bd54-0ad2ebe0b73b",
+    "question": "Quiz Question 4: Which French region is known for its wine production?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900477841,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421783045,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "bf60af64-5b53-48d7-913e-cc8cf11514a9",
-    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "id": "900d18e7-a778-49e1-9f16-28caa3e67139",
+    "question": "Quiz Question 3: Which mountain range is found in France?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900477395,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421782600,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "c21fde75-c3e4-4a0b-ae99-75bacd5236b7",
-    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "id": "622b760d-03be-4788-b32f-0a0dbeebba1a",
+    "question": "Quiz Question 2: Which sea borders the south of France?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900476972,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421782095,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "aecb3d0d-7028-4391-9db5-b59fec6b9b92",
-    "question": "Quiz Question 1: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "id": "c8b55b52-b302-4d46-84b7-caa6c1e23a05",
+    "question": "Quiz Question 1: Which is the longest river in France?",
     "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900476651,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747421781158,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "category": "quiz",
-    "id": "2aac629f-d088-4e83-ab26-adbecf1dc1ae",
-    "question": "quiz",
-    "response": "Started a new quiz session",
-    "timestamp": 1746900476052,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "id": "34ce11d9-f82d-4666-bcef-4cca1a31dd54",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747421779522,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
-    "category": "quiz",
-    "id": "7175abf7-6707-4ff8-89be-00647eef2a56",
-    "question": "What type of quiz would you like to take?",
-    "response": "mcq",
-    "timestamp": 1746900476047,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "category": "quiz_request",
+    "id": "cf409821-4634-4067-9f8e-78f5d162a4ee",
+    "question": "i want to start quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\n1. Vocabulaire - Testez votre connaissance des mots\n2. Grammaire - Pratiquez les règles de langue\n3. Traduction - Traduisez entre les langues\n4. Choix multiple (MCQ) - Questions générales sur la langue\n\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747421776990,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
-    "category": "quiz",
-    "id": "cab45f5e-8c50-4f59-ac9e-f316bda7cde2",
-    "question": "Quiz Question 5: Which Spanish city is famous for the 'Running of the Bulls'?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900466011,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "category": "greeting",
+    "id": "888efb80-fd99-489a-b7d5-df4fca0d5691",
+    "question": "hello",
+    "response": "Hello, kareem! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747421767063,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
-    "category": "quiz",
-    "id": "ff4aa1f3-9afb-4c15-a0ef-5359d6f4fc3c",
-    "question": "Quiz Question 4: Which is the longest river in Spain?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900465547,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "7449964f-1c80-44d9-b723-630f447d6a71",
-    "question": "Quiz Question 3: Which animal is featured on the Spanish coat of arms?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900465162,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "586d9634-2890-438e-b7ca-e77eed2073bb",
-    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900464829,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "fb03cad2-f130-4e13-a394-4284ca4ebff0",
-    "question": "Quiz Question 1: Which mountain range runs along the border between Spain and France?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900464499,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "4241cfab-4c42-4b3a-b091-8e9d293ba3cc",
-    "question": "quiz",
-    "response": "Started a new quiz session",
-    "timestamp": 1746900463283,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "60c4cf00-7615-4a94-b973-443659059972",
-    "question": "What type of quiz would you like to take?",
-    "response": "mcq",
-    "timestamp": 1746900463219,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "unknown",
-    "id": "93694544-7ccf-4c0d-b9dc-caa4a757bfe1",
-    "question": "sss",
-    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
-    "timestamp": 1746888774448,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "system",
-    "id": "83444530-eecc-4427-9c6b-0ab7e5ca1021",
-    "question": "help",
-    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
-    "timestamp": 1746888772357,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "system",
-    "id": "29662a70-a516-481c-aeb1-930ef7b06bc6",
-    "question": "help",
-    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
-    "timestamp": 1746888638046,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "category": "greeting",
+    "id": "05ee8a31-82d8-40b9-b7c3-543caf606525",
+    "question": "hi",
+    "response": "Hello, kareem! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747421765197,
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }],
   "quizResults": [{
-    "correctAnswers": 4,
-    "id": "0d373864-df04-4280-8e3b-ff97e4f7b735",
+    "correctAnswers": 5,
+    "id": "da3b9ace-e22e-4f82-9d54-303555042513",
     "questions": [{
-      "correctAnswer": "Pablo Picasso",
+      "correctAnswer": "Paris",
       "isCorrect": true,
-      "question": "Which Spanish artist painted 'Guernica'?",
-      "userAnswer": "Pablo Picasso"
+      "question": "Which city is the capital of France?",
+      "userAnswer": "Paris"
     }, {
-      "correctAnswer": "Paella",
+      "correctAnswer": "The Louvre",
       "isCorrect": true,
-      "question": "Which Spanish dish is made with rice and seafood?",
-      "userAnswer": "Paella"
+      "question": "Which famous museum is located in Paris?",
+      "userAnswer": "The Louvre"
     }, {
-      "correctAnswer": "Madrid",
+      "correctAnswer": "Camembert",
       "isCorrect": true,
-      "question": "Which city is the capital of Spain?",
-      "userAnswer": "Madrid"
+      "question": "Which of these is a traditional French cheese?",
+      "userAnswer": "Camembert"
     }, {
-      "correctAnswer": "New Year's Eve",
+      "correctAnswer": "Escargots",
       "isCorrect": true,
-      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
-      "userAnswer": "New Year's Eve"
+      "question": "Which French dish consists of snails cooked with garlic and butter?",
+      "userAnswer": "Escargots"
     }, {
-      "correctAnswer": "Real Madrid",
-      "isCorrect": false,
-      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
-      "userAnswer": ""
+      "correctAnswer": "Blue, white, and red",
+      "isCorrect": true,
+      "question": "What colors are on the French flag?",
+      "userAnswer": "Blue, white, and red"
     }],
     "quizType": "MCQ",
-    "score": 4.0,
-    "timestamp": 1746900489366,
+    "score": 5.0,
+    "timestamp": 1747421811048,
     "totalQuestions": 5,
-    "userAnswers": ["Pablo Picasso", "Paella", "Madrid", "New Year's Eve", ""],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "userAnswers": ["Paris", "The Louvre", "Camembert", "Escargots", "Blue, white, and red"],
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }, {
     "correctAnswers": 5,
-    "id": "fafe6a1c-f530-4f95-9e6e-b21df7e336ba",
+    "id": "a802024e-245f-4ec8-8169-db2b3a595b76",
     "questions": [{
-      "correctAnswer": "New Year's Eve",
+      "correctAnswer": "Loire",
       "isCorrect": true,
-      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
-      "userAnswer": "New Year's Eve"
+      "question": "Which is the longest river in France?",
+      "userAnswer": "Loire"
     }, {
-      "correctAnswer": "Paella",
+      "correctAnswer": "Mediterranean Sea",
       "isCorrect": true,
-      "question": "Which Spanish dish is made with rice and seafood?",
-      "userAnswer": "Paella"
+      "question": "Which sea borders the south of France?",
+      "userAnswer": "Mediterranean Sea"
     }, {
-      "correctAnswer": "Madrid",
+      "correctAnswer": "The Alps",
       "isCorrect": true,
-      "question": "Which city is the capital of Spain?",
-      "userAnswer": "Madrid"
+      "question": "Which mountain range is found in France?",
+      "userAnswer": "The Alps"
     }, {
-      "correctAnswer": "Pablo Picasso",
+      "correctAnswer": "Bordeaux",
       "isCorrect": true,
-      "question": "Which Spanish artist painted 'Guernica'?",
-      "userAnswer": "Pablo Picasso"
+      "question": "Which French region is known for its wine production?",
+      "userAnswer": "Bordeaux"
     }, {
-      "correctAnswer": "Real Madrid",
+      "correctAnswer": "Portugal",
       "isCorrect": true,
-      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
-      "userAnswer": "Real Madrid"
+      "question": "Which is NOT a neighboring country of France?",
+      "userAnswer": "Portugal"
     }],
     "quizType": "MCQ",
     "score": 5.0,
-    "timestamp": 1746900478411,
+    "timestamp": 1747421783464,
     "totalQuestions": 5,
-    "userAnswers": ["New Year's Eve", "Paella", "Madrid", "Pablo Picasso", "Real Madrid"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 5,
-    "id": "65f7eb6e-84e7-411d-9ce5-2acda698279b",
-    "questions": [{
-      "correctAnswer": "Pyrenees",
-      "isCorrect": true,
-      "question": "Which mountain range runs along the border between Spain and France?",
-      "userAnswer": "Pyrenees"
-    }, {
-      "correctAnswer": "Mallorca",
-      "isCorrect": true,
-      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
-      "userAnswer": "Mallorca"
-    }, {
-      "correctAnswer": "Eagle",
-      "isCorrect": true,
-      "question": "Which animal is featured on the Spanish coat of arms?",
-      "userAnswer": "Eagle"
-    }, {
-      "correctAnswer": "Ebro",
-      "isCorrect": true,
-      "question": "Which is the longest river in Spain?",
-      "userAnswer": "Ebro"
-    }, {
-      "correctAnswer": "Pamplona",
-      "isCorrect": true,
-      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
-      "userAnswer": "Pamplona"
-    }],
-    "quizType": "MCQ",
-    "score": 5.0,
-    "timestamp": 1746900466019,
-    "totalQuestions": 5,
-    "userAnswers": ["Pyrenees", "Mallorca", "Eagle", "Ebro", "Pamplona"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 1,
-    "id": "9685ae91-fd6c-4f38-81e4-e1c18d977847",
-    "questions": [{
-      "correctAnswer": "hablo",
-      "isCorrect": true,
-      "question": "What is the correct present tense conjugation for 'hablar' (yo)?",
-      "userAnswer": "hablo"
-    }, {
-      "correctAnswer": "comes",
-      "isCorrect": true,
-      "question": "What is the correct present tense conjugation for 'comer' (tú)?",
-      "userAnswer": "comes"
-    }, {
-      "correctAnswer": "van",
-      "isCorrect": true,
-      "question": "What is the correct present tense for 'ir' (ellos)?",
-      "userAnswer": "van"
-    }, {
-      "correctAnswer": "somos",
-      "isCorrect": true,
-      "question": "What is the correct present tense for 'ser' (nosotros)?",
-      "userAnswer": "somos"
-    }, {
-      "correctAnswer": "vive",
-      "isCorrect": true,
-      "question": "What is the correct present tense conjugation for 'vivir' (él)?",
-      "userAnswer": "vive"
-    }],
-    "quizType": "Grammar",
-    "score": 5.0,
-    "timestamp": 1746888856146,
-    "totalQuestions": 5,
-    "userAnswers": ["hablo", "comes", "van", "somos", "vive"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 1,
-    "id": "655f14b0-bc73-47fe-bd51-a797dd5d5cd7",
-    "questions": [{
-      "correctAnswer": "Mallorca",
-      "isCorrect": true,
-      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
-      "userAnswer": "Mallorca"
-    }, {
-      "correctAnswer": "Pyrenees",
-      "isCorrect": true,
-      "question": "Which mountain range runs along the border between Spain and France?",
-      "userAnswer": "Pyrenees"
-    }, {
-      "correctAnswer": "Eagle",
-      "isCorrect": true,
-      "question": "Which animal is featured on the Spanish coat of arms?",
-      "userAnswer": "Eagle"
-    }, {
-      "correctAnswer": "Pamplona",
-      "isCorrect": true,
-      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
-      "userAnswer": "Pamplona"
-    }, {
-      "correctAnswer": "Ebro",
-      "isCorrect": true,
-      "question": "Which is the longest river in Spain?",
-      "userAnswer": "Ebro"
-    }],
-    "quizType": "MCQ",
-    "score": 5.0,
-    "timestamp": 1746888827725,
-    "totalQuestions": 5,
-    "userAnswers": ["Mallorca", "Pyrenees", "Eagle", "Pamplona", "Ebro"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "userAnswers": ["Loire", "Mediterranean Sea", "The Alps", "Bordeaux", "Portugal"],
+    "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e"
   }],
-  "userId": "083fa50b-dc29-4076-bc73-53b325339d62",
+  "userId": "87aec568-3f12-42c6-b7d7-150d3afe2d0e",
+  "username": "kareem"
+}, {
+  "email": "mazin.karm@yahho",
+  "interactions": [{
+    "category": "system",
+    "id": "a5dd4c53-461c-4426-937c-afd672804d64",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423399399,
+    "userId": "ab803a98-e811-483e-80fd-9e4c31665d1e"
+  }, {
+    "category": "system",
+    "id": "57d40d81-5dae-4007-8925-a5e2c374a1a4",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747423393263,
+    "userId": "ab803a98-e811-483e-80fd-9e4c31665d1e"
+  }, {
+    "category": "system",
+    "id": "1f804500-82b0-4011-8c6a-84c77832d3a3",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747423390204,
+    "userId": "ab803a98-e811-483e-80fd-9e4c31665d1e"
+  }],
+  "quizResults": [],
+  "userId": "ab803a98-e811-483e-80fd-9e4c31665d1e",
   "username": "mazen"
+}, {
+  "email": "eiad",
+  "interactions": [{
+    "category": "quiz",
+    "id": "48a8c291-acd0-42f1-85ad-e2a60e258f33",
+    "question": "Quiz Question 5: What is the most widely spoken language in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422156080,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "92e2d953-13eb-4a93-b75a-2812c5cf5a6a",
+    "question": "Quiz Question 4: What is the typical French greeting?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422155624,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "88c899de-107b-454e-b8cb-5ded2ac6b31e",
+    "question": "Quiz Question 3: What is the currency used in France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422155117,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "d08910b2-87ce-4459-bf38-20c9ffb06073",
+    "question": "Quiz Question 2: Which of these is a famous French fashion brand?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422154718,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "28cb2f87-dee0-415a-ac5e-edde628a7530",
+    "question": "Quiz Question 1: What is a 'baguette'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747422154471,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "bcc3e209-9803-4cfe-a87c-b0937051c9e9",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1747422153272,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "fb876eec-ae9b-4bab-8b46-785d113f2198",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747422153209,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }, {
+    "category": "quiz",
+    "id": "d71ccb22-1b2d-4aad-ba88-45fb2bfceff4",
+    "question": "What type of quiz would you like to take?",
+    "response": "quiz",
+    "timestamp": 1747422150613,
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "0ba29cf9-3497-45a5-b51a-847d2236c940",
+    "questions": [{
+      "correctAnswer": "A type of bread",
+      "isCorrect": true,
+      "question": "What is a 'baguette'?",
+      "userAnswer": "A type of bread"
+    }, {
+      "correctAnswer": "Chanel",
+      "isCorrect": true,
+      "question": "Which of these is a famous French fashion brand?",
+      "userAnswer": "Chanel"
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in France?",
+      "userAnswer": "Euro"
+    }, {
+      "correctAnswer": "Bonjour",
+      "isCorrect": true,
+      "question": "What is the typical French greeting?",
+      "userAnswer": "Bonjour"
+    }, {
+      "correctAnswer": "French",
+      "isCorrect": true,
+      "question": "What is the most widely spoken language in France?",
+      "userAnswer": "French"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747422156101,
+    "totalQuestions": 5,
+    "userAnswers": ["A type of bread", "Chanel", "Euro", "Bonjour", "French"],
+    "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b"
+  }],
+  "userId": "a4619791-22ae-48e3-bc45-e2e022bfda7b",
+  "username": "eiad"
+}, {
+  "email": "Mazen.Kareem@yahoo.com",
+  "interactions": [{
+    "category": "quiz_request",
+    "id": "90deecad-ac94-46d9-8254-c191448debd8",
+    "question": "i want start a quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\n1. Vocabulaire - Testez votre connaissance des mots\n2. Grammaire - Pratiquez les règles de langue\n3. Traduction - Traduisez entre les langues\n4. Choix multiple (MCQ) - Questions générales sur la langue\n\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747421299955,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }, {
+    "category": "system",
+    "id": "6fcf455b-f9b3-43f3-b868-8061ad13d374",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747421271501,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }, {
+    "category": "settings",
+    "id": "883df335-547f-48a0-8e70-ddc6d485d885",
+    "question": "setiings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747421263507,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }, {
+    "category": "thanks",
+    "id": "17a91151-448d-4d7b-800c-cecb624aedec",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747421260592,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }, {
+    "category": "system",
+    "id": "625b82dd-f478-446b-a5db-7381fe10ade1",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747421232607,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }, {
+    "category": "system",
+    "id": "8189efb7-4f40-46b7-a2af-fb8e652a600e",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747421228683,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }, {
+    "category": "greeting",
+    "id": "bb2ae95f-56ae-4c69-91d7-6a240491f74b",
+    "question": "hello",
+    "response": "Hello, Mazen Kareem! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747421219345,
+    "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372"
+  }],
+  "quizResults": [],
+  "userId": "275d70dd-c43c-4f5f-befa-24b2c6429372",
+  "username": "Mazen Kareem"
 }]
