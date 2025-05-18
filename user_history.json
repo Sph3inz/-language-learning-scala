@@ -1,6 +1,559 @@
 [{
   "email": "mazen",
   "interactions": [{
+    "category": "thanks",
+    "id": "11c0426c-def7-4e06-9472-2594e7221d8e",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747581841371,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "5987797b-8c59-4bc1-9349-373132536180",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747581592917,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "50dff41b-0c11-44f1-90ee-8904fe410daa",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747581584046,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "1722d404-3a02-44cd-8ec8-32b3163849d8",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747581546500,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "28794068-175e-41e7-91ce-d132d059cc69",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747581380090,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "d2c532af-57cb-47c4-b71a-f7f754ece356",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747581349855,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "94d166cb-b9ff-40cd-ad15-7490559dcfd6",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747581325812,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "74d7c1f1-4ce7-4206-9fc8-6621a157f84f",
+    "question": "setting",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747581321504,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "7a872ece-c8ae-4fa0-a39a-895afa23f544",
+    "question": "change difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415742959,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "settings",
+    "id": "c91d7b33-79da-4465-9176-537bb307fe2f",
+    "question": "set difficult easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415728702,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "6dc29a3c-ffe2-48a0-b55b-6f5233c7f0bd",
+    "question": "hello",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747415701823,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_question",
+    "id": "20443fb0-6f93-4942-be00-99e323146c53",
+    "question": "hi",
+    "response": "Hello, mazen! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747415699518,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "b191b1f9-d9bb-4128-822e-1d7590db23b1",
+    "question": "set difficulty medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415575891,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "419b81ff-83a4-4907-8b5c-73077f5ecc09",
+    "question": "change difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415564678,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "58f00e50-f908-4b2c-9dca-c48f7109b43f",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415552903,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "3e62a0aa-9931-4f8e-aecc-96d397eea725",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415422491,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "f9ce6ed4-5050-4edd-a31c-c169cebb48f0",
+    "question": "set difficulty hrd",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415411873,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "9209af3e-03b6-4506-9b14-e7aeab170e1a",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747415400282,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "42d9c954-582e-4109-9263-4d35d8929f12",
+    "question": "set difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415384661,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "03d0eb4a-bbf7-48df-9396-56edbf085d38",
+    "question": "set difficulty level medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415214577,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "96be43dc-b7d7-41da-8747-c8001114ef17",
+    "question": "change difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415202141,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "af145493-c013-48bc-b93e-969c2fb98e10",
+    "question": "set difficulty level easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747415178015,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz_request",
+    "id": "71400649-e18c-4913-b156-7d4d26ad1d6c",
+    "question": "i want a quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\r\n1. Vocabulaire - Testez votre connaissance des mots\r\n2. Grammaire - Pratiquez les règles de langue\r\n3. Traduction - Traduisez entre les langues\r\n4. Choix multiple (MCQ) - Questions générales sur la langue\r\n\r\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747412814534,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "642b9a1e-4b88-4c7e-9a4c-32321b9ee6d6",
+    "question": "set difficulty level easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412631131,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "5fe324a6-a407-4aa3-85d6-33e742954aa2",
+    "question": "set difficulty level easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412451544,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "9fa162a1-9aaf-4cb3-8ee0-d7e2e4593ab5",
+    "question": "set difficulty level  hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412444209,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "19e82a99-7b8f-46dd-89ea-7579e437c49c",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747412422016,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "3576fb61-1f1e-4441-a0d0-431b169382c7",
+    "question": "difficulty level hard",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747412405755,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "bd04c517-6e9a-46a9-b915-a5c615d36b45",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412380324,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "cfe0ac2d-5857-4b5a-b2ae-02eb46761694",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747412331296,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "34713e76-8809-4e87-9ef3-6418bcffefd7",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747412319834,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "30eb8a21-6a3f-4bce-be28-15b130be1244",
+    "question": "set difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412105853,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "90d391c3-c2a2-40bd-8d01-5f102cd16545",
+    "question": "set difficulty level medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747412075968,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "ecbb8f44-50c9-4250-a05b-d627a903e475",
+    "question": "set difficulty level medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747411914366,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "8a278e53-38eb-4c53-843b-ab1f57372859",
+    "question": "difficulty level",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747411899931,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "53297384-b476-4f9b-86e3-c269ec909fdb",
+    "question": "set difficulty level medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747411867480,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "14b662b5-6e20-45c2-8446-aba9a716173e",
+    "question": "set difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747411853234,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b3f105db-a1ff-4d8b-b317-235191639c1e",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747410938968,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "994ce756-2f9f-4af3-8923-9d43f060b62a",
+    "question": "Quiz Question 2: Example question 2?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Option B",
+    "timestamp": 1747410192725,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5db9e045-17b1-4302-b04b-0348d9ff52fb",
+    "question": "Quiz Question 1: Example question 3?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Option C",
+    "timestamp": 1747410192255,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c3ed43f6-b5e4-47fa-a0f8-da0885c41775",
+    "question": "vocabulary",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747410189731,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "46547fd0-7a8b-4d76-8e3e-0dbb0c021eb0",
+    "question": "i want to learn english",
+    "response": "Great! I'll help you learn english. Would you like to take a quiz to practice?",
+    "timestamp": 1747410183092,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "60901920-675f-4805-b9f9-13bbfa793b88",
+    "question": "Quiz Question 5: Was ist 'old' auf Deutsch?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410113809,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "f23b570f-c1b3-4dae-80bb-631f6c6dac8d",
+    "question": "Quiz Question 4: Was ist 'young' auf Deutsch?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410113194,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "58b92a80-9fdd-4b3d-bda5-e9dcf0393f3b",
+    "question": "Quiz Question 3: Was ist 'beautiful' auf Deutsch?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410102903,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "dd2c27b2-d327-4c48-aed9-b4c7b4ceae9d",
+    "question": "Quiz Question 2: Was ist 'big' auf Deutsch?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410102000,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "2c1033ff-1afb-4ce9-a820-e50dee1d804c",
+    "question": "Quiz Question 1: Was ist 'small' auf Deutsch?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747410101586,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "55c50445-861e-43eb-81a6-e1c86947e3be",
+    "question": "vocabulry",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747410091493,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "e75d2482-3a72-44de-93dd-d61a5b31276b",
+    "question": "i want learn german",
+    "response": "Great! I'll help you learn german. Would you like to take a quiz to practice?",
+    "timestamp": 1747410082716,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "bd9d1946-dd55-4e80-b23d-e842e2e1ab9b",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409657554,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "40971baf-292f-4d89-81a1-17e958ad3c5d",
+    "question": "What type of quiz would you like to take?",
+    "response": "grammar",
+    "timestamp": 1747409650478,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e9b85154-bc34-429a-b7a8-d3b94892b97a",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409632319,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d6f9da24-544a-4bf3-b7b6-7291151d7f20",
+    "question": "What type of quiz would you like to take?",
+    "response": "vocabulary",
+    "timestamp": 1747409624369,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "33fe9bef-c314-4aff-9795-3353eec13e37",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409583421,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "5c6fba97-6cfc-48ad-b6de-440fd13f6b68",
+    "question": "vocabulary",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747409568998,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "24acba74-442f-47ca-8cb7-2a6cb1cd6ca9",
+    "question": "i want to learn english",
+    "response": "Great! I'll help you learn english. Would you like to take a quiz to practice?",
+    "timestamp": 1747409557459,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "d33109ab-f0a5-48ce-80ce-ff00b0f15697",
+    "question": "Quiz Question 5: Example question 5?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409515443,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "6c686b32-8b43-430d-b6fd-3ca8d7c41eba",
+    "question": "Quiz Question 4: Example question 1?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409515049,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "1b17d33f-db8a-414b-bb36-35a5adfa7b3e",
+    "question": "Quiz Question 3: Example question 3?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Option C",
+    "timestamp": 1747409514646,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "140948c9-ac44-485a-8669-e3390bfa78ca",
+    "question": "Quiz Question 2: Example question 4?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Option D",
+    "timestamp": 1747409514190,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "beaab8ea-6e91-4a06-b9c9-99d9692f7ac0",
+    "question": "Quiz Question 1: Example question 2?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Option B",
+    "timestamp": 1747409513521,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "16b89c54-5185-4ca6-99f8-3ed6b2807707",
+    "question": "vocabulary",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747409497940,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "ea53150f-1dcb-4e1a-920c-6db6be02d3fc",
+    "question": "learn german",
+    "response": "Great! I'll help you learn german. Would you like to take a quiz to practice?",
+    "timestamp": 1747409488737,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "91cb77fb-1fcd-4678-b742-71366ac4e24f",
+    "question": "Quiz Question 5: What time do Spaniards typically eat dinner?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409469963,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "3cfe5dca-9410-4e0a-9d17-b9a21dabd36f",
+    "question": "Quiz Question 4: Which of these is a traditional Spanish dance?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409469475,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "8cfb20be-d360-4e6f-ba59-ad0516026bd0",
+    "question": "Quiz Question 3: What color is the Spanish flag?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409469030,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "7c867e4c-9d28-4561-8be8-1458faad31a7",
+    "question": "Quiz Question 2: What is the traditional Spanish midday rest called?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409468596,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "ede2676c-96f3-4b1f-822b-56684eb93b36",
+    "question": "Quiz Question 1: What is the currency used in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747409468099,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "b438c732-447a-463b-8c52-ac5004dbb5b7",
+    "question": "mcq",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747409463458,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "language_selection",
+    "id": "1a79e962-b9a2-45d2-bdc2-c6d33fd8a813",
+    "question": "learn spanish",
+    "response": "Great! I'll help you learn spanish. Would you like to take a quiz to practice?",
+    "timestamp": 1747409442476,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "e86867d4-eb7b-46a1-b930-d5cc6780d9b2",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747409434312,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "1409ae50-42f1-49c6-96e9-d74f3651adf5",
+    "question": "What type of quiz would you like to take?",
+    "response": "2",
+    "timestamp": 1747409429098,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "c0f23259-1c30-4c58-b21d-5e13421fc863",
+    "question": "Quiz Question 1: What is the currency used in France?",
+    "response": "Answer: i want to learn spanish, Feedback: That's not correct. The correct answer is: Euro",
+    "timestamp": 1747409368135,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "quiz",
+    "id": "bfdbc032-8f51-48b3-8e0e-a51032927515",
+    "question": "learn me spanish",
+    "response": "Started a MCQ quiz",
+    "timestamp": 1747409351929,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "6e6dd23c-2086-404a-a76a-c01d11461418",
+    "question": "set Difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747409115762,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "20e5036f-d8a3-47fc-be6d-a0fb1a8e7300",
+    "question": "Difficulty level easy",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747409102042,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "51d61a23-2640-4ad8-8a88-db4c6f015642",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747409077762,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "67fd12e5-4ed8-444c-81d5-35f64b2cd048",
+    "question": "chat",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747409002997,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "system",
+    "id": "80ab3a24-ea68-4534-93fb-4cb657019d68",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747408996934,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
     "category": "system",
     "id": "0f6e5dc8-0910-4ae7-8789-4ea09c344e2d",
     "question": "analytics",
@@ -4945,6 +5498,111 @@
   }],
   "quizResults": [{
     "correctAnswers": 5,
+    "id": "67e74e06-732a-4609-917a-308cc837d873",
+    "questions": [{
+      "correctAnswer": "klein",
+      "isCorrect": true,
+      "question": "Was ist 'small' auf Deutsch?",
+      "userAnswer": "klein"
+    }, {
+      "correctAnswer": "groß",
+      "isCorrect": true,
+      "question": "Was ist 'big' auf Deutsch?",
+      "userAnswer": "groß"
+    }, {
+      "correctAnswer": "schön",
+      "isCorrect": true,
+      "question": "Was ist 'beautiful' auf Deutsch?",
+      "userAnswer": "schön"
+    }, {
+      "correctAnswer": "jung",
+      "isCorrect": true,
+      "question": "Was ist 'young' auf Deutsch?",
+      "userAnswer": "jung"
+    }, {
+      "correctAnswer": "alt",
+      "isCorrect": true,
+      "question": "Was ist 'old' auf Deutsch?",
+      "userAnswer": "alt"
+    }],
+    "quizType": "Vocabulary",
+    "score": 5.0,
+    "timestamp": 1747410113823,
+    "totalQuestions": 5,
+    "userAnswers": ["klein", "groß", "schön", "jung", "alt"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 2,
+    "id": "f644bd90-de56-462e-b58e-c50d904ad6ba",
+    "questions": [{
+      "correctAnswer": "Option B",
+      "isCorrect": false,
+      "question": "Example question 2?",
+      "userAnswer": "Option A"
+    }, {
+      "correctAnswer": "Option D",
+      "isCorrect": false,
+      "question": "Example question 4?",
+      "userAnswer": "Option A"
+    }, {
+      "correctAnswer": "Option C",
+      "isCorrect": false,
+      "question": "Example question 3?",
+      "userAnswer": "Option A"
+    }, {
+      "correctAnswer": "Option A",
+      "isCorrect": true,
+      "question": "Example question 1?",
+      "userAnswer": "Option A"
+    }, {
+      "correctAnswer": "Option A",
+      "isCorrect": true,
+      "question": "Example question 5?",
+      "userAnswer": "Option A"
+    }],
+    "quizType": "Vocabulary",
+    "score": 2.0,
+    "timestamp": 1747409515451,
+    "totalQuestions": 5,
+    "userAnswers": ["Option A", "Option A", "Option A", "Option A", "Option A"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
+    "id": "c9bb45d3-e563-4b17-8de3-b7226a2067f7",
+    "questions": [{
+      "correctAnswer": "Euro",
+      "isCorrect": true,
+      "question": "What is the currency used in Spain?",
+      "userAnswer": "Euro"
+    }, {
+      "correctAnswer": "Siesta",
+      "isCorrect": true,
+      "question": "What is the traditional Spanish midday rest called?",
+      "userAnswer": "Siesta"
+    }, {
+      "correctAnswer": "Red and yellow",
+      "isCorrect": true,
+      "question": "What color is the Spanish flag?",
+      "userAnswer": "Red and yellow"
+    }, {
+      "correctAnswer": "Flamenco",
+      "isCorrect": true,
+      "question": "Which of these is a traditional Spanish dance?",
+      "userAnswer": "Flamenco"
+    }, {
+      "correctAnswer": "9-10 PM",
+      "isCorrect": true,
+      "question": "What time do Spaniards typically eat dinner?",
+      "userAnswer": "9-10 PM"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1747409469988,
+    "totalQuestions": 5,
+    "userAnswers": ["Euro", "Siesta", "Red and yellow", "Flamenco", "9-10 PM"],
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "correctAnswers": 5,
     "id": "bac07fb9-7b57-42d6-9748-66e7bfb5df3d",
     "questions": [{
       "correctAnswer": "Die Rechnung, bitte",
@@ -6242,6 +6900,563 @@
   "userId": "fb3f2991-2a99-4217-838a-71013cf35465",
   "username": "mazen"
 }, {
+  "email": "uua",
+  "interactions": [{
+    "category": "quiz",
+    "id": "e24b82cc-4a55-426a-ae1a-01f00d397516",
+    "question": "What type of quiz would you like to take?",
+    "response": "vocabulary",
+    "timestamp": 1747424984174,
+    "userId": "9aaf8a6d-9ba2-4fe3-9f84-0c300339ffd9"
+  }, {
+    "category": "system",
+    "id": "0539f6c2-3d11-4519-9dd5-94907c643657",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747424972049,
+    "userId": "9aaf8a6d-9ba2-4fe3-9f84-0c300339ffd9"
+  }, {
+    "category": "system",
+    "id": "c39ec566-4a1d-4762-adb0-8d97f24a6b28",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747424965153,
+    "userId": "9aaf8a6d-9ba2-4fe3-9f84-0c300339ffd9"
+  }],
+  "quizResults": [],
+  "userId": "9aaf8a6d-9ba2-4fe3-9f84-0c300339ffd9",
+  "username": "mo"
+}, {
+  "email": "222",
+  "interactions": [{
+    "category": "system",
+    "id": "c3f3ce6d-7f0b-4cab-b3ee-cf21a6993694",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419259029,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "a3fc6771-96e8-4b0c-af66-ff66bb02aa34",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747419255794,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "9668fe32-5354-43cc-8e99-e121dc3aa2ee",
+    "question": "set difficulty level medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747419245375,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "64db8942-99ba-4c07-b956-b29edee47500",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419232059,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "941c5b4c-c302-46fa-889f-a9e661ec122c",
+    "question": "set difficulty Medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747419053053,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "ed2ac08a-5816-4502-96d6-74e78ae85112",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419036239,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "276c42b6-4c8e-434e-b9b3-94da53a7bbed",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747419014404,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "settings",
+    "id": "a4083e4b-7580-4a2a-a92e-c57ba25cd2e2",
+    "question": "set mother langage spanish",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418998764,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "5c376e3b-0810-432d-a132-07e423e8be8b",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418972666,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "53083ff3-e66f-45fc-8187-c978f7751434",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418822748,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "f89cdab2-dc28-4929-81ba-71f122aa5bf6",
+    "question": "set difficulty Medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418817329,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "a01401bb-23a3-4060-8c87-f68a2c7d32e2",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418802251,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "bcf96d3f-2678-4901-9e60-bcda6c157d25",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418308773,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "13ac91ea-35db-40a7-b764-c6e9057e65a2",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747418295522,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "bd927729-f473-480b-9a0a-3a79cf1e7886",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747418289049,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "settings",
+    "id": "13448431-3ba3-46e2-9f49-24714a6375e1",
+    "question": "set difficult level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417854344,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "11bab645-ecc8-456d-9121-f24a5df76985",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417831227,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "e95ded1a-936e-4341-a58f-42ad25f50b8f",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417806987,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "settings",
+    "id": "d925a976-8d12-4e81-89d8-ae8db5c8a432",
+    "question": "settigs",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417798811,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "7eaff5ad-69dc-4d02-88b0-de3f1fb665a5",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417793222,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "f79ac649-b779-4970-a166-52add1681cd8",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417778082,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "f478db06-9e86-43c3-8ed8-daa156914d88",
+    "question": "set difficulty medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417773688,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "00fae220-f0b5-4553-94a0-a260759174fb",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417758134,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "9f510d6d-8124-43fa-ac80-5aabaaacc541",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417608835,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "32142f2f-0e42-4bd1-b493-edd1fad11b0f",
+    "question": "set difficulty Medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417605366,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "9c1ad97a-c87f-4573-8ad9-13db13afe3ba",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417590101,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "7ddba405-4016-460d-b040-1c2a5d1db578",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417436099,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "2a0ce8e2-6ca0-4459-95de-0d536631e4ee",
+    "question": "change Difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417432135,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "43a1820b-b5cc-495c-8640-3c6b2eb33f17",
+    "question": "Difficulty hard",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747417420733,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "system",
+    "id": "80770de7-ca9a-4be8-a378-f992650d2863",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747417407525,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "b1ddbb99-8646-4751-9981-564acb7a6725",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417403633,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "ecb8610d-8c52-44a7-9844-4570deaa8d96",
+    "question": "change difficulty level easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417145246,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "0fafb109-eaf1-4a38-a0ee-d7468aba1c21",
+    "question": "set difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747417069804,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "unknown",
+    "id": "644967a2-fcb2-48ca-8cd5-9ea0319ecb34",
+    "question": "hello",
+    "response": "Hello, yassin! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747417032690,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "language_question",
+    "id": "04def02a-cca3-42ab-b5cb-4c8d6a5fe343",
+    "question": "hi",
+    "response": "Hello, yassin! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747417030532,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "25a98198-dd63-41fa-919e-bd8a6f03cb6f",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416686568,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "50a6a6e6-4709-4116-8ff1-bc9442ac4870",
+    "question": "change difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416574981,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "4206e137-f31d-4b80-b034-f90568f7e3ef",
+    "question": "difficlty level medium",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747416554973,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "94e38634-e453-421e-ba4a-0f2ad73d2f14",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747416539162,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "70f2f219-cd37-4855-bb4a-991c86849529",
+    "question": "set Difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747411607484,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "thanks",
+    "id": "c57294e9-b752-4f41-99f7-fc2577fb4487",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747411588017,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "unknown",
+    "id": "f8cdb140-d34f-4fc8-9bbf-9bbca3431f32",
+    "question": "",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747411572885,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "8e3be2ba-13a0-4fe5-bed3-cb6d6c157220",
+    "question": "Quiz Question 5: What is 'yes' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411563370,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "633b534d-d882-49ea-a1af-7b33a65444f9",
+    "question": "Quiz Question 4: What is 'thank you' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411563039,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "04346be3-679e-4331-b589-e96cd3934837",
+    "question": "Quiz Question 3: What is 'please' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411562753,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "639ea1fa-ebe3-4079-aadb-38ec2aa3d90d",
+    "question": "Quiz Question 2: What is 'hello' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411562457,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "8b3fb9c0-b418-4f1a-8579-0028bcc80ee9",
+    "question": "Quiz Question 1: What is 'no' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411562148,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "d89bb22c-68f7-4708-a8eb-83d99fcef51e",
+    "question": "vocabulary",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747411559961,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz_request",
+    "id": "f186fa76-7d58-4d7b-9915-7fee989d953a",
+    "question": "i want french quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\r\n1. Vocabulaire - Testez votre connaissance des mots\r\n2. Grammaire - Pratiquez les règles de langue\r\n3. Traduction - Traduisez entre les langues\r\n4. Choix multiple (MCQ) - Questions générales sur la langue\r\n\r\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747411548433,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "6543ae4f-660a-4623-9c5b-a3a1bd0e2b08",
+    "question": "Quiz Question 5: What is 'banana' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411395508,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "0b43582b-1973-4a48-bb44-dfa5a06a6eb7",
+    "question": "Quiz Question 4: What is 'cheese' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411395135,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "0a63a5a0-9974-4b10-928f-29fe7878766b",
+    "question": "Quiz Question 3: What is 'apple' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411394780,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "08190608-fe7b-4f0d-b63d-9765fe7659c3",
+    "question": "Quiz Question 2: What is 'bread' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411394474,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "656459c9-a2f2-41a5-a64e-55dc8298b093",
+    "question": "Quiz Question 1: What is 'water' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747411393928,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "8c3e64e7-613a-48b2-9307-2e97fd158e02",
+    "question": "vocabulary",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747411389884,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz_request",
+    "id": "359e448c-1302-4223-a09e-e765bfa58971",
+    "question": "i want quiz",
+    "response": "¿Qué tipo de cuestionario te gustaría realizar? Ofrecemos:\r\n1. Vocabulario - Pon a prueba tu conocimiento de palabras\r\n2. Gramática - Practica reglas del lenguaje\r\n3. Traducción - Traduce entre idiomas\r\n4. Opción múltiple (MCQ) - Preguntas generales de idioma\r\n\r\nPor favor, escribe el número (1-4) o el nombre del cuestionario que deseas realizar.",
+    "timestamp": 1747411371050,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "4d9c041c-9c1b-41cd-a6b9-ddc6ed9d5778",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747411240231,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz",
+    "id": "2be5a56c-791e-46ab-bb99-e729b8497285",
+    "question": "vocabulaire",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747411118424,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "category": "quiz_request",
+    "id": "a4be5182-8e5b-4c7a-8dfc-63c7a91ac82a",
+    "question": "i want english quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\r\n1. Vocabulaire - Testez votre connaissance des mots\r\n2. Grammaire - Pratiquez les règles de langue\r\n3. Traduction - Traduisez entre les langues\r\n4. Choix multiple (MCQ) - Questions générales sur la langue\r\n\r\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747411102310,
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }],
+  "quizResults": [{
+    "correctAnswers": 5,
+    "id": "a802f985-7e7d-479c-9be1-a3cce0d692c9",
+    "questions": [{
+      "correctAnswer": "non",
+      "isCorrect": true,
+      "question": "What is 'no' in French?",
+      "userAnswer": "non"
+    }, {
+      "correctAnswer": "bonjour",
+      "isCorrect": true,
+      "question": "What is 'hello' in French?",
+      "userAnswer": "bonjour"
+    }, {
+      "correctAnswer": "s'il vous plaît",
+      "isCorrect": true,
+      "question": "What is 'please' in French?",
+      "userAnswer": "s'il vous plaît"
+    }, {
+      "correctAnswer": "merci",
+      "isCorrect": true,
+      "question": "What is 'thank you' in French?",
+      "userAnswer": "merci"
+    }, {
+      "correctAnswer": "oui",
+      "isCorrect": true,
+      "question": "What is 'yes' in French?",
+      "userAnswer": "oui"
+    }],
+    "quizType": "Vocabulary",
+    "score": 5.0,
+    "timestamp": 1747411563383,
+    "totalQuestions": 5,
+    "userAnswers": ["non", "bonjour", "s'il vous plaît", "merci", "oui"],
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }, {
+    "correctAnswers": 5,
+    "id": "b59fc129-1637-49fc-9d56-cd3aef5b618f",
+    "questions": [{
+      "correctAnswer": "agua",
+      "isCorrect": true,
+      "question": "What is 'water' in Spanish?",
+      "userAnswer": "agua"
+    }, {
+      "correctAnswer": "pan",
+      "isCorrect": true,
+      "question": "What is 'bread' in Spanish?",
+      "userAnswer": "pan"
+    }, {
+      "correctAnswer": "manzana",
+      "isCorrect": true,
+      "question": "What is 'apple' in Spanish?",
+      "userAnswer": "manzana"
+    }, {
+      "correctAnswer": "queso",
+      "isCorrect": true,
+      "question": "What is 'cheese' in Spanish?",
+      "userAnswer": "queso"
+    }, {
+      "correctAnswer": "plátano",
+      "isCorrect": true,
+      "question": "What is 'banana' in Spanish?",
+      "userAnswer": "plátano"
+    }],
+    "quizType": "Vocabulary",
+    "score": 5.0,
+    "timestamp": 1747411395520,
+    "totalQuestions": 5,
+    "userAnswers": ["agua", "pan", "manzana", "queso", "plátano"],
+    "userId": "f0890699-4285-4b57-b710-0db0cf0643fb"
+  }],
+  "userId": "f0890699-4285-4b57-b710-0db0cf0643fb",
+  "username": "yassin"
+}, {
+  "email": "yaa",
+  "interactions": [{
+    "category": "thanks",
+    "id": "b414e0a3-9efc-4aca-8ce9-23fdeacf877b",
+    "question": "set difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747582314169,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "thanks",
+    "id": "1bdb9737-63c7-4e66-805a-95716c03722e",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747582300943,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "settings",
+    "id": "ee2e9d87-a800-485e-8464-d653f835c683",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747582293965,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "settings",
+    "id": "e8b805b8-7add-48ef-ad1a-543eb4c138fc",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747582284112,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "system",
+    "id": "9accc090-6e75-4665-9eb3-90de840fcdf4",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747582271554,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }],
+  "quizResults": [],
+  "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6",
+  "username": "yaa"
+}, {
   "email": "ramez",
   "interactions": [{
     "category": "quiz",
@@ -6597,4 +7812,224 @@
   }],
   "userId": "083fa50b-dc29-4076-bc73-53b325339d62",
   "username": "mazen"
+}, {
+  "email": "Yassin.Hany@yahos",
+  "interactions": [{
+    "category": "quiz",
+    "id": "62aaa0ea-d5d4-4695-9332-c1186a79e0d4",
+    "question": "Quiz Question 5: What is 'house' in Spanish?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: casa",
+    "timestamp": 1747425158344,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "3335a044-d266-402a-bd11-144f5a8728bd",
+    "question": "Quiz Question 4: What is 'bed' in Spanish?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: cama",
+    "timestamp": 1747425157082,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "cd73bfd8-910a-4abd-81f0-65892d49a762",
+    "question": "Quiz Question 3: What is 'cshair' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747425155793,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "16d5fa04-21cf-413e-8e89-13113e67bbbe",
+    "question": "Quiz Question 2: What is 'door' in Spanish?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: puerta",
+    "timestamp": 1747425153652,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "50b17757-398e-4cf4-a843-7a73765112a2",
+    "question": "Quiz Question 1: What is 'table' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747425151818,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "95b0d13f-0c93-488f-9de7-82c41693e684",
+    "question": "What type of quiz would you like to take?",
+    "response": "vocabulary",
+    "timestamp": 1747425149645,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "system",
+    "id": "f8af57f4-06a7-4450-9d66-ff3b858615e6",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747425132054,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "thanks",
+    "id": "a03434dd-aeae-4a5c-a289-8c6c4563858c",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747425128878,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "system",
+    "id": "fe67de0e-2163-448c-bf0a-050a3aea0a8d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747425101621,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "system",
+    "id": "f0462229-4692-486d-be42-946bbc9a4122",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747425092749,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }],
+  "quizResults": [{
+    "correctAnswers": 2,
+    "id": "b13d3580-b1e6-41ea-aaac-c9863ccc44f3",
+    "questions": [{
+      "correctAnswer": "mesa",
+      "isCorrect": true,
+      "question": "What is 'table' in Spanish?",
+      "userAnswer": "mesa"
+    }, {
+      "correctAnswer": "puerta",
+      "isCorrect": false,
+      "question": "What is 'door' in Spanish?",
+      "userAnswer": "ventana"
+    }, {
+      "correctAnswer": "silla",
+      "isCorrect": true,
+      "question": "What is 'cshair' in Spanish?",
+      "userAnswer": "silla"
+    }, {
+      "correctAnswer": "cama",
+      "isCorrect": false,
+      "question": "What is 'bed' in Spanish?",
+      "userAnswer": "mesa"
+    }, {
+      "correctAnswer": "casa",
+      "isCorrect": false,
+      "question": "What is 'house' in Spanish?",
+      "userAnswer": "oficina"
+    }],
+    "quizType": "Vocabulary",
+    "score": 2.0,
+    "timestamp": 1747425158357,
+    "totalQuestions": 5,
+    "userAnswers": ["mesa", "ventana", "silla", "mesa", "oficina"],
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }],
+  "userId": "4260a945-81ab-4c93-bf6e-6571b986666b",
+  "username": "Yassin"
+}, {
+  "email": "yyy",
+  "interactions": [{
+    "category": "quiz_request",
+    "id": "3c668bee-6e0a-4a1c-bb69-4785e261f5d9",
+    "question": "i want take a quiz",
+    "response": "Quel type de quiz souhaitez-vous passer ? Nous proposons :\r\n1. Vocabulaire - Testez votre connaissance des mots\r\n2. Grammaire - Pratiquez les règles de langue\r\n3. Traduction - Traduisez entre les langues\r\n4. Choix multiple (MCQ) - Questions générales sur la langue\r\n\r\nVeuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.",
+    "timestamp": 1747424176118,
+    "userId": "490c80a7-a01e-424c-8f4e-2cc020f145bd"
+  }, {
+    "category": "system",
+    "id": "dab76f5a-2bcf-4f95-9952-a6021ed8549c",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747424098315,
+    "userId": "490c80a7-a01e-424c-8f4e-2cc020f145bd"
+  }, {
+    "category": "thanks",
+    "id": "bb4ccaad-af87-4c9c-bbd2-c82bbf7e55d1",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747424095314,
+    "userId": "490c80a7-a01e-424c-8f4e-2cc020f145bd"
+  }, {
+    "category": "system",
+    "id": "d93cb4d5-1223-4be8-ba34-c9802a658b25",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747424059533,
+    "userId": "490c80a7-a01e-424c-8f4e-2cc020f145bd"
+  }, {
+    "category": "system",
+    "id": "463c538c-55ef-46ee-b0db-ac08e73c3b34",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747424043651,
+    "userId": "490c80a7-a01e-424c-8f4e-2cc020f145bd"
+  }],
+  "quizResults": [],
+  "userId": "490c80a7-a01e-424c-8f4e-2cc020f145bd",
+  "username": "yasso"
+}, {
+  "email": "kkk",
+  "interactions": [{
+    "category": "system",
+    "id": "8c3413a0-8fdf-4245-8907-00f57ff02f5d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747424456341,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }, {
+    "category": "quiz_request",
+    "id": "175b5a47-a2f0-4690-b873-3bbed08222e0",
+    "question": "i want to start quiz",
+    "response": "¿Qué tipo de cuestionario te gustaría realizar? Ofrecemos:\r\n1. Vocabulario - Pon a prueba tu conocimiento de palabras\r\n2. Gramática - Practica reglas del lenguaje\r\n3. Traducción - Traduce entre idiomas\r\n4. Opción múltiple (MCQ) - Preguntas generales de idioma\r\n\r\nPor favor, escribe el número (1-4) o el nombre del cuestionario que deseas realizar.",
+    "timestamp": 1747424434378,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }, {
+    "category": "system",
+    "id": "a2f31727-996c-4ed6-8689-88d948eb4fa0",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747424427924,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }, {
+    "category": "thanks",
+    "id": "69498884-5223-4d03-965f-92fce2e01159",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747424424498,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }, {
+    "category": "system",
+    "id": "da82cb65-d2dd-4b1a-9a1c-ff0faac65f9e",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747424389748,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }, {
+    "category": "settings",
+    "id": "ea654792-c825-42e5-97d2-7f22c52159d4",
+    "question": "prefrences",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747424367532,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }, {
+    "category": "system",
+    "id": "096c1acd-8f99-4684-addb-3f530b602eda",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747424363839,
+    "userId": "93efc046-c600-48b9-8521-e6bc1271c245"
+  }],
+  "quizResults": [],
+  "userId": "93efc046-c600-48b9-8521-e6bc1271c245",
+  "username": "abdo"
+}, {
+  "email": "oo",
+  "interactions": [{
+    "category": "settings",
+    "id": "8b4a26d5-9933-40e3-917b-f28225a2b441",
+    "question": "set target spanish",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747424715590,
+    "userId": "a2a77cbd-07f0-4cae-89e5-5c083cddf925"
+  }],
+  "quizResults": [],
+  "userId": "a2a77cbd-07f0-4cae-89e5-5c083cddf925",
+  "username": "kk"
 }]

@@ -234,6 +234,96 @@ object QuizGenerator {
         )
       )
 
+      // German vocabulary quizzes - Easy difficulty (3 versions)
+      case (German, Easy, Vocabulary) => List(
+        // Version 1 - Basic nouns
+        List(
+          Question("Was ist 'apple' auf Deutsch?", List("Apfel", "Banane", "Orange", "Traube"), "Apfel", Vocabulary),
+          Question("Was ist 'book' auf Deutsch?", List("Buch", "Heft", "Bleistift", "Kugelschreiber"), "Buch", Vocabulary),
+          Question("Was ist 'dog' auf Deutsch?", List("Hund", "Katze", "Vogel", "Fisch"), "Hund", Vocabulary),
+          Question("Was ist 'house' auf Deutsch?", List("Haus", "Wohnung", "Gebäude", "Hotel"), "Haus", Vocabulary),
+          Question("Was ist 'car' auf Deutsch?", List("Auto", "Fahrrad", "Zug", "Flugzeug"), "Auto", Vocabulary)
+        ),
+        
+        // Version 2 - Common verbs
+        List(
+          Question("Was ist 'to eat' auf Deutsch?", List("essen", "trinken", "schlafen", "laufen"), "essen", Vocabulary),
+          Question("Was ist 'to drink' auf Deutsch?", List("trinken", "essen", "schlafen", "laufen"), "trinken", Vocabulary),
+          Question("Was ist 'to sleep' auf Deutsch?", List("schlafen", "essen", "trinken", "laufen"), "schlafen", Vocabulary),
+          Question("Was ist 'to walk' auf Deutsch?", List("laufen", "essen", "trinken", "schlafen"), "laufen", Vocabulary),
+          Question("Was ist 'to write' auf Deutsch?", List("schreiben", "lesen", "sprechen", "hören"), "schreiben", Vocabulary)
+        ),
+        
+        // Version 3 - Adjectives
+        List(
+          Question("Was ist 'big' auf Deutsch?", List("groß", "klein", "alt", "jung"), "groß", Vocabulary),
+          Question("Was ist 'small' auf Deutsch?", List("klein", "groß", "alt", "jung"), "klein", Vocabulary),
+          Question("Was ist 'old' auf Deutsch?", List("alt", "jung", "groß", "klein"), "alt", Vocabulary),
+          Question("Was ist 'young' auf Deutsch?", List("jung", "alt", "groß", "klein"), "jung", Vocabulary),
+          Question("Was ist 'beautiful' auf Deutsch?", List("schön", "hässlich", "gut", "schlecht"), "schön", Vocabulary)
+        )
+      )
+
+      // German vocabulary quizzes - Medium difficulty (3 versions)
+      case (German, Medium, Vocabulary) => List(
+        // Version 1 - Professions
+        List(
+          Question("Was ist 'doctor' auf Deutsch?", List("Arzt", "Lehrer", "Ingenieur", "Anwalt"), "Arzt", Vocabulary),
+          Question("Was ist 'teacher' auf Deutsch?", List("Lehrer", "Student", "Arzt", "Anwalt"), "Lehrer", Vocabulary),
+          Question("Was ist 'engineer' auf Deutsch?", List("Ingenieur", "Arzt", "Lehrer", "Krankenschwester"), "Ingenieur", Vocabulary),
+          Question("Was ist 'lawyer' auf Deutsch?", List("Anwalt", "Richter", "Polizist", "Feuerwehrmann"), "Anwalt", Vocabulary),
+          Question("Was ist 'nurse' auf Deutsch?", List("Krankenschwester", "Arzt", "Apotheker", "Zahnarzt"), "Krankenschwester", Vocabulary)
+        ),
+        
+        // Version 2 - Travel
+        List(
+          Question("Was ist 'passport' auf Deutsch?", List("Reisepass", "Ticket", "Koffer", "Hotel"), "Reisepass", Vocabulary),
+          Question("Was ist 'airport' auf Deutsch?", List("Flughafen", "Bahnhof", "Hafen", "Terminal"), "Flughafen", Vocabulary),
+          Question("Was ist 'hotel' auf Deutsch?", List("Hotel", "Pension", "Wohnung", "Haus"), "Hotel", Vocabulary),
+          Question("Was ist 'ticket' auf Deutsch?", List("Fahrkarte", "Reisepass", "Gepäck", "Reservierung"), "Fahrkarte", Vocabulary),
+          Question("Was ist 'suitcase' auf Deutsch?", List("Koffer", "Rucksack", "Tasche", "Gepäck"), "Koffer", Vocabulary)
+        ),
+        
+        // Version 3 - Technology
+        List(
+          Question("Was ist 'computer' auf Deutsch?", List("Computer", "Telefon", "Tablet", "Fernseher"), "Computer", Vocabulary),
+          Question("Was ist 'cell phone' auf Deutsch?", List("Handy", "Computer", "Tablet", "Fernseher"), "Handy", Vocabulary),
+          Question("Was ist 'internet' auf Deutsch?", List("Internet", "Web", "Netz", "WLAN"), "Internet", Vocabulary),
+          Question("Was ist 'printer' auf Deutsch?", List("Drucker", "Scanner", "Computer", "Monitor"), "Drucker", Vocabulary),
+          Question("Was ist 'keyboard' auf Deutsch?", List("Tastatur", "Maus", "Bildschirm", "Drucker"), "Tastatur", Vocabulary)
+        )
+      )
+
+      // German vocabulary quizzes - Hard difficulty (3 versions)
+      case (German, Hard, Vocabulary) => List(
+        // Version 1 - Business terminology
+        List(
+          Question("Was ist 'meeting' auf Deutsch?", List("Besprechung", "Präsentation", "Geschäft", "Konferenz"), "Besprechung", Vocabulary),
+          Question("Was ist 'contract' auf Deutsch?", List("Vertrag", "Vereinbarung", "Dokument", "Projekt"), "Vertrag", Vocabulary),
+          Question("Was ist 'investment' auf Deutsch?", List("Investition", "Gewinn", "Finanzen", "Budget"), "Investition", Vocabulary),
+          Question("Was ist 'profit' auf Deutsch?", List("Gewinn", "Einnahme", "Einkommen", "Gehalt"), "Gewinn", Vocabulary),
+          Question("Was ist 'management' auf Deutsch?", List("Management", "Verwaltung", "Leitung", "Koordination"), "Management", Vocabulary)
+        ),
+        
+        // Version 2 - Medical terminology
+        List(
+          Question("Was ist 'diagnosis' auf Deutsch?", List("Diagnose", "Behandlung", "Symptom", "Krankheit"), "Diagnose", Vocabulary),
+          Question("Was ist 'prescription' auf Deutsch?", List("Rezept", "Medikament", "Behandlung", "Apotheke"), "Rezept", Vocabulary),
+          Question("Was ist 'examination' auf Deutsch?", List("Untersuchung", "Beratung", "Überprüfung", "Diagnose"), "Untersuchung", Vocabulary),
+          Question("Was ist 'symptom' auf Deutsch?", List("Symptom", "Krankheit", "Schmerz", "Diagnose"), "Symptom", Vocabulary),
+          Question("Was ist 'treatment' auf Deutsch?", List("Behandlung", "Medikament", "Therapie", "Pflege"), "Behandlung", Vocabulary)
+        ),
+        
+        // Version 3 - Legal terminology
+        List(
+          Question("Was ist 'law' auf Deutsch?", List("Gesetz", "Recht", "Gerechtigkeit", "Kodex"), "Gesetz", Vocabulary),
+          Question("Was ist 'justice' auf Deutsch?", List("Gerechtigkeit", "Gesetz", "Gericht", "Richter"), "Gerechtigkeit", Vocabulary),
+          Question("Was ist 'lawsuit' auf Deutsch?", List("Klage", "Prozess", "Streit", "Rechtsstreit"), "Klage", Vocabulary),
+          Question("Was ist 'evidence' auf Deutsch?", List("Beweis", "Zeugnis", "Aussage", "Erklärung"), "Beweis", Vocabulary),
+          Question("Was ist 'verdict' auf Deutsch?", List("Urteil", "Entscheidung", "Beschluss", "Prozess"), "Urteil", Vocabulary)
+        )
+      )
+
       // Spanish grammar quizzes - Easy difficulty (3 versions)
       case (Spanish, Easy, Grammar) => List(
         // Version 1 - Present tense conjugation

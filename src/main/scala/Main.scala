@@ -193,6 +193,8 @@ object Main extends App {
       return
     }
     
+        // Removed the difficulty regex pattern matching since we now handle it explicitly in the case statement
+    
     // First, check for direct quiz type requests using ChatbotCore's detectQuizType
     val tokens = ChatbotCore.parseInput(input)
     
@@ -421,6 +423,8 @@ object Main extends App {
     }
     
     input.toLowerCase match {
+            // Removed regex pattern matching for difficulty since we handle it explicitly via the direct command
+        
       case "quiz" | "start quiz" =>
         pendingQuizType match {
           case Some(qt) =>
@@ -457,7 +461,7 @@ object Main extends App {
           )
         }
         
-      case "settings" | "preferences" =>
+      case "settings" | "preferences" | "show settings" | "show preferences" =>
         showSettings()
         // Save settings interaction to history
         currentUser.foreach { user =>
@@ -584,10 +588,25 @@ object Main extends App {
       case Some(prefs) =>
         // Create a recursive function to keep asking for quiz type until valid
         def askForQuizType(): Unit = {
-          // Get quiz selection message from ChatbotCore in the appropriate language
-          val quizSelectionMessage = ChatbotCore.getQuizSelectionMessage(prefs.motherLanguage)
+          // Get quiz selection message directly in mother language - English
+          val quizMessage = """What type of quiz would you like to take? We offer:
+1. Vocabulary - Test your knowledge of words
+2. Grammar - Practice language rules
+3. Translation - Translate between languages
+4. Multiple Choice (MCQ) - General language questions
+
+Please type the number (1-4) or name of the quiz you'd like to take."""
           
-          println(s"\nBot: ${formatDualLanguageResponse(quizSelectionMessage)}")
+          // Always use the mother language for quiz instructions
+          val translatedMessage = if (prefs.motherLanguage != English && motherLanguageExplicitlySet) {
+            // Only translate if mother language is not English and is explicitly set
+            ChatbotCore.translateText(quizMessage, prefs.motherLanguage)
+          } else {
+            // Default to English
+            quizMessage
+          }
+          
+          println(s"\nBot: $translatedMessage")
           print("\nYou: ")
           val quizTypeInput = readLine().trim.toLowerCase
           
@@ -894,6 +913,33 @@ object Main extends App {
         val response = s"Mother language set to ${languageToString(lang)}"
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
+        // Automatically save settings to file
+        userPreferences.foreach(prefs => {
+          try {
+            savePreferences(prefs) match {
+              case Success(_) => 
+                // Settings saved silently, no need to notify user
+              case Failure(error) => 
+                println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save settings to file: ${error.getMessage}")}")
+            }
+          } catch {
+            case ex: Throwable =>
+              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving settings: ${ex.getMessage}")}")
+          }
+        })
+        
+        // Log the setting change if user is logged in
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = s"set mother language ${langStr}",
+            response = response,
+            category = "settings"
+          )
+        }
+        
       case None =>
         println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German")}")
     }
@@ -917,6 +963,33 @@ object Main extends App {
         val response = s"Target language set to ${languageToString(lang)}"
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
+        // Automatically save settings to file
+        userPreferences.foreach(prefs => {
+          try {
+            savePreferences(prefs) match {
+              case Success(_) => 
+                // Settings saved silently, no need to notify user
+              case Failure(error) => 
+                println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save settings to file: ${error.getMessage}")}")
+            }
+          } catch {
+            case ex: Throwable =>
+              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving settings: ${ex.getMessage}")}")
+          }
+        })
+        
+        // Log the setting change if user is logged in
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = s"set target language ${langStr}",
+            response = response,
+            category = "settings"
+          )
+        }
+        
       case None =>
         println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German")}")
     }
@@ -929,19 +1002,62 @@ object Main extends App {
     val difficulty = parseDifficulty(diffStr)
     difficulty match {
       case Some(diff) =>
-        userPreferences = ChatbotCore.storeUserPreferences(
-          motherLanguage = if (userPreferences.isDefined) Some(userPreferences.get.motherLanguage) else None,
-          targetLanguage = if (userPreferences.isDefined) Some(userPreferences.get.targetLanguage) else None,
-          difficulty = Some(diff),
-          currentPreferences = userPreferences
-        )
+        // Create new preferences with the updated difficulty
+        userPreferences = userPreferences match {
+          case Some(prefs) =>
+            // Preserve existing preferences, only update difficulty
+            ChatbotCore.storeUserPreferences(
+              motherLanguage = Some(prefs.motherLanguage),
+              targetLanguage = Some(prefs.targetLanguage),
+              difficulty = Some(diff),
+              currentPreferences = Some(prefs)
+            )
+          case None =>
+            // If no preferences exist yet, create with defaults and new difficulty
+            ChatbotCore.storeUserPreferences(
+              motherLanguage = Some(English), // Default to English
+              targetLanguage = Some(English), // Default to English
+              difficulty = Some(diff),
+              currentPreferences = None
+            )
+        }
+        
         // Mark difficulty as explicitly set
         difficultyExplicitlySet = true
-        val response = s"Difficulty set to ${difficultyToString(diff)}"
-        println(s"\nBot: ${formatDualLanguageResponse(response)}")
+        
+        // Simple direct confirmation message
+        println(s"\nBot: ✅ Difficulty level set to ${difficultyToString(diff)}.")
+        
+        // Automatically save settings to file
+        userPreferences.foreach(prefs => {
+          try {
+            savePreferences(prefs) match {
+              case Success(_) => 
+                // Settings saved silently, no need to notify user
+              case Failure(error) => 
+                println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save settings to file: ${error.getMessage}")}")
+            }
+          } catch {
+            case ex: Throwable =>
+              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving settings: ${ex.getMessage}")}")
+          }
+        })
+        
+        // Log the setting change if user is logged in
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = s"set difficulty ${diffStr}",
+            response = s"Difficulty set to ${difficultyToString(diff)}",
+            category = "settings"
+          )
+        }
         
       case None =>
-        println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that difficulty level. Available options: Easy, Medium, Hard, Impossible")}")
+        // Error message for invalid difficulty
+        println(s"\nBot: ❌ Invalid difficulty level. Available options are: Easy, Medium, Hard, Impossible")
     }
   }
   
