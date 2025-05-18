@@ -17,6 +17,9 @@ object Main extends App {
   val authService = new AuthService()
   val userHistoryService = new UserHistoryService()
   
+  // Settings manager instance
+  val settingsManager = new SettingsManager()
+  
   // State variables (kept immutable by always reassigning)
   var userPreferences: Option[UserPreferences] = None
   var currentQuizSession: Option[QuizSession] = None
@@ -28,10 +31,6 @@ object Main extends App {
   // Flags to track which preferences have been explicitly set
   var motherLanguageExplicitlySet: Boolean = false
   var targetLanguageExplicitlySet: Boolean = false
-  var difficultyExplicitlySet: Boolean = false
-  
-  // Settings file constants
-  val SETTINGS_FILE = "user_preferences.txt"
   
   // Authentication menu
   def showAuthMenu(): Unit = {
@@ -61,12 +60,28 @@ object Main extends App {
     }
   }
   
+  def isValidEmail(email: String): Boolean = {
+    val emailRegex = """^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$""".r
+    emailRegex.findFirstMatchIn(email).isDefined
+  }
+  
   def handleSignUp(): Unit = {
     println("\n=== Sign Up ===")
     print("Username: ")
     val username = readLine().trim
     print("Email: ")
     val email = readLine().trim
+    
+    if (!isValidEmail(email)) {
+      println("Invalid email format. Please enter a valid email address (e.g., user@example.com)")
+      println("Would you like to try again? (yes/no)")
+      readLine().trim.toLowerCase match {
+        case "yes" | "y" => handleSignUp()
+        case _ => showAuthMenu()
+      }
+      return
+    }
+    
     print("Password: ")
     val password = readLine().trim
     
@@ -90,13 +105,23 @@ object Main extends App {
     println("\n=== Login ===")
     print("Email: ")
     val email = readLine().trim
+    
+    if (!isValidEmail(email)) {
+      println("Invalid email format. Please enter a valid email address (e.g., user@example.com)")
+      println("Would you like to try again? (yes/no)")
+      readLine().trim.toLowerCase match {
+        case "yes" | "y" => handleLogin()
+        case _ => showAuthMenu()
+      }
+      return
+    }
+    
     print("Password: ")
     val password = readLine().trim
     
     val credentials = UserCredentials(email, password)
     authService.login(credentials) match {
       case Success(user) =>
-        // Store the user with their original ID
         currentUser = Some(user)
         println(s"Welcome back, ${user.username}!")
         loadUserPreferences()
@@ -119,7 +144,6 @@ object Main extends App {
             userPreferences = Some(loadedPrefs)
             motherLanguageExplicitlySet = true
             targetLanguageExplicitlySet = true
-            difficultyExplicitlySet = true
             println("Loaded your previously saved preferences.")
           case _ => 
             println("No saved preferences found. Let's set up your preferences.")
@@ -192,17 +216,61 @@ object Main extends App {
       }
       return
     }
+
+    // Check early for preferences/settings request with possible misspellings
+    if (containsPreferencesCommand(input)) {
+      showSettings()
+      // Save settings interaction to history
+      currentUser.foreach { user =>
+        userHistoryService.addInteraction(
+          userId = user.id,
+          username = user.username,
+          email = user.email,
+          question = input,
+          response = "Displayed user settings",
+          category = "system"
+        )
+      }
+      return
+    }
     
-        // Removed the difficulty regex pattern matching since we now handle it explicitly in the case statement
+    // First, check for direct settings commands (case insensitive)
+    val lowerInput = input.toLowerCase()
     
-    // First, check for direct quiz type requests using ChatbotCore's detectQuizType
+    // Standard command processing for settings
+    if (lowerInput.startsWith("set mother language ") || lowerInput.startsWith("set mother langauge ")) {
+      val lang = input.substring(lowerInput.indexOf("language") + 9).trim
+      setMotherLanguage(lang)
+      return
+    } else if (lowerInput.startsWith("set target language ") || lowerInput.startsWith("set target langauge ")) {
+      val lang = input.substring(lowerInput.indexOf("language") + 9).trim
+      setTargetLanguage(lang)
+      return
+    }
+    
+    // Continue with normal flow - check for direct quiz type requests
     val tokens = ChatbotCore.parseInput(input)
     
     // Special case for generic quiz requests without a specific quiz type
-    if (input.trim.toLowerCase == "quiz" || 
-        input.trim.toLowerCase == "give me quiz" || 
-        input.trim.toLowerCase == "start quiz" || 
-        input.trim.toLowerCase == "take quiz") {
+    val quizStartPhrases = Set(
+      "quiz", 
+      "give me quiz", 
+      "start quiz", 
+      "take quiz",
+      "i want quiz",
+      "i want start quiz",
+      "i want to start quiz",
+      "i want a quiz",
+      "i'd like a quiz",
+      "i would like a quiz",
+      "i want to take a quiz",
+      "can i take a quiz",
+      "can i start a quiz"
+    )
+    
+    if (quizStartPhrases.exists(phrase => input.trim.toLowerCase.contains(phrase)) || 
+        (input.toLowerCase.contains("want") && input.toLowerCase.contains("quiz")) ||
+        (input.toLowerCase.contains("start") && input.toLowerCase.contains("quiz"))) {
       // Ask what type of quiz they want
       startQuiz()
       return
@@ -224,7 +292,6 @@ object Main extends App {
           // Start quiz with the specified type
           val questions = QuizGenerator.selectQuizQuestions(
             prefs.targetLanguage,
-            prefs.difficulty,
             quizTypeValue,
             5
           )
@@ -341,7 +408,7 @@ object Main extends App {
       case "vocabulary" | "vocab" | "vocabulario" | "vocabulaire" | "vokabular" | "المفردات" | "1" => Some(Vocabulary)
       case "grammar" | "gramática" | "grammaire" | "grammatik" | "القواعد" | "2" => Some(Grammar)
       case "translation" | "translate" | "traducción" | "traduction" | "übersetzung" | "الترجمة" | "3" => Some(Translation)
-      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" | "4" => Some(MCQ)
+      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "الاختيار من متعدد" | "4" => Some(MCQ)
       case _ => None
     }
     
@@ -351,7 +418,6 @@ object Main extends App {
           // Start quiz with the specified type
           val questions = QuizGenerator.selectQuizQuestions(
             prefs.targetLanguage,
-            prefs.difficulty,
             directQuizType.get,
             5
           )
@@ -423,8 +489,6 @@ object Main extends App {
     }
     
     input.toLowerCase match {
-            // Removed regex pattern matching for difficulty since we handle it explicitly via the direct command
-        
       case "quiz" | "start quiz" =>
         pendingQuizType match {
           case Some(qt) =>
@@ -433,7 +497,6 @@ object Main extends App {
               case Some(prefs) =>
                 val questions = QuizGenerator.selectQuizQuestions(
                   prefs.targetLanguage,
-                  prefs.difficulty,
                   qt,
                   5
                 )
@@ -461,22 +524,42 @@ object Main extends App {
           )
         }
         
-      case "settings" | "preferences" | "show settings" | "show preferences" =>
-        showSettings()
-        // Save settings interaction to history
-        currentUser.foreach { user =>
-          userHistoryService.addInteraction(
-            userId = user.id,
-            username = user.username,
-            email = user.email,
-            question = "settings",
-            response = "Displayed user settings",
-            category = "system"
-          )
+      case "save settings" | "save preferences" =>
+        userPreferences match {
+          case Some(prefsToSave) => 
+            // Directly save settings without confirmation
+            try {
+              savePreferences(prefsToSave) match {
+                case Success(_) => 
+                  println(s"\nBot: ${formatDualLanguageResponse("Settings saved successfully!")}")
+                case Failure(error) => 
+                  println(s"\nBot: ${formatDualLanguageResponse(s"Failed to save settings: ${error.getMessage}")}")
+              }
+            } catch {
+              case ex: Throwable =>
+                println(s"\nBot: ${formatDualLanguageResponse(s"Error saving settings: ${ex.getMessage}")}")
+            }
+            
+            // Save to user_preferences.txt file as well
+            try {
+              val motherLang = languageToString(prefsToSave.motherLanguage)
+              val targetLang = languageToString(prefsToSave.targetLanguage)
+              val name = prefsToSave.name.getOrElse("")
+              
+              val content = s"$motherLang|$targetLang|$name"
+              val file = new File("user_preferences.txt")
+              val writer = new PrintWriter(file)
+              writer.write(content)
+              writer.close()
+            } catch {
+              case ex: Throwable =>
+                println(s"\nBot: ${formatDualLanguageResponse(s"Error saving to user_preferences.txt: ${ex.getMessage()}")}")
+            }
+            
+          case None => 
+            println(s"\nBot: ${formatDualLanguageResponse("No preferences to save. Please set your preferences first.")}")
         }
         
-      case "save settings" | "save preferences" =>
-        saveSettings()
         // Save save settings interaction to history
         currentUser.foreach { user =>
           userHistoryService.addInteraction(
@@ -484,7 +567,7 @@ object Main extends App {
             username = user.username,
             email = user.email,
             question = "save settings",
-            response = "Attempted to save user settings",
+            response = "Saved user settings",
             category = "system"
           )
         }
@@ -502,18 +585,6 @@ object Main extends App {
             category = "system"
           )
         }
-        
-      case s if s.startsWith("set mother language ") || s.startsWith("set mother langauge ") =>
-        val lang = s.substring("set mother language ".length).trim
-        setMotherLanguage(lang)
-        
-      case s if s.startsWith("set target language ") || s.startsWith("set target langauge ") =>
-        val lang = s.substring("set target language ".length).trim
-        setTargetLanguage(lang)
-        
-      case s if s.startsWith("set difficulty ") =>
-        val diff = s.substring("set difficulty ".length).trim
-        setDifficulty(diff)
         
       case "analytics" | "stats" | "progress" =>
         showAnalytics()
@@ -538,6 +609,10 @@ object Main extends App {
             println(s"\nBot: ${formatDualLanguageResponse("Please sign in to view your history.")}")
         }
         
+      case "chat" =>
+        // Start a weather-based conversation in target language with translation
+        startWeatherChat()
+        
       case "help" =>
         val helpMessage = """
           |Available commands:
@@ -559,7 +634,25 @@ object Main extends App {
           response = helpMessage,
           category = "system"
         )
+      
+      case _ if ChatbotCore.categorizeInput(input) == "weather" =>
+        // Handle weather-related queries
+        val weatherResponse = ChatbotCore.handleWeatherQuery(input)
+        val formattedResponse = formatDualLanguageResponse(weatherResponse)
+        println(s"\nBot: $formattedResponse")
         
+        // Log the weather interaction if user is logged in
+        currentUser.foreach { user =>
+          userHistoryService.addInteraction(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            question = input,
+            response = weatherResponse,
+            category = "weather"
+          )
+        }
+      
       case _ =>
         // Process general input using ChatbotCore which will return the "unknown" response for unrecognized input
         val response = ChatbotCore.handleUserInput(input, userPreferences, currentUser)
@@ -581,6 +674,23 @@ object Main extends App {
   }
   
   /**
+   * Checks if input contains variations of "preferences" or "settings"
+   */
+  def containsPreferencesCommand(input: String): Boolean = {
+    val inputLower = input.toLowerCase
+    
+    // Common variations and misspellings of preferences/settings
+    val prefVariations = Set(
+      "preferences", "preference", "preferances", "preferance", "prefrences", "prefrence",
+      "prefs", "pref", "preffs", "prefernces", "prefrances", "preferenses", "prefrences",
+      "settings", "setting", "setings", "seting", "setings", "settigns", "options", "option"
+    )
+    
+    // Check if any variation is contained in the input
+    prefVariations.exists(variation => inputLower.contains(variation))
+  }
+  
+  /**
    * Starts a new quiz session
    */
   def startQuiz(): Unit = {
@@ -588,7 +698,7 @@ object Main extends App {
       case Some(prefs) =>
         // Create a recursive function to keep asking for quiz type until valid
         def askForQuizType(): Unit = {
-          // Get quiz selection message directly in mother language - English
+          // Get quiz selection message directly in mother language
           val quizMessage = """What type of quiz would you like to take? We offer:
 1. Vocabulary - Test your knowledge of words
 2. Grammar - Practice language rules
@@ -598,12 +708,13 @@ object Main extends App {
 Please type the number (1-4) or name of the quiz you'd like to take."""
           
           // Always use the mother language for quiz instructions
-          val translatedMessage = if (prefs.motherLanguage != English && motherLanguageExplicitlySet) {
-            // Only translate if mother language is not English and is explicitly set
-            ChatbotCore.translateText(quizMessage, prefs.motherLanguage)
-          } else {
-            // Default to English
-            quizMessage
+          val translatedMessage = userPreferences match {
+            case Some(p) if motherLanguageExplicitlySet =>
+              // Use mother language for quiz instructions
+              ChatbotCore.translateText(quizMessage, p.motherLanguage)
+            case _ =>
+              // Default to English
+              quizMessage
           }
           
           println(s"\nBot: $translatedMessage")
@@ -644,7 +755,7 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
             case "vocabulary" | "vocab" | "1" | "vocabulario" | "vocabulaire" | "vokabular" | "المفردات" => Some(Vocabulary)
             case "grammar" | "2" | "gramática" | "grammaire" | "grammatik" | "القواعد" => Some(Grammar)
             case "translation" | "translate" | "3" | "traducción" | "traduction" | "übersetzung" | "الترجمة" => Some(Translation)
-            case "mcq" | "multiple choice" | "4" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" => Some(MCQ)
+            case "mcq" | "multiple choice" | "4" | "opción múltiple" | "choix multiple" | "الاختيار من متعدد" => Some(MCQ)
             case _ => None
           }
           
@@ -653,7 +764,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
               // Generate quiz questions
               val questions = QuizGenerator.selectQuizQuestions(
                 prefs.targetLanguage, 
-                prefs.difficulty, 
                 qt, 
                 5 // 5 questions per quiz
               )
@@ -754,66 +864,78 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
             displayCurrentQuestion()
           } else {
             // Quiz completed
-            val completedSession = currentQuizSession.get
-            val summary = QuizGenerator.summarizeQuizResults(completedSession)
-            
-            // Save quiz results if user is logged in
-            currentUser.foreach { user =>
-              val quizQuestions = completedSession.questions.zip(completedSession.userAnswers).map {
-                case (question, answer) =>
-                  QuizQuestion(
-                    question = question.prompt,
-                    correctAnswer = question.correctAnswer,
-                    userAnswer = answer,
-                    isCorrect = answer == question.correctAnswer
-                  )
-              }
-              
-              // Calculate correct answers for this quiz
-              val correctAnswers = quizQuestions.count(_.isCorrect)
-              
-              // Get total correct answers across all quizzes
-              val totalCorrectAnswers = userHistoryService.getTotalCorrectAnswers(user.id)
-              val totalQuestions = userHistoryService.getTotalQuestions(user.id)
-              
-              userHistoryService.addQuizResult(
-                userId = user.id,
-                username = user.username,
-                email = user.email,
-                quizType = completedSession.quizType.toString,
-                score = completedSession.calculateScore,
-                totalQuestions = completedSession.questions.length,
-                correctAnswers = correctAnswers,  // Use the actual count of correct answers
-                questions = quizQuestions,
-                userAnswers = completedSession.userAnswers
-              )
-              
-              // Add total stats to summary
-              val totalStats = s"\nTotal Questions Answered: $totalQuestions\nTotal Correct Answers: $totalCorrectAnswers"
-              val finalSummary = summary + totalStats
-              
-              // For quiz summary, use only the target language if set
-              val translatedSummary = userPreferences match {
-                case Some(prefs) if targetLanguageExplicitlySet =>
-                  ChatbotCore.translateText(finalSummary, prefs.targetLanguage)
-                case Some(prefs) if motherLanguageExplicitlySet =>
-                  ChatbotCore.translateText(finalSummary, prefs.motherLanguage)
-                case _ => finalSummary
-              }
-              
-              println(s"\nBot: $translatedSummary")
-            }
-            
-            // Reset quiz mode
-            inQuizMode = false
-            currentQuizSession = None
-            currentQuestionIndex = 0
+            handleQuizCompletion()
           }
           
         case None =>
           println(s"\nBot: ${formatDualLanguageResponse("There was an error with the quiz. Exiting quiz mode.")}")
           inQuizMode = false
       }
+    }
+  }
+  
+  /**
+   * Handles quiz completion
+   */
+  def handleQuizCompletion(): Unit = {
+    currentQuizSession match {
+      case Some(session) =>
+        val score = session.calculateScore
+        val accuracy = session.calculateAccuracy.toInt
+        
+        // First save the quiz result
+        currentUser.foreach { user =>
+          userHistoryService.addQuizResult(
+            userId = user.id,
+            username = user.username,
+            email = user.email,
+            quizType = session.quizType.toString,
+            score = accuracy,
+            totalQuestions = session.questions.length,
+            correctAnswers = score,
+            questions = session.questions.zip(session.userAnswers).map { case (q, ua) =>
+              QuizQuestion(
+                question = q.prompt,
+                correctAnswer = q.correctAnswer,
+                userAnswer = ua,
+                isCorrect = q.correctAnswer.toLowerCase == ua.toLowerCase
+              )
+            },
+            userAnswers = session.userAnswers
+          )
+        }
+
+        // Then get the updated totals
+        val (totalQuestions, totalCorrectAnswers) = currentUser.map { user =>
+          (userHistoryService.getTotalQuestions(user.id), userHistoryService.getTotalCorrectAnswers(user.id))
+        }.getOrElse((0, 0))
+
+        // Format and display results
+        val performanceFeedback = accuracy match {
+          case a if a >= 90 => "Excellent work! You've mastered this material!"
+          case a if a >= 80 => "Great job! You have a strong grasp of this content."
+          case a if a >= 70 => "Good work! You're on the right track."
+          case a if a >= 60 => "Not bad, but there's room for improvement."
+          case _ => "You might want to review this material more thoroughly."
+        }
+
+        val results = s"""Quiz Complete!
+                       |Score: $score out of ${session.questions.length} correct
+                       |Accuracy: $accuracy%
+                       |$performanceFeedback
+                       |Total Questions Answered: $totalQuestions
+                       |Total Correct Answers: $totalCorrectAnswers""".stripMargin
+
+        println(s"\nBot: ${formatDualLanguageResponse(results)}")
+        
+        // Reset quiz state
+        currentQuizSession = None
+        inQuizMode = false
+        currentQuestionIndex = 0
+        pendingQuizType = None
+
+      case None =>
+        println("\nBot: No active quiz session found.")
     }
   }
   
@@ -848,51 +970,33 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
    * Show and modify user settings
    */
   def showSettings(): Unit = {
-    // Display settings only in mother language (with English as fallback)
-    val displayLanguage = userPreferences.map(_.motherLanguage).getOrElse(English)
+    println(s"\nBot: ${formatDualLanguageResponse("You can change your settings for:")}")
+    println(s"- ${formatDualLanguageResponse("Mother language")}")
+    println(s"- ${formatDualLanguageResponse("Target language")}")
     
-    // Helper function to translate text to only mother language
-    def translateToMotherLang(text: String): String = {
-      ChatbotCore.translateText(text, displayLanguage)
-    }
-    
-    println(s"\nBot: ===== ${translateToMotherLang("User Settings")} =====")
-    println(s"${translateToMotherLang("Available languages")}: English, Spanish, French, German")
-    println(s"${translateToMotherLang("Available difficulty levels")}: Easy, Medium, Hard, Impossible")
-    
-    println(s"\n${translateToMotherLang("Current settings")}:")
-    
+    // Display current settings if they exist
     userPreferences match {
       case Some(prefs) =>
-        // Mother language display
-        if (prefs.motherLanguage == English && !motherLanguageExplicitlySet) {
-          println(s"${translateToMotherLang("Mother Language")}: ${translateToMotherLang("Not set yet")}")
-        } else {
-          println(s"${translateToMotherLang("Mother Language")}: ${languageToString(prefs.motherLanguage)}")
-        }
-        
-        // Target language display
-        if (prefs.targetLanguage == English && !targetLanguageExplicitlySet) {
-          println(s"${translateToMotherLang("Target Language")}: ${translateToMotherLang("Not set yet")}")
-        } else {
-          println(s"${translateToMotherLang("Target Language")}: ${languageToString(prefs.targetLanguage)}")
-        }
-        
-        // Difficulty display
-        if (prefs.difficulty == Easy && !difficultyExplicitlySet) {
-          println(s"${translateToMotherLang("Difficulty")}: ${translateToMotherLang("Not set yet")}")
-        } else {
-          println(s"${translateToMotherLang("Difficulty")}: ${difficultyToString(prefs.difficulty)}")
-        }
-        
+        println(s"\n${formatDualLanguageResponse("Your current settings:")}")
+        println(s"${formatDualLanguageResponse("Mother language")}: ${languageToString(prefs.motherLanguage)}")
+        println(s"${formatDualLanguageResponse("Target language")}: ${languageToString(prefs.targetLanguage)}")
       case None =>
-        println(translateToMotherLang("No preferences set yet."))
+        println(s"\n${formatDualLanguageResponse("You haven't set any preferences yet.")}")
     }
     
-    println(s"\n${translateToMotherLang("To update settings, use commands like")}:")
-    println(s"- ${translateToMotherLang("set mother language")} English")
-    println(s"- ${translateToMotherLang("set target language")} Spanish")
-    println(s"- ${translateToMotherLang("set difficulty")} Medium")
+    println(s"\n${formatDualLanguageResponse("What would you like to update?")}")
+    
+    // Save this interaction
+    currentUser.foreach { user =>
+      userHistoryService.addInteraction(
+        userId = user.id,
+        username = user.username,
+        email = user.email,
+        question = "settings", 
+        response = "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+        category = "settings"
+      )
+    }
   }
   
   /**
@@ -905,7 +1009,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
         userPreferences = ChatbotCore.storeUserPreferences(
           motherLanguage = Some(lang),
           targetLanguage = if (userPreferences.isDefined) Some(userPreferences.get.targetLanguage) else None,
-          difficulty = if (userPreferences.isDefined) Some(userPreferences.get.difficulty) else None,
           currentPreferences = userPreferences
         )
         // Mark mother language as explicitly set
@@ -913,20 +1016,18 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
         val response = s"Mother language set to ${languageToString(lang)}"
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
-        // Automatically save settings to file
-        userPreferences.foreach(prefs => {
-          try {
-            savePreferences(prefs) match {
-              case Success(_) => 
-                // Settings saved silently, no need to notify user
-              case Failure(error) => 
-                println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save settings to file: ${error.getMessage}")}")
-            }
-          } catch {
-            case ex: Throwable =>
-              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving settings: ${ex.getMessage}")}")
+        // Automatically save mother language to file using the settings manager
+        try {
+          settingsManager.saveMotherLanguage(lang) match {
+            case Success(_) => 
+              // Settings saved silently, no need to notify user
+            case Failure(error) => 
+              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save mother language setting: ${error.getMessage}")}")
           }
-        })
+        } catch {
+          case ex: Throwable =>
+            println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving mother language setting: ${ex.getMessage}")}")
+        }
         
         // Log the setting change if user is logged in
         currentUser.foreach { user =>
@@ -955,7 +1056,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
         userPreferences = ChatbotCore.storeUserPreferences(
           motherLanguage = if (userPreferences.isDefined) Some(userPreferences.get.motherLanguage) else None,
           targetLanguage = Some(lang),
-          difficulty = if (userPreferences.isDefined) Some(userPreferences.get.difficulty) else None,
           currentPreferences = userPreferences
         )
         // Mark target language as explicitly set
@@ -963,20 +1063,18 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
         val response = s"Target language set to ${languageToString(lang)}"
         println(s"\nBot: ${formatDualLanguageResponse(response)}")
         
-        // Automatically save settings to file
-        userPreferences.foreach(prefs => {
-          try {
-            savePreferences(prefs) match {
-              case Success(_) => 
-                // Settings saved silently, no need to notify user
-              case Failure(error) => 
-                println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save settings to file: ${error.getMessage}")}")
-            }
-          } catch {
-            case ex: Throwable =>
-              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving settings: ${ex.getMessage}")}")
+        // Automatically save target language to file using the settings manager
+        try {
+          settingsManager.saveTargetLanguage(lang) match {
+            case Success(_) => 
+              // Settings saved silently, no need to notify user
+            case Failure(error) => 
+              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save target language setting: ${error.getMessage}")}")
           }
-        })
+        } catch {
+          case ex: Throwable =>
+            println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving target language setting: ${ex.getMessage}")}")
+        }
         
         // Log the setting change if user is logged in
         currentUser.foreach { user =>
@@ -992,72 +1090,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
         
       case None =>
         println(s"\nBot: ${formatDualLanguageResponse("Sorry, I don't recognize that language. Available options: English, Spanish, French, German")}")
-    }
-  }
-  
-  /**
-   * Set difficulty level
-   */
-  def setDifficulty(diffStr: String): Unit = {
-    val difficulty = parseDifficulty(diffStr)
-    difficulty match {
-      case Some(diff) =>
-        // Create new preferences with the updated difficulty
-        userPreferences = userPreferences match {
-          case Some(prefs) =>
-            // Preserve existing preferences, only update difficulty
-            ChatbotCore.storeUserPreferences(
-              motherLanguage = Some(prefs.motherLanguage),
-              targetLanguage = Some(prefs.targetLanguage),
-              difficulty = Some(diff),
-              currentPreferences = Some(prefs)
-            )
-          case None =>
-            // If no preferences exist yet, create with defaults and new difficulty
-            ChatbotCore.storeUserPreferences(
-              motherLanguage = Some(English), // Default to English
-              targetLanguage = Some(English), // Default to English
-              difficulty = Some(diff),
-              currentPreferences = None
-            )
-        }
-        
-        // Mark difficulty as explicitly set
-        difficultyExplicitlySet = true
-        
-        // Simple direct confirmation message
-        println(s"\nBot: ✅ Difficulty level set to ${difficultyToString(diff)}.")
-        
-        // Automatically save settings to file
-        userPreferences.foreach(prefs => {
-          try {
-            savePreferences(prefs) match {
-              case Success(_) => 
-                // Settings saved silently, no need to notify user
-              case Failure(error) => 
-                println(s"\nBot: ${formatDualLanguageResponse(s"Note: Could not save settings to file: ${error.getMessage}")}")
-            }
-          } catch {
-            case ex: Throwable =>
-              println(s"\nBot: ${formatDualLanguageResponse(s"Note: Error saving settings: ${ex.getMessage}")}")
-          }
-        })
-        
-        // Log the setting change if user is logged in
-        currentUser.foreach { user =>
-          userHistoryService.addInteraction(
-            userId = user.id,
-            username = user.username,
-            email = user.email,
-            question = s"set difficulty ${diffStr}",
-            response = s"Difficulty set to ${difficultyToString(diff)}",
-            category = "settings"
-          )
-        }
-        
-      case None =>
-        // Error message for invalid difficulty
-        println(s"\nBot: ❌ Invalid difficulty level. Available options are: Easy, Medium, Hard, Impossible")
     }
   }
   
@@ -1147,9 +1179,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
     println(s"- ${translateToMotherLang("load settings")}: ${translateToMotherLang("Load your saved preferences from file")}")
     println(s"- ${translateToMotherLang("set mother language")} [${translateToMotherLang("language")}]: ${translateToMotherLang("Set your native language")}")
     println(s"- ${translateToMotherLang("set target language")} [${translateToMotherLang("language")}]: ${translateToMotherLang("Set the language you want to learn")}")
-    println(s"- ${translateToMotherLang("set difficulty")} [${translateToMotherLang("level")}]: ${translateToMotherLang("Set the difficulty level")}")
-    println(s"- ${translateToMotherLang("analytics")}: ${translateToMotherLang("View your learning progress and statistics")}")
-    println(s"- ${translateToMotherLang("history")}: ${translateToMotherLang("View your interaction history")}")
     println(s"- ${translateToMotherLang("help")}: ${translateToMotherLang("Show this help message")}")
     println(s"- ${translateToMotherLang("exit")}: ${translateToMotherLang("Close the application")}")
     
@@ -1190,31 +1219,11 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
   }
   
   /**
-   * Save user preferences to file
+   * Save user preferences using the settings manager
    */
   def savePreferences(preferences: UserPreferences): Try[Unit] = {
-    Try {
-      // Convert preferences to a string representation
-      val prefsString = serializePreferences(preferences)
-      
-      // Write to file
-      val writer = new BufferedWriter(new FileWriter(SETTINGS_FILE))
-      writer.write(prefsString)
-      writer.close()
-    }
-  }
-  
-  /**
-   * Convert preferences to string format for file storage
-   */
-  private def serializePreferences(prefs: UserPreferences): String = {
-    // Simple format: motherLanguage|targetLanguage|difficulty|name
-    val motherLang = languageToString(prefs.motherLanguage)
-    val targetLang = languageToString(prefs.targetLanguage)
-    val diff = difficultyToString(prefs.difficulty)
-    val name = prefs.name.getOrElse("")
-    
-    s"$motherLang|$targetLang|$diff|$name"
+    // Use the settings manager to save all preferences
+    settingsManager.saveAllPreferences(preferences)
   }
   
   /**
@@ -1233,7 +1242,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
             // Set flags based on loaded preferences
             motherLanguageExplicitlySet = true
             targetLanguageExplicitlySet = true
-            difficultyExplicitlySet = true
             
             println(s"\nBot: ${formatDualLanguageResponse("Settings loaded successfully!")}")
             showSettings() // Display the loaded settings
@@ -1254,43 +1262,11 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
   }
   
   /**
-   * Load user preferences from file
+   * Load user preferences using the settings manager
    */
   def loadPreferences(): Try[Option[UserPreferences]] = {
-    if (Files.exists(Paths.get(SETTINGS_FILE))) {
-      Try {
-        val source = Source.fromFile(SETTINGS_FILE)
-        val content = source.getLines().mkString("\n")
-        source.close()
-        
-        deserializePreferences(content)
-      }
-    } else {
-      Success(None) // File doesn't exist yet
-    }
-  }
-  
-  /**
-   * Parse preferences string back into UserPreferences object
-   */
-  private def deserializePreferences(prefsString: String): Option[UserPreferences] = {
-    val parts = prefsString.split("\\|")
-    
-    if (parts.length >= 3) {
-      val motherLang = parseLanguage(parts(0))
-      val targetLang = parseLanguage(parts(1))
-      val difficulty = parseDifficulty(parts(2))
-      
-      val name = if (parts.length > 3 && parts(3).nonEmpty) Some(parts(3)) else None
-      
-      for {
-        ml <- motherLang
-        tl <- targetLang
-        d <- difficulty
-      } yield UserPreferences(ml, tl, d, name)
-    } else {
-      None
-    }
+    // Use the settings manager to load all preferences
+    settingsManager.loadAllPreferences()
   }
   
   /**
@@ -1302,19 +1278,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
       case "spanish" => Some(Spanish)
       case "french" => Some(French)
       case "german" => Some(German)
-      case _ => None
-    }
-  }
-  
-  /**
-   * Parse difficulty string to Difficulty type using pattern matching
-   */
-  def parseDifficulty(diff: String): Option[Difficulty] = {
-    diff.toLowerCase match {
-      case "easy" => Some(Easy)
-      case "medium" => Some(Medium)
-      case "hard" => Some(Hard)
-      case "impossible" => Some(Impossible)
       case _ => None
     }
   }
@@ -1333,19 +1296,6 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
   }
   
   /**
-   * Helper method to convert Difficulty to a string representation
-   */
-  def difficultyToString(difficulty: Difficulty): String = {
-    difficulty match {
-      case Easy => "Easy"
-      case Medium => "Medium"
-      case Hard => "Hard"
-      case Impossible => "Impossible"
-      case _ => "Unknown"
-    }
-  }
-  
-  /**
    * Format a response in both target and mother languages
    */
   def formatDualLanguageResponse(response: String): String = {
@@ -1354,46 +1304,404 @@ Please type the number (1-4) or name of the quiz you'd like to take."""
                           response.contains("Available quiz types") ||
                           response.contains("starting a quiz") ||
                           response.contains("Exiting quiz mode") ||
-                          response.contains("error with the quiz")
+                          response.contains("error with the quiz") ||
+                          response.contains("What type of quiz would you like to take?") ||
+                          response.contains("Would you like to take a quiz") ||
+                          response.contains("Please type the number") ||
+                          response.contains("Vocabulary -") ||
+                          response.contains("Grammar -") ||
+                          response.contains("Translation -") ||
+                          response.contains("MCQ -") ||
+                          response.contains("quiz") ||
+                          response.contains("Quiz")
     
-    // Check if this is quiz content (choices, , etc.)
-    val isQuizContent = response.contains("vocabulary") ||
-                       response.contains("grammar") ||
-                       response.contains("translation") ||
-                       response.contains("mcq")
+    // If this is quiz instruction, don't translate it
+    if (isQuizInstruction) {
+      return response
+    }
     
-    // Check if this is a greeting response
-    val isGreeting = response.startsWith("Hello") || 
-                    response.contains("Language Learning Bot") ||
-                    response.contains("I'm your Language Learning Bot")
-    
+    // Otherwise, apply standard translation - don't show multiple language tags
     userPreferences match {
-      case Some(prefs) if motherLanguageExplicitlySet && targetLanguageExplicitlySet => 
-        if (isQuizInstruction) {
-          // For quiz instructions, show only in mother language
-          ChatbotCore.translateText(response, prefs.motherLanguage)
-        } else if (isQuizContent) {
-          // For quiz content, show only in target language
-          ChatbotCore.translateText(response, prefs.targetLanguage)
-        } else if (isGreeting) {
-          // For greetings, show only in mother language
-          ChatbotCore.translateText(response, prefs.motherLanguage)
+      case Some(prefs) if prefs.motherLanguage != prefs.targetLanguage =>
+        // Only translate to mother language if it's not English
+        if (prefs.motherLanguage != English) {
+          val motherLangTranslation = ChatbotCore.translateText(response, prefs.motherLanguage)
+          s"$motherLangTranslation\n(in English: $response)"
         } else {
-          // Only show English translation as requested
-          ChatbotCore.translateText(response, English)
+          // If mother language is English, just return response in English
+          response
         }
-      
-      case Some(prefs) if targetLanguageExplicitlySet => 
-        // If only target language is set
-        ChatbotCore.translateText(response, prefs.targetLanguage)
-        
-      case Some(prefs) if motherLanguageExplicitlySet => 
-        // If only mother language is set
-        ChatbotCore.translateText(response, prefs.motherLanguage)
         
       case _ => 
-        // If no languages are set, return original response
+        // If no preferences or same language, just return the original
         response
+    }
+  }
+  
+  /**
+   * Starts a weather-based conversation in the target language
+   * with translations to practice language skills
+   */
+  def startWeatherChat(): Unit = {
+    userPreferences match {
+      case Some(prefs) if targetLanguageExplicitlySet && motherLanguageExplicitlySet => 
+        val weatherQuestions = Map(
+          "How is the weather today?" -> Map(
+            "Spanish" -> "¿Cómo está el clima hoy?",
+            "French" -> "Comment est le temps aujourd'hui?",
+            "German" -> "Wie ist das Wetter heute?"
+          ),
+          "Is it hot or cold outside?" -> Map(
+            "Spanish" -> "¿Hace calor o frío afuera?",
+            "French" -> "Fait-il chaud ou froid dehors?",
+            "German" -> "Ist es draußen heiß oder kalt?"
+          ),
+          "Do you like this weather?" -> Map(
+            "Spanish" -> "¿Te gusta este clima?",
+            "French" -> "Est-ce que tu aimes ce temps?",
+            "German" -> "Magst du dieses Wetter?"
+          ),
+          "What's your favorite season?" -> Map(
+            "Spanish" -> "¿Cuál es tu estación favorita?",
+            "French" -> "Quelle est ta saison préférée?",
+            "German" -> "Was ist deine Lieblingsjahreszeit?"
+          ),
+          "Is it raining today?" -> Map(
+            "Spanish" -> "¿Está lloviendo hoy?",
+            "French" -> "Pleut-il aujourd'hui?",
+            "German" -> "Regnet es heute?"
+          )
+        )
+        
+        val followupQuestions = Map(
+          "Do you prefer hot or cold weather?" -> Map(
+            "Spanish" -> "¿Prefieres el clima caliente o frío?",
+            "French" -> "Préférez-vous le temps chaud ou froid?",
+            "German" -> "Bevorzugen Sie heißes oder kaltes Wetter?"
+          ),
+          "What do you usually wear in this weather?" -> Map(
+            "Spanish" -> "¿Qué sueles usar con este clima?",
+            "French" -> "Que portez-vous habituellement par ce temps?",
+            "German" -> "Was tragen Sie normalerweise bei diesem Wetter?"
+          ),
+          "What activities do you enjoy in this weather?" -> Map(
+            "Spanish" -> "¿Qué actividades disfrutas con este clima?",
+            "French" -> "Quelles activités aimez-vous faire par ce temps?",
+            "German" -> "Welche Aktivitäten machen Sie gerne bei diesem Wetter?"
+          ),
+          "How does the weather affect your mood?" -> Map(
+            "Spanish" -> "¿Cómo afecta el clima tu estado de ánimo?",
+            "French" -> "Comment la météo affecte-t-elle votre humeur?",
+            "German" -> "Wie beeinflusst das Wetter Ihre Stimmung?"
+          ),
+          "What's the weather like in your hometown?" -> Map(
+            "Spanish" -> "¿Cómo es el clima en tu ciudad natal?",
+            "French" -> "Quel temps fait-il dans votre ville natale?",
+            "German" -> "Wie ist das Wetter in Ihrer Heimatstadt?"
+          )
+        )
+        
+        // Select a random question
+        val questionKeys = weatherQuestions.keys.toArray
+        val questionEn = questionKeys(scala.util.Random.nextInt(questionKeys.length))
+        
+        // Get translations
+        val targetLangName = languageToString(prefs.targetLanguage)
+        val motherLangName = languageToString(prefs.motherLanguage)
+        
+        // Get actual translations using our predefined maps
+        val targetLangQuestion = if (prefs.targetLanguage == English || !weatherQuestions(questionEn).contains(targetLangName)) {
+          questionEn // Default to English if translation not available
+        } else {
+          weatherQuestions(questionEn)(targetLangName)
+        }
+        
+        val motherLangQuestion = if (prefs.motherLanguage == English || !weatherQuestions(questionEn).contains(motherLangName)) {
+          questionEn // Default to English if translation not available
+        } else {
+          weatherQuestions(questionEn)(motherLangName)
+        }
+        
+        // Display the question with translation
+        println(s"\nBot: $targetLangQuestion")
+        if (prefs.targetLanguage != prefs.motherLanguage) {
+          println(s"(${languageToString(prefs.motherLanguage)}: $motherLangQuestion)")
+        }
+        
+        // Start conversation loop
+        var chatting = true
+        var questionsAsked = 1
+        
+        while (chatting && questionsAsked < 5) {
+          print("\nYou: ")
+          val userResponse = readLine().trim
+          
+          // Check for exit conditions
+          if (userResponse.toLowerCase == "exit" || 
+              userResponse.toLowerCase == "quit" || 
+              userResponse.toLowerCase == "end chat" || 
+              userResponse.toLowerCase == "stop" ||
+              userResponse.toLowerCase == "exit chat" ||
+              userResponse.toLowerCase == "stop chat") {
+            
+            val endMessage = "Hope you have an amazing day! Thanks for chatting. Feel free to come back anytime to practice more."
+            val endMessageTranslated = if (prefs.targetLanguage == English) {
+              endMessage
+            } else if (prefs.targetLanguage == Spanish) {
+              "¡Espero que tengas un día increíble! Gracias por charlar. No dudes en volver cuando quieras para practicar más."
+            } else if (prefs.targetLanguage == French) {
+              "J'espère que vous passerez une excellente journée ! Merci pour cette conversation. N'hésitez pas à revenir quand vous voulez pour vous entraîner davantage."
+            } else if (prefs.targetLanguage == German) {
+              "Ich wünsche Ihnen einen wunderschönen Tag! Danke für das Gespräch. Kommen Sie jederzeit wieder, um mehr zu üben."
+            } else {
+              endMessage
+            }
+            
+            println(s"\nBot: $endMessageTranslated")
+            if (prefs.targetLanguage != prefs.motherLanguage && prefs.motherLanguage != English) {
+              println(s"(${languageToString(prefs.motherLanguage)}: $endMessage)")
+            }
+            chatting = false
+          } else {
+            // Log conversation in history
+            currentUser.foreach { user =>
+              userHistoryService.addInteraction(
+                userId = user.id,
+                username = user.username,
+                email = user.email,
+                question = questionEn, // Store the English version for logging
+                response = userResponse,
+                category = "chat"
+              )
+            }
+            
+            // Track if we've found weather or clothing in the response
+            var responseSent = false
+            
+            // First, check for clothing items
+            val clothingDetected = ChatbotCore.detectClothing(userResponse)
+            
+            // Also check if response mentions weather
+            val isWeatherInResponse = ChatbotCore.isWeatherQuery(ChatbotCore.parseInput(userResponse))
+            
+            // Variables to track what type of weather was last discussed
+            var lastWeatherWasHot = false
+            var lastWeatherWasCold = false
+            
+            if (userResponse.toLowerCase.contains("hot") || 
+                userResponse.toLowerCase.contains("warm") || 
+                userResponse.toLowerCase.contains("heat")) {
+              lastWeatherWasHot = true
+              lastWeatherWasCold = false
+            } else if (userResponse.toLowerCase.contains("cold") || 
+                      userResponse.toLowerCase.contains("cool") || 
+                      userResponse.toLowerCase.contains("chill") || 
+                      userResponse.toLowerCase.contains("freez")) {
+              lastWeatherWasCold = true
+              lastWeatherWasHot = false
+            }
+            
+            // Handle clothing feedback if detected
+            if (clothingDetected.isDefined) {
+              val (clothingItem, isHotWeatherClothing) = clothingDetected.get
+              
+              // Evaluate if clothing is appropriate for mentioned weather
+              val clothingFeedback = ChatbotCore.evaluateClothingChoice(
+                clothingItem, 
+                isHotWeatherClothing,
+                lastWeatherWasHot
+              )
+              
+              // Translate clothing feedback
+              val translatedFeedback = if (prefs.targetLanguage == Spanish) {
+                if (isHotWeatherClothing && lastWeatherWasHot) {
+                  s"¡Excelente elección con la/el $clothingItem! Es perfecto para el clima cálido. Te mantendrá fresco y cómodo."
+                } else if (!isHotWeatherClothing && lastWeatherWasCold) {
+                  s"¡Excelente elección con la/el $clothingItem! Es perfecto para el clima frío. Te mantendrá abrigado y cómodo."
+                } else if (isHotWeatherClothing && lastWeatherWasCold) {
+                  s"Una/Un $clothingItem podría no ser suficientemente abrigado para el clima frío. Considera añadir una chaqueta, suéter o abrigo para mantenerte caliente."
+                } else {
+                  s"Una/Un $clothingItem podría ser demasiado abrigado para el clima cálido. Algo más ligero como una camiseta sería más cómodo."
+                }
+              } else if (prefs.targetLanguage == French) {
+                if (isHotWeatherClothing && lastWeatherWasHot) {
+                  s"Excellent choix avec le $clothingItem ! C'est parfait pour un temps chaud. Cela vous gardera frais et à l'aise."
+                } else if (!isHotWeatherClothing && lastWeatherWasCold) {
+                  s"Excellent choix avec le $clothingItem ! C'est parfait pour un temps froid. Cela vous gardera au chaud et confortable."
+                } else if (isHotWeatherClothing && lastWeatherWasCold) {
+                  s"Un $clothingItem pourrait ne pas être assez chaud pour un temps froid. Pensez à ajouter une veste, un pull ou un manteau pour rester au chaud."
+                } else {
+                  s"Un $clothingItem pourrait être trop chaud pour un temps chaud. Quelque chose de plus léger comme un t-shirt serait plus confortable."
+                }
+              } else if (prefs.targetLanguage == German) {
+                if (isHotWeatherClothing && lastWeatherWasHot) {
+                  s"Tolle Wahl mit dem $clothingItem! Das ist perfekt für heißes Wetter. Es wird Sie kühl und bequem halten."
+                } else if (!isHotWeatherClothing && lastWeatherWasCold) {
+                  s"Ausgezeichnete Wahl mit dem $clothingItem! Das ist perfekt für kaltes Wetter. Es wird Sie warm und gemütlich halten."
+                } else if (isHotWeatherClothing && lastWeatherWasCold) {
+                  s"Ein $clothingItem ist vielleicht nicht warm genug für kaltes Wetter. Erwägen Sie, eine Jacke, einen Pullover oder einen Mantel hinzuzufügen, um warm zu bleiben."
+                } else {
+                  s"Ein $clothingItem ist vielleicht zu warm für heißes Wetter. Etwas Leichteres wie ein T-Shirt wäre bequemer."
+                }
+              } else {
+                clothingFeedback // Default to English
+              }
+              
+              // Display clothing feedback with translation
+              println(s"\nBot: $translatedFeedback")
+              if (prefs.targetLanguage != prefs.motherLanguage && prefs.motherLanguage != English) {
+                println(s"(${languageToString(prefs.motherLanguage)}: $clothingFeedback)")
+              } else if (prefs.motherLanguage == English && prefs.targetLanguage != English) {
+                println(s"(English: $clothingFeedback)")
+              }
+              
+              responseSent = true
+            }
+            
+            // Based on response, provide a weather-related follow-up
+            if (isWeatherInResponse && !responseSent) {
+              // If user mentioned weather, give specific response
+              val weatherReply = ChatbotCore.handleWeatherQuery(userResponse)
+              
+              // Translate weather reply (simple translations for common phrases)
+              val targetLangReply = if (prefs.targetLanguage == Spanish) {
+                if (weatherReply.contains("It sounds hot")) {
+                  "¡Parece que hace calor! Te recomiendo usar ropa ligera y transpirable como camisetas y ropa de algodón. Mantente hidratado, usa protector solar y trata de estar en la sombra cuando sea posible."
+                  lastWeatherWasHot = true
+                  lastWeatherWasCold = false
+                } else if (weatherReply.contains("It sounds cold")) {
+                  "¡Parece que hace frío! Asegúrate de usar capas abrigadas - un suéter o forro polar debajo de una chaqueta. No olvides una bufanda para proteger tu cuello del viento frío."
+                  lastWeatherWasHot = false
+                  lastWeatherWasCold = true
+                } else {
+                  "Cuando hablamos del clima, ¡puedo darte sugerencias de ropa! Solo dime si hace calor o frío afuera, y te recomendaré qué usar."
+                }
+              } else if (prefs.targetLanguage == French) {
+                if (weatherReply.contains("It sounds hot")) {
+                  "Il fait chaud! Je vous recommande de porter des vêtements légers et respirants comme des shorts et un t-shirt. Restez hydraté, utilisez de la crème solaire et essayez de rester à l'ombre si possible."
+                  lastWeatherWasHot = true
+                  lastWeatherWasCold = false
+                } else if (weatherReply.contains("It sounds cold")) {
+                  "Il fait froid! Assurez-vous de porter des couches chaudes - un pull ou une polaire sous une veste, plus un chapeau et des gants s'il fait très froid."
+                  lastWeatherWasHot = false
+                  lastWeatherWasCold = true
+                } else {
+                  "En parlant de la météo, je peux vous donner des suggestions vestimentaires! Dites-moi simplement s'il fait chaud ou froid dehors, et je vous recommanderai quoi porter."
+                }
+              } else if (prefs.targetLanguage == German) {
+                if (weatherReply.contains("It sounds hot")) {
+                  "Es klingt heiß! Ich empfehle leichte, atmungsaktive Kleidung wie Shorts und ein T-Shirt. Bleiben Sie hydratisiert, verwenden Sie Sonnenschutz und versuchen Sie, wenn möglich im Schatten zu bleiben."
+                  lastWeatherWasHot = true
+                  lastWeatherWasCold = false
+                } else if (weatherReply.contains("It sounds cold")) {
+                  "Es klingt kalt! Achten Sie auf warme Schichten - einen Pullover oder Fleece unter einer Jacke, plus eine Mütze und Handschuhe, wenn es sehr kalt ist."
+                  lastWeatherWasHot = false
+                  lastWeatherWasCold = true
+                } else {
+                  "Wenn wir über das Wetter sprechen, kann ich Ihnen Kleidungsvorschläge machen! Sagen Sie mir einfach, ob es draußen heiß oder kalt ist, und ich empfehle Ihnen, was Sie tragen sollten."
+                }
+              } else {
+                weatherReply // Default to English
+              }
+              
+              // Display response with translation
+              println(s"\nBot: $targetLangReply")
+              if (prefs.targetLanguage != prefs.motherLanguage && prefs.motherLanguage != English) {
+                println(s"(${languageToString(prefs.motherLanguage)}: $weatherReply)")
+              } else if (prefs.motherLanguage == English && prefs.targetLanguage != English) {
+                println(s"(English: $weatherReply)")
+              }
+              
+              responseSent = true
+            }
+            
+            // ALWAYS follow up with a new question
+            // Wait a moment before asking the next question for better UX
+            Thread.sleep(1000) 
+            
+            // Add clothing-specific questions to follow-up options
+            val clothingQuestions = Map(
+              "What do you usually wear in this kind of weather?" -> Map(
+                "Spanish" -> "¿Qué sueles usar en este tipo de clima?",
+                "French" -> "Que portez-vous habituellement par ce temps?",
+                "German" -> "Was tragen Sie normalerweise bei diesem Wetter?"
+              ),
+              "Do you prefer light or heavy clothing?" -> Map(
+                "Spanish" -> "¿Prefieres ropa ligera o pesada?",
+                "French" -> "Préférez-vous des vêtements légers ou lourds?",
+                "German" -> "Bevorzugen Sie leichte oder schwere Kleidung?"
+              ),
+              "What color clothes do you like to wear when it's hot?" -> Map(
+                "Spanish" -> "¿Qué color de ropa te gusta usar cuando hace calor?",
+                "French" -> "De quelle couleur aimez-vous porter des vêtements quand il fait chaud?",
+                "German" -> "Welche Farbe Kleidung tragen Sie gerne, wenn es heiß ist?"
+              ),
+              "What's your favorite jacket for cold days?" -> Map(
+                "Spanish" -> "¿Cuál es tu chaqueta favorita para días fríos?",
+                "French" -> "Quelle est votre veste préférée pour les jours froids?",
+                "German" -> "Was ist Ihre Lieblingsjacke für kalte Tage?"
+              )
+            )
+            
+            // Combine the clothing questions with our follow-up questions for more variety
+            val allQuestions = followupQuestions ++ clothingQuestions
+            
+            // Select a follow-up question
+            val allKeys = allQuestions.keys.toArray
+            val newQuestionEn = allKeys(scala.util.Random.nextInt(allKeys.length))
+            
+            // Get translated follow-up question
+            val targetLangNewQ = if (prefs.targetLanguage == English || !allQuestions(newQuestionEn).contains(targetLangName)) {
+              newQuestionEn // Default to English if translation not available
+            } else {
+              allQuestions(newQuestionEn)(targetLangName)
+            }
+            
+            val motherLangNewQ = if (prefs.motherLanguage == English || !allQuestions(newQuestionEn).contains(motherLangName)) {
+              newQuestionEn // Default to English if translation not available
+            } else {
+              allQuestions(newQuestionEn)(motherLangName)
+            }
+            
+            // Display the question with translation
+            println(s"\nBot: $targetLangNewQ")
+            if (prefs.targetLanguage != prefs.motherLanguage) {
+              println(s"(${languageToString(prefs.motherLanguage)}: $motherLangNewQ)")
+            }
+            
+            questionsAsked += 1
+          }
+        }
+        
+        // End conversation after 5 exchanges
+        if (questionsAsked >= 5 && chatting) {
+          val endMessage = "That was a great chat! Hope you have an amazing day. Feel free to come back anytime to practice more."
+          val endMessageTranslated = if (prefs.targetLanguage == English) {
+            endMessage
+          } else if (prefs.targetLanguage == Spanish) {
+            "¡Fue una gran conversación! Espero que tengas un día increíble. Puedes volver cuando quieras para practicar más."
+          } else if (prefs.targetLanguage == French) {
+            "C'était une excellente conversation! J'espère que vous passerez une journée incroyable. N'hésitez pas à revenir quand vous voulez pour pratiquer davantage."
+          } else if (prefs.targetLanguage == German) {
+            "Das war ein tolles Gespräch! Ich hoffe, Sie haben einen wunderbaren Tag. Sie können jederzeit wiederkommen, um mehr zu üben."
+          } else {
+            endMessage
+          }
+          
+          println(s"\nBot: $endMessageTranslated")
+          if (prefs.targetLanguage != prefs.motherLanguage && prefs.motherLanguage != English) {
+            println(s"(${languageToString(prefs.motherLanguage)}: $endMessage)")
+          }
+        }
+        
+      case Some(_) => 
+        // Not all preferences are set
+        println(s"\nBot: ${formatDualLanguageResponse("Please make sure both your mother language and target language are set to start a chat.")}")
+        showSettings()
+        
+      case None =>
+        println(s"\nBot: ${formatDualLanguageResponse("Please set your language preferences before starting a chat.")}")
+        showSettings()
     }
   }
 }

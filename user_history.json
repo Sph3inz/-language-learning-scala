@@ -1,6 +1,2367 @@
 [{
+  "email": "yassin",
+  "interactions": [{
+    "category": "quiz",
+    "id": "7dfeae57-3155-4fc5-b230-75d482897942",
+    "question": "Quiz Question 5: What is 'dog' in French?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: chien",
+    "timestamp": 1747599006071,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "2c374b56-1dad-4660-a91e-1fe890771788",
+    "question": "Quiz Question 4: What is 'book' in French?",
+    "response": "Answer: dd, Feedback: That's not correct. The correct answer is: livre",
+    "timestamp": 1747599005444,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "2b5f8009-3ed3-4d54-8cd7-5d57e6dba448",
+    "question": "Quiz Question 3: What is 'food' in French?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: nourriture",
+    "timestamp": 1747599004575,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "9db7b12f-5f81-406e-b51b-d50f75dcdcfc",
+    "question": "Quiz Question 2: What is 'house' in French?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: maison",
+    "timestamp": 1747599004293,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "6235945b-24fa-4e68-b355-c30a822a389d",
+    "question": "Quiz Question 1: What is 'family' in French?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: famille",
+    "timestamp": 1747599003973,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "48745e42-d1d3-47c0-9e57-c0cd359b134f",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747599000257,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "97b2e316-c65d-429f-b051-61d956f1d398",
+    "question": "Quiz Question 5: What is 'family' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: famille",
+    "timestamp": 1747598989070,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "759ac537-0025-4e82-b9c7-f20a8c460f2e",
+    "question": "Quiz Question 4: What is 'book' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747598988421,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "ace6d945-d002-45c6-ae1c-ae7beef83079",
+    "question": "Quiz Question 3: What is 'house' in French?",
+    "response": "Answer: s, Feedback: That's not correct. The correct answer is: maison",
+    "timestamp": 1747598987848,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "98aa4a29-9f33-4606-bdc5-038fcf65da00",
+    "question": "Quiz Question 2: What is 'dog' in French?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: chien",
+    "timestamp": 1747598987015,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "22db0def-aebd-4a19-9d9b-ceca5fe27db5",
+    "question": "Quiz Question 1: What is 'food' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: nourriture",
+    "timestamp": 1747598985574,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "ceb22715-9955-485f-8192-f88209f1c74d",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747598982824,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "d5c85f0d-fecc-4064-986f-a1b4aa84ab15",
+    "question": "Quiz Question 5: What is 'family' in French?",
+    "response": "Answer: f, Feedback: That's not correct. The correct answer is: famille",
+    "timestamp": 1747598408393,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "577cdd3d-fa30-4681-b004-62275312ec0c",
+    "question": "Quiz Question 4: What is 'book' in French?",
+    "response": "Answer: f, Feedback: That's not correct. The correct answer is: livre",
+    "timestamp": 1747598407763,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "aee2a3d7-13c0-4b15-bbfa-92f2a9954b05",
+    "question": "Quiz Question 3: What is 'food' in French?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: nourriture",
+    "timestamp": 1747598407270,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "2631055c-f38c-478a-9fae-ca2c266364b1",
+    "question": "Quiz Question 2: What is 'dog' in French?",
+    "response": "Answer: as, Feedback: That's not correct. The correct answer is: chien",
+    "timestamp": 1747598406508,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "7ab57c88-6a40-4f99-94cb-3f32457dac08",
+    "question": "Quiz Question 1: What is 'house' in French?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: maison",
+    "timestamp": 1747598405327,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "5c20dad0-b27b-4b95-a5b2-b2e6c21e83aa",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747598401776,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "dcfd9bae-07fc-4f80-bfea-778e36269d48",
+    "question": "Quiz Question 5: What is 'family' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: famille",
+    "timestamp": 1747598396135,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "7497c854-314a-4716-adb3-00285d61b69a",
+    "question": "Quiz Question 4: What is 'book' in French?",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: livre",
+    "timestamp": 1747598395703,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "a01dcc3e-eda4-4ba9-b5c7-eb5154b620ac",
+    "question": "Quiz Question 3: What is 'food' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: nourriture",
+    "timestamp": 1747598394938,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "daa2c258-2603-41e4-8318-8227607d306f",
+    "question": "Quiz Question 2: What is 'dog' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: chien",
+    "timestamp": 1747598394609,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "847a8292-d2c0-4017-a34e-bcd2652e0281",
+    "question": "Quiz Question 1: What is 'house' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747598394291,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "9641ca48-0297-464a-a050-e57c794bd011",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747598392875,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "91d7ed55-9fdf-4ae2-8de9-2f5757e3915f",
+    "question": "Quiz Question 5: What is 'family' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: famille",
+    "timestamp": 1747598276507,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "25c8d4eb-86bf-4f4c-bcd0-bbaf5285c6ab",
+    "question": "Quiz Question 4: What is 'book' in French?",
+    "response": "Answer: xs, Feedback: That's not correct. The correct answer is: livre",
+    "timestamp": 1747598275954,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "3dd3d642-6a4c-4521-b04b-968cce5ee497",
+    "question": "Quiz Question 3: What is 'food' in French?",
+    "response": "Answer: x, Feedback: That's not correct. The correct answer is: nourriture",
+    "timestamp": 1747598274549,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "6d2e04a1-a2dd-4233-b8ab-ab1fe28ce648",
+    "question": "Quiz Question 2: What is 'dog' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: chien",
+    "timestamp": 1747598272845,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "0e38965e-8168-4fea-8c66-36360e4e16be",
+    "question": "Quiz Question 1: What is 'house' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747598257230,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "907bb9dc-a105-4a46-b7d4-c839e9c4ed50",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747598247302,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "04c36921-b314-4c68-8383-ab01219b5c2d",
+    "question": "Quiz Question 5: What is 'family' in French?",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: famille",
+    "timestamp": 1747598239163,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "5fccf4d2-9276-4272-ad49-bedd8652fb89",
+    "question": "Quiz Question 4: What is 'book' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747598238510,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "e5546234-151e-4f4c-bcca-f66585ad092f",
+    "question": "Quiz Question 3: What is 'food' in French?",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: nourriture",
+    "timestamp": 1747598238119,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "558c9a60-4bd8-4f44-a516-bc9686f35c8a",
+    "question": "Quiz Question 2: What is 'dog' in French?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: chien",
+    "timestamp": 1747598237276,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "59d93d9a-e7d4-4789-b0a3-61a4b56859a2",
+    "question": "Quiz Question 1: What is 'house' in French?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747598236951,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "f73a1405-3fc8-4dd8-b325-0166082bc5b8",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747598235381,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "02a0e5b6-b6b5-4276-a0de-5c69d49e120e",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747598225200,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "6323355e-aeb3-47da-8333-fbe82c3f958f",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747596997345,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "f0f83897-8cd7-4f7d-9e7f-7093bf989b01",
+    "question": "Quiz Question 5: Select the correct sentence:",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Ich esse einen Apfel",
+    "timestamp": 1747596990024,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "72eaa621-5efb-4666-8cba-16b36552ffc1",
+    "question": "Quiz Question 4: Which word is a verb?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: lesen",
+    "timestamp": 1747596989003,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "539ac891-4a3f-4754-bf09-788cf10f98eb",
+    "question": "Quiz Question 3: What is the plural form of 'das Buch'?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: die Bücher",
+    "timestamp": 1747596988739,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "15548b08-48c6-48ca-9d1e-d7d48767de7f",
+    "question": "Quiz Question 2: Which article matches with 'Haus'?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: das",
+    "timestamp": 1747596988459,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "7ccdf495-c8ec-46d2-a4dc-bdaa841d0191",
+    "question": "Quiz Question 1: Which is the correct conjugation of 'sprechen' for 'ich'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747596988153,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "d101daf1-dffa-4062-9a19-3c27a5dc7acc",
+    "question": "What type of quiz would you like to take?",
+    "response": "2",
+    "timestamp": 1747596984111,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "607efeb7-71cf-4d21-a1d2-344ec8524ebb",
+    "question": "Quiz Question 5: Select the correct sentence:",
+    "response": "Answer: d, Feedback: Correct! Well done!",
+    "timestamp": 1747596966613,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "65216920-51ed-4ddf-afae-23b72d4cb859",
+    "question": "Quiz Question 4: Which word is a verb?",
+    "response": "Answer: c, Feedback: Correct! Well done!",
+    "timestamp": 1747596958668,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "051462da-9dcc-45c0-8cc4-eebed5186c1b",
+    "question": "Quiz Question 3: What is the plural form of 'das Buch'?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: die Bücher",
+    "timestamp": 1747596951011,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "c56d4bcc-fff5-4793-b945-5cac41b6b012",
+    "question": "Quiz Question 2: Which article matches with 'Haus'?",
+    "response": "Answer: c, Feedback: Correct! Well done!",
+    "timestamp": 1747596942343,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "e07b97ba-f443-4aca-bf1b-03a87f9f1f50",
+    "question": "Quiz Question 1: Which is the correct conjugation of 'sprechen' for 'ich'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747596938139,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "51c9128c-4a96-40d9-b98b-f2c29ee55ff5",
+    "question": "What type of quiz would you like to take?",
+    "response": "2",
+    "timestamp": 1747596931699,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "925d1a1e-1f92-44f9-9641-cc9a28658e9f",
+    "question": "What type of quiz would you like to take?",
+    "response": "",
+    "timestamp": 1747596924811,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "a49b9597-7a0a-4ea8-83c1-8d737daf2a76",
+    "question": "set target language german",
+    "response": "Target language set to German",
+    "timestamp": 1747596915506,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "0e69f4aa-f51b-4e01-b901-7f337e725633",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747596905816,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "34f95d23-24aa-427e-a31a-ec91310e57e8",
+    "question": "save settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747596885377,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "70e87396-e4df-405b-ba8c-54d9461cb8af",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747596885372,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "c0850591-2969-47e8-9520-a27bd6aacfea",
+    "question": "set target language german",
+    "response": "Target language set to German",
+    "timestamp": 1747596873443,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "130c1405-7fba-4d9d-870e-60b39aecbc88",
+    "question": "set mother language spanish",
+    "response": "Mother language set to Spanish",
+    "timestamp": 1747596859166,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "7b2a5e40-1f27-4e2f-8941-802dece464b6",
+    "question": "preferences",
+    "response": "Displayed user settings",
+    "timestamp": 1747596848770,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "d5746dd9-f46b-45da-b6ae-bfa72ff39207",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747596848753,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "43aef4e3-39be-4f62-bc14-29a6b8e1769b",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747596842494,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "7ba73a01-66ea-4f6e-971c-ec801762090f",
+    "question": "",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747596392303,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "ada07f72-a841-41d2-8b3c-74377af5108c",
+    "question": "Is it hot or cold outside?",
+    "response": "cold weather",
+    "timestamp": 1747596382224,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "7dbbd7df-256d-4343-bb93-82632365e641",
+    "question": "Is it hot or cold outside?",
+    "response": "light clothing",
+    "timestamp": 1747596372223,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "6c561622-ac63-4813-8d54-1d690a996964",
+    "question": "Is it hot or cold outside?",
+    "response": "light",
+    "timestamp": 1747596363198,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "6ffe8334-beb4-4bd1-a32b-075ae19358f1",
+    "question": "Is it hot or cold outside?",
+    "response": "hot",
+    "timestamp": 1747596353265,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "a875172a-e45b-4d5a-bbfa-cee9c13c0244",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747596344732,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "0d3fe592-347e-44b5-876f-c03840310bab",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747596079481,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "0800e260-bd10-4b12-9ec7-3a5e01de892e",
+    "question": "What's your favorite season?",
+    "response": "shirt",
+    "timestamp": 1747595854945,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "5615413c-8590-4223-978e-412bc184efbd",
+    "question": "What's your favorite season?",
+    "response": "warm",
+    "timestamp": 1747595844357,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "f7d7d594-dcaf-46ff-88ed-6b564600a3f1",
+    "question": "What's your favorite season?",
+    "response": "summer",
+    "timestamp": 1747595839165,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "102a071d-2744-4830-8afe-0df5aaec6e37",
+    "question": "prefrences",
+    "response": "Displayed user settings",
+    "timestamp": 1747595820627,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "f09943da-5780-4175-b854-c1b952cd4ccb",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747595820619,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "bb89e63e-7961-49a7-bbd6-dbe3e774fca6",
+    "question": "settngs",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747595813423,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "ea239ced-21dd-4e25-ac52-02bd1b65823d",
+    "question": "set target language french",
+    "response": "Target language set to French",
+    "timestamp": 1747595810862,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "f8ed9b54-15c0-428b-a789-82dea1c9e6aa",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747595800324,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "77463d77-5d2f-4b07-9b3b-e897efb699f2",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747595789258,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "4324437b-dbf6-4dee-8749-f0cffb256d43",
+    "question": "exit chat",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747595749126,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "5ae2a524-7e83-43d4-8287-c0b390ea312e",
+    "question": "swimming",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747595733490,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "793c0a9e-5523-4799-ae23-3da3af2182dd",
+    "question": "How is the weather today?",
+    "response": "shirt",
+    "timestamp": 1747595724666,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "10510765-5d45-44ea-a697-665e98eacb4c",
+    "question": "How is the weather today?",
+    "response": "hot",
+    "timestamp": 1747595706878,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "5f4ba475-3cfa-436f-bc84-08eb511a9192",
+    "question": "How is the weather today?",
+    "response": "coat",
+    "timestamp": 1747595692657,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "4b357a45-2014-49be-a7d6-c3a92fe3d030",
+    "question": "How is the weather today?",
+    "response": "cold",
+    "timestamp": 1747595684073,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "3881d54f-556a-41f2-a321-f1f13d5ba827",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747595675407,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "32103e74-4276-4573-8e6b-7143ea369f76",
+    "question": "Is it hot or cold outside?",
+    "response": "cold",
+    "timestamp": 1747595402023,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "c75f9c4d-3500-4bb4-965b-74ebad33e378",
+    "question": "What's your favorite season?",
+    "response": "exit chat",
+    "timestamp": 1747595384806,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "634ccc5c-a31f-4a16-b021-fe1fc8131802",
+    "question": "What's your favorite season?",
+    "response": "",
+    "timestamp": 1747595374986,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "9f33bf40-257f-494e-9465-7d51465a8923",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747595372395,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "f14658c7-e0d5-447f-9c61-921c26bf30a4",
+    "question": "How is the weather today?",
+    "response": "warm",
+    "timestamp": 1747595301467,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "e246d7f9-b19e-4710-9e25-aa25d657c430",
+    "question": "How is the weather today?",
+    "response": "thanks",
+    "timestamp": 1747595292926,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "chat",
+    "id": "be18ec5d-95ea-46d4-9237-50a704a8d498",
+    "question": "How is the weather today?",
+    "response": "cool",
+    "timestamp": 1747595272607,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "0624a885-9740-4175-a2ed-980bc7e3b35a",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747595162678,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "weather",
+    "id": "58a1a433-2e8a-4e70-9345-b87efcbf86ea",
+    "question": "weather is hot",
+    "response": "It sounds hot! I recommend wearing light, breathable clothes like shorts and a t-shirt. Stay hydrated, use sunscreen, and try to stay in the shade when possible. A hat can also help protect you from the sun.",
+    "timestamp": 1747594778440,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "8d0624fa-e63b-405b-8707-637eaf855880",
+    "question": "chat",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747594764154,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "9b46e8ab-6c79-4f0e-a2dd-371c6cc22781",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747594762241,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "56c41cac-cc60-4116-b833-f32c910cbaf4",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747594758409,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "02517620-4b2a-4d7d-901e-7e5382b66b15",
+    "question": "1",
+    "response": "Started a Vocabulary quiz",
+    "timestamp": 1747594749255,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "31f15422-0685-4efb-a5bc-2cf971f1e590",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747594747504,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "5a0e5ccb-5d88-449c-aa76-7c997e3390f9",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747592849908,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "83c9700e-172d-4e20-9c1b-d9bce58a0ae3",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747592849902,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "936abe4a-7aa4-45fc-9724-41aafb965824",
+    "question": "quit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747592844661,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "c3297530-c296-44c0-bb5e-ca7923247fe4",
+    "question": "What type of quiz would you like to take?",
+    "response": "quit quiz",
+    "timestamp": 1747592844645,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "5c60ff4c-002a-4256-9a66-9ea4d519673e",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747592825490,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "b4147ebc-f994-4d7e-ae90-48f114cfafd7",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747592707305,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "8dbab25a-71a1-43da-9fab-7301b5f442e9",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747592707298,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "313ee997-8018-4956-b9e7-14192713e67d",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit",
+    "timestamp": 1747592700518,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "201c7ebd-0c08-4793-9586-22a679abdec7",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747592282690,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "9e15150b-b2e7-4ffc-b095-8888d958c7ba",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747592282685,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "7c7f3dcc-f600-407a-9b78-431e06c9de37",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747592279231,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "3d3eac46-4c76-4564-99cc-198e207212ca",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747592279224,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "78a04c76-0368-4d96-bc9f-23c4a42be7ed",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747592263018,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "257c2e74-6121-4a86-a5f3-1950b91dbb14",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747592263012,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "8f71744b-aeaf-4222-aa88-c5bf1efb520f",
+    "question": "What type of quiz would you like to take?",
+    "response": "quiz",
+    "timestamp": 1747592258906,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "9e8727d1-057f-44d4-b5ca-01bf9d0d11c6",
+    "question": "set target language french",
+    "response": "Target language set to French",
+    "timestamp": 1747592238220,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "701e2350-662b-4755-a2ba-58a5bf523cbf",
+    "question": "set mother language spanish",
+    "response": "Mother language set to Spanish",
+    "timestamp": 1747592230131,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "a3ba19c1-469f-4f5e-a642-bc7eb0760265",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747592219083,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "ee466025-1564-4025-b9de-21661e3e84d2",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747592219070,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "682bbc18-06a9-4502-b071-4337f0276f32",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747592190357,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "fcde93fc-a4e9-4130-be6b-3313d6365320",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747592190305,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "20e530a9-df3e-4743-8bdd-4e6f1b49a79f",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747591645124,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "210469d4-2797-4493-85b3-5034c7eb569d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747591633385,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "bb781fbb-1ac5-41f8-9cba-e4aa372cf867",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747591633381,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "8aa0237c-17e6-4f1b-882a-ad17a0e5dea7",
+    "question": "set target language french",
+    "response": "Target language set to French",
+    "timestamp": 1747591628860,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "50f79260-0a18-4078-9967-a14a5d6defb0",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747591613226,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "f1abe759-617d-40ff-9690-2187e80bda96",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747591582803,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "a76f99dc-ee27-400a-a18f-42310941dbad",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747591582799,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "54326d09-5f8d-413b-80b8-95d479d099a6",
+    "question": "set target language german",
+    "response": "Target language set to German",
+    "timestamp": 1747591575320,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "29e94fe7-831b-4aa3-b96b-4226e25486bd",
+    "question": "set mother language spanish",
+    "response": "Mother language set to Spanish",
+    "timestamp": 1747591567378,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "24e0270d-b36e-4900-8051-2e23ef3f28e7",
+    "question": "preferences",
+    "response": "Displayed user settings",
+    "timestamp": 1747591495420,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "dbf8fb60-eb2b-4ee6-8879-ef629f15b118",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747591495393,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "453ba0a9-696d-4b15-90ed-21d86702ea2b",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747591488603,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "d6078ade-f477-4861-be2a-bb3fc828e1dd",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747591178902,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "ddf16dcd-3eb3-4f8a-a300-0d5e04389386",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747591178894,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "aebb414a-8984-4464-a43a-f1418e12fcb4",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747591171079,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "39ac8cee-5885-43fc-bd0e-48c99a4def4e",
+    "question": "Quiz Question 5: Select the correct sentence:",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Tú comes manzanas",
+    "timestamp": 1747591057834,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "60292e81-aee8-4e33-9381-9f0130f3229a",
+    "question": "Quiz Question 4: Which word is a verb?",
+    "response": "Answer: c, Feedback: Correct! Well done!",
+    "timestamp": 1747591055828,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "558c2e06-dc3d-42f1-8b2f-946c704559f2",
+    "question": "Quiz Question 3: What is the plural form of 'el libro'?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: los libros",
+    "timestamp": 1747591053858,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "cd8fb5df-348b-47e5-9fa1-20ddad951642",
+    "question": "Quiz Question 2: Which article matches with 'casa'?",
+    "response": "Answer: b, Feedback: Correct! Well done!",
+    "timestamp": 1747591053192,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "1b1ad3fe-3b8d-4d82-8652-c6cbe95f5a52",
+    "question": "Quiz Question 1: Which is the correct conjugation of 'hablar' for 'yo'?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: hablo",
+    "timestamp": 1747591047954,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "789c4cd5-e2b7-4661-9ab2-1b6e5d7dbed7",
+    "question": "What type of quiz would you like to take?",
+    "response": "grammar",
+    "timestamp": 1747591044613,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "fd7e6677-459f-4eaa-8d63-e01fcc1f9907",
+    "question": "analytics",
+    "response": "Displayed user analytics",
+    "timestamp": 1747591026135,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "a35a5e34-3a09-43a4-a13a-ce77a5781162",
+    "question": "Quiz Question 5: What is 'family' in Spanish?",
+    "response": "Answer: c, Feedback: Correct! Well done!",
+    "timestamp": 1747590983680,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "d1698108-dd9f-424c-b64d-14ee061e72ff",
+    "question": "Quiz Question 4: What is 'book' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747590978798,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "74e10a5a-9124-4727-9fc7-f8fd14eecc4f",
+    "question": "Quiz Question 3: What is 'food' in Spanish?",
+    "response": "Answer: b, Feedback: Correct! Well done!",
+    "timestamp": 1747590973998,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "a11751c8-25d0-4056-92d2-a8b704048f1b",
+    "question": "Quiz Question 2: What is 'dog' in Spanish?",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: perro",
+    "timestamp": 1747590946105,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "51f41e8e-3e90-42ae-86e3-0d0e1bfeef28",
+    "question": "Quiz Question 1: What is 'house' in Spanish?",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: casa",
+    "timestamp": 1747590945108,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "d617c192-e72a-44b4-a1e2-bd2d2cbf0b17",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747590942898,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "language_question",
+    "id": "10a63c31-4429-4c9f-8b4c-762c95eb3bb2",
+    "question": "hi",
+    "response": "Hello, yassin! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747590937341,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "bf96b786-89d2-4e3e-9fab-3859eb8cc4f3",
+    "question": "hello",
+    "response": "Hello, yassin! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747590935381,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "71623493-584a-43e8-b708-a11b3dc30875",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747590925339,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "6c8acb6c-3d83-4a89-be8b-c93018b138f6",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747590925293,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "9fb8f1e6-d384-4170-8edc-fa71daa9b24f",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747590550527,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "70c72eb7-44d7-40ba-a12c-981ac508af2b",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747590484389,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "language_question",
+    "id": "71138f9f-419c-466b-ab9b-5fa8dade711d",
+    "question": "hi",
+    "response": "Hello, yassin! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747590473720,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "b9521ae4-2363-43c9-8630-524c0c0ed9bc",
+    "question": "hello",
+    "response": "Hello, yassin! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747590471125,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "unknown",
+    "id": "6d798d5b-0d9c-4c92-9399-ce3508681c9b",
+    "question": ".\\run_app.bat",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747590394822,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "1fa56ac6-23b7-40ee-8b4a-d3bd8d6b1d4d",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747589748479,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "c9af1c49-d17f-4117-b86b-d72399575cf1",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747589742160,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "2c027f40-d595-4e24-b522-572efe80dada",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747589683294,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "3a769195-c875-4951-90c7-7c2c975b35e4",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747589675462,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "c8c20771-a723-47d1-9369-58233fbb949a",
+    "question": "What type of quiz would you like to take?",
+    "response": "2",
+    "timestamp": 1747589661157,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "b4a57e8a-77db-43a4-953c-7c9f476cefba",
+    "question": "Quiz Question 5: Which city is the capital of Spain?",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: Madrid",
+    "timestamp": 1747589648787,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "920287ac-b699-4462-9397-10027339e05b",
+    "question": "Quiz Question 4: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: s, Feedback: That's not correct. The correct answer is: Paella",
+    "timestamp": 1747589646777,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "92a0a0d1-3948-47e0-a0c9-68508594d123",
+    "question": "Quiz Question 3: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: New Year's Eve",
+    "timestamp": 1747589646004,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "ec8ff60b-735b-43ab-9626-3fe3332109fa",
+    "question": "Quiz Question 2: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747589644897,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "04984f45-9382-4f12-b3e0-cb3d75924f86",
+    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747589642982,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "e9ceb4d7-c62b-429b-8704-1eaaec63eb81",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747589639076,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "92f14fab-5834-4633-8c3e-4115d3d4f70a",
+    "question": "exit quiz",
+    "response": "Exited quiz mode",
+    "timestamp": 1747589624520,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "8c370c24-1921-485c-a7c9-d322f9d948c9",
+    "question": "Quiz Question 1: How do you say 'hello' in Spanish?",
+    "response": "Answer: la, Feedback: That's not correct. The correct answer is: hola",
+    "timestamp": 1747589615364,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "quiz",
+    "id": "c76d96c3-0f7a-4ae8-9e06-dcd5cb10df31",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747589605347,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "58bad8cb-ee61-45f4-9d5e-14e8a13eda40",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747589594704,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "2c66102e-19fb-4c1c-b176-b9df02f51e2e",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747589594700,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "5056efaa-9bbd-49a9-b3c1-f480b7813dfb",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747589579706,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "c0ec348c-abb1-4354-b8a4-8ee80efd89e6",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747589573826,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "c3f9139e-fb88-4dc5-bd2e-b848f482b761",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747589573822,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "55197ce7-c2d9-4c7c-85f6-a639d11de98e",
+    "question": "save settings",
+    "response": "Attempted to save user settings",
+    "timestamp": 1747589569456,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "184a6668-6db2-42c9-9786-9579174611e0",
+    "question": "prefrences",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747589553511,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "0f87b51b-9c63-4ccb-801f-b8e8c3d9ff58",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747589546745,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "37d74976-7ba4-4bdb-aec3-d11eb7f3bf15",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747589546739,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "2577bd82-acaa-4c7a-9d5d-ee72bd077379",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747589542794,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "c3b741aa-f09b-4687-afb0-445f2a5d15a0",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747589528665,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "system",
+    "id": "73c69926-301d-43e1-a040-f75662128e2a",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747589509658,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "category": "settings",
+    "id": "9f4fe601-12d7-465a-a58f-d73a18a5974b",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747589509611,
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }],
+  "quizResults": [{
+    "correctAnswers": 0,
+    "id": "93f14569-ff1b-4f97-8765-c4f64a037376",
+    "questions": [{
+      "correctAnswer": "famille",
+      "isCorrect": false,
+      "question": "What is 'family' in French?",
+      "userAnswer": "travail"
+    }, {
+      "correctAnswer": "maison",
+      "isCorrect": false,
+      "question": "What is 'house' in French?",
+      "userAnswer": "livre"
+    }, {
+      "correctAnswer": "nourriture",
+      "isCorrect": false,
+      "question": "What is 'food' in French?",
+      "userAnswer": "argent"
+    }, {
+      "correctAnswer": "livre",
+      "isCorrect": false,
+      "question": "What is 'book' in French?",
+      "userAnswer": "dd"
+    }, {
+      "correctAnswer": "chien",
+      "isCorrect": false,
+      "question": "What is 'dog' in French?",
+      "userAnswer": "souris"
+    }],
+    "quizType": "Vocabulary",
+    "score": 0.0,
+    "timestamp": 1747599006076,
+    "totalQuestions": 5,
+    "userAnswers": ["travail", "livre", "argent", "dd", "souris"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 1,
+    "id": "ba274b36-159a-4576-8551-1901dfec9e4a",
+    "questions": [{
+      "correctAnswer": "nourriture",
+      "isCorrect": false,
+      "question": "What is 'food' in French?",
+      "userAnswer": "eau"
+    }, {
+      "correctAnswer": "chien",
+      "isCorrect": false,
+      "question": "What is 'dog' in French?",
+      "userAnswer": "oiseau"
+    }, {
+      "correctAnswer": "maison",
+      "isCorrect": false,
+      "question": "What is 'house' in French?",
+      "userAnswer": "s"
+    }, {
+      "correctAnswer": "livre",
+      "isCorrect": true,
+      "question": "What is 'book' in French?",
+      "userAnswer": "livre"
+    }, {
+      "correctAnswer": "famille",
+      "isCorrect": false,
+      "question": "What is 'family' in French?",
+      "userAnswer": "amis"
+    }],
+    "quizType": "Vocabulary",
+    "score": 1.0,
+    "timestamp": 1747598989080,
+    "totalQuestions": 5,
+    "userAnswers": ["eau", "oiseau", "s", "livre", "amis"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 0,
+    "id": "f7f61874-648d-4a3e-9fd6-0ca8f8501681",
+    "questions": [{
+      "correctAnswer": "maison",
+      "isCorrect": false,
+      "question": "What is 'house' in French?",
+      "userAnswer": "livre"
+    }, {
+      "correctAnswer": "chien",
+      "isCorrect": false,
+      "question": "What is 'dog' in French?",
+      "userAnswer": "as"
+    }, {
+      "correctAnswer": "nourriture",
+      "isCorrect": false,
+      "question": "What is 'food' in French?",
+      "userAnswer": "argent"
+    }, {
+      "correctAnswer": "livre",
+      "isCorrect": false,
+      "question": "What is 'book' in French?",
+      "userAnswer": "f"
+    }, {
+      "correctAnswer": "famille",
+      "isCorrect": false,
+      "question": "What is 'family' in French?",
+      "userAnswer": "f"
+    }],
+    "quizType": "Vocabulary",
+    "score": 0.0,
+    "timestamp": 1747598408401,
+    "totalQuestions": 5,
+    "userAnswers": ["livre", "as", "argent", "f", "f"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 1,
+    "id": "46854201-c90c-407e-9c75-0e0a0bab46da",
+    "questions": [{
+      "correctAnswer": "maison",
+      "isCorrect": true,
+      "question": "What is 'house' in French?",
+      "userAnswer": "maison"
+    }, {
+      "correctAnswer": "chien",
+      "isCorrect": false,
+      "question": "What is 'dog' in French?",
+      "userAnswer": "chat"
+    }, {
+      "correctAnswer": "nourriture",
+      "isCorrect": false,
+      "question": "What is 'food' in French?",
+      "userAnswer": "eau"
+    }, {
+      "correctAnswer": "livre",
+      "isCorrect": false,
+      "question": "What is 'book' in French?",
+      "userAnswer": "aa"
+    }, {
+      "correctAnswer": "famille",
+      "isCorrect": false,
+      "question": "What is 'family' in French?",
+      "userAnswer": "amis"
+    }],
+    "quizType": "Vocabulary",
+    "score": 1.0,
+    "timestamp": 1747598396149,
+    "totalQuestions": 5,
+    "userAnswers": ["maison", "chat", "eau", "aa", "amis"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 1,
+    "id": "ba91106d-b70e-4bb4-9fda-d12be803930d",
+    "questions": [{
+      "correctAnswer": "maison",
+      "isCorrect": true,
+      "question": "What is 'house' in French?",
+      "userAnswer": "maison"
+    }, {
+      "correctAnswer": "chien",
+      "isCorrect": false,
+      "question": "What is 'dog' in French?",
+      "userAnswer": "chat"
+    }, {
+      "correctAnswer": "nourriture",
+      "isCorrect": false,
+      "question": "What is 'food' in French?",
+      "userAnswer": "x"
+    }, {
+      "correctAnswer": "livre",
+      "isCorrect": false,
+      "question": "What is 'book' in French?",
+      "userAnswer": "xs"
+    }, {
+      "correctAnswer": "famille",
+      "isCorrect": false,
+      "question": "What is 'family' in French?",
+      "userAnswer": "amis"
+    }],
+    "quizType": "Vocabulary",
+    "score": 1.0,
+    "timestamp": 1747598276514,
+    "totalQuestions": 5,
+    "userAnswers": ["maison", "chat", "x", "xs", "amis"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 2,
+    "id": "9f447ca7-c498-48fc-87e3-a1b9d04996be",
+    "questions": [{
+      "correctAnswer": "maison",
+      "isCorrect": true,
+      "question": "What is 'house' in French?",
+      "userAnswer": "maison"
+    }, {
+      "correctAnswer": "chien",
+      "isCorrect": false,
+      "question": "What is 'dog' in French?",
+      "userAnswer": "chat"
+    }, {
+      "correctAnswer": "nourriture",
+      "isCorrect": false,
+      "question": "What is 'food' in French?",
+      "userAnswer": "aa"
+    }, {
+      "correctAnswer": "livre",
+      "isCorrect": true,
+      "question": "What is 'book' in French?",
+      "userAnswer": "livre"
+    }, {
+      "correctAnswer": "famille",
+      "isCorrect": false,
+      "question": "What is 'family' in French?",
+      "userAnswer": "aa"
+    }],
+    "quizType": "Vocabulary",
+    "score": 2.0,
+    "timestamp": 1747598239171,
+    "totalQuestions": 5,
+    "userAnswers": ["maison", "chat", "aa", "livre", "aa"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 1,
+    "id": "1fcff635-9081-4f90-a8f2-3d9966fe3d25",
+    "questions": [{
+      "correctAnswer": "spreche",
+      "isCorrect": true,
+      "question": "Which is the correct conjugation of 'sprechen' for 'ich'?",
+      "userAnswer": "spreche"
+    }, {
+      "correctAnswer": "das",
+      "isCorrect": false,
+      "question": "Which article matches with 'Haus'?",
+      "userAnswer": "der"
+    }, {
+      "correctAnswer": "die Bücher",
+      "isCorrect": false,
+      "question": "What is the plural form of 'das Buch'?",
+      "userAnswer": "das bücher"
+    }, {
+      "correctAnswer": "lesen",
+      "isCorrect": false,
+      "question": "Which word is a verb?",
+      "userAnswer": "schön"
+    }, {
+      "correctAnswer": "Ich esse einen Apfel",
+      "isCorrect": false,
+      "question": "Select the correct sentence:",
+      "userAnswer": "ich esse ein apfel"
+    }],
+    "quizType": "Grammar",
+    "score": 1.0,
+    "timestamp": 1747596990031,
+    "totalQuestions": 5,
+    "userAnswers": ["spreche", "der", "das bücher", "schön", "ich esse ein apfel"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 4,
+    "id": "7477d220-a19c-4d47-b56f-af930f852a01",
+    "questions": [{
+      "correctAnswer": "spreche",
+      "isCorrect": true,
+      "question": "Which is the correct conjugation of 'sprechen' for 'ich'?",
+      "userAnswer": "spreche"
+    }, {
+      "correctAnswer": "das",
+      "isCorrect": true,
+      "question": "Which article matches with 'Haus'?",
+      "userAnswer": "das"
+    }, {
+      "correctAnswer": "die Bücher",
+      "isCorrect": false,
+      "question": "What is the plural form of 'das Buch'?",
+      "userAnswer": "der bücher"
+    }, {
+      "correctAnswer": "lesen",
+      "isCorrect": true,
+      "question": "Which word is a verb?",
+      "userAnswer": "lesen"
+    }, {
+      "correctAnswer": "Ich esse einen Apfel",
+      "isCorrect": true,
+      "question": "Select the correct sentence:",
+      "userAnswer": "Ich esse einen Apfel"
+    }],
+    "quizType": "Grammar",
+    "score": 4.0,
+    "timestamp": 1747596966622,
+    "totalQuestions": 5,
+    "userAnswers": ["spreche", "das", "der bücher", "lesen", "Ich esse einen Apfel"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 2,
+    "id": "354bd5fe-1684-4d09-a4e3-887a2631dc37",
+    "questions": [{
+      "correctAnswer": "hablo",
+      "isCorrect": false,
+      "question": "Which is the correct conjugation of 'hablar' for 'yo'?",
+      "userAnswer": "habla"
+    }, {
+      "correctAnswer": "la",
+      "isCorrect": true,
+      "question": "Which article matches with 'casa'?",
+      "userAnswer": "la"
+    }, {
+      "correctAnswer": "los libros",
+      "isCorrect": false,
+      "question": "What is the plural form of 'el libro'?",
+      "userAnswer": "los libro"
+    }, {
+      "correctAnswer": "correr",
+      "isCorrect": true,
+      "question": "Which word is a verb?",
+      "userAnswer": "correr"
+    }, {
+      "correctAnswer": "Tú comes manzanas",
+      "isCorrect": false,
+      "question": "Select the correct sentence:",
+      "userAnswer": "yo come manzanas"
+    }],
+    "quizType": "Grammar",
+    "score": 2.0,
+    "timestamp": 1747591057840,
+    "totalQuestions": 5,
+    "userAnswers": ["habla", "la", "los libro", "correr", "yo come manzanas"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 3,
+    "id": "10c799dd-0aef-4842-91a0-16381567154e",
+    "questions": [{
+      "correctAnswer": "casa",
+      "isCorrect": false,
+      "question": "What is 'house' in Spanish?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "perro",
+      "isCorrect": false,
+      "question": "What is 'dog' in Spanish?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "comida",
+      "isCorrect": true,
+      "question": "What is 'food' in Spanish?",
+      "userAnswer": "comida"
+    }, {
+      "correctAnswer": "libro",
+      "isCorrect": true,
+      "question": "What is 'book' in Spanish?",
+      "userAnswer": "libro"
+    }, {
+      "correctAnswer": "familia",
+      "isCorrect": true,
+      "question": "What is 'family' in Spanish?",
+      "userAnswer": "familia"
+    }],
+    "quizType": "Vocabulary",
+    "score": 3.0,
+    "timestamp": 1747590983688,
+    "totalQuestions": 5,
+    "userAnswers": ["", "", "comida", "libro", "familia"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }, {
+    "correctAnswers": 2,
+    "id": "4f16cc88-fde4-44f3-854d-adf11b97ad3e",
+    "questions": [{
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }, {
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": false,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "d"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": false,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "s"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": false,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "aa"
+    }],
+    "quizType": "MCQ",
+    "score": 2.0,
+    "timestamp": 1747589648796,
+    "totalQuestions": 5,
+    "userAnswers": ["Pablo Picasso", "Real Madrid", "d", "s", "aa"],
+    "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27"
+  }],
+  "userId": "a7f08bed-21d0-4b64-8c03-e10ba39a1e27",
+  "username": "yassin"
+}, {
+  "email": "yaa",
+  "interactions": [{
+    "category": "thanks",
+    "id": "b414e0a3-9efc-4aca-8ce9-23fdeacf877b",
+    "question": "set difficulty level hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747582314169,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "thanks",
+    "id": "1bdb9737-63c7-4e66-805a-95716c03722e",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747582300943,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "settings",
+    "id": "ee2e9d87-a800-485e-8464-d653f835c683",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747582293965,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "settings",
+    "id": "e8b805b8-7add-48ef-ad1a-543eb4c138fc",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747582284112,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }, {
+    "category": "system",
+    "id": "9accc090-6e75-4665-9eb3-90de840fcdf4",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747582271554,
+    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+  }],
+  "quizResults": [],
+  "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6",
+  "username": "yaa"
+}, {
+  "email": "ramez",
+  "interactions": [{
+    "category": "quiz",
+    "id": "2d41dcee-31b9-49ef-afc8-c801bc2e4760",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: Real Madrid",
+    "timestamp": 1746900489362,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ccd9b9c7-326b-4606-8115-6e1f896d6c89",
+    "question": "Quiz Question 4: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488990,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "52e3dd65-af09-46d6-b6e8-9faa1a37f890",
+    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488402,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "fe6ee49b-4f80-400f-a34f-04f5c2c7aaa4",
+    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900488002,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "3b1720bf-34ab-4945-8158-ca48a8fc0eed",
+    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900487630,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "8a101fa8-1ca7-41b8-a973-df3de656ec84",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900486242,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ff986b31-7931-49d0-bec3-34314fa1440c",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900486237,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "unknown",
+    "id": "b7c64f3a-f82d-4632-acfb-d2d2cfa22075",
+    "question": "mcq",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746900482800,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "1db68540-be8e-4fb3-87a9-166e59b094da",
+    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900478407,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "310ca165-c4fe-4b2c-bf05-e71237618c5a",
+    "question": "Quiz Question 4: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900477841,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "bf60af64-5b53-48d7-913e-cc8cf11514a9",
+    "question": "Quiz Question 3: Which city is the capital of Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900477395,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "c21fde75-c3e4-4a0b-ae99-75bacd5236b7",
+    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900476972,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "aecb3d0d-7028-4391-9db5-b59fec6b9b92",
+    "question": "Quiz Question 1: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900476651,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "2aac629f-d088-4e83-ab26-adbecf1dc1ae",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900476052,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "7175abf7-6707-4ff8-89be-00647eef2a56",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900476047,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "cab45f5e-8c50-4f59-ac9e-f316bda7cde2",
+    "question": "Quiz Question 5: Which Spanish city is famous for the 'Running of the Bulls'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900466011,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "ff4aa1f3-9afb-4c15-a0ef-5359d6f4fc3c",
+    "question": "Quiz Question 4: Which is the longest river in Spain?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900465547,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "7449964f-1c80-44d9-b723-630f447d6a71",
+    "question": "Quiz Question 3: Which animal is featured on the Spanish coat of arms?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900465162,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "586d9634-2890-438e-b7ca-e77eed2073bb",
+    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900464829,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "fb03cad2-f130-4e13-a394-4284ca4ebff0",
+    "question": "Quiz Question 1: Which mountain range runs along the border between Spain and France?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1746900464499,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "4241cfab-4c42-4b3a-b091-8e9d293ba3cc",
+    "question": "quiz",
+    "response": "Started a new quiz session",
+    "timestamp": 1746900463283,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "quiz",
+    "id": "60c4cf00-7615-4a94-b973-443659059972",
+    "question": "What type of quiz would you like to take?",
+    "response": "mcq",
+    "timestamp": 1746900463219,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "unknown",
+    "id": "93694544-7ccf-4c0d-b9dc-caa4a757bfe1",
+    "question": "sss",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
+    "timestamp": 1746888774448,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "system",
+    "id": "83444530-eecc-4427-9c6b-0ab7e5ca1021",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746888772357,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "category": "system",
+    "id": "29662a70-a516-481c-aeb1-930ef7b06bc6",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1746888638046,
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }],
+  "quizResults": [{
+    "correctAnswers": 4,
+    "id": "0d373864-df04-4280-8e3b-ff97e4f7b735",
+    "questions": [{
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": false,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": ""
+    }],
+    "quizType": "MCQ",
+    "score": 4.0,
+    "timestamp": 1746900489366,
+    "totalQuestions": 5,
+    "userAnswers": ["Pablo Picasso", "Paella", "Madrid", "New Year's Eve", ""],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 5,
+    "id": "fafe6a1c-f530-4f95-9e6e-b21df7e336ba",
+    "questions": [{
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": true,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "Paella"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": true,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Madrid"
+    }, {
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900478411,
+    "totalQuestions": 5,
+    "userAnswers": ["New Year's Eve", "Paella", "Madrid", "Pablo Picasso", "Real Madrid"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 5,
+    "id": "65f7eb6e-84e7-411d-9ce5-2acda698279b",
+    "questions": [{
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746900466019,
+    "totalQuestions": 5,
+    "userAnswers": ["Pyrenees", "Mallorca", "Eagle", "Ebro", "Pamplona"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 1,
+    "id": "9685ae91-fd6c-4f38-81e4-e1c18d977847",
+    "questions": [{
+      "correctAnswer": "hablo",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'hablar' (yo)?",
+      "userAnswer": "hablo"
+    }, {
+      "correctAnswer": "comes",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'comer' (tú)?",
+      "userAnswer": "comes"
+    }, {
+      "correctAnswer": "van",
+      "isCorrect": true,
+      "question": "What is the correct present tense for 'ir' (ellos)?",
+      "userAnswer": "van"
+    }, {
+      "correctAnswer": "somos",
+      "isCorrect": true,
+      "question": "What is the correct present tense for 'ser' (nosotros)?",
+      "userAnswer": "somos"
+    }, {
+      "correctAnswer": "vive",
+      "isCorrect": true,
+      "question": "What is the correct present tense conjugation for 'vivir' (él)?",
+      "userAnswer": "vive"
+    }],
+    "quizType": "Grammar",
+    "score": 5.0,
+    "timestamp": 1746888856146,
+    "totalQuestions": 5,
+    "userAnswers": ["hablo", "comes", "van", "somos", "vive"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }, {
+    "correctAnswers": 1,
+    "id": "655f14b0-bc73-47fe-bd51-a797dd5d5cd7",
+    "questions": [{
+      "correctAnswer": "Mallorca",
+      "isCorrect": true,
+      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
+      "userAnswer": "Mallorca"
+    }, {
+      "correctAnswer": "Pyrenees",
+      "isCorrect": true,
+      "question": "Which mountain range runs along the border between Spain and France?",
+      "userAnswer": "Pyrenees"
+    }, {
+      "correctAnswer": "Eagle",
+      "isCorrect": true,
+      "question": "Which animal is featured on the Spanish coat of arms?",
+      "userAnswer": "Eagle"
+    }, {
+      "correctAnswer": "Pamplona",
+      "isCorrect": true,
+      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
+      "userAnswer": "Pamplona"
+    }, {
+      "correctAnswer": "Ebro",
+      "isCorrect": true,
+      "question": "Which is the longest river in Spain?",
+      "userAnswer": "Ebro"
+    }],
+    "quizType": "MCQ",
+    "score": 5.0,
+    "timestamp": 1746888827725,
+    "totalQuestions": 5,
+    "userAnswers": ["Mallorca", "Pyrenees", "Eagle", "Pamplona", "Ebro"],
+    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+  }],
+  "userId": "083fa50b-dc29-4076-bc73-53b325339d62",
+  "username": "mazen"
+}, {
+  "email": "Yassin.Hany@yahos",
+  "interactions": [{
+    "category": "quiz",
+    "id": "62aaa0ea-d5d4-4695-9332-c1186a79e0d4",
+    "question": "Quiz Question 5: What is 'house' in Spanish?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: casa",
+    "timestamp": 1747425158344,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "3335a044-d266-402a-bd11-144f5a8728bd",
+    "question": "Quiz Question 4: What is 'bed' in Spanish?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: cama",
+    "timestamp": 1747425157082,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "cd73bfd8-910a-4abd-81f0-65892d49a762",
+    "question": "Quiz Question 3: What is 'cshair' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747425155793,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "16d5fa04-21cf-413e-8e89-13113e67bbbe",
+    "question": "Quiz Question 2: What is 'door' in Spanish?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: puerta",
+    "timestamp": 1747425153652,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "50b17757-398e-4cf4-a843-7a73765112a2",
+    "question": "Quiz Question 1: What is 'table' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747425151818,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "quiz",
+    "id": "95b0d13f-0c93-488f-9de7-82c41693e684",
+    "question": "What type of quiz would you like to take?",
+    "response": "vocabulary",
+    "timestamp": 1747425149645,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "system",
+    "id": "f8af57f4-06a7-4450-9d66-ff3b858615e6",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747425132054,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "thanks",
+    "id": "a03434dd-aeae-4a5c-a289-8c6c4563858c",
+    "question": "set difficulty easy",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747425128878,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "system",
+    "id": "fe67de0e-2163-448c-bf0a-050a3aea0a8d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747425101621,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }, {
+    "category": "system",
+    "id": "f0462229-4692-486d-be42-946bbc9a4122",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747425092749,
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }],
+  "quizResults": [{
+    "correctAnswers": 2,
+    "id": "b13d3580-b1e6-41ea-aaac-c9863ccc44f3",
+    "questions": [{
+      "correctAnswer": "mesa",
+      "isCorrect": true,
+      "question": "What is 'table' in Spanish?",
+      "userAnswer": "mesa"
+    }, {
+      "correctAnswer": "puerta",
+      "isCorrect": false,
+      "question": "What is 'door' in Spanish?",
+      "userAnswer": "ventana"
+    }, {
+      "correctAnswer": "silla",
+      "isCorrect": true,
+      "question": "What is 'cshair' in Spanish?",
+      "userAnswer": "silla"
+    }, {
+      "correctAnswer": "cama",
+      "isCorrect": false,
+      "question": "What is 'bed' in Spanish?",
+      "userAnswer": "mesa"
+    }, {
+      "correctAnswer": "casa",
+      "isCorrect": false,
+      "question": "What is 'house' in Spanish?",
+      "userAnswer": "oficina"
+    }],
+    "quizType": "Vocabulary",
+    "score": 2.0,
+    "timestamp": 1747425158357,
+    "totalQuestions": 5,
+    "userAnswers": ["mesa", "ventana", "silla", "mesa", "oficina"],
+    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+  }],
+  "userId": "4260a945-81ab-4c93-bf6e-6571b986666b",
+  "username": "Yassin"
+}, {
+  "email": "yasi",
+  "interactions": [{
+    "category": "quiz",
+    "id": "a3b1ba33-3b49-4464-b53f-f13016327bc8",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747596627555,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "settings",
+    "id": "808681ee-52bd-4551-aa6c-61fd2e2dad86",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747596624679,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "quiz",
+    "id": "18fc5b1f-e285-4b86-b92b-ff4f818d29d5",
+    "question": "Quiz Question 5: Translate: 'She works at a hospital'",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: Ella trabaja en un hospital",
+    "timestamp": 1747596580525,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "quiz",
+    "id": "4b39fb87-8536-471f-af56-442e020964cc",
+    "question": "Quiz Question 4: Translate: 'I like to travel'",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: Me gusta viajar",
+    "timestamp": 1747596579829,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "quiz",
+    "id": "1f8625ab-f86a-4591-96e6-9e3a32b7d17d",
+    "question": "Quiz Question 3: Translate: 'My name is John'",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: Me llamo John",
+    "timestamp": 1747596579396,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "quiz",
+    "id": "16d808ac-8602-46cf-9bad-74e8e45bcae6",
+    "question": "Quiz Question 2: Translate: 'Where is the bathroom?'",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: ¿Dónde está el baño?",
+    "timestamp": 1747596578005,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "quiz",
+    "id": "6016f7a7-17fd-4c69-8398-cda8c0329e0f",
+    "question": "Quiz Question 1: Translate: 'I eat breakfast every day'",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: Yo como el desayuno todos los días",
+    "timestamp": 1747596577526,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "quiz",
+    "id": "10ca4514-2118-440e-aa45-d4a809dab6c3",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747596575039,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "system",
+    "id": "05876903-fc4d-4f12-be8f-1d1132fe4afd",
+    "question": "save settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747596522461,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "settings",
+    "id": "15cce479-c81a-4dcf-8ec8-5eabd93657ef",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747596522457,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "system",
+    "id": "e41abb88-116e-44d2-9dcb-8c858a7bca7e",
+    "question": "save settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747596487030,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "settings",
+    "id": "c725867a-18a5-4352-88c8-d81b674f6347",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747596487023,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "settings",
+    "id": "3786b1c7-d72b-456c-8e43-f33597eb7e4c",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747596481986,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "settings",
+    "id": "77d8c8d2-1078-4bbd-8833-3e1e13222778",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747596471970,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "system",
+    "id": "dd1dc3cb-c331-49a4-a218-c1c8dd24a44d",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747596457613,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "settings",
+    "id": "a5bf7e55-9df7-4c03-9920-d185255e6408",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747596457605,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "unknown",
+    "id": "e9427dc5-02c5-4f5f-886f-a45289677afa",
+    "question": "hello",
+    "response": "Hello, hh! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747596454423,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }, {
+    "category": "language_question",
+    "id": "81deaa2c-51cf-400b-8894-6e551c977d6b",
+    "question": "hi",
+    "response": "Hello, hh! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747596451875,
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }],
+  "quizResults": [{
+    "correctAnswers": 0,
+    "id": "f14d3512-4ae0-42c9-bc71-2961ae8e5664",
+    "questions": [{
+      "correctAnswer": "Yo como el desayuno todos los días",
+      "isCorrect": false,
+      "question": "Translate: 'I eat breakfast every day'",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "¿Dónde está el baño?",
+      "isCorrect": false,
+      "question": "Translate: 'Where is the bathroom?'",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Me llamo John",
+      "isCorrect": false,
+      "question": "Translate: 'My name is John'",
+      "userAnswer": "yo llamo john"
+    }, {
+      "correctAnswer": "Me gusta viajar",
+      "isCorrect": false,
+      "question": "Translate: 'I like to travel'",
+      "userAnswer": "yo gusto viajar"
+    }, {
+      "correctAnswer": "Ella trabaja en un hospital",
+      "isCorrect": false,
+      "question": "Translate: 'She works at a hospital'",
+      "userAnswer": "ella trabajar en un hospital"
+    }],
+    "quizType": "Translation",
+    "score": 0.0,
+    "timestamp": 1747596580535,
+    "totalQuestions": 5,
+    "userAnswers": ["", "", "yo llamo john", "yo gusto viajar", "ella trabajar en un hospital"],
+    "userId": "6402698b-f199-425c-bc99-02d24c54ee9e"
+  }],
+  "userId": "6402698b-f199-425c-bc99-02d24c54ee9e",
+  "username": "hh"
+}, {
   "email": "mazen",
   "interactions": [{
+    "category": "settings",
+    "id": "4a096b7f-0414-445d-b280-7ab4a546d2e2",
+    "question": "dir settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747583943740,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "unknown",
+    "id": "c7f943d6-7f6b-4006-8a0f-f3d7919cce8a",
+    "question": "q",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747583934408,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
+    "category": "thanks",
+    "id": "c4d3c574-b9e0-4177-af30-43b5e0c4b846",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747583914307,
+    "userId": "fb3f2991-2a99-4217-838a-71013cf35465"
+  }, {
     "category": "thanks",
     "id": "11c0426c-def7-4e06-9472-2594e7221d8e",
     "question": "set difficulty hard",
@@ -6927,6 +9288,802 @@
   "userId": "9aaf8a6d-9ba2-4fe3-9f84-0c300339ffd9",
   "username": "mo"
 }, {
+  "email": "123",
+  "interactions": [{
+    "category": "thanks",
+    "id": "c6252df0-37e5-4270-a43f-913b4628c4b5",
+    "question": "set difficulty level Medium",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747587432450,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "d8393806-b872-4248-b9e2-8c4dfeb6d60e",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747587420334,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "8bd5d210-013e-4c86-9285-f7c815b9f2ba",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747587420328,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "67a1db76-7ce2-4183-a418-7a67490ecbc9",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747587408879,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "0e1ae04a-e20d-4753-a48a-d791bd5d3355",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747587404837,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "a2f98e96-933c-47c4-a653-96b445a8b3bc",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747587393716,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "e5728801-6778-49e2-bd8b-6be14804e786",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747587373463,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "ef08fb2f-af98-4847-945f-08ab32de0e42",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747587368701,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "29bf27ec-5399-4315-be0a-f7de1cb8a03d",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747587368683,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "bb4aa99f-9376-44de-8a54-24e972fdd08f",
+    "question": "What type of quiz would you like to take?",
+    "response": "settings",
+    "timestamp": 1747587361523,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "eb54c43e-9ec0-4675-a781-0ee6f382e217",
+    "question": "set difficulty hard",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747586186944,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "ce878262-1b56-453d-8492-48331a6519f0",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747586175228,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "e924166c-fae2-48ee-b9e6-e767ba3093f5",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747586175223,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "3d144311-ccfd-4e8e-a5ad-a1caac6bbd42",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747586163292,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "e2378fb4-18fe-46ab-a627-980ae00c381a",
+    "question": "set mother language french",
+    "response": "Mother language set to French",
+    "timestamp": 1747586156733,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "7d542fcb-8382-4e04-b722-ab5d0b92c82a",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747586145377,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "f2926508-1677-499b-9776-2ecf896c104a",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747586145371,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "f6555c87-91a5-45e8-87ba-2462cd002e7c",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747586134974,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "8972cde8-17b5-4734-81b9-67af0209532a",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747586134969,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "16408153-3050-446e-a86e-b492e9d4d1fd",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747586103479,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "fcb3bc99-6fb2-4315-8ef7-145e189afdc3",
+    "question": "set target language french",
+    "response": "Target language set to French",
+    "timestamp": 1747586098250,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "8ab5115f-98d9-453f-b00b-f7ad8826a61e",
+    "question": "set mother language spanish",
+    "response": "Mother language set to Spanish",
+    "timestamp": 1747586088068,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "ccfeefb1-d0f0-4d5f-b2a5-21f410c6e0a7",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747586077150,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "8c993695-3b82-4cdc-ae9c-e80b9f87155a",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747586077144,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "78eef653-4c94-4ccc-8741-b5f325a96fc0",
+    "question": "analytics",
+    "response": "Displayed user analytics",
+    "timestamp": 1747586030816,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "00665f1d-8705-45ad-b7e8-e8806c64bd60",
+    "question": "Quiz Question 5: What is 'door' in Spanish?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: puerta",
+    "timestamp": 1747586020973,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "28f32178-4b6b-41c8-a946-e53f9d03f6bc",
+    "question": "Quiz Question 4: What is 'house' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747586020409,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "2c4191fd-b6a0-4e12-ad96-5d0cb1f27ca7",
+    "question": "Quiz Question 3: What is 'cshair' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747586019130,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "5dd77767-a357-4d54-87cd-350817c59491",
+    "question": "Quiz Question 2: What is 'table' in Spanish?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: mesa",
+    "timestamp": 1747586018445,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "c4761574-b07e-4d22-b6b6-f4ba15af029c",
+    "question": "Quiz Question 1: What is 'bed' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747586015227,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "36392839-ba94-4b4b-a25c-8c002429a72a",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747586014383,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "07451afe-c766-468f-b625-80497f8ef551",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747585989899,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "3d1b0d7b-3899-4cc9-ac4b-193d71e1d3b5",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747585989891,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "8ce920dc-5e65-425f-a97b-1515c8e4d3b2",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit the quiz",
+    "timestamp": 1747585984095,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "c6f83663-00e8-484e-bf7f-793d8d7531db",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747585960846,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "1232bf67-bc73-4f57-80dc-9744293ab71b",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747585960809,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "unknown",
+    "id": "54ce8309-92d4-4216-8646-c02575790ee3",
+    "question": "",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747585536595,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz_request",
+    "id": "97cee379-b8b6-44d0-a745-088a68698893",
+    "question": "i want start quiz",
+    "response": "¿Qué tipo de cuestionario te gustaría realizar? Ofrecemos:\r\n1. Vocabulario - Pon a prueba tu conocimiento de palabras\r\n2. Gramática - Practica reglas del lenguaje\r\n3. Traducción - Traduce entre idiomas\r\n4. Opción múltiple (MCQ) - Preguntas generales de idioma\r\n\r\nPor favor, escribe el número (1-4) o el nombre del cuestionario que deseas realizar.",
+    "timestamp": 1747585536478,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "1ec5b793-9243-40c3-b7aa-1105e7d45a1b",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747585530531,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "50fe61a8-f3c0-414b-bd1e-fe424dc9b0aa",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747585530526,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "860bcc8b-0477-4890-a135-c386d57dab78",
+    "question": "What type of quiz would you like to take?",
+    "response": "i want quiz",
+    "timestamp": 1747585523470,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "8087c15d-035a-4d2e-b0fb-fff1965fdf82",
+    "question": "Quiz Question 5: What is 'banana' in Spanish?",
+    "response": "Answer: f, Feedback: That's not correct. The correct answer is: plátano",
+    "timestamp": 1747585464938,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "51ce1c67-14aa-4b45-865a-3ba94c2525c2",
+    "question": "Quiz Question 4: What is 'bread' in Spanish?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: pan",
+    "timestamp": 1747585464260,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "cc62be34-8941-4366-9cf0-99766484c058",
+    "question": "Quiz Question 3: What is 'apple' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747585463709,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "275a5e09-d347-4f25-82ad-c874d2d74406",
+    "question": "Quiz Question 2: What is 'cheese' in Spanish?",
+    "response": "Answer: s, Feedback: That's not correct. The correct answer is: queso",
+    "timestamp": 1747585462321,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "73905411-1e99-4cf0-b89d-58ed15aecbc2",
+    "question": "Quiz Question 1: What is 'water' in Spanish?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747585461765,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "dea043b3-e152-4b57-88dd-935e34b86e93",
+    "question": "What type of quiz would you like to take?",
+    "response": "vocab",
+    "timestamp": 1747585459972,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "79254d84-f526-4536-a093-b86b7aacfe7d",
+    "question": "save settings",
+    "response": "Attempted to save user settings",
+    "timestamp": 1747585448205,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "76f6d62c-7f34-490b-9ce3-0f2279629cc3",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747585440006,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "1cd14041-4492-4610-b942-697aae902992",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747585426601,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "167c8d67-2f79-4c5b-897b-9ea0a2c66c62",
+    "question": "set difficulty hard",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747585400370,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz_request",
+    "id": "dfe0d58c-93b4-4b10-a353-67d54bc3ce6d",
+    "question": "uiz",
+    "response": "¿Qué tipo de cuestionario te gustaría realizar? Ofrecemos:\r\n1. Vocabulario - Pon a prueba tu conocimiento de palabras\r\n2. Gramática - Practica reglas del lenguaje\r\n3. Traducción - Traduce entre idiomas\r\n4. Opción múltiple (MCQ) - Preguntas generales de idioma\r\n\r\nPor favor, escribe el número (1-4) o el nombre del cuestionario que deseas realizar.",
+    "timestamp": 1747585039566,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "93a65bcf-b9a7-4f33-a3b6-b0ec96d34f47",
+    "question": "Quiz Question 5: Which city is the capital of Spain?",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Madrid",
+    "timestamp": 1747585012357,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "9506fa2b-d27a-4220-89a1-8c25c48d99a0",
+    "question": "Quiz Question 4: Which Spanish dish is made with rice and seafood?",
+    "response": "Answer: s, Feedback: That's not correct. The correct answer is: Paella",
+    "timestamp": 1747585011816,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "2acf9fde-54b9-443f-9060-7a53557020ab",
+    "question": "Quiz Question 3: On which day do Spaniards traditionally eat twelve grapes at midnight?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747585011223,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "64c40c8a-22d8-4287-9108-43715171f0ca",
+    "question": "Quiz Question 2: Which Spanish football club has won the most UEFA Champions League titles?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747585008876,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "cf5c5355-f82d-48fc-b4fb-f538ce3151c8",
+    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747585008558,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "quiz",
+    "id": "d8a4a6a1-9425-4f35-ac3c-fa590266c7ee",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747585005905,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "86c7c5df-3bda-4d38-8439-837553adc426",
+    "question": "set difficulty Medium",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747584995270,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "bf4db56b-8dc8-421a-8476-0909c9b1f843",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747584985021,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "1810d061-10e7-4aa1-8cfa-a8f611038920",
+    "question": "set difficulty medium",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747584968677,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "fa6137d8-04e7-486c-a4a0-b7e49f1aba78",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747584958675,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "a9a73bfc-e841-4e63-a848-ef02a357ec7e",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747584950072,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "96a8c453-b8f3-49f6-9d63-418a3c64cf2e",
+    "question": "set difficulty level hard",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747584701688,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "eca0a554-5d37-483f-9499-f5650a32c146",
+    "question": "set difficulty hard",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747584679973,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "6c45c466-3a1f-407d-9db4-f60a02caad7f",
+    "question": "set difficulty medium",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747584624662,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "3d2432a1-1b95-4bd4-9f80-fff680df2825",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747584614252,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "settings",
+    "id": "f18adaed-897c-4d23-9e4f-9488a54cb689",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747584600842,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "08e149ab-23a4-4f02-95e8-125b722195bb",
+    "question": "set difficulty medium",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747584344287,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "ba8f317d-72ae-4a5f-a943-f8432542d946",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747584330615,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "system",
+    "id": "7d6d1812-e7ed-4942-bb1e-872408cedb5a",
+    "question": "help",
+    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
+    "timestamp": 1747584320951,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "category": "thanks",
+    "id": "dfb69581-b809-482c-9c38-37d0c8e2f33a",
+    "question": "set difficulty hard",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
+    "timestamp": 1747584030159,
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }],
+  "quizResults": [{
+    "correctAnswers": 3,
+    "id": "2343abd3-5716-4199-a3ca-033e725a0cb2",
+    "questions": [{
+      "correctAnswer": "cama",
+      "isCorrect": true,
+      "question": "What is 'bed' in Spanish?",
+      "userAnswer": "cama"
+    }, {
+      "correctAnswer": "mesa",
+      "isCorrect": false,
+      "question": "What is 'table' in Spanish?",
+      "userAnswer": "cama"
+    }, {
+      "correctAnswer": "silla",
+      "isCorrect": true,
+      "question": "What is 'cshair' in Spanish?",
+      "userAnswer": "silla"
+    }, {
+      "correctAnswer": "casa",
+      "isCorrect": true,
+      "question": "What is 'house' in Spanish?",
+      "userAnswer": "casa"
+    }, {
+      "correctAnswer": "puerta",
+      "isCorrect": false,
+      "question": "What is 'door' in Spanish?",
+      "userAnswer": "pared"
+    }],
+    "quizType": "Vocabulary",
+    "score": 3.0,
+    "timestamp": 1747586020981,
+    "totalQuestions": 5,
+    "userAnswers": ["cama", "cama", "silla", "casa", "pared"],
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "correctAnswers": 2,
+    "id": "50c123d9-b33e-47e0-9638-2297e3f24fcc",
+    "questions": [{
+      "correctAnswer": "agua",
+      "isCorrect": true,
+      "question": "What is 'water' in Spanish?",
+      "userAnswer": "agua"
+    }, {
+      "correctAnswer": "queso",
+      "isCorrect": false,
+      "question": "What is 'cheese' in Spanish?",
+      "userAnswer": "s"
+    }, {
+      "correctAnswer": "manzana",
+      "isCorrect": true,
+      "question": "What is 'apple' in Spanish?",
+      "userAnswer": "manzana"
+    }, {
+      "correctAnswer": "pan",
+      "isCorrect": false,
+      "question": "What is 'bread' in Spanish?",
+      "userAnswer": "agua"
+    }, {
+      "correctAnswer": "plátano",
+      "isCorrect": false,
+      "question": "What is 'banana' in Spanish?",
+      "userAnswer": "f"
+    }],
+    "quizType": "Vocabulary",
+    "score": 2.0,
+    "timestamp": 1747585464947,
+    "totalQuestions": 5,
+    "userAnswers": ["agua", "s", "manzana", "agua", "f"],
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }, {
+    "correctAnswers": 3,
+    "id": "55676745-5592-441d-9d42-3e2e6ee10dc4",
+    "questions": [{
+      "correctAnswer": "Pablo Picasso",
+      "isCorrect": true,
+      "question": "Which Spanish artist painted 'Guernica'?",
+      "userAnswer": "Pablo Picasso"
+    }, {
+      "correctAnswer": "Real Madrid",
+      "isCorrect": true,
+      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
+      "userAnswer": "Real Madrid"
+    }, {
+      "correctAnswer": "New Year's Eve",
+      "isCorrect": true,
+      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
+      "userAnswer": "New Year's Eve"
+    }, {
+      "correctAnswer": "Paella",
+      "isCorrect": false,
+      "question": "Which Spanish dish is made with rice and seafood?",
+      "userAnswer": "s"
+    }, {
+      "correctAnswer": "Madrid",
+      "isCorrect": false,
+      "question": "Which city is the capital of Spain?",
+      "userAnswer": "Valencia"
+    }],
+    "quizType": "MCQ",
+    "score": 3.0,
+    "timestamp": 1747585012367,
+    "totalQuestions": 5,
+    "userAnswers": ["Pablo Picasso", "Real Madrid", "New Year's Eve", "s", "Valencia"],
+    "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b"
+  }],
+  "userId": "10d8bcc5-2a0c-4c99-bdab-bb912abee69b",
+  "username": "mazen"
+}, {
+  "email": "yasso",
+  "interactions": [{
+    "category": "system",
+    "id": "097eb756-d0ef-4efe-8df4-53a544a6c69c",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747594301083,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "unknown",
+    "id": "e535d65f-40f8-404b-87b2-4ba2ead0d7b6",
+    "question": "good morning",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747594297386,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "unknown",
+    "id": "a99fde1c-9c07-4179-a5f9-05d489ed045f",
+    "question": "hello",
+    "response": "Hello, yasso! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747594291618,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "language_question",
+    "id": "e433f906-9fc0-43ad-8969-e5b6498ff3db",
+    "question": "hi",
+    "response": "Hello, yasso! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747594288861,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "system",
+    "id": "041928d0-a8e4-4bae-a4ae-0bed6006bfa3",
+    "question": "analytics",
+    "response": "Displayed user analytics",
+    "timestamp": 1747594268126,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "2e0cc2cd-bd8f-4aaa-b34b-5208f322eaad",
+    "question": "Quiz Question 5: How do you say 'goodbye' in Spanish?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: adiós",
+    "timestamp": 1747594263164,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "2ebc6363-2dc8-49d1-85ae-fdccca7f3777",
+    "question": "Quiz Question 4: What is 'water' in Spanish?",
+    "response": "Answer: v, Feedback: That's not correct. The correct answer is: agua",
+    "timestamp": 1747594261303,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "2a741fe8-25f5-4f8f-af20-08f7fc807c6c",
+    "question": "Quiz Question 3: What does 'gracias' mean?",
+    "response": "Answer: c, Feedback: Correct! Well done!",
+    "timestamp": 1747594260046,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "bf8e1e41-91e3-43b5-8a99-5e1633fe123e",
+    "question": "Quiz Question 2: What is 'friend' in Spanish?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: amigo",
+    "timestamp": 1747594258414,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "ff536996-65dc-440b-a6f3-0014a6ecd843",
+    "question": "Quiz Question 1: How do you say 'hello' in Spanish?",
+    "response": "Answer: b, Feedback: Correct! Well done!",
+    "timestamp": 1747594257443,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "2d0d98b2-4dbe-494d-bf62-4540a936374d",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747594253793,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "system",
+    "id": "92babd3f-bb64-431b-a9d4-ab72c2dc77b3",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747594235148,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "settings",
+    "id": "7ff8d597-4099-4e27-adc8-700bccda43b6",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747594235107,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "4c6f6680-5b03-4d46-8275-c6968c33940c",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747594189384,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "43065915-e081-449f-9a09-2fb79a08946e",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747594189378,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "quiz",
+    "id": "a1b40eff-e4a7-427e-b4e9-78509e42b158",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit",
+    "timestamp": 1747594186403,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "system",
+    "id": "50db06b2-cc2d-4713-999f-86b644eb2326",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747594018926,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "settings",
+    "id": "655086c3-c300-49da-b27d-8f1cb53d4575",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747594018916,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "settings",
+    "id": "74c3a46c-b32c-4bd4-9cc0-ce9a0684c8ae",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747594015332,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }, {
+    "category": "settings",
+    "id": "08cba184-4dae-4365-9a94-2ec5a34e9544",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747594003435,
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }],
+  "quizResults": [{
+    "correctAnswers": 2,
+    "id": "76a7e3af-5d0a-4198-a08f-a7ecbea89a46",
+    "questions": [{
+      "correctAnswer": "hola",
+      "isCorrect": true,
+      "question": "How do you say 'hello' in Spanish?",
+      "userAnswer": "hola"
+    }, {
+      "correctAnswer": "amigo",
+      "isCorrect": false,
+      "question": "What is 'friend' in Spanish?",
+      "userAnswer": "familia"
+    }, {
+      "correctAnswer": "thank you",
+      "isCorrect": true,
+      "question": "What does 'gracias' mean?",
+      "userAnswer": "thank you"
+    }, {
+      "correctAnswer": "agua",
+      "isCorrect": false,
+      "question": "What is 'water' in Spanish?",
+      "userAnswer": "v"
+    }, {
+      "correctAnswer": "adiós",
+      "isCorrect": false,
+      "question": "How do you say 'goodbye' in Spanish?",
+      "userAnswer": "buenos días"
+    }],
+    "quizType": "Vocabulary",
+    "score": 2.0,
+    "timestamp": 1747594263172,
+    "totalQuestions": 5,
+    "userAnswers": ["hola", "familia", "thank you", "v", "buenos días"],
+    "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd"
+  }],
+  "userId": "241fb087-ba02-45f2-9af9-2ba74c56cefd",
+  "username": "yasso"
+}, {
   "email": "222",
   "interactions": [{
     "category": "system",
@@ -7416,513 +10573,213 @@
   "userId": "f0890699-4285-4b57-b710-0db0cf0643fb",
   "username": "yassin"
 }, {
-  "email": "yaa",
+  "email": "33",
   "interactions": [{
-    "category": "thanks",
-    "id": "b414e0a3-9efc-4aca-8ce9-23fdeacf877b",
-    "question": "set difficulty level hard",
-    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
-    "timestamp": 1747582314169,
-    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+    "category": "quiz",
+    "id": "cad02482-4004-4a51-a33d-7a38ea85c05c",
+    "question": "Quiz Question 5: Translate: 'She works at a hospital'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747597080264,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }, {
-    "category": "thanks",
-    "id": "1bdb9737-63c7-4e66-805a-95716c03722e",
-    "question": "set difficulty hard",
-    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
-    "timestamp": 1747582300943,
-    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+    "category": "quiz",
+    "id": "2273c270-bb6e-4001-a3f6-c53e955acd79",
+    "question": "Quiz Question 4: Translate: 'I like to travel'",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: J'aime voyager",
+    "timestamp": 1747597079887,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
+  }, {
+    "category": "quiz",
+    "id": "82650018-b444-4d12-a74c-92e341e10154",
+    "question": "Quiz Question 3: Translate: 'My name is John'",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Je m'appelle John",
+    "timestamp": 1747597079243,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
+  }, {
+    "category": "quiz",
+    "id": "de5d9936-ee60-4469-9eec-9a4bce9356b3",
+    "question": "Quiz Question 2: Translate: 'Where is the bathroom?'",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: Où sont les toilettes?",
+    "timestamp": 1747597078908,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
+  }, {
+    "category": "quiz",
+    "id": "01ae9d3c-afb0-404e-b5bd-c9886bb23b63",
+    "question": "Quiz Question 1: Translate: 'I eat breakfast every day'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747597078621,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
+  }, {
+    "category": "quiz",
+    "id": "fd9a240e-103b-4268-bb8d-761024f9b9d4",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747597074668,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }, {
     "category": "settings",
-    "id": "ee2e9d87-a800-485e-8464-d653f835c683",
-    "question": "set target language spanish",
-    "response": "Target language set to Spanish",
-    "timestamp": 1747582293965,
-    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+    "id": "46d96684-24a8-4816-8c7b-4694aa9f9a20",
+    "question": "set target language french",
+    "response": "Target language set to French",
+    "timestamp": 1747597059302,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }, {
     "category": "settings",
-    "id": "e8b805b8-7add-48ef-ad1a-543eb4c138fc",
+    "id": "e2dc96ba-e459-47e3-9416-97fc2e9b52a0",
     "question": "set mother language english",
     "response": "Mother language set to English",
-    "timestamp": 1747582284112,
-    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
+    "timestamp": 1747597049721,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }, {
     "category": "system",
-    "id": "9accc090-6e75-4665-9eb3-90de840fcdf4",
-    "question": "settings",
+    "id": "93920d95-18e0-4037-b9f1-e88c868916ab",
+    "question": "prefrences",
     "response": "Displayed user settings",
-    "timestamp": 1747582271554,
-    "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6"
-  }],
-  "quizResults": [],
-  "userId": "1804cb5b-d3d2-4c2c-a3f2-6ff3c2b596c6",
-  "username": "yaa"
-}, {
-  "email": "ramez",
-  "interactions": [{
-    "category": "quiz",
-    "id": "2d41dcee-31b9-49ef-afc8-c801bc2e4760",
-    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
-    "response": "Answer: , Feedback: You didn't provide an answer. The correct answer is: Real Madrid",
-    "timestamp": 1746900489362,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
+    "timestamp": 1747597035236,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }, {
-    "category": "quiz",
-    "id": "ccd9b9c7-326b-4606-8115-6e1f896d6c89",
-    "question": "Quiz Question 4: On which day do Spaniards traditionally eat twelve grapes at midnight?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900488990,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "52e3dd65-af09-46d6-b6e8-9faa1a37f890",
-    "question": "Quiz Question 3: Which city is the capital of Spain?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900488402,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "fe6ee49b-4f80-400f-a34f-04f5c2c7aaa4",
-    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900488002,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "3b1720bf-34ab-4945-8158-ca48a8fc0eed",
-    "question": "Quiz Question 1: Which Spanish artist painted 'Guernica'?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900487630,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "8a101fa8-1ca7-41b8-a973-df3de656ec84",
-    "question": "quiz",
-    "response": "Started a new quiz session",
-    "timestamp": 1746900486242,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "ff986b31-7931-49d0-bec3-34314fa1440c",
-    "question": "What type of quiz would you like to take?",
-    "response": "mcq",
-    "timestamp": 1746900486237,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "unknown",
-    "id": "b7c64f3a-f82d-4632-acfb-d2d2cfa22075",
-    "question": "mcq",
-    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
-    "timestamp": 1746900482800,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "1db68540-be8e-4fb3-87a9-166e59b094da",
-    "question": "Quiz Question 5: Which Spanish football club has won the most UEFA Champions League titles?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900478407,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "310ca165-c4fe-4b2c-bf05-e71237618c5a",
-    "question": "Quiz Question 4: Which Spanish artist painted 'Guernica'?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900477841,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "bf60af64-5b53-48d7-913e-cc8cf11514a9",
-    "question": "Quiz Question 3: Which city is the capital of Spain?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900477395,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "c21fde75-c3e4-4a0b-ae99-75bacd5236b7",
-    "question": "Quiz Question 2: Which Spanish dish is made with rice and seafood?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900476972,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "aecb3d0d-7028-4391-9db5-b59fec6b9b92",
-    "question": "Quiz Question 1: On which day do Spaniards traditionally eat twelve grapes at midnight?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900476651,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "2aac629f-d088-4e83-ab26-adbecf1dc1ae",
-    "question": "quiz",
-    "response": "Started a new quiz session",
-    "timestamp": 1746900476052,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "7175abf7-6707-4ff8-89be-00647eef2a56",
-    "question": "What type of quiz would you like to take?",
-    "response": "mcq",
-    "timestamp": 1746900476047,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "cab45f5e-8c50-4f59-ac9e-f316bda7cde2",
-    "question": "Quiz Question 5: Which Spanish city is famous for the 'Running of the Bulls'?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900466011,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "ff4aa1f3-9afb-4c15-a0ef-5359d6f4fc3c",
-    "question": "Quiz Question 4: Which is the longest river in Spain?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900465547,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "7449964f-1c80-44d9-b723-630f447d6a71",
-    "question": "Quiz Question 3: Which animal is featured on the Spanish coat of arms?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900465162,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "586d9634-2890-438e-b7ca-e77eed2073bb",
-    "question": "Quiz Question 2: Which of these Spanish islands is located in the Mediterranean Sea?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900464829,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "fb03cad2-f130-4e13-a394-4284ca4ebff0",
-    "question": "Quiz Question 1: Which mountain range runs along the border between Spain and France?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1746900464499,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "4241cfab-4c42-4b3a-b091-8e9d293ba3cc",
-    "question": "quiz",
-    "response": "Started a new quiz session",
-    "timestamp": 1746900463283,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "quiz",
-    "id": "60c4cf00-7615-4a94-b973-443659059972",
-    "question": "What type of quiz would you like to take?",
-    "response": "mcq",
-    "timestamp": 1746900463219,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "unknown",
-    "id": "93694544-7ccf-4c0d-b9dc-caa4a757bfe1",
-    "question": "sss",
-    "response": "I'm not sure I understand. Try asking about quizzes, changing settings, or asking a specific language question.",
-    "timestamp": 1746888774448,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "system",
-    "id": "83444530-eecc-4427-9c6b-0ab7e5ca1021",
-    "question": "help",
-    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
-    "timestamp": 1746888772357,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "category": "system",
-    "id": "29662a70-a516-481c-aeb1-930ef7b06bc6",
-    "question": "help",
-    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
-    "timestamp": 1746888638046,
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }],
-  "quizResults": [{
-    "correctAnswers": 4,
-    "id": "0d373864-df04-4280-8e3b-ff97e4f7b735",
-    "questions": [{
-      "correctAnswer": "Pablo Picasso",
-      "isCorrect": true,
-      "question": "Which Spanish artist painted 'Guernica'?",
-      "userAnswer": "Pablo Picasso"
-    }, {
-      "correctAnswer": "Paella",
-      "isCorrect": true,
-      "question": "Which Spanish dish is made with rice and seafood?",
-      "userAnswer": "Paella"
-    }, {
-      "correctAnswer": "Madrid",
-      "isCorrect": true,
-      "question": "Which city is the capital of Spain?",
-      "userAnswer": "Madrid"
-    }, {
-      "correctAnswer": "New Year's Eve",
-      "isCorrect": true,
-      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
-      "userAnswer": "New Year's Eve"
-    }, {
-      "correctAnswer": "Real Madrid",
-      "isCorrect": false,
-      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
-      "userAnswer": ""
-    }],
-    "quizType": "MCQ",
-    "score": 4.0,
-    "timestamp": 1746900489366,
-    "totalQuestions": 5,
-    "userAnswers": ["Pablo Picasso", "Paella", "Madrid", "New Year's Eve", ""],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 5,
-    "id": "fafe6a1c-f530-4f95-9e6e-b21df7e336ba",
-    "questions": [{
-      "correctAnswer": "New Year's Eve",
-      "isCorrect": true,
-      "question": "On which day do Spaniards traditionally eat twelve grapes at midnight?",
-      "userAnswer": "New Year's Eve"
-    }, {
-      "correctAnswer": "Paella",
-      "isCorrect": true,
-      "question": "Which Spanish dish is made with rice and seafood?",
-      "userAnswer": "Paella"
-    }, {
-      "correctAnswer": "Madrid",
-      "isCorrect": true,
-      "question": "Which city is the capital of Spain?",
-      "userAnswer": "Madrid"
-    }, {
-      "correctAnswer": "Pablo Picasso",
-      "isCorrect": true,
-      "question": "Which Spanish artist painted 'Guernica'?",
-      "userAnswer": "Pablo Picasso"
-    }, {
-      "correctAnswer": "Real Madrid",
-      "isCorrect": true,
-      "question": "Which Spanish football club has won the most UEFA Champions League titles?",
-      "userAnswer": "Real Madrid"
-    }],
-    "quizType": "MCQ",
-    "score": 5.0,
-    "timestamp": 1746900478411,
-    "totalQuestions": 5,
-    "userAnswers": ["New Year's Eve", "Paella", "Madrid", "Pablo Picasso", "Real Madrid"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 5,
-    "id": "65f7eb6e-84e7-411d-9ce5-2acda698279b",
-    "questions": [{
-      "correctAnswer": "Pyrenees",
-      "isCorrect": true,
-      "question": "Which mountain range runs along the border between Spain and France?",
-      "userAnswer": "Pyrenees"
-    }, {
-      "correctAnswer": "Mallorca",
-      "isCorrect": true,
-      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
-      "userAnswer": "Mallorca"
-    }, {
-      "correctAnswer": "Eagle",
-      "isCorrect": true,
-      "question": "Which animal is featured on the Spanish coat of arms?",
-      "userAnswer": "Eagle"
-    }, {
-      "correctAnswer": "Ebro",
-      "isCorrect": true,
-      "question": "Which is the longest river in Spain?",
-      "userAnswer": "Ebro"
-    }, {
-      "correctAnswer": "Pamplona",
-      "isCorrect": true,
-      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
-      "userAnswer": "Pamplona"
-    }],
-    "quizType": "MCQ",
-    "score": 5.0,
-    "timestamp": 1746900466019,
-    "totalQuestions": 5,
-    "userAnswers": ["Pyrenees", "Mallorca", "Eagle", "Ebro", "Pamplona"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 1,
-    "id": "9685ae91-fd6c-4f38-81e4-e1c18d977847",
-    "questions": [{
-      "correctAnswer": "hablo",
-      "isCorrect": true,
-      "question": "What is the correct present tense conjugation for 'hablar' (yo)?",
-      "userAnswer": "hablo"
-    }, {
-      "correctAnswer": "comes",
-      "isCorrect": true,
-      "question": "What is the correct present tense conjugation for 'comer' (tú)?",
-      "userAnswer": "comes"
-    }, {
-      "correctAnswer": "van",
-      "isCorrect": true,
-      "question": "What is the correct present tense for 'ir' (ellos)?",
-      "userAnswer": "van"
-    }, {
-      "correctAnswer": "somos",
-      "isCorrect": true,
-      "question": "What is the correct present tense for 'ser' (nosotros)?",
-      "userAnswer": "somos"
-    }, {
-      "correctAnswer": "vive",
-      "isCorrect": true,
-      "question": "What is the correct present tense conjugation for 'vivir' (él)?",
-      "userAnswer": "vive"
-    }],
-    "quizType": "Grammar",
-    "score": 5.0,
-    "timestamp": 1746888856146,
-    "totalQuestions": 5,
-    "userAnswers": ["hablo", "comes", "van", "somos", "vive"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }, {
-    "correctAnswers": 1,
-    "id": "655f14b0-bc73-47fe-bd51-a797dd5d5cd7",
-    "questions": [{
-      "correctAnswer": "Mallorca",
-      "isCorrect": true,
-      "question": "Which of these Spanish islands is located in the Mediterranean Sea?",
-      "userAnswer": "Mallorca"
-    }, {
-      "correctAnswer": "Pyrenees",
-      "isCorrect": true,
-      "question": "Which mountain range runs along the border between Spain and France?",
-      "userAnswer": "Pyrenees"
-    }, {
-      "correctAnswer": "Eagle",
-      "isCorrect": true,
-      "question": "Which animal is featured on the Spanish coat of arms?",
-      "userAnswer": "Eagle"
-    }, {
-      "correctAnswer": "Pamplona",
-      "isCorrect": true,
-      "question": "Which Spanish city is famous for the 'Running of the Bulls'?",
-      "userAnswer": "Pamplona"
-    }, {
-      "correctAnswer": "Ebro",
-      "isCorrect": true,
-      "question": "Which is the longest river in Spain?",
-      "userAnswer": "Ebro"
-    }],
-    "quizType": "MCQ",
-    "score": 5.0,
-    "timestamp": 1746888827725,
-    "totalQuestions": 5,
-    "userAnswers": ["Mallorca", "Pyrenees", "Eagle", "Pamplona", "Ebro"],
-    "userId": "083fa50b-dc29-4076-bc73-53b325339d62"
-  }],
-  "userId": "083fa50b-dc29-4076-bc73-53b325339d62",
-  "username": "mazen"
-}, {
-  "email": "Yassin.Hany@yahos",
-  "interactions": [{
-    "category": "quiz",
-    "id": "62aaa0ea-d5d4-4695-9332-c1186a79e0d4",
-    "question": "Quiz Question 5: What is 'house' in Spanish?",
-    "response": "Answer: d, Feedback: That's not correct. The correct answer is: casa",
-    "timestamp": 1747425158344,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "quiz",
-    "id": "3335a044-d266-402a-bd11-144f5a8728bd",
-    "question": "Quiz Question 4: What is 'bed' in Spanish?",
-    "response": "Answer: c, Feedback: That's not correct. The correct answer is: cama",
-    "timestamp": 1747425157082,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "quiz",
-    "id": "cd73bfd8-910a-4abd-81f0-65892d49a762",
-    "question": "Quiz Question 3: What is 'cshair' in Spanish?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1747425155793,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "quiz",
-    "id": "16d5fa04-21cf-413e-8e89-13113e67bbbe",
-    "question": "Quiz Question 2: What is 'door' in Spanish?",
-    "response": "Answer: b, Feedback: That's not correct. The correct answer is: puerta",
-    "timestamp": 1747425153652,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "quiz",
-    "id": "50b17757-398e-4cf4-a843-7a73765112a2",
-    "question": "Quiz Question 1: What is 'table' in Spanish?",
-    "response": "Answer: a, Feedback: Correct! Well done!",
-    "timestamp": 1747425151818,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "quiz",
-    "id": "95b0d13f-0c93-488f-9de7-82c41693e684",
-    "question": "What type of quiz would you like to take?",
-    "response": "vocabulary",
-    "timestamp": 1747425149645,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "system",
-    "id": "f8af57f4-06a7-4450-9d66-ff3b858615e6",
+    "category": "settings",
+    "id": "2a66ceb6-9a57-4ce8-8599-9d5f0a34a800",
     "question": "settings",
-    "response": "Displayed user settings",
-    "timestamp": 1747425132054,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "thanks",
-    "id": "a03434dd-aeae-4a5c-a289-8c6c4563858c",
-    "question": "set difficulty easy",
-    "response": "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
-    "timestamp": 1747425128878,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747597035232,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }, {
     "category": "system",
-    "id": "fe67de0e-2163-448c-bf0a-050a3aea0a8d",
-    "question": "settings",
-    "response": "Displayed user settings",
-    "timestamp": 1747425101621,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
-  }, {
-    "category": "system",
-    "id": "f0462229-4692-486d-be42-946bbc9a4122",
+    "id": "e3b98004-8c40-40f9-935f-bb9908803a26",
     "question": "help",
-    "response": "\r\nAvailable commands:\r\n1. chat - Start a conversation\r\n2. quiz - Take a quiz\r\n3. history - View your learning history\r\n4. preferences - Set your language preferences\r\n5. help - Show this help message\r\n6. logout - Log out\r\n7. exit - Exit the application\r\n",
-    "timestamp": 1747425092749,
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747597025528,
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }],
   "quizResults": [{
     "correctAnswers": 2,
-    "id": "b13d3580-b1e6-41ea-aaac-c9863ccc44f3",
+    "id": "56eceeec-009e-4413-adfa-d1742b27e289",
     "questions": [{
-      "correctAnswer": "mesa",
+      "correctAnswer": "Je mange le petit déjeuner tous les jours",
       "isCorrect": true,
-      "question": "What is 'table' in Spanish?",
-      "userAnswer": "mesa"
+      "question": "Translate: 'I eat breakfast every day'",
+      "userAnswer": "Je mange le petit déjeuner tous les jours"
     }, {
-      "correctAnswer": "puerta",
+      "correctAnswer": "Où sont les toilettes?",
       "isCorrect": false,
-      "question": "What is 'door' in Spanish?",
-      "userAnswer": "ventana"
+      "question": "Translate: 'Where is the bathroom?'",
+      "userAnswer": ""
     }, {
-      "correctAnswer": "silla",
+      "correctAnswer": "Je m'appelle John",
+      "isCorrect": false,
+      "question": "Translate: 'My name is John'",
+      "userAnswer": "mon nom est john"
+    }, {
+      "correctAnswer": "J'aime voyager",
+      "isCorrect": false,
+      "question": "Translate: 'I like to travel'",
+      "userAnswer": "aa"
+    }, {
+      "correctAnswer": "Elle travaille dans un hôpital",
       "isCorrect": true,
-      "question": "What is 'cshair' in Spanish?",
-      "userAnswer": "silla"
-    }, {
-      "correctAnswer": "cama",
-      "isCorrect": false,
-      "question": "What is 'bed' in Spanish?",
-      "userAnswer": "mesa"
-    }, {
-      "correctAnswer": "casa",
-      "isCorrect": false,
-      "question": "What is 'house' in Spanish?",
-      "userAnswer": "oficina"
+      "question": "Translate: 'She works at a hospital'",
+      "userAnswer": "Elle travaille dans un hôpital"
     }],
-    "quizType": "Vocabulary",
+    "quizType": "Translation",
     "score": 2.0,
-    "timestamp": 1747425158357,
+    "timestamp": 1747597080272,
     "totalQuestions": 5,
-    "userAnswers": ["mesa", "ventana", "silla", "mesa", "oficina"],
-    "userId": "4260a945-81ab-4c93-bf6e-6571b986666b"
+    "userAnswers": ["Je mange le petit déjeuner tous les jours", "", "mon nom est john", "aa", "Elle travaille dans un hôpital"],
+    "userId": "7906637e-27a9-4678-8724-fd231365c4a8"
   }],
-  "userId": "4260a945-81ab-4c93-bf6e-6571b986666b",
-  "username": "Yassin"
+  "userId": "7906637e-27a9-4678-8724-fd231365c4a8",
+  "username": "ahmed"
+}, {
+  "email": "ali@gmail.com",
+  "interactions": [{
+    "category": "language_question",
+    "id": "7dce77a2-c278-44b0-954d-331446c5427a",
+    "question": "aa",
+    "response": "What would you like to know about language learning? I can help with vocabulary, grammar, and more.",
+    "timestamp": 1747600531941,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }, {
+    "category": "quiz",
+    "id": "7ec427d0-d6d1-4b58-ae1e-430279cde3ea",
+    "question": "Quiz Question 5: Which German car manufacturer makes the 911 model?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747600529803,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }, {
+    "category": "quiz",
+    "id": "3e34375c-1021-4c8d-9240-2c1b5fc8348c",
+    "question": "Quiz Question 4: Which German composer wrote 'Symphony No. 9'?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: Ludwig van Beethoven",
+    "timestamp": 1747600529340,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }, {
+    "category": "quiz",
+    "id": "7df2e9ca-ee7e-46d2-8921-6cc6946c60e9",
+    "question": "Quiz Question 3: What is the currency of Germany?",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: Euro",
+    "timestamp": 1747600527875,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }, {
+    "category": "quiz",
+    "id": "be8945b7-feb7-4a8c-9bd1-036f08e73982",
+    "question": "Quiz Question 2: Which German festival is celebrated in October?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747600527227,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }, {
+    "category": "quiz",
+    "id": "f5c933fd-7eb1-4c7e-a8ab-e7df81e8d14e",
+    "question": "Quiz Question 1: Which city is the capital of Germany?",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: Berlin",
+    "timestamp": 1747600526781,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }, {
+    "category": "quiz",
+    "id": "2b38fe8e-99d6-482f-be3c-000b133f3c4e",
+    "question": "What type of quiz would you like to take?",
+    "response": "4",
+    "timestamp": 1747600519994,
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }],
+  "quizResults": [{
+    "correctAnswers": 2,
+    "id": "e6713bc1-8717-478e-aa16-5dc88f964d9b",
+    "questions": [{
+      "correctAnswer": "Berlin",
+      "isCorrect": false,
+      "question": "Which city is the capital of Germany?",
+      "userAnswer": "aa"
+    }, {
+      "correctAnswer": "Oktoberfest",
+      "isCorrect": true,
+      "question": "Which German festival is celebrated in October?",
+      "userAnswer": "Oktoberfest"
+    }, {
+      "correctAnswer": "Euro",
+      "isCorrect": false,
+      "question": "What is the currency of Germany?",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Ludwig van Beethoven",
+      "isCorrect": false,
+      "question": "Which German composer wrote 'Symphony No. 9'?",
+      "userAnswer": "wolfgang amadeus mozart"
+    }, {
+      "correctAnswer": "Porsche",
+      "isCorrect": true,
+      "question": "Which German car manufacturer makes the 911 model?",
+      "userAnswer": "Porsche"
+    }],
+    "quizType": "MCQ",
+    "score": 40.0,
+    "timestamp": 1747600529813,
+    "totalQuestions": 5,
+    "userAnswers": ["aa", "Oktoberfest", "", "wolfgang amadeus mozart", "Porsche"],
+    "userId": "e4985904-bf06-4c07-a4f5-09020441d27b"
+  }],
+  "userId": "e4985904-bf06-4c07-a4f5-09020441d27b",
+  "username": "ali"
 }, {
   "email": "yyy",
   "interactions": [{
@@ -8020,6 +10877,473 @@
   "userId": "93efc046-c600-48b9-8521-e6bc1271c245",
   "username": "abdo"
 }, {
+  "email": "mohamedSaafan@gmail.com",
+  "interactions": [{
+    "category": "system",
+    "id": "9089fc51-4519-4bcb-b15c-58e6425dce3e",
+    "question": "analytics",
+    "response": "Displayed user analytics",
+    "timestamp": 1747601711674,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "578b38e9-423f-4492-bd54-e14d4312c467",
+    "question": "Quiz Question 5: Translate: 'I have a question'",
+    "response": "Answer: d, Feedback: That's not correct. The correct answer is: Ich habe eine Frage",
+    "timestamp": 1747601704699,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "0ad2ca5b-ab25-40eb-98e2-939a0c9e54d0",
+    "question": "Quiz Question 4: Translate: 'I'm learning German'",
+    "response": "Answer: , Feedback: That's not correct. The correct answer is: Ich lerne Deutsch",
+    "timestamp": 1747601703561,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "42b17f86-0be5-4367-a755-12c4bad0ec26",
+    "question": "Quiz Question 3: Translate: 'Have a nice day'",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: Einen schönen Tag",
+    "timestamp": 1747601701876,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "bfdcc20c-11b1-4e03-8c34-7a4d20e04922",
+    "question": "Quiz Question 2: Translate: 'What's your name?'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747601700085,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "416f1d6d-0ea9-47d7-bb05-4ed8d003bbd4",
+    "question": "Quiz Question 1: Translate: 'Can you help me?'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747601699162,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "74aae6aa-e3b6-490a-bca9-edf74721568e",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747601685777,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "b75ea918-6193-40fe-af33-959336ede450",
+    "question": "Quiz Question 5: Translate: 'I don't understand'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747601678375,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "6cce391b-2b03-424a-897e-5ef05ef925c1",
+    "question": "Quiz Question 4: Translate: 'See you tomorrow'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747601677908,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "0918ef56-0007-46d3-8759-dd6d33c2f731",
+    "question": "Quiz Question 3: Translate: 'What time is it?'",
+    "response": "Answer: aa, Feedback: That's not correct. The correct answer is: Wie spät ist es?",
+    "timestamp": 1747601677370,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "cc3a3348-2749-4fff-b997-ad2ecc65bfd1",
+    "question": "Quiz Question 2: Translate: 'I would like a coffee'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747601676775,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "524fbd30-8847-464a-8abe-8b9ce6d843de",
+    "question": "Quiz Question 1: Translate: 'How are you?'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747601676465,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "quiz",
+    "id": "22638740-867d-4947-88a1-be4c6a08b9fc",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747601674638,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "959d4e6b-451e-4edd-9d7b-279c4164f68a",
+    "question": "What's your favorite season?",
+    "response": "happy",
+    "timestamp": 1747601629941,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "86d6c47c-2fde-4569-ae07-050047ae8a3e",
+    "question": "What's your favorite season?",
+    "response": "heavy clothing",
+    "timestamp": 1747601616355,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "66808486-8b67-4cb3-9d08-348ed9820c19",
+    "question": "What's your favorite season?",
+    "response": "cold",
+    "timestamp": 1747601604504,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "3dff2af8-1209-4f99-bc89-15ffe182d48a",
+    "question": "What's your favorite season?",
+    "response": "summer",
+    "timestamp": 1747601599843,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "settings",
+    "id": "c497f384-30f6-4b7b-8436-5e21dae4b658",
+    "question": "set target language german",
+    "response": "Target language set to German",
+    "timestamp": 1747601589230,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "d1b0e9fc-25c1-4727-8f9f-ad5c73d9ff45",
+    "question": "What's your favorite season?",
+    "response": "white color",
+    "timestamp": 1747601559295,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "905fdc60-c12a-442d-8ed8-26d4d2258596",
+    "question": "What's your favorite season?",
+    "response": "light clothes",
+    "timestamp": 1747601548282,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "b4499688-f666-450e-b5a8-3220194db8a9",
+    "question": "What's your favorite season?",
+    "response": "warm",
+    "timestamp": 1747601534726,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "chat",
+    "id": "c9080b77-5231-44f4-bfc7-8e5b97d4b67d",
+    "question": "What's your favorite season?",
+    "response": "summer",
+    "timestamp": 1747601520224,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "system",
+    "id": "40f1db2c-0f52-484d-b1b5-6c2f0284e7d1",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747601500464,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "system",
+    "id": "cb4f0217-9149-4928-8d11-10dda0213a58",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747601495157,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "settings",
+    "id": "225e99cc-c665-49b1-a759-dba4bc7dbf01",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747601495150,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "settings",
+    "id": "7a3dca74-9013-436d-b4b9-4eac17e4bbf3",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747601491941,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "settings",
+    "id": "a2ee50d0-9910-46aa-abc8-101e3f3f065f",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747601483494,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "unknown",
+    "id": "f2407741-5196-4f55-8f37-4e39c728fa5a",
+    "question": "set mother english",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747601472526,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "system",
+    "id": "4b74fbf0-0eb7-4adb-b8c9-8c55cbaf0431",
+    "question": "prefrences",
+    "response": "Displayed user settings",
+    "timestamp": 1747601459834,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "settings",
+    "id": "a2a88aca-f107-4cfc-9bf4-83728c5e90e5",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747601459817,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "category": "system",
+    "id": "07ed5cc3-0e71-4fcd-9d64-6288b771876e",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747601450801,
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }],
+  "quizResults": [{
+    "correctAnswers": 2,
+    "id": "ef635f0b-fe8d-4a50-90b5-8a24957dc554",
+    "questions": [{
+      "correctAnswer": "Können Sie mir helfen?",
+      "isCorrect": true,
+      "question": "Translate: 'Can you help me?'",
+      "userAnswer": "Können Sie mir helfen?"
+    }, {
+      "correctAnswer": "Wie heißt du?",
+      "isCorrect": true,
+      "question": "Translate: 'What's your name?'",
+      "userAnswer": "Wie heißt du?"
+    }, {
+      "correctAnswer": "Einen schönen Tag",
+      "isCorrect": false,
+      "question": "Translate: 'Have a nice day'",
+      "userAnswer": "guten tag"
+    }, {
+      "correctAnswer": "Ich lerne Deutsch",
+      "isCorrect": false,
+      "question": "Translate: 'I'm learning German'",
+      "userAnswer": ""
+    }, {
+      "correctAnswer": "Ich habe eine Frage",
+      "isCorrect": false,
+      "question": "Translate: 'I have a question'",
+      "userAnswer": "ich brauche antwort"
+    }],
+    "quizType": "Translation",
+    "score": 40.0,
+    "timestamp": 1747601704705,
+    "totalQuestions": 5,
+    "userAnswers": ["Können Sie mir helfen?", "Wie heißt du?", "guten tag", "", "ich brauche antwort"],
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }, {
+    "correctAnswers": 4,
+    "id": "07ef23a0-a699-418a-86d0-59d954b5af2d",
+    "questions": [{
+      "correctAnswer": "Wie geht es dir?",
+      "isCorrect": true,
+      "question": "Translate: 'How are you?'",
+      "userAnswer": "Wie geht es dir?"
+    }, {
+      "correctAnswer": "Ich möchte einen Kaffee",
+      "isCorrect": true,
+      "question": "Translate: 'I would like a coffee'",
+      "userAnswer": "Ich möchte einen Kaffee"
+    }, {
+      "correctAnswer": "Wie spät ist es?",
+      "isCorrect": false,
+      "question": "Translate: 'What time is it?'",
+      "userAnswer": "aa"
+    }, {
+      "correctAnswer": "Bis morgen",
+      "isCorrect": true,
+      "question": "Translate: 'See you tomorrow'",
+      "userAnswer": "Bis morgen"
+    }, {
+      "correctAnswer": "Ich verstehe nicht",
+      "isCorrect": true,
+      "question": "Translate: 'I don't understand'",
+      "userAnswer": "Ich verstehe nicht"
+    }],
+    "quizType": "Translation",
+    "score": 80.0,
+    "timestamp": 1747601678384,
+    "totalQuestions": 5,
+    "userAnswers": ["Wie geht es dir?", "Ich möchte einen Kaffee", "aa", "Bis morgen", "Ich verstehe nicht"],
+    "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e"
+  }],
+  "userId": "6c2c017a-e854-44aa-8a61-e05d38a3af1e",
+  "username": "saafan"
+}, {
+  "email": "messi",
+  "interactions": [{
+    "category": "quiz",
+    "id": "19c29581-f978-4a0a-867a-2467effe269d",
+    "question": "Quiz Question 5: Translate: 'My name is John'",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Me llamo John",
+    "timestamp": 1747599385352,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "quiz",
+    "id": "54ab95fa-128f-4b28-9375-28d25ca35cf7",
+    "question": "Quiz Question 4: Translate: 'I eat breakfast every day'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747599384702,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "quiz",
+    "id": "1d0e9bc5-d52d-4cbe-af24-daf7d2b28144",
+    "question": "Quiz Question 3: Translate: 'Where is the bathroom?'",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: ¿Dónde está el baño?",
+    "timestamp": 1747599384293,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "quiz",
+    "id": "c9cd4b18-ac58-4f22-8716-a4958bca1be2",
+    "question": "Quiz Question 2: Translate: 'She works at a hospital'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747599383903,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "quiz",
+    "id": "789cf227-2ccb-4c84-a808-40e92513a971",
+    "question": "Quiz Question 1: Translate: 'I like to travel'",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747599383334,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "quiz",
+    "id": "b5002c00-6f18-45ac-80f8-163e56183bbb",
+    "question": "What type of quiz would you like to take?",
+    "response": "3",
+    "timestamp": 1747599380815,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "system",
+    "id": "d6621020-3c56-435b-9fd2-163313185faa",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747599372067,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "settings",
+    "id": "8e3a336a-91d6-42dc-910d-866fa2908f01",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747599372061,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "chat",
+    "id": "9d3d258f-98d4-4669-88d9-74acf1bf6bf8",
+    "question": "Do you like this weather?",
+    "response": "shirt",
+    "timestamp": 1747599359073,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "chat",
+    "id": "5cd893a8-0e16-41f0-b270-d67691609d84",
+    "question": "Do you like this weather?",
+    "response": "light clothing",
+    "timestamp": 1747599352691,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "chat",
+    "id": "f62fd028-e3c0-4500-ad1a-34438e2d97d5",
+    "question": "Do you like this weather?",
+    "response": "its hot",
+    "timestamp": 1747599339517,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "chat",
+    "id": "ad6df5d5-ae07-4337-8490-3a0320e907b1",
+    "question": "Do you like this weather?",
+    "response": "yes",
+    "timestamp": 1747599326154,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "system",
+    "id": "cf78f65a-ae74-406b-ad24-d242bcf58d42",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747599152429,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "settings",
+    "id": "a39d6341-e459-4ca0-92a6-986062c8fc44",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747599152421,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "settings",
+    "id": "f9c59015-6b26-4e73-9c23-1e7f34a16180",
+    "question": "set target language spanish",
+    "response": "Target language set to Spanish",
+    "timestamp": 1747599146453,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "settings",
+    "id": "831093c9-3857-4188-9e95-e507c73e9dba",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747599137770,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "system",
+    "id": "ea18634b-cc74-48fb-8da8-0d5313d5c228",
+    "question": "prefrences",
+    "response": "Displayed user settings",
+    "timestamp": 1747599125606,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "settings",
+    "id": "a36deb83-f95d-4527-b047-6a37237e8e06",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747599125591,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }, {
+    "category": "system",
+    "id": "1bafcfbc-203f-4a0e-acde-cb55a4ff2b07",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747599118460,
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }],
+  "quizResults": [{
+    "correctAnswers": 3,
+    "id": "a70437a3-794d-48c8-b5bd-444d8dec4e55",
+    "questions": [{
+      "correctAnswer": "Me gusta viajar",
+      "isCorrect": true,
+      "question": "Translate: 'I like to travel'",
+      "userAnswer": "Me gusta viajar"
+    }, {
+      "correctAnswer": "Ella trabaja en un hospital",
+      "isCorrect": true,
+      "question": "Translate: 'She works at a hospital'",
+      "userAnswer": "Ella trabaja en un hospital"
+    }, {
+      "correctAnswer": "¿Dónde está el baño?",
+      "isCorrect": false,
+      "question": "Translate: 'Where is the bathroom?'",
+      "userAnswer": "¿dónde es el baño?"
+    }, {
+      "correctAnswer": "Yo como el desayuno todos los días",
+      "isCorrect": true,
+      "question": "Translate: 'I eat breakfast every day'",
+      "userAnswer": "Yo como el desayuno todos los días"
+    }, {
+      "correctAnswer": "Me llamo John",
+      "isCorrect": false,
+      "question": "Translate: 'My name is John'",
+      "userAnswer": "mi nombre es john"
+    }],
+    "quizType": "Translation",
+    "score": 3.0,
+    "timestamp": 1747599385363,
+    "totalQuestions": 5,
+    "userAnswers": ["Me gusta viajar", "Ella trabaja en un hospital", "¿dónde es el baño?", "Yo como el desayuno todos los días", "mi nombre es john"],
+    "userId": "230f9120-7be8-43a3-9066-42b79164e05b"
+  }],
+  "userId": "230f9120-7be8-43a3-9066-42b79164e05b",
+  "username": "messi"
+}, {
   "email": "oo",
   "interactions": [{
     "category": "settings",
@@ -8032,4 +11356,290 @@
   "quizResults": [],
   "userId": "a2a77cbd-07f0-4cae-89e5-5c083cddf925",
   "username": "kk"
+}, {
+  "email": "Ali amin",
+  "interactions": [{
+    "category": "system",
+    "id": "a2ed432c-10cf-4045-b6fa-80c0d0c2fdda",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747600287490,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "chat",
+    "id": "86f2f836-b64f-4433-9ca7-4c3e8a04d6b6",
+    "question": "Is it raining today?",
+    "response": "coat",
+    "timestamp": 1747600250254,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "chat",
+    "id": "e36b6542-23fa-4d5e-9c54-0e447f4ccf17",
+    "question": "Is it raining today?",
+    "response": "yes",
+    "timestamp": 1747600236337,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "system",
+    "id": "d83f519d-e756-416d-adc7-de265fd0cf98",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747600222766,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "system",
+    "id": "9588aa13-6301-4f5d-9674-dd13e537b68a",
+    "question": "analytics",
+    "response": "Displayed user analytics",
+    "timestamp": 1747600194695,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "a494023d-3984-40c5-8e9e-d17e95ac3440",
+    "question": "Quiz Question 5: What is 'city' in German?",
+    "response": "Answer: s, Feedback: That's not correct. The correct answer is: Stadt",
+    "timestamp": 1747600182180,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "cc1eb061-3b2d-43cc-aa5a-9565b92fd8be",
+    "question": "Quiz Question 4: What is 'money' in German?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Geld",
+    "timestamp": 1747600181095,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "5eb97586-6964-41e7-9031-2628c57c28f3",
+    "question": "Quiz Question 3: What is 'weather' in German?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: Wetter",
+    "timestamp": 1747600180478,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "feddee9a-1014-42d7-bb2b-e5c71dceba48",
+    "question": "Quiz Question 2: What is 'time' in German?",
+    "response": "Answer: b, Feedback: That's not correct. The correct answer is: Zeit",
+    "timestamp": 1747600179600,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "aa5d1827-8bba-4af2-b4a6-03d24bebcb61",
+    "question": "Quiz Question 1: What is 'work' in German?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Arbeit",
+    "timestamp": 1747600178210,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "f8db4d86-6f09-4c36-bd45-80c076e23432",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747600174943,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "a0c141ba-4c14-45c7-90c2-13650d8ce6de",
+    "question": "Quiz Question 5: What is 'weather' in German?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: Wetter",
+    "timestamp": 1747600161016,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "c02ea0da-9a30-4beb-9fa6-e3b6dd5a5a2d",
+    "question": "Quiz Question 4: What is 'work' in German?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Arbeit",
+    "timestamp": 1747600160444,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "e282d180-34e2-4174-85c8-20ec84b587f6",
+    "question": "Quiz Question 3: What is 'city' in German?",
+    "response": "Answer: a, Feedback: That's not correct. The correct answer is: Stadt",
+    "timestamp": 1747600159982,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "2da51cc6-dade-4ea2-a809-4409134de032",
+    "question": "Quiz Question 2: What is 'money' in German?",
+    "response": "Answer: c, Feedback: That's not correct. The correct answer is: Geld",
+    "timestamp": 1747600159237,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "4f9290ce-cf87-4cb2-9149-b4ef2c39f641",
+    "question": "Quiz Question 1: What is 'time' in German?",
+    "response": "Answer: a, Feedback: Correct! Well done!",
+    "timestamp": 1747600153006,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "d17a82fc-2c57-4b0d-8f50-8f5d8515f4d9",
+    "question": "What type of quiz would you like to take?",
+    "response": "1",
+    "timestamp": 1747600146910,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "settings",
+    "id": "792ac981-46df-4dcd-ae57-a4e73a8de6c6",
+    "question": "set target language german",
+    "response": "Target language set to German",
+    "timestamp": 1747600140932,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "4cd7ab6a-bb9b-4c5b-8b01-8be1f9cacc98",
+    "question": "exit quiz",
+    "response": "Cancelled quiz setup",
+    "timestamp": 1747600130283,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "quiz",
+    "id": "b5af07e5-dc40-4ded-93f5-1c812c960eb6",
+    "question": "What type of quiz would you like to take?",
+    "response": "exit quiz",
+    "timestamp": 1747600130276,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "unknown",
+    "id": "0c02da44-7a41-46fe-b823-6e2618554c65",
+    "question": "start",
+    "response": "I'm not sure I understand. Try asking about quizzes, changing settings.",
+    "timestamp": 1747600113928,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "system",
+    "id": "42651ecb-3d2e-4844-9a13-3268ad3eeaf7",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747600103335,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "unknown",
+    "id": "1f57ca64-416e-4676-9d0a-a5be7a78bf0c",
+    "question": "hello",
+    "response": "Hello, Ali! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
+    "timestamp": 1747600090694,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "system",
+    "id": "3a3f7ee1-94a6-4daa-82a6-2e09fb1ed6ed",
+    "question": "settings",
+    "response": "Displayed user settings",
+    "timestamp": 1747600084268,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "settings",
+    "id": "58ace051-7b65-40df-be60-e8fffc44ccb0",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747600084258,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "settings",
+    "id": "85d84c2c-d70c-45ce-8692-8b1f6dcb7317",
+    "question": "set target language french",
+    "response": "Target language set to French",
+    "timestamp": 1747600081350,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "settings",
+    "id": "36b3621c-3c35-4f8a-b763-5bdaa1a0a295",
+    "question": "set mother language english",
+    "response": "Mother language set to English",
+    "timestamp": 1747600072812,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "system",
+    "id": "88467850-dbc4-4ba5-965a-538d5c6cdd9a",
+    "question": "prefrences",
+    "response": "Displayed user settings",
+    "timestamp": 1747600058765,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "settings",
+    "id": "314ab09a-cfb7-4687-9fe9-e518ecce311c",
+    "question": "settings",
+    "response": "You can change your settings for:\n- Mother language\n- Target language\nWhat would you like to update?",
+    "timestamp": 1747600058751,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "category": "system",
+    "id": "7d90e933-4232-440b-9e49-8f86a41caf1a",
+    "question": "help",
+    "response": "\nAvailable commands:\n1. chat - Start a conversation\n2. quiz - Take a quiz\n3. history - View your learning history\n4. preferences - Set your language preferences\n5. help - Show this help message\n6. logout - Log out\n7. exit - Exit the application\n",
+    "timestamp": 1747600051915,
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }],
+  "quizResults": [{
+    "correctAnswers": 0,
+    "id": "8241473c-e4f5-4ba4-809e-de19db429f37",
+    "questions": [{
+      "correctAnswer": "Arbeit",
+      "isCorrect": false,
+      "question": "What is 'work' in German?",
+      "userAnswer": "schule"
+    }, {
+      "correctAnswer": "Zeit",
+      "isCorrect": false,
+      "question": "What is 'time' in German?",
+      "userAnswer": "tag"
+    }, {
+      "correctAnswer": "Wetter",
+      "isCorrect": false,
+      "question": "What is 'weather' in German?",
+      "userAnswer": "klima"
+    }, {
+      "correctAnswer": "Geld",
+      "isCorrect": false,
+      "question": "What is 'money' in German?",
+      "userAnswer": "zeit"
+    }, {
+      "correctAnswer": "Stadt",
+      "isCorrect": false,
+      "question": "What is 'city' in German?",
+      "userAnswer": "s"
+    }],
+    "quizType": "Vocabulary",
+    "score": 0.0,
+    "timestamp": 1747600182187,
+    "totalQuestions": 5,
+    "userAnswers": ["schule", "tag", "klima", "zeit", "s"],
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }, {
+    "correctAnswers": 1,
+    "id": "edfd9275-0ead-49d4-b303-00d4cc3363a6",
+    "questions": [{
+      "correctAnswer": "Zeit",
+      "isCorrect": true,
+      "question": "What is 'time' in German?",
+      "userAnswer": "Zeit"
+    }, {
+      "correctAnswer": "Geld",
+      "isCorrect": false,
+      "question": "What is 'money' in German?",
+      "userAnswer": "preis"
+    }, {
+      "correctAnswer": "Stadt",
+      "isCorrect": false,
+      "question": "What is 'city' in German?",
+      "userAnswer": "land"
+    }, {
+      "correctAnswer": "Arbeit",
+      "isCorrect": false,
+      "question": "What is 'work' in German?",
+      "userAnswer": "schule"
+    }, {
+      "correctAnswer": "Wetter",
+      "isCorrect": false,
+      "question": "What is 'weather' in German?",
+      "userAnswer": "klima"
+    }],
+    "quizType": "Vocabulary",
+    "score": 20.0,
+    "timestamp": 1747600161024,
+    "totalQuestions": 5,
+    "userAnswers": ["Zeit", "preis", "land", "schule", "klima"],
+    "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434"
+  }],
+  "userId": "9d896c8d-cf48-45db-8463-6d41c19ef434",
+  "username": "Ali"
 }]

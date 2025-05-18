@@ -1,7 +1,19 @@
-[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:344:12: Pattern contains duplicate alternatives: "multiple choice"[0m
-[0m[[0m[33mwarn[0m] [0m[0m      case "mcq" | "multiple choice" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" | "4" => Some(MCQ)[0m
-[0m[[0m[33mwarn[0m] [0m[0m           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:647:18: Pattern contains duplicate alternatives: "multiple choice"[0m
-[0m[[0m[33mwarn[0m] [0m[0m            case "mcq" | "multiple choice" | "4" | "opción múltiple" | "choix multiple" | "multiple choice" | "الاختيار من متعدد" => Some(MCQ)[0m
-[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:1569:19: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  "¡Parece que hace calor! Te recomiendo usar ropa ligera y transpirable como camisetas y ropa de algodón. Mantente hidratado, usa protector solar y trata de estar en la sombra cuando sea posible."[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:1573:19: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  "¡Parece que hace frío! Asegúrate de usar capas abrigadas - un suéter o forro polar debajo de una chaqueta. No olvides una bufanda para proteger tu cuello del viento frío."[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:1581:19: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  "Il fait chaud! Je vous recommande de porter des vêtements légers et respirants comme des shorts et un t-shirt. Restez hydraté, utilisez de la crème solaire et essayez de rester à l'ombre si possible."[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:1585:19: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  "Il fait froid! Assurez-vous de porter des couches chaudes - un pull ou une polaire sous une veste, plus un chapeau et des gants s'il fait très froid."[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:1593:19: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  "Es klingt heiß! Ich empfehle leichte, atmungsaktive Kleidung wie Shorts und ein T-Shirt. Bleiben Sie hydratisiert, verwenden Sie Sonnenschutz und versuchen Sie, wenn möglich im Schatten zu bleiben."[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mD:\learning chatbot\-language-learning-scala\src\main\scala\Main.scala:1597:19: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  "Es klingt kalt! Achten Sie auf warme Schichten - einen Pullover oder Fleece unter einer Jacke, plus eine Mütze und Handschuhe, wenn es sehr kalt ist."[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m

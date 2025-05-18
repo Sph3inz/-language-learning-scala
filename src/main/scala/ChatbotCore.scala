@@ -1,10 +1,80 @@
 package languagelearningbot
 
+import java.util.regex.Pattern
+import scala.util.Random
 import scala.util.matching.Regex
 import models.User
 
 object ChatbotCore {
   // Required core chatbot functions as specified in the requirements
+  
+  // Standard translation dictionary for common UI phrases
+  private val translationDict: Map[(String, String), String] = Map(
+    // Settings-related translations
+    ("Your current settings are:", "Spanish") -> "Tus configuraciones actuales son:",
+    ("Your current settings are:", "French") -> "Vos paramètres actuels sont :",
+    ("Your current settings are:", "German") -> "Ihre aktuellen Einstellungen sind:",
+    
+    ("Mother language:", "Spanish") -> "Idioma materno:",
+    ("Mother language:", "French") -> "Langue maternelle :",
+    ("Mother language:", "German") -> "Muttersprache:",
+    
+    ("Target language:", "Spanish") -> "Idioma objetivo:",
+    ("Target language:", "French") -> "Langue cible :",
+    ("Target language:", "German") -> "Zielsprache:",
+    
+    ("You can change these with commands like:", "Spanish") -> "Puedes cambiar estas con comandos como:",
+    ("You can change these with commands like:", "French") -> "Vous pouvez modifier ces paramètres avec des commandes comme :",
+    ("You can change these with commands like:", "German") -> "Sie können diese mit Befehlen wie den folgenden ändern:",
+    
+    // Settings menu translations
+    ("You can change your settings for:", "Spanish") -> "Puedes cambiar tus configuraciones para:",
+    ("You can change your settings for:", "French") -> "Vous pouvez modifier vos paramètres pour :",
+    ("You can change your settings for:", "German") -> "Sie können Ihre Einstellungen ändern für:",
+    
+    ("Mother language", "Spanish") -> "Idioma materno",
+    ("Mother language", "French") -> "Langue maternelle",
+    ("Mother language", "German") -> "Muttersprache",
+    
+    ("Target language", "Spanish") -> "Idioma objetivo",
+    ("Target language", "French") -> "Langue cible",
+    ("Target language", "German") -> "Zielsprache",
+    
+    // Language selection confirmations
+    ("Mother language set to", "Spanish") -> "Idioma materno establecido a",
+    ("Mother language set to", "French") -> "Langue maternelle définie sur",
+    ("Mother language set to", "German") -> "Muttersprache eingestellt auf",
+    
+    ("Target language set to", "Spanish") -> "Idioma objetivo establecido a",
+    ("Target language set to", "French") -> "Langue cible définie sur",
+    ("Target language set to", "German") -> "Zielsprache eingestellt auf",
+    
+    // Quiz-related translations
+    ("Starting a", "Spanish") -> "Iniciando un",
+    ("Starting a", "French") -> "Démarrage d'un",
+    ("Starting a", "German") -> "Starten eines",
+    
+    ("quiz in", "Spanish") -> "cuestionario en",
+    ("quiz in", "French") -> "quiz en",
+    ("quiz in", "German") -> "Quiz in",
+    
+    // Quiz types
+    ("Vocabulary", "Spanish") -> "Vocabulario",
+    ("Vocabulary", "French") -> "Vocabulaire",
+    ("Vocabulary", "German") -> "Wortschatz",
+    
+    ("Grammar", "Spanish") -> "Gramática",
+    ("Grammar", "French") -> "Grammaire",
+    ("Grammar", "German") -> "Grammatik",
+    
+    ("Translation", "Spanish") -> "Traducción",
+    ("Translation", "French") -> "Traduction",
+    ("Translation", "German") -> "Übersetzung",
+    
+    ("Multiple Choice", "Spanish") -> "Opción múltiple",
+    ("Multiple Choice", "French") -> "Choix multiple",
+    ("Multiple Choice", "German") -> "Multiple Choice"
+  )
   
   /**
    * Returns an initial greeting based on user preferences if any
@@ -94,6 +164,13 @@ object ChatbotCore {
       
       // Language related
       "english", "spanish", "french", "german", "chinese", "japanese", "russian",
+      
+      // Weather related
+      "weather", "temperature", "forecast", "rain", "sunny", "cloudy", "hot", "cold",
+      "warm", "cool", "freezing", "heat", "chilly", "frigid", "degrees", "celsius",
+      "fahrenheit", "climate", "storm", "snowing", "raining", "sun", "snow", "wind",
+      "windy", "humidity", "thunder", "lightning", "hail", "fog", "foggy", "mist",
+      "misty", "drizzle", "shower", "breeze", "gust", "blizzard", "tropical", 
       
       // Quiz related
       "quiz", "quizzes", "test", "tests", "testing", "exam", "exams", "examination",
@@ -186,6 +263,11 @@ object ChatbotCore {
       return generateResponse("thanks", preferences, currentUser)
     }
     
+    // Check for weather-related queries
+    if (isWeatherQuery(tokens)) {
+      return handleWeatherQuery(input)
+    }
+    
     // Check for explicit quiz type requests (like "grammar", "vocabulary", etc.)
     detectQuizType(tokens) match {
       case Some(quizType) =>
@@ -249,7 +331,7 @@ object ChatbotCore {
         currentUser match {
           case Some(user) =>
             "You can change your settings for:\n" +
-            "- Mother language\n- Target language\n- Difficulty level\n" +
+            "- Mother language\n- Target language\n" +
             "What would you like to update?"
           case None =>
             "Please sign in or continue as guest to access settings."
@@ -390,9 +472,61 @@ object ChatbotCore {
     }.map(_._2)
   }
   
+  // Various word sets for detecting query intents
+  private val settingsWords = Set("settings", "preferences", "change", "configure", "options")
+  
+  /**
+   * Determine if the input is asking about changing settings
+   */
   private def isSettingsChange(tokens: List[String]): Boolean = {
-    val settingsWords = Set("settings", "preferences", "change", "set", "configure", "options")
+    // Get full input as string
+    val input = tokens.mkString(" ")
+    
+    // First check for specific setting commands that should be handled elsewhere
+    if (input.contains("set") && (
+        input.contains("mother language") ||
+        input.contains("mother langauge") ||
+        input.contains("target language") ||
+        input.contains("target langauge"))) {
+      return false
+    }
+    
+    // Only match general settings-related words
     tokens.exists(settingsWords.contains)
+  }
+  
+  /**
+   * Handle queries about settings
+   */
+  private def handleSettingsQuery(tokens: List[String], userPreferences: Option[UserPreferences]): String = {
+    userPreferences match {
+      case Some(prefs) =>
+        s"""Your current settings are:
+           |Mother language: ${languageToString(prefs.motherLanguage)}
+           |Target language: ${languageToString(prefs.targetLanguage)}
+           |
+           |You can change these with commands like:
+           |'set mother language Spanish'
+           |'set target language French'""".stripMargin
+           
+      case None =>
+        """You haven't set any preferences yet. You can set them with:
+          |'set mother language [your language]' 
+          |'set target language [language you want to learn]'""".stripMargin
+    }
+  }
+  
+  /**
+   * Helper method to convert Language to string representation
+   */
+  private def languageToString(language: Language): String = {
+    language match {
+      case English => "English"
+      case Spanish => "Spanish"
+      case French => "French"
+      case German => "German"
+      case _ => "Unknown"
+    }
   }
   
   private def isHelp(tokens: List[String]): Boolean = {
@@ -412,8 +546,7 @@ object ChatbotCore {
    * Returns Option[UserPreferences]
    */
   def storeUserPreferences(motherLanguage: Option[Language] = None, 
-                         targetLanguage: Option[Language] = None, 
-                         difficulty: Option[Difficulty] = None,
+                         targetLanguage: Option[Language] = None,
                          name: Option[String] = None,
                          currentPreferences: Option[UserPreferences] = None): Option[UserPreferences] = {
     
@@ -424,7 +557,6 @@ object ChatbotCore {
         Some(UserPreferences(
           motherLanguage.getOrElse(prefs.motherLanguage),
           targetLanguage.getOrElse(prefs.targetLanguage),
-          difficulty.getOrElse(prefs.difficulty),
           name.orElse(prefs.name)
         ))
         
@@ -433,21 +565,12 @@ object ChatbotCore {
           Some(UserPreferences(
             motherLanguage.get,
             targetLanguage.getOrElse(English),  // Use English as a placeholder for incomplete preferences
-            difficulty.getOrElse(Easy),         // Use Easy as a placeholder for incomplete preferences
             name
           ))
         } else if (targetLanguage.isDefined) {
           Some(UserPreferences(
             English,                              // Use English as a placeholder for incomplete preferences
             targetLanguage.get,
-            difficulty.getOrElse(Easy),          // Use Easy as a placeholder for incomplete preferences
-            name
-          ))
-        } else if (difficulty.isDefined) {
-          Some(UserPreferences(
-            English,                              // Use English as a placeholder for incomplete preferences
-            English,                              // Use English as a placeholder for incomplete preferences
-            difficulty.get,
             name
           ))
         } else {
@@ -468,244 +591,29 @@ object ChatbotCore {
    * This is a simplified implementation. In a real system, you would use a translation API.
    */
   def translateText(text: String, targetLanguage: Language): String = {
+    // Check if this is quiz instructions - never append language tags to quiz instructions
+    val isQuizInstruction = text.contains("quiz type") || 
+                          text.contains("What type of quiz would you like to take?") ||
+                          text.contains("We offer:") ||
+                          text.contains("Please type the number") ||
+                          text.contains("Vocabulary -") ||
+                          text.contains("Grammar -") ||
+                          text.contains("Translation -") ||
+                          text.contains("Multiple Choice") ||
+                          text.contains("MCQ") ||
+                          text.contains("I'd be happy to start a quiz")
+    
     // Helper function to get translation based on language type
     def getTranslation(text: String, lang: Language): String = {
-      // Simple translations for demonstration
-      val translations = Map(
-        // Greetings
-        ("Hello", "English") -> "Hello",
-        ("Hello", "Spanish") -> "¡Hola!",
-        ("Hello", "French") -> "Bonjour !",
-        ("Hello", "German") -> "Hallo!",
-        
-        // Thanks response
-        ("You're welcome! Would you like to try a quiz or Changing Settings?", "English") -> 
-          "You're welcome! Would you like to try a quiz or Changing Settings?",
-        ("You're welcome! Would you like to try a quiz or Changing Settings?", "Spanish") -> 
-          "¡De nada! ¿Te gustaría hacer un cuestionario o cambiar la configuración?",
-        ("You're welcome! Would you like to try a quiz or Changing Settings?", "French") -> 
-          "De rien ! Souhaitez-vous essayer un quiz ou modifier les paramètres ?",
-        ("You're welcome! Would you like to try a quiz or Changing Settings?", "German") -> 
-          "Gern geschehen! Möchten Sie ein Quiz versuchen oder die Einstellungen ändern?",
-       
-          
-        // Language learning confirmation
-        ("Great! I'll help you learn ", "English") -> "Great! I'll help you learn ",
-        ("Great! I'll help you learn ", "Spanish") -> "¡Genial! Te ayudaré a aprender ",
-        ("Great! I'll help you learn ", "French") -> "Parfait ! Je vais vous aider à apprendre le ",
-        ("Great! I'll help you learn ", "German") -> "Großartig! Ich helfe Ihnen beim Erlernen von ",
-        
-        
-        (". Would you like to take a quiz to practice?", "English") -> ". Would you like to take a quiz to practice?",
-        (". Would you like to take a quiz to practice?", "Spanish") -> ". ¿Te gustaría hacer un cuestionario para practicar?",
-        (". Would you like to take a quiz to practice?", "French") -> ". Souhaitez-vous faire un quiz pour vous entraîner ?",
-        (". Would you like to take a quiz to practice?", "German") -> ". Möchten Sie ein Quiz machen, um zu üben?",
-       
-        
-        // Exit quiz message when not in quiz mode
-        ("You're not currently in a quiz.", "English") -> "You're not currently in a quiz.",
-        ("You're not currently in a quiz.", "Spanish") -> "No estás en un cuestionario en este momento.",
-        ("You're not currently in a quiz.", "French") -> "Vous n'êtes pas actuellement dans un quiz.",
-        ("You're not currently in a quiz.", "German") -> "Sie befinden sich derzeit nicht in einem Quiz.",
-       
-        
-        // Settings save messages
-        ("Do you want to save your current settings to file? (yes/no)", "English") -> "Do you want to save your current settings to file? (yes/no)",
-        ("Do you want to save your current settings to file? (yes/no)", "Spanish") -> "¿Desea guardar su configuración actual en el archivo? (sí/no)",
-        ("Do you want to save your current settings to file? (yes/no)", "French") -> "Voulez-vous enregistrer vos paramètres actuels dans le fichier ? (oui/non)",
-        ("Do you want to save your current settings to file? (yes/no)", "German") -> "Möchten Sie Ihre aktuellen Einstellungen in der Datei speichern? (ja/nein)",
-        
-        
-        ("Settings saved successfully!", "English") -> "Settings saved successfully!",
-        ("Settings saved successfully!", "Spanish") -> "¡Configuración guardada con éxito!",
-        ("Settings saved successfully!", "French") -> "Paramètres enregistrés avec succès !",
-        ("Settings saved successfully!", "German") -> "Einstellungen erfolgreich gespeichert!",
-        
-        
-        // Common phrases
-        ("Type 'help' for available commands.", "English") -> "Type 'help' for available commands.",
-        ("Type 'help' for available commands.", "Spanish") -> "Escribe 'help' para ver los comandos disponibles.",
-        ("Type 'help' for available commands.", "French") -> "Tapez 'help' pour voir les commandes disponibles.",
-        ("Type 'help' for available commands.", "German") -> "Geben Sie 'help' ein, um verfügbare Befehle zu sehen.",
-        
-        
-        ("I'm here to help you learn languages", "English") -> "I'm here to help you learn languages",
-        ("I'm here to help you learn languages", "Spanish") -> "Estoy aquí para ayudarte a aprender idiomas",
-        ("I'm here to help you learn languages", "French") -> "Je suis là pour vous aider à apprendre des langues",
-        ("I'm here to help you learn languages", "German") -> "Ich bin hier, um Ihnen beim Sprachenlernen zu helfen",
-        
-        
-        ("What would you like to do today?", "English") -> "What would you like to do today?",
-        ("What would you like to do today?", "Spanish") -> "¿Qué te gustaría hacer hoy?",
-        ("What would you like to do today?", "French") -> "Que souhaitez-vous faire aujourd'hui ?",
-        ("What would you like to do today?", "German") -> "Was möchten Sie heute machen?",
-        
-        
-        // Greeting responses
-        ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "English") -> 
-          "Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?",
-        ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "Spanish") -> 
-          "¡Hola! Soy tu Bot de Aprendizaje de Idiomas. ¿Te gustaría practicar vocabulario, gramática o comenzar un cuestionario?",
-        ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "French") -> 
-          "Bonjour ! Je suis votre Bot d'Apprentissage des Langues. Souhaitez-vous pratiquer le vocabulaire, la grammaire ou commencer un quiz ?",
-        ("Hello! I'm your Language Learning Bot. Would you like to practice vocabulary, grammar, or start a quiz?", "German") -> 
-          "Hallo! Ich bin Ihr Sprachlern-Bot. Möchten Sie Vokabeln üben, Grammatik lernen oder ein Quiz starten?",
-        
-        
-        // Other common responses
-        ("I'd be happy to help with your language question. Could you be more specific?", "English") -> 
-          "I'd be happy to help with your language question. Could you be more specific?",
-        ("I'd be happy to help with your language question. Could you be more specific?", "Spanish") -> 
-          "Con gusto te ayudo con tu pregunta sobre idiomas. ¿Podrías ser más específico?",
-        ("I'd be happy to help with your language question. Could you be more specific?", "French") -> 
-          "Je serais ravi de vous aider avec votre question linguistique. Pourriez-vous être plus précis ?",
-        ("I'd be happy to help with your language question. Could you be more specific?", "German") -> 
-          "Ich helfe Ihnen gerne bei Ihrer Sprachfrage. Könnten Sie das genauer erläutern?",
-        
-        
-        ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice", "English") -> 
-          "I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice",
-        ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice", "Spanish") -> 
-          "¡Con gusto comenzamos un cuestionario! ¿Qué tipo prefieres? Ofrecemos:\n1. Vocabulario\n2. Gramática\n3. Traducción\n4. Opción Múltiple",
-        ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice", "French") -> 
-          "Je serais ravi de commencer un quiz ! Quel type préférez-vous ? Nous proposons :\n1. Vocabulaire\n2. Grammaire\n3. Traduction\n4. Choix Multiple",
-        ("I'd be happy to start a quiz! What type would you prefer? We offer:\n1. Vocabulary\n2. Grammar\n3. Translation\n4. Multiple Choice", "German") -> 
-          "Ich starte gerne ein Quiz! Welchen Typ bevorzugen Sie? Wir bieten:\n1. Vokabeln\n2. Grammatik\n3. Übersetzung\n4. Multiple-Choice",
-        
-        
-        ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "English") -> 
-          "You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?",
-        ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "Spanish") -> 
-          "Puedes modificar tu configuración para:\n- Idioma materno\n- Idioma objetivo\n- Nivel de dificultad\n¿Qué te gustaría actualizar?",
-        ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "French") -> 
-          "Vous pouvez modifier vos paramètres pour :\n- Langue maternelle\n- Langue cible\n- Niveau de difficulté\nQue souhaitez-vous mettre à jour ?",
-        ("You can change your settings for:\n- Mother language\n- Target language\n- Difficulty level\nWhat would you like to update?", "German") -> 
-          "Sie können Ihre Einstellungen ändern für:\n- Muttersprache\n- Zielsprache\n- Schwierigkeitsgrad\nWas möchten Sie aktualisieren?",
-        
-
-        // Quiz-related translations
-        ("What type of quiz would you like to take?", "English") -> 
-          "What type of quiz would you like to take?",
-        ("What type of quiz would you like to take?", "Spanish") -> 
-          "¿Qué tipo de cuestionario te gustaría realizar?",
-        ("What type of quiz would you like to take?", "French") -> 
-          "Quel type de quiz souhaitez-vous passer ?",
-        ("What type of quiz would you like to take?", "German") -> 
-          "Welche Art von Quiz möchten Sie machen?",
-        
-          
-        ("Available quiz types: vocabulary, grammar, translation, mcq", "English") -> 
-          "Available quiz types: vocabulary, grammar, translation, mcq",
-        ("Available quiz types: vocabulary, grammar, translation, mcq", "Spanish") -> 
-          "Tipos de cuestionarios disponibles: vocabulario, gramática, traducción, opción múltiple",
-        ("Available quiz types: vocabulary, grammar, translation, mcq", "French") -> 
-          "Types de quiz disponibles : vocabulaire, grammaire, traduction, choix multiple",
-        ("Available quiz types: vocabulary, grammar, translation, mcq", "German") -> 
-          "Verfügbare Quiz-Typen: Vokabeln, Grammatik, Übersetzung, Multiple-Choice",
-        
-
-        ("Cancelling quiz setup.", "English") -> 
-          "Cancelling quiz setup.",
-        ("Cancelling quiz setup.", "Spanish") -> 
-          "Cancelando la configuración del cuestionario.",
-        ("Cancelling quiz setup.", "French") -> 
-          "Annulation de la configuration du quiz.",
-        ("Cancelling quiz setup.", "German") -> 
-          "Quiz-Einrichtung wird abgebrochen.",
-        
-
-        ("Exiting quiz mode.", "English") -> 
-          "Exiting quiz mode.",
-        ("Exiting quiz mode.", "Spanish") -> 
-          "Saliendo del modo cuestionario.",
-        ("Exiting quiz mode.", "French") -> 
-          "Sortie du mode quiz.",
-        ("Exiting quiz mode.", "German") -> 
-          "Quiz-Modus wird beendet.",
-        
-
-        ("There was an error with the quiz. Exiting quiz mode.", "English") -> 
-          "There was an error with the quiz. Exiting quiz mode.",
-        ("There was an error with the quiz. Exiting quiz mode.", "Spanish") -> 
-          "Hubo un error con el cuestionario. Saliendo del modo cuestionario.",
-        ("There was an error with the quiz. Exiting quiz mode.", "French") -> 
-          "Une erreur s'est produite avec le quiz. Sortie du mode quiz.",
-        ("There was an error with the quiz. Exiting quiz mode.", "German") -> 
-          "Es gab einen Fehler beim Quiz. Quiz-Modus wird beendet.",
-        
-        ("No questions available.", "English") -> 
-          "No questions available.",
-        ("No questions available.", "Spanish") -> 
-          "No hay preguntas disponibles.",
-        ("No questions available.", "French") -> 
-          "Aucune question disponible.",
-        ("No questions available.", "German") -> 
-          "Keine Fragen verfügbar.",
-        
-
-        ("Sorry, I don't recognize that quiz type. Please try again.", "English") -> 
-          "Sorry, I don't recognize that quiz type. Please try again.",
-        ("Sorry, I don't recognize that quiz type. Please try again.", "Spanish") -> 
-          "Lo siento, no reconozco ese tipo de cuestionario. Por favor, inténtalo de nuevo.",
-        ("Sorry, I don't recognize that quiz type. Please try again.", "French") -> 
-          "Désolé, je ne reconnais pas ce type de quiz. Veuillez réessayer.",
-        ("Sorry, I don't recognize that quiz type. Please try again.", "German") -> 
-          "Entschuldigung, ich erkenne diesen Quiz-Typ nicht. Bitte versuchen Sie es erneut.",
-        
-        ("Please set your language preferences before starting a quiz.", "English") -> 
-          "Please set your language preferences before starting a quiz.",
-        ("Please set your language preferences before starting a quiz.", "Spanish") -> 
-          "Por favor, configura tus preferencias de idioma antes de comenzar un cuestionario.",
-        ("Please set your language preferences before starting a quiz.", "French") -> 
-          "Veuillez définir vos préférences linguistiques avant de commencer un quiz.",
-        ("Please set your language preferences before starting a quiz.", "German") -> 
-          "Bitte legen Sie Ihre Spracheinstellungen fest, bevor Sie ein Quiz starten.",
-        
-        
-        ("I'm not sure I understand. Try asking about quizzes, changing settings.", "English") -> 
-          "I'm not sure I understand. Try asking about quizzes, changing settings.",
-        ("I'm not sure I understand. Try asking about quizzes, changing settings.", "French") -> 
-          "Je ne suis pas sûr de comprendre. Essayez de poser des questions sur les quiz ou de modifier les paramètres.",
-        ("I'm not sure I understand. Try asking about quizzes, changing settings.", "Spanish") -> 
-          "No estoy seguro de entender. Intenta preguntar sobre cuestionarios o cambiar la configuración.",
-        ("I'm not sure I understand. Try asking about quizzes, changing settings.", "German") -> 
-          "Ich bin mir nicht sicher, ob ich das verstehe. Versuchen Sie, nach Quiz zu fragen oder die Einstellungen zu ändern.",
-        
-        // Settings messages
-        ("Mother language set to", "English") -> "Mother language set to",
-        ("Mother language set to", "Spanish") -> "Idioma materno establecido en",
-        ("Mother language set to", "French") -> "Langue maternelle définie sur",
-        ("Mother language set to", "German") -> "Muttersprache festgelegt auf",
-        
-        
-        ("Target language set to", "English") -> "Target language set to",
-        ("Target language set to", "Spanish") -> "Idioma objetivo establecido en",
-        ("Target language set to", "French") -> "Langue cible définie sur",
-        ("Target language set to", "German") -> "Zielsprache festgelegt auf",
-        
-        
-        ("Difficulty set to", "English") -> "Difficulty set to",
-        ("Difficulty set to", "Spanish") -> "Nivel de dificultad establecido en",
-        ("Difficulty set to", "French") -> "Niveau de difficulté défini sur",
-        ("Difficulty set to", "German") -> "Schwierigkeitsgrad festgelegt auf",
-        
-
-        ("Welcome to the Language Learning Bot. How can I help you today?", "Spanish") -> "¡Bienvenido al Bot de Aprendizaje de Idiomas. ¿Cómo puedo ayudarte hoy?",
-        ("Welcome to the Language Learning Bot. How can I help you today?", "French") -> "Bienvenue sur le Bot d'Apprentissage des Langues. Comment puis-je vous aider aujourd'hui ?",
-        ("Welcome to the Language Learning Bot. How can I help you today?", "German") -> "Willkommen beim Sprachlern-Bot. Wie kann ich Ihnen heute helfen?",
-      
-        ("Welcome to the Language Learning Bot. How can I help you today?", "English") -> "Welcome to the Language Learning Bot. How can I help you today?"
-      )
-      
       // Convert language to string for lookup
       val langStr = languageToString(lang)
       
       // Check if we have a translation for the exact text
-      if (translations.contains((text, langStr))) {
-        translations((text, langStr))
+      if (translationDict.contains((text, langStr))) {
+        translationDict((text, langStr))
       } else {
         // For simplicity, if no exact match, look for partial matches at the beginning
-        val matchingPrefix = translations.keys
+        val matchingPrefix = translationDict.keys
           .filter(_._2 == langStr)
           .map(_._1)
           .find(phrase => text.startsWith(phrase))
@@ -713,32 +621,30 @@ object ChatbotCore {
         matchingPrefix match {
           case Some(prefix) => 
             // If we find a prefix match, translate that part and keep the rest
-            val translated = translations((prefix, langStr))
+            val translated = translationDict((prefix, langStr))
             val remainder = text.substring(prefix.length)
             translated + remainder
           case None => 
-            // Fall back to appending a language marker for unknown translations
-            lang match {
-              case English => text + " (in English)"
-              case Spanish => text + " (en Español)"
-              case French => text + " (en Français)"
-              case German => text + " (auf Deutsch)"
-            
-              case _ => text
+            // For quiz instructions, never append language markers
+            if (isQuizInstruction) {
+              lang match {
+                case English => text
+                case Spanish => text  // In a real system we'd apply Spanish translation
+                case French => text   // In a real system we'd apply French translation
+                case German => text   // In a real system we'd apply German translation
+                case _ => text
+              }
+            } else {
+              // Fall back to appending a language marker for unknown translations
+              lang match {
+                case English => text + " (in English)"
+                case Spanish => text + " (en Español)"
+                case French => text + " (en Français)"
+                case German => text + " (auf Deutsch)"
+                case _ => text
+              }
             }
         }
-      }
-    }
-    
-    // Helper method to convert Language to string
-    def languageToString(language: Language): String = {
-      language match {
-        case English => "English"
-        case Spanish => "Spanish"
-        case French => "French"
-        case German => "German"
-        
-        case _ => "Unknown"
       }
     }
     
@@ -754,11 +660,109 @@ object ChatbotCore {
     
     if (isGreeting(tokens)) "greeting"
     else if (isThanks(tokens)) "thanks"
+    else if (isWeatherQuery(tokens)) "weather"
     else if (isQuizRequest(tokens)) "quiz_request"
     else if (isSettingsChange(tokens)) "settings"
     else if (isHelp(tokens)) "help"
     else if (isLanguageQuestion(tokens)) "language_question"
     else "unknown"
+  }
+  
+  /**
+   * Checks if input is weather-related
+   */
+  def isWeatherQuery(tokens: List[String]): Boolean = {
+    val weatherWords = Set("weather", "temperature", "forecast", "rain", "sunny", "cloudy", 
+                          "hot", "cold", "warm", "cool", "freezing", "heat", "chilly", "frigid",
+                          "degrees", "celsius", "fahrenheit", "climate", "storm", "snowing", "raining")
+    tokens.exists(weatherWords.contains)
+  }
+  
+  /**
+   * Checks if input contains clothing items
+   */
+  def detectClothing(input: String): Option[(String, Boolean)] = {
+    val hotWeatherClothes = Set(
+      "t-shirt", "t shirt", "tshirt", "tank top", "short sleeve shirt", 
+      "light shirt", "cotton shirt", "polo shirt", "summer top", "blouse", 
+      "sleeveless top", "linen shirt", "breathable shirt", "jersey", 
+      "light fabric", "thin clothes", "summer clothes"
+    )
+    
+    val coldWeatherClothes = Set(
+      "coat", "jacket", "sweater", "sweatshirt", "hoodie", "scarf",
+      "winter coat", "wool coat", "parka", "pullover", "cardigan", "fleece",
+      "turtleneck", "long sleeve", "thick shirt", "thermal shirt", "windbreaker",
+      "down jacket", "heavy jacket", "puffer jacket", "winter clothes", "warm top"
+    )
+    
+    val lowerInput = input.toLowerCase
+    
+    // First check for hot weather clothes
+    val hotClothingMatch = hotWeatherClothes.find(item => lowerInput.contains(item))
+    if (hotClothingMatch.isDefined) {
+      return Some((hotClothingMatch.get, true)) // true means hot weather appropriate
+    }
+    
+    // Then check for cold weather clothes
+    val coldClothingMatch = coldWeatherClothes.find(item => lowerInput.contains(item))
+    if (coldClothingMatch.isDefined) {
+      return Some((coldClothingMatch.get, false)) // false means cold weather appropriate
+    }
+    
+    None // No clothing detected
+  }
+  
+  /**
+   * Evaluates if clothing choice is appropriate for the weather and returns feedback
+   */
+  def evaluateClothingChoice(clothingItem: String, isHotWeatherClothing: Boolean, isHotWeather: Boolean): String = {
+    if (isHotWeatherClothing && isHotWeather) {
+      s"Great choice with the $clothingItem! That's perfect for hot weather. It will keep you cool and comfortable."
+    } else if (!isHotWeatherClothing && !isHotWeather) {
+      s"Excellent choice with the $clothingItem! That's perfect for cold weather. It will keep you warm and cozy."
+    } else if (isHotWeatherClothing && !isHotWeather) {
+      s"A $clothingItem might not be warm enough for cold weather. Consider adding a jacket, sweater, or coat to stay warm."
+    } else {
+      s"A $clothingItem might be too warm for hot weather. Something lighter like a t-shirt or shorts would be more comfortable."
+    }
+  }
+
+  /**
+   * Handle weather-related queries and provide appropriate responses
+   */
+  def handleWeatherQuery(input: String): String = {
+    val tokens = parseInput(input)
+    val lowerInput = input.toLowerCase
+    
+    // Check if the input mentions hot/warm conditions
+    val isHot = lowerInput.contains("hot") || lowerInput.contains("warm") || 
+                lowerInput.contains("heat") || lowerInput.contains("burning") ||
+                lowerInput.contains("boiling") || lowerInput.contains("tropical") ||
+                (lowerInput.contains("degrees") && 
+                 lowerInput.replaceAll("[^0-9]", " ").trim.split(" ").filter(_.nonEmpty)
+                   .headOption.map(_.toIntOption).flatten.getOrElse(0) > 30)
+    
+    // Check if the input mentions cold conditions
+    val isCold = lowerInput.contains("cold") || lowerInput.contains("cool") || 
+                 lowerInput.contains("chilly") || lowerInput.contains("freezing") ||
+                 lowerInput.contains("frigid") || lowerInput.contains("snow") ||
+                 lowerInput.contains("frost") || lowerInput.contains("icy") ||
+                 (lowerInput.contains("degrees") && 
+                  lowerInput.replaceAll("[^0-9]", " ").trim.split(" ").filter(_.nonEmpty)
+                    .headOption.map(_.toIntOption).flatten.getOrElse(20) < 15)
+    
+    // Determine appropriate response
+    if (isHot) {
+      "It sounds hot! I recommend wearing light, breathable clothes like shorts and a t-shirt. " +
+      "Stay hydrated, use sunscreen, and try to stay in the shade when possible. A hat can also help protect you from the sun."
+    } else if (isCold) {
+      "It sounds cold! Make sure to wear warm layers - a sweater or fleece under a jacket, plus a hat and gloves if it's very cold. " +
+      "Don't forget a scarf to protect your neck from the cold wind. Warm socks and waterproof shoes are also important."
+    } else {
+      "When talking about the weather, I can give you clothing suggestions! " +
+      "Just tell me if it's hot or cold outside, and I'll recommend what to wear."
+    }
   }
 
   // --- Quiz selection messages in different languages ---
@@ -783,27 +787,27 @@ object ChatbotCore {
     |
     |Please type the number (1-4) or name of the quiz you'd like to take.""".stripMargin
     
-  val quizSelectionSpanish: String = """¿Qué tipo de cuestionario te gustaría realizar? Ofrecemos:
-    |1. Vocabulario - Pon a prueba tu conocimiento de palabras
+  val quizSelectionSpanish: String = """¿Qué tipo de cuestionario te gustaría hacer? Ofrecemos:
+    |1. Vocabulario - Prueba tu conocimiento de palabras
     |2. Gramática - Practica reglas del lenguaje
     |3. Traducción - Traduce entre idiomas
     |4. Opción múltiple (MCQ) - Preguntas generales de idioma
     |
-    |Por favor, escribe el número (1-4) o el nombre del cuestionario que deseas realizar.""".stripMargin
+    |Por favor, escribe el número (1-4) o el nombre del cuestionario que te gustaría hacer.""".stripMargin
     
-  val quizSelectionFrench: String = """Quel type de quiz souhaitez-vous passer ? Nous proposons :
+  val quizSelectionFrench: String = """Quel type de quiz souhaitez-vous passer? Nous proposons:
     |1. Vocabulaire - Testez votre connaissance des mots
     |2. Grammaire - Pratiquez les règles de langue
     |3. Traduction - Traduisez entre les langues
-    |4. Choix multiple (MCQ) - Questions générales sur la langue
+    |4. Choix multiple (QCM) - Questions générales de langue
     |
-    |Veuillez taper le numéro (1-4) ou le nom du quiz que vous souhaitez passer.""".stripMargin
+    |Veuillez taper le numéro (1-4) ou le nom du quiz que vous voulez passer.""".stripMargin
     
   val quizSelectionGerman: String = """Welche Art von Quiz möchten Sie machen? Wir bieten:
-    |1. Vokabular - Testen Sie Ihre Wortkenntnisse
+    |1. Wortschatz - Testen Sie Ihre Wortkenntnis
     |2. Grammatik - Üben Sie Sprachregeln
     |3. Übersetzung - Übersetzen Sie zwischen Sprachen
-    |4. Multiple Choice (MCQ) - Allgemeine Sprachfragen
+    |4. Multiple Choice - Allgemeine Sprachfragen
     |
     |Bitte geben Sie die Nummer (1-4) oder den Namen des Quiz ein, das Sie machen möchten.""".stripMargin
     

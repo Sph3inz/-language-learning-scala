@@ -5,18 +5,10 @@ package languagelearningbot
 
 // Language enumeration
 sealed trait Language
-case object Arabic extends Language
 case object German extends Language
 case object English extends Language
 case object French extends Language 
 case object Spanish extends Language
-
-// Difficulty level enumeration
-sealed trait Difficulty
-case object Easy extends Difficulty
-case object Medium extends Difficulty
-case object Hard extends Difficulty
-case object Impossible extends Difficulty
 
 // Quiz Type enumeration
 sealed trait QuizType
@@ -28,11 +20,16 @@ case object Correction extends QuizType
 case object ScenarioBased extends QuizType
 case object Translation extends QuizType
 
+// Question format enumeration
+sealed trait QuestionFormat
+case object MultipleChoice extends QuestionFormat
+case object DirectInput extends QuestionFormat
+case object FillInBlank extends QuestionFormat
+
 // User preferences - immutable structure
 case class UserPreferences(
   motherLanguage: Language,
   targetLanguage: Language,
-  difficulty: Difficulty,
   name: Option[String] = None
 )
 
@@ -41,7 +38,8 @@ case class Question(
   prompt: String,
   options: List[String],
   correctAnswer: String,
-  category: QuizType
+  category: QuizType,
+  format: QuestionFormat = MultipleChoice  // Default to MultipleChoice for backward compatibility
 )
 
 // Quiz session - immutable record of a quiz
